@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>WavWiz — the Ultimate Music App for whole-home synced sound (public beta)</title>
+  <meta name="description" content="WavWiz is the Ultimate Music App for Windows whole-home sound. Library, radio, AirPlay and optional Spotify Connect play in sync across every room. Phones join from the browser—no app to buy. Free and open source (MIT). Public beta 0.1.2.">
+  <meta name="theme-color" content="#0b1020">
+  <meta name="color-scheme" content="dark">
+  <link rel="canonical" href="https://wavwiz.com/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="WavWiz">
+  <meta property="og:title" content="WavWiz — the Ultimate Music App. Your whole house. One beat.">
+  <meta property="og:description" content="The Ultimate Music App for free whole-home synced music on Windows. AirPlay built in, optional Spotify Connect, phones join from the browser.">
+  <meta property="og:url" content="https://wavwiz.com/">
+  <meta property="og:image" content="https://wavwiz.com/assets/img/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+  <link rel="preload" href="assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="watermark" aria-hidden="true"></div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="wordmark" href="#top" aria-label="WavWiz home"><span class="wm-wav">Wav</span><span class="wm-wiz">Wiz</span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <a href="#features">Features</a>
+        <a href="#previews">Previews</a>
+        <a href="#how">How it works</a>
+        <a href="#visualizers">Visualizers</a>
+        <a href="#support">Support</a>
+        <a href="#faq">FAQ</a>
+        <a class="btn btn-ghost btn-sm" href="https://github.com/vdubbin74/WavWiz" target="_blank" rel="noopener">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
+          GitHub
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <canvas class="warp" id="warp" aria-hidden="true"></canvas>
+      <div class="hero-glow hero-glow-a" data-parallax="0.25" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow-b" data-parallax="-0.15" aria-hidden="true"></div>
+      <div class="hero-grid" aria-hidden="true"></div>
+
+      <div class="container hero-inner">
+        <div class="hero-copy" data-parallax="0.12">
+          <span class="badge"><span class="badge-dot" aria-hidden="true"></span>The Ultimate Music App · Free &amp; open source · Public beta 0.1.2</span>
+          <h1 id="hero-title" class="hero-title">
+            <span class="line">Your whole house.</span>
+            <span class="line glow-text">One beat.</span>
+          </h1>
+          <p class="hero-sub">WavWiz is the Ultimate Music App for your house—an always-on Windows PC becomes a whole-home music server. Your library, internet radio, AirPlay and optional Spotify Connect play in sync on every PC, TV and phone. Phones join from the browser—nothing to install, nothing to pay.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary btn-lg" href="https://github.com/vdubbin74/WavWiz/releases/latest" target="_blank" rel="noopener">
+              <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M2 4.3 10 3.2v7.7H2V4.3Zm9-1.2L22 1.5v9.4H11V3.1ZM2 12h8v7.8l-8-1.1V12Zm9 0h11v10.5l-11-1.6V12Z"/></svg>
+              Download for Windows
+            </a>
+            <a class="btn btn-ghost btn-lg" href="https://github.com/vdubbin74/WavWiz" target="_blank" rel="noopener">
+              <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
+              View on GitHub
+            </a>
+          </div>
+          <p class="hero-meta">One app for the whole house. Server and Player run on Windows; phones and TVs join from any modern browser.</p>
+        </div>
+
+        <div class="hero-emblem" data-parallax="-0.08" aria-hidden="true">
+          <div class="emblem-stage" id="emblem-stage">
+            <div class="emblem-glow"></div>
+            <div class="emblem-orbit orbit-a"><span class="eq-ticks" aria-hidden="true"></span></div>
+            <div class="emblem-orbit orbit-b"><span class="eq-ticks" aria-hidden="true"></span></div>
+            <div class="emblem-orbit orbit-c"></div>
+            <div class="emblem-sparks" id="emblem-sparks"></div>
+            <img src="assets/img/wavwiz-emblem.png" width="360" height="360" alt="">
+          </div>
+        </div>
+      </div>
+
+      <a class="scroll-cue" href="#sync" aria-label="Scroll to the next section"><span></span></a>
+    </section>
+
+    <!-- ============ EQ STRIP ============ -->
+    <div class="eq-strip" aria-hidden="true">
+      <div class="eq-track" id="eq-track"></div>
+    </div>
+
+    <!-- ============ SYNC (per-device delay) ============ -->
+    <section class="section sync" id="sync" aria-labelledby="sync-title">
+      <div class="container sync-inner">
+        <div class="sync-copy reveal">
+          <p class="eyebrow">Per-device delay</p>
+          <h2 id="sync-title" class="sync-title">Every room, perfectly <span class="accent-t">in sync</span>.</h2>
+          <p class="sync-lead">Bluetooth speakers, TVs and Wi-Fi PCs each add a little lag of their own—and across a whole house that lag becomes an echo between rooms. WavWiz gives every device a live delay slider from 0 to 1000&nbsp;ms, synced with a number box for exact values. Nudge it while the music plays and each room falls into line, so walking through the house sounds like one big room.</p>
+          <ul class="sync-points">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5 10 17l9-10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>A live 0&ndash;1000&nbsp;ms slider and number box for every device</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5 10 17l9-10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Fine-tune while music plays, no restart needed</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5 10 17l9-10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Bluetooth, TVs, Wi-Fi PCs and wired speakers all line up</li>
+          </ul>
+        </div>
+
+        <div class="sync-panel reveal" id="sync-demo" role="img" aria-label="Illustration: four devices (Living Room TV, Bluetooth speaker, Kitchen PC and Garage speakers), each with a delay slider and millisecond readout. As the sliders settle, the four waveforms slide into alignment.">
+          <div class="sync-bar" aria-hidden="true">
+            <span class="sync-now"><span class="sync-dot"></span>Now playing &middot; Whole House</span>
+            <span class="sync-status"><span class="sync-status-a">Aligning&hellip;</span><span class="sync-status-b">In sync</span></span>
+          </div>
+          <div class="sync-legend" aria-hidden="true"><span>Device</span><span>Output</span><span>Delay <em>0&ndash;1000 ms</em></span></div>
+          <div class="sync-rows" aria-hidden="true">
+            <div class="sync-row" data-target="140" data-tone="t">
+              <div class="sync-dev"><span class="sync-ico"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="12" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 20h8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span><span><b>Living Room TV</b><small>HDMI</small></span></div>
+              <canvas class="sync-wave"></canvas>
+              <div class="sync-ctl"><span class="sync-track"><span class="sync-fill"></span><span class="sync-thumb"></span></span><span class="sync-num"><span class="sync-val">0</span><span class="sync-unit">ms</span></span></div>
+            </div>
+            <div class="sync-row" data-target="65" data-tone="o">
+              <div class="sync-dev"><span class="sync-ico"><svg viewBox="0 0 24 24"><rect x="6" y="2.5" width="12" height="19" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="14.5" r="3.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="7" r="1.2" fill="currentColor"/></svg></span><span><b>Bluetooth speaker</b><small>Bluetooth</small></span></div>
+              <canvas class="sync-wave"></canvas>
+              <div class="sync-ctl"><span class="sync-track"><span class="sync-fill"></span><span class="sync-thumb"></span></span><span class="sync-num"><span class="sync-val">0</span><span class="sync-unit">ms</span></span></div>
+            </div>
+            <div class="sync-row" data-target="185" data-tone="t">
+              <div class="sync-dev"><span class="sync-ico"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M9 20h6M12 16v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span><span><b>Kitchen PC</b><small>Wi-Fi</small></span></div>
+              <canvas class="sync-wave"></canvas>
+              <div class="sync-ctl"><span class="sync-track"><span class="sync-fill"></span><span class="sync-thumb"></span></span><span class="sync-num"><span class="sync-val">0</span><span class="sync-unit">ms</span></span></div>
+            </div>
+            <div class="sync-row" data-target="250" data-tone="o">
+              <div class="sync-dev"><span class="sync-ico"><svg viewBox="0 0 24 24"><path d="M3 10.5 12 4l9 6.5V20H3Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M7 20v-6h10v6M7 17h10" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span><span><b>Garage</b><small>Wired speakers</small></span></div>
+              <canvas class="sync-wave"></canvas>
+              <div class="sync-ctl"><span class="sync-track"><span class="sync-fill"></span><span class="sync-thumb"></span></span><span class="sync-num"><span class="sync-val">0</span><span class="sync-unit">ms</span></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FEATURES ============ -->
+    <section class="section" id="features" aria-labelledby="features-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Features</p>
+          <h2 id="features-title">Every room. Every device. <span class="accent-o">Zero</span> drift.</h2>
+          <p class="section-lead">Everything the Ultimate Music App should do—fill the house from the kitchen speaker to the phone in your pocket.</p>
+        </header>
+
+        <div class="feature-new-grid">
+          <article class="card feature feature-new reveal">
+            <span class="new-badge">New</span>
+            <div class="feature-ico ico-t"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="2.2" fill="currentColor"/><path d="M8.2 15.8a5.4 5.4 0 0 1 0-7.6M15.8 8.2a5.4 5.4 0 0 1 0 7.6M5.4 18.6a9.3 9.3 0 0 1 0-13.2M18.6 5.4a9.3 9.3 0 0 1 0 13.2" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg></div>
+            <h3>AirPlay, built in</h3>
+            <p>Your server shows up on iPhone, iPad and Mac as the AirPlay speaker <span class="speaker-name">WavWiz &ndash; Whole House</span>. Send audio from any app—Spotify, Apple Music, YouTube, podcasts—and it plays in every room in sync, with title and artwork on Now Playing and visualizers that react to the music.</p>
+          </article>
+          <article class="card feature feature-new reveal">
+            <span class="new-badge">New</span>
+            <div class="feature-ico ico-o"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="6" width="7" height="12" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.9"/><rect x="15" y="4" width="6.5" height="16" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.9"/><circle cx="18.25" cy="14.5" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M11.5 9.5c.9.7.9 4.3 0 5M13.2 8c1.6 1.4 1.6 6.6 0 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+            <h3>Spotify Connect <span class="opt-tag">Optional</span></h3>
+            <p>Off by default. Turn it on in Admin settings and WavWiz appears in Spotify's device list; the server streams straight from Spotify to every room. Needs your own Spotify Premium account. Not affiliated with Spotify.</p>
+          </article>
+        </div>
+
+        <div class="feature-grid">
+          <article class="card feature reveal">
+            <div class="feature-ico ico-o"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h3l2-6 4 12 3-9 2 3h4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h3>Sample-accurate multi-room sync</h3>
+            <p>Every speaker plays the same sample at the same moment, so walking between rooms sounds like one big room.</p>
+          </article>
+          <article class="card feature reveal">
+            <div class="feature-ico ico-t"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M11 18h2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+            <h3>Any phone joins from its browser</h3>
+            <p>Open the address, tap play. No app store, nothing to install. Guests can join in seconds.</p>
+          </article>
+          <article class="card feature reveal">
+            <div class="feature-ico ico-o"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M20 18h0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="16" cy="6" r="2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="10" cy="12" r="2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="18" r="2" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
+            <h3>Zones &amp; per-device delay</h3>
+            <p>Group devices into zones, then fine-tune each one with a live 0&ndash;1000&nbsp;ms delay so Bluetooth speakers and TVs keep up with the rest of the house.</p>
+          </article>
+          <article class="card feature feature-wide reveal">
+            <div class="feature-ico ico-t"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M8 20V4M12 20v-7M16 20V7M20 20v-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+            <h3>8 visualizers, calmer by default</h3>
+            <p>Throw the music up on the TV. Pick a Mood—Calm, Balanced or Energetic—and tune each look. They follow your theme colors.</p>
+            <ul class="chips" aria-label="Visualizers">
+              <li>Particle burst</li><li>Waveform river</li><li>Speaker cone</li><li>Ring</li>
+              <li>Neon tunnel</li><li>Terrain</li><li>Lightning</li><li>VU meters</li>
+            </ul>
+            <div class="mini-eq" id="mini-eq" aria-hidden="true"></div>
+          </article>
+          <article class="card feature reveal">
+            <div class="feature-ico ico-o"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3a9 9 0 0 0 0 18Z" fill="currentColor"/></svg></div>
+            <h3>Themes</h3>
+            <p>Restyle the whole player to match your setup—Midnight Neon, Ember, Arctic, Forest, Synthwave, Monochrome and a Pepecoin theme among them—or dial in your own colors.</p>
+          </article>
+          <article class="card feature reveal">
+            <div class="feature-ico ico-t"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9a10 10 0 0 1 14 0M8 12a6 6 0 0 1 8 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="16" r="2" fill="currentColor"/><path d="M12 18v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+            <h3>Internet radio finder</h3>
+            <p>Search and play internet radio stations, synced across the house just like your own library.</p>
+          </article>
+          <article class="card feature reveal">
+            <div class="feature-ico ico-o"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
+            <h3>CD ripping to FLAC</h3>
+            <p>Pop in a disc and rip it to lossless FLAC, straight into your library.</p>
+          </article>
+          <article class="card feature reveal">
+            <div class="feature-ico ico-t"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12V4h8l10 10-8 8L3 12Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="7.5" cy="8.5" r="1.5" fill="currentColor"/></svg></div>
+            <h3>Auto-tagging</h3>
+            <p>Fill in missing track details automatically so your library stays tidy and easy to browse.</p>
+          </article>
+          <article class="card feature reveal">
+            <div class="feature-ico ico-o"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 10h18M8 3v4M16 3v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+            <h3>Scenes &amp; schedules</h3>
+            <p>Save favorite zone-and-playlist combos as scenes, then start them on a schedule. Wake-up music, dinner time—you name it.</p>
+          </article>
+          <article class="card feature reveal">
+            <div class="feature-ico ico-t"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h12M4 12h12M4 18h8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M18 14v6l4-3-4-3Z" fill="currentColor"/></svg></div>
+            <h3>Shared queue from any device</h3>
+            <p>Everyone in the house can add songs from their own phone. One queue, no fighting over the aux cord.</p>
+          </article>
+          <article class="card feature reveal">
+            <div class="feature-ico ico-o"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
+            <h3>Private remote access via Tailscale</h3>
+            <p>Listen away from home over your own Tailscale network. WavWiz stays on your private path—it does not open ports to the public internet for you.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PREVIEWS ============ -->
+    <section class="section section-alt" id="previews" aria-labelledby="previews-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Look &amp; feel</p>
+          <h2 id="previews-title">See it <span class="accent-t">move</span>.</h2>
+          <p class="section-lead">A taste of Now Playing. Click either image to enlarge.</p>
+        </header>
+
+        <div class="gallery" id="gallery">
+          <button class="shot reveal" type="button" data-index="0">
+            <img src="assets/img/wavwiz-np-4-waveform-river-thumb.jpg" width="640" height="360" loading="lazy" alt="Preview: Now Playing with the Waveform river visualizer">
+            <span class="shot-label">Waveform river</span>
+          </button>
+          <button class="shot reveal" type="button" data-index="1">
+            <img src="assets/img/wavwiz-viz-terrain-thumb.jpg" width="640" height="360" loading="lazy" alt="Preview: Now Playing with the Terrain visualizer">
+            <span class="shot-label">Terrain</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox carousel -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Preview viewer" hidden>
+      <div class="lb-backdrop" data-close></div>
+      <figure class="lb-frame">
+        <img class="lb-img" id="lb-img" src="" alt="">
+        <figcaption class="lb-caption"><span class="lb-tag">Preview</span><span id="lb-caption"></span><span class="lb-count" id="lb-count"></span></figcaption>
+      </figure>
+      <button class="lb-btn lb-prev" type="button" aria-label="Previous image"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button class="lb-btn lb-next" type="button" aria-label="Next image"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button class="lb-btn lb-close" type="button" aria-label="Close viewer" data-close><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></button>
+      <div class="lb-dots" id="lb-dots"></div>
+    </div>
+
+    <!-- ============ HOW IT WORKS ============ -->
+    <section class="section" id="how" aria-labelledby="how-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">How it works</p>
+          <h2 id="how-title">Three steps to <span class="accent-o">whole-home</span> sound.</h2>
+        </header>
+        <ol class="steps">
+          <li class="card step reveal">
+            <span class="step-num">01</span>
+            <h3>Install on your always-on PC</h3>
+            <p>Download WavWiz for Windows, install the Server, and point it at your music folders. That PC becomes the hub for the whole house.</p>
+          </li>
+          <li class="card step reveal">
+            <span class="step-num">02</span>
+            <h3>Add rooms and devices</h3>
+            <p>Install the Player on Windows PCs with speakers. On phones and TVs, open the WavWiz address in a browser. Group them into zones however you like.</p>
+          </li>
+          <li class="card step reveal">
+            <span class="step-num">03</span>
+            <h3>Press play</h3>
+            <p>Pick an album, a playlist, a radio station—or AirPlay from your phone. Every room starts on the same beat and stays there.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ VISUALIZER SHOWCASE ============ -->
+    <section class="section section-alt" id="visualizers" aria-labelledby="viz-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Visualizer showcase</p>
+          <h2 id="viz-title">Turn the TV into a <span class="accent-t">light show</span>.</h2>
+          <p class="section-lead">A tiny live demo on simulated audio, right in your browser. In the app, visualizers default to a calmer Mood and react to whatever is playing—library, radio, AirPlay or Spotify Connect.</p>
+        </header>
+
+        <div class="viz-wrap reveal">
+          <div class="viz-stage card">
+            <canvas id="viz" aria-label="Animated visualizer demo" role="img"></canvas>
+            <div class="viz-hud">
+              <span class="viz-live"><span class="badge-dot" aria-hidden="true"></span>Simulated audio</span>
+              <span class="viz-name" id="viz-name">Particle burst</span>
+            </div>
+          </div>
+          <aside class="viz-side">
+            <div class="viz-tabs" role="tablist" aria-label="Visualizer style">
+              <button type="button" role="tab" class="viz-tab is-active" aria-selected="true" data-viz="particles">Particle burst</button>
+              <button type="button" role="tab" class="viz-tab" aria-selected="false" data-viz="ring">Ring</button>
+              <button type="button" role="tab" class="viz-tab" aria-selected="false" data-viz="river">Waveform river</button>
+            </div>
+            <label class="viz-auto"><input type="checkbox" id="viz-auto" checked> Auto-cycle styles</label>
+
+            <div class="vu-pair card" aria-label="Analog VU meters (decorative)">
+              <p class="vu-title">Analog VU · L / R</p>
+              <svg class="vu" id="vu-l" viewBox="0 0 200 120" aria-hidden="true">
+                <defs>
+                  <linearGradient id="vuface" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b2338"/><stop offset="1" stop-color="#0f1526"/></linearGradient>
+                </defs>
+                <rect x="1" y="1" width="198" height="118" rx="3" fill="url(#vuface)" stroke="#2a3450"/>
+                <g class="vu-scale"></g>
+                <text x="100" y="92" text-anchor="middle" class="vu-label">VU · L</text>
+                <line class="vu-needle" x1="100" y1="112" x2="100" y2="26"/>
+                <circle cx="100" cy="112" r="6" fill="#2a3450"/>
+              </svg>
+              <svg class="vu" id="vu-r" viewBox="0 0 200 120" aria-hidden="true">
+                <rect x="1" y="1" width="198" height="118" rx="3" fill="url(#vuface)" stroke="#2a3450"/>
+                <g class="vu-scale"></g>
+                <text x="100" y="92" text-anchor="middle" class="vu-label">VU · R</text>
+                <line class="vu-needle" x1="100" y1="112" x2="100" y2="26"/>
+                <circle cx="100" cy="112" r="6" fill="#2a3450"/>
+              </svg>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SUPPORT / DONATE ============ -->
+    <section class="section" id="support" aria-labelledby="support-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Donate</p>
+          <h2 id="support-title">Support <span class="wm-wav">Wav</span><span class="wm-wiz">Wiz</span></h2>
+          <p class="section-lead">WavWiz is free and always will be. If it makes your house sound better, a tip helps keep the music playing.</p>
+        </header>
+
+        <div class="coin-accept reveal">
+          <span class="coin-accept-label">We accept</span>
+          <ul class="coin-accept-list">
+            <li><a href="#donate-ltc"><img src="assets/img/coins/ltc.svg" alt="" width="22" height="22" decoding="async">Litecoin</a></li>
+            <li><a href="#donate-xmr"><img src="assets/img/coins/xmr.svg" alt="" width="22" height="22" decoding="async">Monero</a></li>
+            <li><a href="#donate-btc"><img src="assets/img/coins/btc.svg" alt="" width="22" height="22" decoding="async">Bitcoin</a></li>
+            <li><a href="#donate-pep"><img src="assets/img/coins/pep.svg" alt="" width="22" height="22" decoding="async">Pepecoin</a></li>
+          </ul>
+        </div>
+        <div class="donate-grid">
+          <article class="card coin coin-ltc reveal" data-coin="LTC" id="donate-ltc">
+            <header class="coin-head"><span class="coin-logo" aria-hidden="true"><img src="assets/img/coins/ltc.svg" alt="" width="56" height="56" decoding="async"></span><div><h3>Litecoin</h3><p class="coin-tick">LTC</p></div></header>
+            <div class="qr" role="img" aria-label="Litecoin address QR code"></div>
+            <code class="coin-addr">ltc1qx4y3ncgjzgl6nydfwu3wzp7lwzmf2cysacr64d</code>
+            <button class="btn btn-ghost btn-copy" type="button">Copy address</button>
+          </article>
+          <article class="card coin coin-xmr reveal" data-coin="XMR" id="donate-xmr">
+            <header class="coin-head"><span class="coin-logo" aria-hidden="true"><img src="assets/img/coins/xmr.svg" alt="" width="56" height="56" decoding="async"></span><div><h3>Monero</h3><p class="coin-tick">XMR</p></div></header>
+            <div class="qr" role="img" aria-label="Monero address QR code"></div>
+            <code class="coin-addr">44FpjtjsaBzABrjf8Wmr2TcvEbUWvi5iW3tXP67APgNe6Stv1kkxHUDEFbtG4p6XBBThD76JY8sJvQSsRfZgWiqjHRJ7bDt</code>
+            <button class="btn btn-ghost btn-copy" type="button">Copy address</button>
+          </article>
+          <article class="card coin coin-btc reveal" data-coin="BTC" id="donate-btc">
+            <header class="coin-head"><span class="coin-logo" aria-hidden="true"><img src="assets/img/coins/btc.svg" alt="" width="56" height="56" decoding="async"></span><div><h3>Bitcoin</h3><p class="coin-tick">BTC</p></div></header>
+            <div class="qr" role="img" aria-label="Bitcoin address QR code"></div>
+            <code class="coin-addr">bc1qauyj5n6ghg0pc55ee6u5vfm4efccus9rvmgala</code>
+            <button class="btn btn-ghost btn-copy" type="button">Copy address</button>
+          </article>
+          <article class="card coin coin-pep reveal" data-coin="PEP" id="donate-pep">
+            <header class="coin-head"><span class="coin-logo" aria-hidden="true"><img src="assets/img/coins/pep.svg" alt="" width="56" height="56" decoding="async"></span><div><h3>Pepecoin (PEP)</h3><p class="coin-tick">PEP</p></div></header>
+            <div class="qr" role="img" aria-label="Pepecoin address QR code"></div>
+            <code class="coin-addr">Pby4S9GQQhgEhJ5Sm7A6xLnTVcGuVnvfqQ</code>
+            <p class="coin-note">The Dogecoin-fork Pepecoin, not the Ethereum PEPE token.</p>
+            <button class="btn btn-ghost btn-copy" type="button">Copy address</button>
+          </article>
+        </div>
+        <p class="donate-note reveal"><strong>Double-check the address in your wallet before sending.</strong> Crypto transactions can't be reversed.</p>
+        <noscript><p class="donate-note">QR codes and copy buttons need JavaScript. You can still select and copy the addresses above.</p></noscript>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section section-alt" id="faq" aria-labelledby="faq-title">
+      <div class="container container-narrow">
+        <header class="section-head reveal">
+          <p class="eyebrow">FAQ</p>
+          <h2 id="faq-title">Questions, answered.</h2>
+        </header>
+        <div class="faq">
+          <details class="card reveal" open>
+            <summary>Is WavWiz really free?</summary>
+            <p>Yes. WavWiz is free and open source under the MIT license—nothing to buy and no subscription. The source is on <a href="https://github.com/vdubbin74/WavWiz" target="_blank" rel="noopener">GitHub</a>.</p>
+          </details>
+          <details class="card reveal">
+            <summary>What do I need to run it?</summary>
+            <p>A Windows PC that stays on for the Server (ideally the one with your music), plus WavWiz Player on any Windows PCs with speakers. Phones and TVs just need a browser on the same home network. For discovery and AirPlay, set that Wi-Fi or Ethernet to a <strong>Private</strong> network profile in Windows.</p>
+          </details>
+          <details class="card reveal">
+            <summary>Do phones need an app?</summary>
+            <p>No. Open the WavWiz address in the browser and you can listen, control playback and add to the shared queue. Guests can join in seconds.</p>
+          </details>
+          <details class="card reveal">
+            <summary>Can I play to WavWiz from my iPhone, iPad or Mac?</summary>
+            <p>Yes. AirPlay is built in. Your server shows up as <em>WavWiz &ndash; Whole House</em>. Pick it from Control Center or any app—Spotify, Apple Music, YouTube, podcasts—and the audio plays in every room in sync, with title and artwork on Now Playing. Stay on the same home Wi-Fi (not a guest network). If the speaker doesn't appear, pause any VPN or LAN-blocking mode and confirm Windows is on a Private network.</p>
+          </details>
+          <details class="card reveal">
+            <summary>Does WavWiz work with Spotify?</summary>
+            <p>Two ways. From an iPhone, iPad or Mac you can AirPlay from the Spotify app. Or turn on optional Spotify Connect in Admin settings—WavWiz shows up in Spotify's device list and streams to every room. Spotify Connect needs your own Spotify Premium account and is off by default. WavWiz is not affiliated with Spotify.</p>
+          </details>
+          <details class="card reveal">
+            <summary>Why does Windows show a SmartScreen warning?</summary>
+            <p>The public beta installer is not code-signed yet, so SmartScreen may say the app is unrecognized. If you downloaded it from the official <a href="https://github.com/vdubbin74/WavWiz/releases/latest" target="_blank" rel="noopener">GitHub Releases</a> page, click <em>More info</em>, then <em>Run anyway</em>. Only install WavWiz from that repository.</p>
+          </details>
+          <details class="card reveal">
+            <summary>Can I listen when I'm away from home?</summary>
+            <p>Yes, privately. Pair WavWiz with your own Tailscale network and reach your library from your devices without exposing the PC to the open internet.</p>
+          </details>
+          <details class="card reveal">
+            <summary>It's a public beta. What should I expect?</summary>
+            <p>You're on version <strong>0.1.2</strong>. Features ship and get polished quickly. If something feels off, open a note on <a href="https://github.com/vdubbin74/WavWiz/issues" target="_blank" rel="noopener">GitHub Issues</a>—bug reports and ideas are welcome.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FINAL CTA ============ -->
+    <section class="cta-band" aria-label="Download WavWiz">
+      <div class="container cta-inner reveal">
+        <h2>Ready for the Ultimate Music App across the house?</h2>
+        <div class="hero-ctas">
+          <a class="btn btn-primary btn-lg" href="https://github.com/vdubbin74/WavWiz/releases/latest" target="_blank" rel="noopener">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M2 4.3 10 3.2v7.7H2V4.3Zm9-1.2L22 1.5v9.4H11V3.1ZM2 12h8v7.8l-8-1.1V12Zm9 0h11v10.5l-11-1.6V12Z"/></svg>
+            Download for Windows
+          </a>
+          <a class="btn btn-ghost btn-lg" href="https://github.com/vdubbin74/WavWiz" target="_blank" rel="noopener">View on GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a class="wordmark" href="#top" aria-label="WavWiz home"><span class="wm-wav">Wav</span><span class="wm-wiz">Wiz</span></a>
+        <p>The Ultimate Music App—free, open-source whole-home synced music for Windows.</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="https://github.com/vdubbin74/WavWiz" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://github.com/vdubbin74/WavWiz/blob/main/LICENSE" target="_blank" rel="noopener">MIT License</a>
+        <a href="#privacy">Privacy</a>
+      </nav>
+    </div>
+    <div class="container footer-privacy" id="privacy">
+      <p><strong>Privacy:</strong> this site has no analytics, no trackers, no cookies and no third-party requests. Fonts and scripts are served from this site. Hosted on GitHub Pages, which may keep standard server logs.</p>
+      <p class="trademark">AirPlay is a trademark of Apple Inc. Spotify is a trademark of Spotify AB. WavWiz is not affiliated with either.</p>
+      <p class="copyright">© 2026 vdubbin74. Released under the MIT License. Security reports: <a href="mailto:vdubbin74@proton.me">vdubbin74@proton.me</a>.</p>
+    </div>
+  </footer>
+
+  <script src="assets/vendor/qrcode.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
