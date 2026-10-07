@@ -6,11 +6,21 @@ Every asset path is relative, so it works from GitHub Pages, a custom domain or 
 ```
 index.html          page markup
 styles.css          all styles (brand colors, layout, animations, prefers-reduced-motion)
-script.js           warp starfield, EQ strip, reveals, parallax, visualizer demo, donate QR/copy
+script.js           warp starfield, EQ strip, reveals, parallax, visualizer video showcase, themes gallery, donate QR/copy
 CNAME               contains: wavwiz.com
 .nojekyll           tells GitHub Pages to serve files as-is (no Jekyll processing)
 favicon.ico
-assets/img/         emblem, background watermark, favicons, OG image, visualizer screenshots (+ -thumb versions; not currently shown on the page)
+assets/img/         background watermark, favicons, og-image.png (1200x630 social preview, made from the main window shot),
+                    real app screenshots (WebP):
+                    wavwiz-app-window(-960).webp     full main window, devices connected (menu bar and status bar cropped off)
+                    wavwiz-delay-sliders.webp        Living Room device dialog with its delay slider (per-device delay section)
+                    wavwiz-step-installer.webp       Setup wizard welcome page (How it works, step 1)
+                    wavwiz-step-library.webp         Settings > Music folders + NAS logins (How it works, step 2)
+                    wavwiz-step-phone-iphone.webp    iPhone browser Now Playing, demo track (How it works, step 3)
+                    wavwiz-viz-*.webp                visualizer stills (1280x720), used as video posters
+                    wavwiz-theme-*.webp              the five themes (1280x720) for the themes gallery in Features
+assets/video/       real 8-second visualizer loops (MP4, H.264, muted, no audio track), one per visualizer:
+                    particle-burst, waveform-river, speaker-cone, ring, neon-tunnel, terrain, vu-meters, graphic-eq
 assets/img/coins/   coin logos (btc.svg, ltc.svg, xmr.svg, pep.svg) for the donate section, see Credits
 assets/fonts/       self-hosted Space Grotesk, Inter, JetBrains Mono (SIL Open Font License)
 assets/vendor/qrcode.js   qrcode-generator by Kazuhiko Arase (MIT), generates QR codes in the browser
@@ -36,7 +46,9 @@ assets/vendor/qrcode.js   qrcode-generator by Kazuhiko Arase (MIT), generates QR
    `<code class="coin-addr">` in `index.html` (the no-JavaScript fallback), then scan each QR code with your own wallet
    to confirm it decodes to the right address.
    To remove a coin, delete its entry from the config (the card hides itself) or delete its `<article>` in `index.html`.
-2. **Copyright line.** In the footer of `index.html`, replace `© 2026 WavWiz contributors` once the owner name is decided.
+2. **No version numbers on the page.** Download and "Release notes" links point at `.../releases/latest`, so the
+   site never needs editing for a new release. Screenshots are cropped so the app's version badge doesn't show; keep
+   it that way when swapping in new captures.
 3. **LICENSE.** The footer links to `https://github.com/vdubbin74/WavWiz/blob/main/LICENSE`. Make sure the repo has
    a `LICENSE` file on `main` (or update the link).
 4. **Repo visibility.** The Download/GitHub buttons point at `https://github.com/vdubbin74/WavWiz` and
@@ -104,6 +116,26 @@ cd wavwiz-site
 python -m http.server 8000
 # open http://localhost:8000
 ```
+
+## Media
+
+All screenshots and videos are real captures of the app, using demo tracks by "Demo Artist" (no real artists or
+albums appear anywhere). The main shot, visualizers and step images use the Midnight Neon theme; the themes gallery
+shows all five. To swap one, keep the same file name and size, or update the `width`/`height` attributes in
+`index.html`. Convert stills to WebP with Pillow (quality ~82, about 1280 px wide for full-width shots) and keep the
+visualizer clips short, muted, H.264 MP4 (crf ~26, `-an`, `+faststart`).
+
+- **Visualizer showcase:** eight tabs, one per visualizer. Every `<video>` has `preload="none"` and its poster in
+  `data-poster`; when the section comes near the screen, only the selected clip loads and plays, and posters are
+  attached just for the current clip and the next one in the auto-cycle. Auto-cycle walks through all eight, one
+  full loop each. To add or remove a visualizer, add or remove both its `<video>` and its tab button (matching
+  `data-viz`); the script reads the order and names from the tabs.
+- **Themes gallery:** each swatch button carries `data-src` and `data-alt`; clicking it swaps the one large preview
+  image (lazy-loaded). Swatch colors are set inline with `--sw-bg`/`--sw-ac`.
+- **Inside the app legend:** on desktop the five labels follow the screenshot's real column widths (Library /
+  Visualizer + Now Playing / Devices, with Playlist across the bottom). If a new main shot changes the panel layout,
+  update `grid-template-columns` on `.app-legend` in `styles.css`.
+- **No version numbers:** captures must not show the app's version text. "BETA" badges are fine.
 
 ## Privacy
 

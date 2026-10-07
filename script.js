@@ -242,244 +242,132 @@ const WAVWIZ_CONFIG = {
     apply();
   })();
 
-  /* ---------------- Visualizer showcase ---------------- */
-  (function vizDemo() {
-    const canvas = document.getElementById("viz");
-    if (!canvas || !canvas.getContext) return;
-    const ctx = canvas.getContext("2d");
-    const nameEl = document.getElementById("viz-name");
+  /* ---------------- Visualizer showcase: real app captures (MP4 loops) ---------------- */
+  // Eight muted 8 s loops recorded from the app (preload="none"). Nothing downloads until the
+  // section is near the viewport; then only the selected clip loads and plays (and only while it's
+  // on screen). Posters are attached just for the current clip and the next one in the cycle.
+  (function vizShowcase() {
+    const stage = document.getElementById("viz-stage");
+    if (!stage) return;
+    const vids = Array.from(stage.querySelectorAll(".viz-video"));
     const tabs = Array.from(document.querySelectorAll(".viz-tab"));
+    const nameEl = document.getElementById("viz-name");
     const autoBox = document.getElementById("viz-auto");
-    const order = ["particles", "ring", "river"];
-    const names = { particles: "Particle burst", ring: "Ring", river: "Waveform river" };
-    let style = "particles", w = 0, h = 0, dpr = 1, running = false, visible = false, raf = 0, last = 0, cycleT = 0;
-    const parts = [];
+    const order = tabs.map((t) => t.dataset.viz);
+    const names = {};
+    tabs.forEach((t) => { names[t.dataset.viz] = t.textContent.replace(/^\s*\d+\s*/, "").trim(); });
+    let cur = "particles", visible = false, primed = false, loops = 0, need = 1;
+    const vidFor = (k) => vids.find((v) => v.dataset.viz === k);
 
-    function resize() {
-      const r = canvas.getBoundingClientRect();
-      dpr = Math.min(window.devicePixelRatio || 1, 2);
-      w = Math.max(1, Math.round(r.width)); h = Math.max(1, Math.round(r.height));
-      canvas.width = Math.round(w * dpr); canvas.height = Math.round(h * dpr);
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      ctx.fillStyle = "#070b17"; ctx.fillRect(0, 0, w, h);
-      if (!running) renderStatic();
+    const next = (k) => order[(order.indexOf(k) + 1) % order.length];
+    function poster(k) {
+      const v = vidFor(k);
+      if (v && v.dataset.poster && !v.getAttribute("poster")) v.setAttribute("poster", v.dataset.poster);
     }
-
-    function setStyle(s, fromUser) {
-      style = s; cycleT = 0; parts.length = 0;
-      tabs.forEach((t) => { const on = t.dataset.viz === s; t.classList.toggle("is-active", on); t.setAttribute("aria-selected", String(on)); });
-      nameEl.textContent = names[s];
-      ctx.fillStyle = "#070b17"; ctx.fillRect(0, 0, w, h);
-      if (fromUser && autoBox) cycleT = -6; // give a manual pick a little extra time
-      if (!running) renderStatic();
+    function prime() {
+      if (primed) return; primed = true;
+      poster(cur); poster(next(cur));
     }
-    tabs.forEach((t) => t.addEventListener("click", () => setStyle(t.dataset.viz, true)));
-
-    function drawParticles(a, dt, t) {
-      ctx.fillStyle = "rgba(7,11,23,0.22)"; ctx.fillRect(0, 0, w, h);
-      const cx = w / 2, cy = h / 2, m = Math.min(w, h);
-      if (a.onBeat) {
-        const n = 70 + Math.round(a.kick * 60);
-        for (let i = 0; i < n; i++) {
-          const ang = Math.random() * Math.PI * 2, sp = (0.25 + Math.random() * 0.9) * m * (0.6 + a.kick);
-          parts.push({ x: cx, y: cy, vx: Math.cos(ang) * sp, vy: Math.sin(ang) * sp, life: 1, c: Math.random() < 0.55 ? COLORS.orange : COLORS.teal, s: 1 + Math.random() * 2.4 });
+    function sync() {
+      const v = vidFor(cur);
+      vids.forEach((o) => { if (o !== v && !o.paused) o.pause(); });
+      if (!v) return;
+      if (!visible || reduced || document.hidden) { if (!v.paused) v.pause(); return; }
+      if (v.preload !== "auto") v.preload = "auto";
+      const p = v.play();
+      if (p && p.catch) p.catch(() => {});
+    }
+    function setViz(k, fromUser) {
+      if (!names[k]) return;
+      cur = k; loops = 0; need = fromUser ? 2 : 1; // a manual pick stays up a little longer
+      if (primed) { poster(k); poster(next(k)); }
+      tabs.forEach((t) => { const on = t.dataset.viz === k; t.classList.toggle("is-active", on); t.setAttribute("aria-selected", String(on)); t.tabIndex = on ? 0 : -1; });
+      vids.forEach((v) => {
+        const on = v.dataset.viz === k;
+        v.classList.toggle("is-active", on);
+        v.setAttribute("aria-hidden", String(!on));
+        if (on && v.readyState > 0) { try { v.currentTime = 0; } catch (e) { /* not seekable yet */ } }
+        v._last = 0;
+      });
+      nameEl.textContent = names[k];
+      sync();
+    }
+    // Auto-cycle after each full loop of the current clip (counted from real playback, so a slow
+    // connection never skips a clip before it has been seen).
+    vids.forEach((v) => {
+      v._last = 0;
+      v.addEventListener("timeupdate", () => {
+        if (v.dataset.viz !== cur) return;
+        const t = v.currentTime;
+        if (t + 1 < v._last) {
+          loops++;
+          if (autoBox && autoBox.checked && !reduced && loops >= need) setViz(next(cur), false);
         }
-      }
-      // gentle stream between beats
-      for (let i = 0; i < 3; i++) { const ang = Math.random() * 6.283, sp = (0.1 + Math.random() * 0.3) * m; parts.push({ x: cx, y: cy, vx: Math.cos(ang) * sp, vy: Math.sin(ang) * sp, life: 0.8, c: COLORS.teal, s: 1 }); }
-      ctx.globalCompositeOperation = "lighter";
-      for (let i = parts.length - 1; i >= 0; i--) {
-        const p = parts[i];
-        p.vx *= 0.985; p.vy *= 0.985; p.x += p.vx * dt; p.y += p.vy * dt; p.life -= dt * 0.75;
-        if (p.life <= 0 || p.x < -20 || p.x > w + 20 || p.y < -20 || p.y > h + 20) { parts.splice(i, 1); continue; }
-        ctx.fillStyle = rgba(p.c, p.life);
-        ctx.beginPath(); ctx.arc(p.x, p.y, p.s * (0.6 + p.life), 0, 6.283); ctx.fill();
-      }
-      if (parts.length > 1600) parts.splice(0, parts.length - 1600);
-      const r = m * (0.06 + a.kick * 0.05 + a.level * 0.03);
-      const g = ctx.createRadialGradient(cx, cy, 0, cx, cy, r * 3.2);
-      g.addColorStop(0, "rgba(255,255,255,0.9)"); g.addColorStop(0.25, rgba(COLORS.orange, 0.85)); g.addColorStop(0.6, rgba(COLORS.teal, 0.25)); g.addColorStop(1, "rgba(0,0,0,0)");
-      ctx.fillStyle = g; ctx.beginPath(); ctx.arc(cx, cy, r * 3.2, 0, 6.283); ctx.fill();
-      ctx.globalCompositeOperation = "source-over";
-    }
-
-    function drawRing(a, dt, t) {
-      ctx.fillStyle = "rgba(7,11,23,0.35)"; ctx.fillRect(0, 0, w, h);
-      const cx = w / 2, cy = h / 2, m = Math.min(w, h);
-      const N = FakeAudio.N, total = N * 2;
-      const r0 = m * (0.2 + a.kick * 0.025);
-      const rot = t * 0.25;
-      ctx.globalCompositeOperation = "lighter";
-      ctx.lineCap = "round";
-      ctx.lineWidth = Math.max(2, (2 * Math.PI * r0) / total * 0.55);
-      for (let i = 0; i < total; i++) {
-        const bi = i < N ? i : total - 1 - i;
-        const v = a.bins[bi];
-        const ang = rot + (i / total) * Math.PI * 2;
-        const len = m * 0.04 + v * m * 0.24;
-        const c = lerpColor(COLORS.orange, COLORS.teal, bi / (N - 1));
-        ctx.strokeStyle = rgba(c, 0.9);
-        const cos = Math.cos(ang), sin = Math.sin(ang);
-        ctx.beginPath(); ctx.moveTo(cx + cos * r0, cy + sin * r0); ctx.lineTo(cx + cos * (r0 + len), cy + sin * (r0 + len)); ctx.stroke();
-      }
-      ctx.strokeStyle = rgba(COLORS.teal, 0.5 + a.kick * 0.5); ctx.lineWidth = 2;
-      ctx.beginPath(); ctx.arc(cx, cy, r0 * 0.88, 0, 6.283); ctx.stroke();
-      const g = ctx.createRadialGradient(cx, cy, 0, cx, cy, r0 * 0.85);
-      g.addColorStop(0, rgba(COLORS.orange, 0.25 + a.kick * 0.4)); g.addColorStop(1, "rgba(0,0,0,0)");
-      ctx.fillStyle = g; ctx.beginPath(); ctx.arc(cx, cy, r0 * 0.85, 0, 6.283); ctx.fill();
-      ctx.globalCompositeOperation = "source-over";
-    }
-
-    function drawRiver(a, dt, t) {
-      ctx.fillStyle = "rgba(7,11,23,0.5)"; ctx.fillRect(0, 0, w, h);
-      const layers = 6, step = Math.max(4, w / 120);
-      ctx.globalCompositeOperation = "lighter";
-      for (let L = 0; L < layers; L++) {
-        const band = a.bins[Math.floor((L / layers) * 40)];
-        const amp = h * (0.06 + band * 0.22);
-        const base = h * (0.32 + L * 0.075);
-        const c = lerpColor(COLORS.orange, COLORS.teal, L / (layers - 1));
-        const freq = 0.006 + L * 0.0016, spd = 1.2 + L * 0.35;
-        ctx.beginPath();
-        for (let x = 0; x <= w + step; x += step) {
-          const y = base + Math.sin(x * freq + t * spd + L) * amp * 0.6 + Math.sin(x * freq * 2.3 - t * spd * 1.4) * amp * 0.4;
-          x === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
-        }
-        ctx.strokeStyle = rgba(c, 0.95); ctx.lineWidth = 2.2; ctx.shadowColor = rgba(c, 0.9); ctx.shadowBlur = 14;
-        ctx.stroke();
-        ctx.shadowBlur = 0;
-        ctx.lineTo(w, h); ctx.lineTo(0, h); ctx.closePath();
-        const g = ctx.createLinearGradient(0, base - amp, 0, h);
-        g.addColorStop(0, rgba(c, 0.10)); g.addColorStop(1, "rgba(0,0,0,0)");
-        ctx.fillStyle = g; ctx.fill();
-      }
-      ctx.globalCompositeOperation = "source-over";
-    }
-    const drawers = { particles: drawParticles, ring: drawRing, river: drawRiver };
-
-    function renderStatic() {
-      // Reduced motion / paused: render a representative still frame.
-      const t = 12.0;
-      const a = FakeAudio.update(t);
-      if (style === "particles") { parts.length = 0; a.onBeat = true; for (let i = 0; i < 40; i++) drawParticles(a, 0.016, t + i * 0.016), (a.onBeat = false); }
-      else for (let i = 0; i < 8; i++) drawers[style](a, 0.016, t);
-    }
-
-    function frame(now) {
-      if (!running) return;
-      const t = now / 1000, dt = Math.min(0.05, last ? t - last : 0.016); last = t;
-      const a = FakeAudio.update(t);
-      drawers[style](a, dt, t);
-      if (autoBox && autoBox.checked) { cycleT += dt; if (cycleT > 7) setStyle(order[(order.indexOf(style) + 1) % order.length], false); }
-      raf = requestAnimationFrame(frame);
-    }
-    function start() { if (running || reduced || !visible || document.hidden) return; running = true; last = 0; raf = requestAnimationFrame(frame); }
-    function stop() { running = false; cancelAnimationFrame(raf); }
-
-    if (window.ResizeObserver) new ResizeObserver(resize).observe(canvas); else window.addEventListener("resize", resize);
-    resize();
-    if ("IntersectionObserver" in window) new IntersectionObserver((en) => { visible = en[0].isIntersecting; visible ? start() : stop(); }, { threshold: 0.05 }).observe(canvas);
-    else { visible = true; start(); }
-    document.addEventListener("visibilitychange", () => (document.hidden ? stop() : start()));
-    window.__wavwizViz = { isRunning: () => running };
-
-    mq.addEventListener && mq.addEventListener("change", (e) => {
-      reduced = e.matches;
-      if (reduced) { stop(); renderStatic(); Warp && (Warp.stop(), Warp.redraw()); document.querySelectorAll(".reveal").forEach((el) => el.classList.add("in")); }
-      else { start(); Warp && Warp.start(); }
+        v._last = t;
+      });
     });
+    tabs.forEach((t) => t.addEventListener("click", () => setViz(t.dataset.viz, true)));
+    tabs.forEach((t, i) => t.addEventListener("keydown", (e) => {
+      if (e.key !== "ArrowDown" && e.key !== "ArrowUp" && e.key !== "ArrowRight" && e.key !== "ArrowLeft") return;
+      e.preventDefault();
+      const n = tabs[(i + (e.key === "ArrowDown" || e.key === "ArrowRight" ? 1 : tabs.length - 1)) % tabs.length];
+      n.focus(); setViz(n.dataset.viz, true);
+    }));
+    if (autoBox) autoBox.addEventListener("change", () => { loops = 0; need = 1; });
+
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver((en) => { if (en[0].isIntersecting) prime(); }, { rootMargin: "600px 0px" }).observe(stage);
+      new IntersectionObserver((en) => { visible = en[0].isIntersecting; sync(); }, { threshold: 0.25 }).observe(stage);
+    } else { prime(); visible = true; sync(); }
+    document.addEventListener("visibilitychange", sync);
+    window.__wavwizViz = {
+      current: () => cur,
+      set: (k) => setViz(k, true),
+      isPlaying: () => { const v = vidFor(cur); return !!v && !v.paused && v.readyState > 2; },
+      video: () => vidFor(cur),
+      order: () => order.slice()
+    };
+    window.__wavwizVizSync = sync;
   })();
 
-  /* ---------------- Sync demo: per-device delay sliders + aligning waveforms ---------------- */
-  (function syncDemo() {
-    const panel = document.getElementById("sync-demo");
-    if (!panel) return;
-    const rows = Array.from(panel.querySelectorAll(".sync-row")).map((el, i) => ({
-      el, i,
-      target: +el.dataset.target || 0,
-      tone: el.dataset.tone === "o" ? COLORS.orange : COLORS.teal,
-      canvas: el.querySelector(".sync-wave"),
-      fill: el.querySelector(".sync-fill"),
-      thumb: el.querySelector(".sync-thumb"),
-      val: el.querySelector(".sync-val"),
-      value: 0, shown: -1, w: 0, h: 0
-    }));
-    const PX_PER_MS = 0.3, BEAT = 480, SPEED = 0.22, CYCLE = 11;
-    const hash = (n) => { const x = Math.sin(n * 127.1) * 43758.5453; return x - Math.floor(x); };
-    const noise = (x) => { const i = Math.floor(x), f = x - i, u = f * f * (3 - 2 * f); return hash(i) * (1 - u) + hash(i + 1) * u; };
-    // Deterministic "music" envelope: a kick every beat, an off-beat hat, and some texture.
-    function amp(s) {
-      const b = ((s % BEAT) + BEAT) % BEAT, o = (((s + BEAT / 2) % BEAT) + BEAT) % BEAT;
-      const kick = Math.exp(-b / 60), hat = Math.exp(-o / 35) * 0.35;
-      return clamp(0.12 + kick * 0.8 + hat + noise(s / 26) * 0.28 + noise(s / 7) * 0.08, 0.06, 1);
+  /* ---------------- Reduced-motion changes at runtime ---------------- */
+  mq.addEventListener && mq.addEventListener("change", (e) => {
+    reduced = e.matches;
+    if (reduced) { Warp && (Warp.stop(), Warp.redraw()); document.querySelectorAll(".reveal").forEach((el) => el.classList.add("in")); }
+    else { Warp && Warp.start(); }
+    window.__wavwizVizSync && window.__wavwizVizSync();
+  });
+
+  /* ---------------- Themes gallery: swatches switch one large preview ---------------- */
+  (function themes() {
+    const img = document.getElementById("theme-img");
+    const label = document.getElementById("theme-name");
+    const btns = Array.from(document.querySelectorAll(".theme-swatch"));
+    if (!img || !btns.length) return;
+    const warm = new Set();
+    function preload(b) {
+      const src = b.dataset.src;
+      if (!src || warm.has(src)) return;
+      warm.add(src); const i = new Image(); i.decoding = "async"; i.src = src;
     }
-    function size(r) {
-      const dpr = Math.min(2, window.devicePixelRatio || 1), cw = r.canvas.clientWidth, ch = r.canvas.clientHeight;
-      if (!cw) return;
-      r.canvas.width = Math.round(cw * dpr); r.canvas.height = Math.round(ch * dpr);
-      r.w = cw; r.h = ch; r.ctx = r.canvas.getContext("2d"); r.ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    }
-    function drawRow(r, playMs) {
-      if (!r.ctx) return;
-      const x = r.ctx, w = r.w, h = r.h, cx = w / 2, mid = h / 2, err = r.target - r.value;
-      x.clearRect(0, 0, w, h);
-      // playhead
-      x.fillStyle = "rgba(233,237,247,.16)"; x.fillRect(Math.round(cx), 4, 1, h - 8);
-      for (let px = 1; px < w; px += 3) {
-        const s = playMs + (px - cx) / PX_PER_MS + err;
-        const a = amp(s), bh = Math.max(1, a * (h - 10));
-        const edge = Math.min(1, px / 26, (w - px) / 26);
-        const near = Math.abs(px - cx) < 3 ? 0.25 : 0;
-        x.fillStyle = rgba(r.tone, (0.28 + a * 0.62 + near) * edge);
-        x.fillRect(px, mid - bh / 2, 2, bh);
+    function pick(b) {
+      btns.forEach((o) => { const on = o === b; o.classList.toggle("is-active", on); o.setAttribute("aria-pressed", String(on)); });
+      if (img.getAttribute("src") !== b.dataset.src) {
+        img.classList.add("is-swapping");
+        const done = () => img.classList.remove("is-swapping");
+        img.addEventListener("load", done, { once: true });
+        img.addEventListener("error", done, { once: true });
+        img.src = b.dataset.src;
+        img.alt = b.dataset.alt || "";
       }
+      if (label) label.textContent = b.textContent.trim();
     }
-    function setValue(r, v) {
-      r.value = v;
-      const pct = clamp(v / 1000, 0, 1) * 100;
-      r.fill.style.width = pct + "%"; r.thumb.style.left = pct + "%";
-      const n = Math.round(v);
-      if (n !== r.shown) { r.shown = n; r.val.textContent = n; }
-    }
-    const easeOutBack = (p) => { const c1 = 1.15, c3 = c1 + 1; return 1 + c3 * Math.pow(p - 1, 3) + c1 * Math.pow(p - 1, 2); };
-    const easeInOut = (p) => (p < 0.5 ? 4 * p * p * p : 1 - Math.pow(-2 * p + 2, 3) / 2);
-    function valueAt(r, t) {
-      const start = 1.4 + r.i * 0.38, dur = 1.9, back = 8.6 + r.i * 0.06, bdur = 1.4;
-      if (t < start) return 0;
-      if (t < start + dur) return r.target * easeOutBack((t - start) / dur);
-      if (t < back) return r.target;
-      if (t < back + bdur) return r.target * (1 - easeInOut((t - back) / bdur));
-      return 0;
-    }
-
-    let running = false, visible = false, raf = 0, last = 0, playMs = 0, cycleT = 0;
-    function render() {
-      rows.forEach((r) => drawRow(r, playMs));
-      panel.classList.toggle("is-synced", rows.every((r) => Math.abs(r.target - r.value) < 1.5));
-    }
-    function renderStatic() { rows.forEach((r) => setValue(r, r.target)); playMs = BEAT * 0.15; render(); }
-    function frame(now) {
-      if (!running) return;
-      const t = now / 1000, dt = Math.min(0.05, last ? t - last : 0.016); last = t;
-      playMs += dt * 1000 * SPEED;
-      cycleT = (cycleT + dt) % CYCLE;
-      rows.forEach((r) => setValue(r, valueAt(r, cycleT)));
-      render();
-      raf = requestAnimationFrame(frame);
-    }
-    function start() { if (running || reduced || !visible || document.hidden) return; running = true; last = 0; raf = requestAnimationFrame(frame); }
-    function stop() { running = false; cancelAnimationFrame(raf); }
-    function resizeAll() { rows.forEach(size); if (!running) render(); }
-
-    if (window.ResizeObserver) { const ro = new ResizeObserver(resizeAll); rows.forEach((r) => ro.observe(r.canvas)); }
-    else window.addEventListener("resize", resizeAll);
-    rows.forEach(size);
-    if (reduced) renderStatic(); else { rows.forEach((r) => setValue(r, 0)); render(); }
-    if ("IntersectionObserver" in window) new IntersectionObserver((en) => { visible = en[0].isIntersecting; visible ? start() : stop(); }, { threshold: 0.05 }).observe(panel);
-    else { visible = true; start(); }
-    document.addEventListener("visibilitychange", () => (document.hidden ? stop() : start()));
-    mq.addEventListener && mq.addEventListener("change", (e) => { if (e.matches) { stop(); renderStatic(); } else start(); });
-    window.__wavwizSync = { isRunning: () => running, setTime: (t) => { cycleT = t; } };
+    btns.forEach((b) => {
+      b.addEventListener("click", () => pick(b));
+      b.addEventListener("pointerenter", () => preload(b));
+      b.addEventListener("focus", () => preload(b));
+    });
+    window.__wavwizThemes = { pick: (k) => { const b = btns.find((o) => o.dataset.theme === k); if (b) pick(b); }, current: () => img.getAttribute("src") };
   })();
 
   /* ---------------- Donate: QR codes + copy buttons ---------------- */

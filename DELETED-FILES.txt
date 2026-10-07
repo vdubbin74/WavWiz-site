@@ -1,0 +1,21 @@
+WavWiz site update (real app captures): delete these files from your site repo.
+Paths are relative to the site root (the folder that has index.html).
+
+Delete now (no longer used by the site):
+assets/img/wavwiz-step-phone.webp
+
+From the previous site refresh, delete these too if they're still in your repo:
+assets/img/og-image.jpg
+assets/img/wavwiz-emblem.png
+assets/img/wavwiz-np-4-waveform-river-thumb.jpg
+assets/img/wavwiz-np-4-waveform-river.jpg
+assets/img/wavwiz-np-5-particle-burst-thumb.jpg
+assets/img/wavwiz-np-5-particle-burst.jpg
+assets/img/wavwiz-viz-lightning-thumb.jpg
+assets/img/wavwiz-viz-lightning.jpg
+assets/img/wavwiz-viz-neon-tunnel-thumb.jpg
+assets/img/wavwiz-viz-neon-tunnel.jpg
+assets/img/wavwiz-viz-terrain-thumb.jpg
+assets/img/wavwiz-viz-terrain.jpg
+assets/img/wavwiz-viz-vu-meters-thumb.jpg
+assets/img/wavwiz-viz-vu-meters.jpg
