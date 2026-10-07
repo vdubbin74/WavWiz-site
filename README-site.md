@@ -10,6 +10,9 @@ script.js           warp starfield, EQ strip, reveals, parallax, visualizer vide
 CNAME               contains: wavwiz.com
 .nojekyll           tells GitHub Pages to serve files as-is (no Jekyll processing)
 favicon.ico
+404.html            "page not found" page (GitHub Pages serves it for any missing URL; uses root-relative /paths, noindex)
+robots.txt          allows all crawlers, points at the sitemap
+sitemap.xml         the home page URL with its last-modified date
 assets/img/         background watermark, favicons, og-image.png (1200x630 social preview, made from the main window shot),
                     real app screenshots (WebP):
                     wavwiz-app-window(-960).webp     full main window, devices connected (menu bar and status bar cropped off)
@@ -108,6 +111,51 @@ dig +short wavwiz.com A        # should list the four 185.199.x.153 addresses
 dig +short www.wavwiz.com      # should show vdubbin74.github.io. and then the GitHub IPs
 ```
 With `wavwiz.com` set as the custom domain, GitHub automatically redirects `www.wavwiz.com` to `wavwiz.com`.
+
+## SEO
+
+What's on the page (all in `index.html`):
+
+- **Title** (about 60 characters): `WavWiz: Free Whole-Home Audio & Multi-Room Music for Windows`.
+- **Meta description** (about 150 characters): "Whole-home audio wizardry: free multi-room music from your Windows PC. Your
+  library, internet radio and AirPlay play in sync on every PC, TV and phone."
+- `rel="canonical"` (https://wavwiz.com/), `robots` (index, follow), `theme-color`, `lang="en-US"`, Open Graph and
+  Twitter card tags with the absolute `og-image.png` URL (1200x630) and its alt text.
+- **Structured data** (one JSON-LD `<script>` in `<head>`, `@graph` form): `Organization`, `WebSite`,
+  `SoftwareApplication` (free offer, Windows 10/11, WebView2, MIT license, download link to `releases/latest`, no
+  version number) and `FAQPage`. There are deliberately **no ratings or reviews** in the markup; never add made-up ones.
+- **FAQ section** (`#faq`) with 8 questions. The `FAQPage` JSON-LD must match the visible questions and answers
+  word for word. If you edit a question or answer, edit both places (the JSON-LD answer is the plain text of the
+  visible answer, without links).
+- One `<h1>` (the hero "Whole-home audio wizardry."), `<h2>` per section, `<h3>` for cards. Every content image
+  has descriptive alt text; the coin logos use empty alt because the coin name sits right next to them.
+- The hero has no image (it's text over an animated canvas), so the first screenshot stays lazy-loaded. The two
+  main fonts are preloaded.
+- `robots.txt` + `sitemap.xml`. When the page changes a lot, update `<lastmod>` in `sitemap.xml`.
+
+Check the markup any time with Google's Rich Results Test (https://search.google.com/test/rich-results) and the
+Schema Markup Validator (https://validator.schema.org/). Note: Google currently shows FAQ rich results only for a
+small set of government and health sites, and software rich results only for apps with real ratings, so don't expect
+those snippets in Google. The markup still helps Bing, other search engines and AI assistants understand the page.
+
+### Your next steps (only you can do these)
+
+1. **Google Search Console** (https://search.google.com/search-console): **Add property**. Choose **Domain** and
+   enter `wavwiz.com` (covers `www` and `https`). Google gives you a **TXT record**; add it in Porkbun under
+   **DNS** (Type `TXT`, Host blank, Answer = the `google-site-verification=...` value), wait a few minutes, then
+   click **Verify**. Alternative: choose **URL prefix** (`https://wavwiz.com/`) and the **HTML file** method:
+   download the `googleXXXX.html` file Google gives you, put it in the site root next to `index.html`, push, and
+   click **Verify**. Leave that file (or the TXT record) in place for good, or verification lapses.
+2. In Search Console, open **Sitemaps**, enter `sitemap.xml` and click **Submit**. Then use **URL inspection** on
+   `https://wavwiz.com/` and click **Request indexing**.
+3. **Bing Webmaster Tools** (https://www.bing.com/webmasters): sign in and choose **Import from Google Search
+   Console** (fastest, it copies the verified site and sitemap), or add `https://wavwiz.com/` and verify with the
+   `BingSiteAuth.xml` file, a `<meta name="msvalidate.01">` tag or a CNAME record in Porkbun. Submit
+   `https://wavwiz.com/sitemap.xml` under **Sitemaps**. Bing also feeds DuckDuckGo and Yahoo.
+4. Make sure the repo's **About** box on GitHub has the website `https://wavwiz.com`, a one-line description, and
+   topics such as `multi-room-audio`, `whole-home-audio`, `airplay`, `windows`, `music-player`, `music-server`.
+5. Links from other sites matter more than anything on the page: forum posts, Reddit threads, "alternative to"
+   listings (AlternativeTo, Softpedia, MajorGeeks), and a short post in GitHub Discussions all help.
 
 ## Preview locally
 

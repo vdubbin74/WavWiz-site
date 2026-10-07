@@ -3,16 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>WavWiz: Whole-home audio wizardry (free, public beta)</title>
-  <meta name="description" content="Whole-home audio wizardry. WavWiz is the Ultimate Music App for Windows whole-home sound: your library, internet radio, AirPlay and optional Spotify Connect play in sync in every room. Phones join from the browser, no app to buy. Free and open source (MIT), in public beta.">
+  <title>WavWiz: Free Whole-Home Audio &amp; Multi-Room Music for Windows</title>
+  <meta name="description" content="Whole-home audio wizardry: free multi-room music from your Windows PC. Your library, internet radio and AirPlay play in sync on every PC, TV and phone.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="theme-color" content="#0b1020">
   <meta name="color-scheme" content="dark">
   <link rel="canonical" href="https://wavwiz.com/">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="WavWiz">
-  <meta property="og:title" content="WavWiz: Whole-home audio wizardry.">
-  <meta property="og:description" content="The Ultimate Music App for free whole-home synced music on Windows. AirPlay built in, optional Spotify Connect, and phones join from the browser.">
+  <meta property="og:title" content="WavWiz: Whole-home audio wizardry for Windows">
+  <meta property="og:description" content="Free, open-source multi-room music from your Windows PC. Your library, internet radio and AirPlay play in sync in every room, on every PC, TV and phone.">
   <meta property="og:url" content="https://wavwiz.com/">
   <meta property="og:image" content="https://wavwiz.com/assets/img/og-image.png">
   <meta property="og:image:type" content="image/png">
@@ -20,9 +21,10 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="The WavWiz app window with Library, the Ring visualizer, Now Playing, Devices (Living Room, Kitchen and Patio online) and Playlist panels, under the WavWiz wordmark and the line Whole-home audio wizardry.">
   <meta property="og:locale" content="en_US">
+  <meta property="og:image:secure_url" content="https://wavwiz.com/assets/img/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="WavWiz: Whole-home audio wizardry.">
-  <meta name="twitter:description" content="Free whole-home synced music on Windows. AirPlay built in, optional Spotify Connect, and phones join from the browser.">
+  <meta name="twitter:title" content="WavWiz: Whole-home audio wizardry for Windows">
+  <meta name="twitter:description" content="Free, open-source multi-room music from your Windows PC. Your library, internet radio and AirPlay play in sync in every room.">
   <meta name="twitter:image" content="https://wavwiz.com/assets/img/og-image.png">
   <meta name="twitter:image:alt" content="The WavWiz app window with its Library, Visualizer, Now Playing, Devices and Playlist panels.">
 
@@ -33,6 +35,158 @@
   <link rel="preload" href="assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://wavwiz.com/#organization",
+        "name": "WavWiz",
+        "url": "https://wavwiz.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://wavwiz.com/assets/img/apple-touch-icon.png",
+          "width": 180,
+          "height": 180
+        },
+        "sameAs": [
+          "https://github.com/vdubbin74/WavWiz"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://wavwiz.com/#website",
+        "name": "WavWiz",
+        "url": "https://wavwiz.com/",
+        "inLanguage": "en-US",
+        "description": "Whole-home audio wizardry: free, open-source multi-room music for Windows.",
+        "publisher": {
+          "@id": "https://wavwiz.com/#organization"
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://wavwiz.com/#software",
+        "name": "WavWiz",
+        "url": "https://wavwiz.com/",
+        "description": "WavWiz turns an always-on Windows PC into a whole-home music server. Your music library (local folders or NAS shares) and internet radio play in sync on every PC, TV and phone in the house, and iPhone, iPad and Mac can AirPlay to every room at once. Phones join from the browser, with no app to install.",
+        "applicationCategory": "MultimediaApplication",
+        "applicationSubCategory": "Whole-home audio",
+        "operatingSystem": "Windows 10, Windows 11",
+        "processorRequirements": "64-bit (x64)",
+        "softwareRequirements": "Microsoft Edge WebView2 Runtime (included with Windows 11 and current Windows 10)",
+        "image": "https://wavwiz.com/assets/img/og-image.png",
+        "screenshot": "https://wavwiz.com/assets/img/wavwiz-app-window.webp",
+        "downloadUrl": "https://github.com/vdubbin74/WavWiz/releases/latest",
+        "installUrl": "https://github.com/vdubbin74/WavWiz/releases/latest",
+        "releaseNotes": "https://github.com/vdubbin74/WavWiz/releases/latest",
+        "license": "https://opensource.org/license/mit",
+        "isAccessibleForFree": true,
+        "inLanguage": "en-US",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "featureList": [
+          "Sample-accurate multi-room sync",
+          "Per-device delay from 0 to 1000 ms",
+          "AirPlay receiver built in",
+          "Optional Spotify Connect (Spotify Premium required)",
+          "Phones join from the web browser",
+          "Music library from local folders and NAS shares",
+          "Internet radio",
+          "Eight visualizers",
+          "Five themes",
+          "ReplayGain volume leveling",
+          "Gapless album playback",
+          "CD ripping to FLAC",
+          "Zones, scenes and schedules"
+        ],
+        "sameAs": [
+          "https://github.com/vdubbin74/WavWiz"
+        ],
+        "publisher": {
+          "@id": "https://wavwiz.com/#organization"
+        },
+        "author": {
+          "@id": "https://wavwiz.com/#organization"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://wavwiz.com/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is WavWiz really free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. WavWiz is free and open source under the MIT license. There's nothing to buy, no subscription and no cloud account to sign up for. The source code is in the WavWiz GitHub repository."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What speakers and devices does WavWiz work with?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The ones you already own. Windows PCs run WavWiz Player and play through whatever speakers are connected to them, wired or Bluetooth. Phones, tablets, Macs and TVs with a modern web browser just open the WavWiz address. You can also send audio to WavWiz from an iPhone, iPad or Mac with AirPlay, or from Spotify with the optional Spotify Connect feature (requires your own Spotify Premium account)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need special hardware?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. You need one 64-bit Windows 10 or Windows 11 PC that stays on, ideally the one that holds your music. Every other device just needs a web browser on the same home network. There are no proprietary multi-room speakers or hubs to buy. See the full system requirements."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does WavWiz work with music on a NAS?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. In Settings, add any music folder the PC can reach, on a local drive or a network share such as \\\\NAS\\Music. If the share asks for a user name and password, save it first under Settings > Library > Network share logins (NAS). WavWiz scans the folder, and your artists, albums and genres show up in the Library."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I control WavWiz from my phone?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, with no app to install. Open the WavWiz address in your phone's web browser while it's on the same Wi-Fi as the server. You can control playback and volume, add songs to the shared queue, and even play the music on the phone itself. If the phone asks, complete the one-time pairing."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Will every room stay in sync? What if one lags behind?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "WavWiz keeps every speaker on the same beat, so walking between rooms sounds like one big room. Bluetooth speakers and TVs add their own lag, though. If one room sounds behind, open that device in WavWiz and move its delay slider (0 to 1000 ms) while the music plays until the echo disappears. See how per-device delay works."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why does Windows SmartScreen warn me when I install WavWiz?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "WavWiz is a public beta and its installer isn't code-signed yet, so SmartScreen doesn't recognize it. If you downloaded it from the official WavWiz releases page on GitHub, click More info, then Run anyway. To double-check the file, compare its SHA-256 checksum with the one listed on the release page. Only download WavWiz from the official repository."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Where do I report bugs or ask questions?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Report bugs on GitHub Issues. For questions, ideas and setup help, join WavWiz Discussions on GitHub. The release notes list what changed in the latest build."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
   <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
@@ -448,35 +602,35 @@
         <div class="faq">
           <details class="card reveal" open>
             <summary>Is WavWiz really free?</summary>
-            <p>Yes. WavWiz is free and open source under the MIT license. There's nothing to buy and no subscription. The source code is on <a href="https://github.com/vdubbin74/WavWiz" target="_blank" rel="noopener">GitHub</a>.</p>
+            <p>Yes. WavWiz is free and open source under the MIT license. There's nothing to buy, no subscription and no cloud account to sign up for. The source code is in the <a href="https://github.com/vdubbin74/WavWiz" target="_blank" rel="noopener">WavWiz GitHub repository</a>.</p>
           </details>
           <details class="card reveal">
-            <summary>What do I need to run it?</summary>
-            <p>The server runs on Windows only for now. Install it on a PC that stays on, ideally the one that holds your music library. Other devices just need a web browser on the same network. See the <a href="#requirements">system requirements</a> for details.</p>
+            <summary>What speakers and devices does WavWiz work with?</summary>
+            <p>The ones you already own. Windows PCs run WavWiz Player and play through whatever speakers are connected to them, wired or Bluetooth. Phones, tablets, Macs and TVs with a modern web browser just open the WavWiz address. You can also send audio to WavWiz from an iPhone, iPad or Mac with AirPlay, or from Spotify with the optional Spotify Connect feature (requires your own Spotify Premium account).</p>
           </details>
           <details class="card reveal">
-            <summary>Do phones need an app?</summary>
-            <p>No. Phones join from the browser. Open the WavWiz address, and you can listen, control playback and add to the shared queue. Nothing to install.</p>
+            <summary>Do I need special hardware?</summary>
+            <p>No. You need one 64-bit Windows 10 or Windows 11 PC that stays on, ideally the one that holds your music. Every other device just needs a web browser on the same home network. There are no proprietary multi-room speakers or hubs to buy. See the <a href="#requirements">full system requirements</a>.</p>
           </details>
           <details class="card reveal">
-            <summary>Why does Windows show a SmartScreen warning?</summary>
-            <p>WavWiz is an unsigned beta, so Windows SmartScreen may warn that the app is unrecognized. If you downloaded it from the official <a href="https://github.com/vdubbin74/WavWiz/releases/latest" target="_blank" rel="noopener">GitHub releases page</a>, click <em>More info</em> and then <em>Run anyway</em>. Only download WavWiz from the official repository.</p>
+            <summary>Does WavWiz work with music on a NAS?</summary>
+            <p>Yes. In <em>Settings</em>, add any music folder the PC can reach, on a local drive or a network share such as \\NAS\Music. If the share asks for a user name and password, save it first under <em>Settings</em> &gt; <em>Library</em> &gt; <em>Network share logins (NAS)</em>. WavWiz scans the folder, and your artists, albums and genres show up in the Library.</p>
           </details>
           <details class="card reveal">
-            <summary>Can I listen when I'm away from home?</summary>
-            <p>Yes, privately. WavWiz supports remote access over Tailscale, so you can reach your library from your own devices without exposing your PC to the open internet.</p>
+            <summary>Can I control WavWiz from my phone?</summary>
+            <p>Yes, with no app to install. Open the WavWiz address in your phone's web browser while it's on the same Wi-Fi as the server. You can control playback and volume, add songs to the shared queue, and even play the music on the phone itself. If the phone asks, complete the one-time pairing.</p>
           </details>
           <details class="card reveal">
-            <summary>Can I play to WavWiz from my iPhone, iPad or Mac?</summary>
-            <p>Yes. AirPlay is built in. Your server shows up as the AirPlay speaker <em>WavWiz &ndash; Whole House</em>. Pick it from any app (Spotify, Apple Music, YouTube, podcasts and more) and the audio plays in every room in sync, with the title and artwork on Now Playing.</p>
+            <summary>Will every room stay in sync? What if one lags behind?</summary>
+            <p>WavWiz keeps every speaker on the same beat, so walking between rooms sounds like one big room. Bluetooth speakers and TVs add their own lag, though. If one room sounds behind, open that device in WavWiz and move its delay slider (0 to 1000&nbsp;ms) while the music plays until the echo disappears. <a href="#sync">See how per-device delay works</a>.</p>
           </details>
           <details class="card reveal">
-            <summary>Does WavWiz work with Spotify?</summary>
-            <p>Yes, two ways. From an iPhone, iPad or Mac you can AirPlay from the Spotify app. WavWiz also offers Spotify Connect as an optional add-on: it's off by default, you turn it on in Admin settings, and then WavWiz appears in Spotify's device list and streams directly to every room. Spotify Connect requires your own Spotify Premium account.</p>
+            <summary>Why does Windows SmartScreen warn me when I install WavWiz?</summary>
+            <p>WavWiz is a public beta and its installer isn't code-signed yet, so SmartScreen doesn't recognize it. If you downloaded it from the official <a href="https://github.com/vdubbin74/WavWiz/releases/latest" target="_blank" rel="noopener">WavWiz releases page on GitHub</a>, click <em>More info</em>, then <em>Run anyway</em>. To double-check the file, compare its SHA-256 checksum with the one listed on the release page. Only download WavWiz from the official repository.</p>
           </details>
           <details class="card reveal">
-            <summary>It's a beta. What does that mean?</summary>
-            <p>WavWiz is in public beta, so features ship and get polished quickly. The <a href="https://github.com/vdubbin74/WavWiz/releases/latest" target="_blank" rel="noopener">release notes</a> list what changed in the latest build. If something feels off, <a href="https://github.com/vdubbin74/WavWiz/issues" target="_blank" rel="noopener">report a bug</a> on GitHub. Bug reports and ideas are welcome.</p>
+            <summary>Where do I report bugs or ask questions?</summary>
+            <p><a href="https://github.com/vdubbin74/WavWiz/issues" target="_blank" rel="noopener">Report bugs on GitHub Issues</a>. For questions, ideas and setup help, join <a href="https://github.com/vdubbin74/WavWiz/discussions" target="_blank" rel="noopener">WavWiz Discussions</a> on GitHub. The <a href="https://github.com/vdubbin74/WavWiz/releases/latest" target="_blank" rel="noopener">release notes</a> list what changed in the latest build.</p>
           </details>
         </div>
       </div>
