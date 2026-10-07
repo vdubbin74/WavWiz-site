@@ -72,7 +72,7 @@ p { margin: 0 0 1em; }
   width: min(86vmin, 760px); aspect-ratio: 540 / 560;
   transform: translate(-50%, -46%);
   background: url("assets/img/wavwiz-watermark.png") center / contain no-repeat;
-  opacity: .06; filter: blur(1.5px) saturate(.55);
+  opacity: .1; filter: blur(1px) saturate(.55);
 }
 
 /* ---------------- Header ---------------- */
@@ -449,7 +449,7 @@ p { margin: 0 0 1em; }
   .eq-bar { height: 54px; width: 6px; }
   .hero-glow-a, .hero-glow-b { width: 340px; height: 340px; }
   .scroll-cue { display: none; }
-  .watermark { width: 96%; opacity: .045; filter: blur(1.2px) saturate(.5); }
+  .watermark { width: 96%; opacity: .075; filter: blur(.8px) saturate(.5); }
   .coin-accept { flex-direction: column; gap: 10px; margin-top: -8px; }
   .coin-accept-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); width: 100%; max-width: 320px; }
   .coin-accept-list a { width: 100%; justify-content: flex-start; }
