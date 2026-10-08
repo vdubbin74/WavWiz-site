@@ -187,20 +187,6 @@ const WAVWIZ_CONFIG = {
     track.appendChild(frag);
   })();
 
-  (function buildMiniEq() {
-    const box = document.getElementById("mini-eq");
-    if (!box) return;
-    const r = rng(11);
-    for (let i = 0; i < 24; i++) {
-      const b = document.createElement("span");
-      b.style.setProperty("--d", (0.35 + r() * 0.6).toFixed(2) + "s");
-      b.style.setProperty("--dl", (-r() * 2).toFixed(2) + "s");
-      b.style.setProperty("--s0", (0.08 + r() * 0.2).toFixed(2));
-      b.style.setProperty("--s1", (0.5 + r() * 0.5 * (1 - i / 40)).toFixed(2));
-      box.appendChild(b);
-    }
-  })();
-
   /* ---------------- Scroll reveal ---------------- */
   (function reveal() {
     const els = Array.from(document.querySelectorAll(".reveal"));
@@ -337,38 +323,6 @@ const WAVWIZ_CONFIG = {
     else { Warp && Warp.start(); }
     window.__wavwizVizSync && window.__wavwizVizSync();
   });
-
-  /* ---------------- Themes gallery: swatches switch one large preview ---------------- */
-  (function themes() {
-    const img = document.getElementById("theme-img");
-    const label = document.getElementById("theme-name");
-    const btns = Array.from(document.querySelectorAll(".theme-swatch"));
-    if (!img || !btns.length) return;
-    const warm = new Set();
-    function preload(b) {
-      const src = b.dataset.src;
-      if (!src || warm.has(src)) return;
-      warm.add(src); const i = new Image(); i.decoding = "async"; i.src = src;
-    }
-    function pick(b) {
-      btns.forEach((o) => { const on = o === b; o.classList.toggle("is-active", on); o.setAttribute("aria-pressed", String(on)); });
-      if (img.getAttribute("src") !== b.dataset.src) {
-        img.classList.add("is-swapping");
-        const done = () => img.classList.remove("is-swapping");
-        img.addEventListener("load", done, { once: true });
-        img.addEventListener("error", done, { once: true });
-        img.src = b.dataset.src;
-        img.alt = b.dataset.alt || "";
-      }
-      if (label) label.textContent = b.textContent.trim();
-    }
-    btns.forEach((b) => {
-      b.addEventListener("click", () => pick(b));
-      b.addEventListener("pointerenter", () => preload(b));
-      b.addEventListener("focus", () => preload(b));
-    });
-    window.__wavwizThemes = { pick: (k) => { const b = btns.find((o) => o.dataset.theme === k); if (b) pick(b); }, current: () => img.getAttribute("src") };
-  })();
 
   /* ---------------- Donate: QR codes + copy buttons ---------------- */
   (function donate() {

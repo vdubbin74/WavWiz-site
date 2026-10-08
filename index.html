@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>WavWiz: Free Whole-Home Audio &amp; Multi-Room Music for Windows</title>
-  <meta name="description" content="Whole-home audio wizardry: free multi-room music from your Windows PC. Your library, internet radio and AirPlay play in sync on every PC, TV and phone.">
+  <meta name="description" content="Free, open-source whole-home audio for Windows. One always-on PC plays your music and internet radio in sync on your PCs, phones and tablets.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="theme-color" content="#0b1020">
   <meta name="color-scheme" content="dark">
@@ -13,7 +13,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="WavWiz">
   <meta property="og:title" content="WavWiz: Whole-home audio wizardry for Windows">
-  <meta property="og:description" content="Free, open-source multi-room music from your Windows PC. Your library, internet radio and AirPlay play in sync in every room, on every PC, TV and phone.">
+  <meta property="og:description" content="Free, open-source multi-room music from your Windows PC. Your library, internet radio and AirPlay play in sync on PCs, phones and tablets.">
   <meta property="og:url" content="https://wavwiz.com/">
   <meta property="og:image" content="https://wavwiz.com/assets/img/og-image.png">
   <meta property="og:image:type" content="image/png">
@@ -24,7 +24,7 @@
   <meta property="og:image:secure_url" content="https://wavwiz.com/assets/img/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="WavWiz: Whole-home audio wizardry for Windows">
-  <meta name="twitter:description" content="Free, open-source multi-room music from your Windows PC. Your library, internet radio and AirPlay play in sync in every room.">
+  <meta name="twitter:description" content="Free, open-source multi-room music from your Windows PC. Your library, internet radio and AirPlay play in sync on PCs, phones and tablets.">
   <meta name="twitter:image" content="https://wavwiz.com/assets/img/og-image.png">
   <meta name="twitter:image:alt" content="The WavWiz app window with its Library, Visualizer, Now Playing, Devices and Playlist panels.">
 
@@ -70,12 +70,12 @@
         "@id": "https://wavwiz.com/#software",
         "name": "WavWiz",
         "url": "https://wavwiz.com/",
-        "description": "WavWiz turns an always-on Windows PC into a whole-home music server. Your music library (local folders or NAS shares) and internet radio play in sync on every PC, TV and phone in the house, and iPhone, iPad and Mac can AirPlay to every room at once. Phones join from the browser, with no app to install.",
+        "description": "WavWiz turns an always-on Windows PC into a whole-home music server. Your music library (local folders or NAS shares) and internet radio play in sync on Windows PCs, phones and tablets, and iPhone, iPad and Mac can AirPlay to every room at once. Phones and tablets play from a web browser, with no app to install.",
         "applicationCategory": "MultimediaApplication",
         "applicationSubCategory": "Whole-home audio",
         "operatingSystem": "Windows 10, Windows 11",
         "processorRequirements": "64-bit (x64)",
-        "softwareRequirements": "Microsoft Edge WebView2 Runtime (included with Windows 11 and current Windows 10)",
+        "softwareRequirements": "Microsoft Edge WebView2 Runtime for the player window (included with Windows 11 and current Windows 10)",
         "image": "https://wavwiz.com/assets/img/og-image.png",
         "screenshot": "https://wavwiz.com/assets/img/wavwiz-app-window.webp",
         "downloadUrl": "https://github.com/vdubbin74/WavWiz/releases/latest",
@@ -90,19 +90,19 @@
           "priceCurrency": "USD"
         },
         "featureList": [
-          "Sample-accurate multi-room sync",
+          "Multi-room playback from one stream with a shared clock and drift correction",
           "Per-device delay from 0 to 1000 ms",
-          "AirPlay receiver built in",
+          "Built-in AirPlay receiver",
           "Optional Spotify Connect (Spotify Premium required)",
-          "Phones join from the web browser",
+          "Phones and tablets play from a web browser",
           "Music library from local folders and NAS shares",
-          "Internet radio",
-          "Eight visualizers",
-          "Five themes",
-          "ReplayGain volume leveling",
+          "Internet radio finder",
           "Gapless album playback",
+          "ReplayGain / R128 volume leveling",
+          "Shared queue, zones, scenes and schedules",
           "CD ripping to FLAC",
-          "Zones, scenes and schedules"
+          "Eight visualizers",
+          "Five themes"
         ],
         "sameAs": [
           "https://github.com/vdubbin74/WavWiz"
@@ -111,7 +111,9 @@
           "@id": "https://wavwiz.com/#organization"
         },
         "author": {
-          "@id": "https://wavwiz.com/#organization"
+          "@type": "Person",
+          "name": "vdubbin74",
+          "url": "https://github.com/vdubbin74"
         }
       },
       {
@@ -123,47 +125,23 @@
             "name": "Is WavWiz really free?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. WavWiz is free and open source under the MIT license. There's nothing to buy, no subscription and no cloud account to sign up for. The source code is in the WavWiz GitHub repository."
+              "text": "Yes. WavWiz is free and open source under the MIT license. There's nothing to buy, no subscription and no account to create."
             }
           },
           {
             "@type": "Question",
-            "name": "What speakers and devices does WavWiz work with?",
+            "name": "How tight is the sync?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The ones you already own. Windows PCs run WavWiz Player and play through whatever speakers are connected to them, wired or Bluetooth. Phones, tablets, Macs and TVs with a modern web browser just open the WavWiz address. You can also send audio to WavWiz from an iPhone, iPad or Mac with AirPlay, or from Spotify with the optional Spotify Connect feature (requires your own Spotify Premium account)."
+              "text": "Every device plays the same stream against a shared clock, and WavWiz keeps correcting each device's drift so rooms stay together. Bluetooth speakers and TVs add their own lag, so if a room sounds behind, raise that device's delay (0 to 1000 ms) while the music plays until the echo is gone. No sync measurements have been published yet."
             }
           },
           {
             "@type": "Question",
-            "name": "Do I need special hardware?",
+            "name": "What doesn't work yet?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "No. You need one 64-bit Windows 10 or Windows 11 PC that stays on, ideally the one that holds your music. Every other device just needs a web browser on the same home network. There are no proprietary multi-room speakers or hubs to buy. See the full system requirements."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Does WavWiz work with music on a NAS?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. In Settings, add any music folder the PC can reach, on a local drive or a network share such as \\\\NAS\\Music. If the share asks for a user name and password, save it first under Settings > Library > Network share logins (NAS). WavWiz scans the folder, and your artists, albums and genres show up in the Library."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can I control WavWiz from my phone?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes, with no app to install. Open the WavWiz address in your phone's web browser while it's on the same Wi-Fi as the server. You can control playback and volume, add songs to the shared queue, and even play the music on the phone itself. If the phone asks, complete the one-time pairing."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Will every room stay in sync? What if one lags behind?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "WavWiz keeps every speaker on the same beat, so walking between rooms sounds like one big room. Bluetooth speakers and TVs add their own lag, though. If one room sounds behind, open that device in WavWiz and move its delay slider (0 to 1000 ms) while the music plays until the echo disappears. See how per-device delay works."
+              "text": "WavWiz is a public beta. Today: smart-TV built-in browsers (LG webOS confirmed) freeze and don't join as a speaker, so for a TV use a PC or laptop connected to it. The server runs only on 64-bit Windows 10 or 11, with no Mac or Linux server and no Docker image. AirPlay shows up as one whole-house speaker, not one per room, and it's classic AirPlay, so iPhone won't group it with AirPlay 2 speakers. WavWiz can't play to Sonos, Chromecast or DLNA speakers. On iPhone, tap the page once to start the sound."
             }
           },
           {
@@ -171,7 +149,15 @@
             "name": "Why does Windows SmartScreen warn me when I install WavWiz?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "WavWiz is a public beta and its installer isn't code-signed yet, so SmartScreen doesn't recognize it. If you downloaded it from the official WavWiz releases page on GitHub, click More info, then Run anyway. To double-check the file, compare its SHA-256 checksum with the one listed on the release page. Only download WavWiz from the official repository."
+              "text": "The installer isn't code-signed yet, so SmartScreen doesn't recognize it. If you downloaded it from the official WavWiz releases page on GitHub, click More info, then Run anyway. To double-check the file, compare its SHA-256 checksum with the one on the release page."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Who makes WavWiz, and was it built with AI?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "WavWiz is a hobby project by vdubbin74, who builds his own speakers and keeps an always-on Windows PC at home. He came up with WavWiz, set the spec, makes the design decisions and tests the builds at home. AI coding agents wrote the code, and AI helped write the docs and this site. The source is on GitHub under the MIT license."
             }
           },
           {
@@ -179,7 +165,7 @@
             "name": "Where do I report bugs or ask questions?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Report bugs on GitHub Issues. For questions, ideas and setup help, join WavWiz Discussions on GitHub. The release notes list what changed in the latest build."
+              "text": "Report bugs on GitHub Issues. For questions, ideas and setup help, use WavWiz Discussions on GitHub."
             }
           }
         ]
@@ -202,11 +188,11 @@
       </button>
       <nav class="site-nav" id="site-nav" aria-label="Main">
         <a href="#features">Features</a>
-        <a href="#how">How it works</a>
         <a href="#visualizers">Visualizers</a>
-        <a href="#requirements">Requirements</a>
-        <a href="#support">Support</a>
+        <a href="#how">How it works</a>
         <a href="#faq">FAQ</a>
+        <a href="#support">Support</a>
+        <a href="#download">Download</a>
         <a class="btn btn-ghost btn-sm" href="https://github.com/vdubbin74/WavWiz" target="_blank" rel="noopener">
           <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
           GitHub
@@ -225,13 +211,12 @@
 
       <div class="container hero-inner">
         <div class="hero-copy" data-parallax="0.12">
-          <p class="hero-eyebrow">The Ultimate Music App</p>
           <span class="badge"><span class="badge-dot" aria-hidden="true"></span>Free &amp; open source · Public beta</span>
           <h1 id="hero-title" class="hero-title">
             <span class="line">Whole-home audio</span>
             <span class="line glow-text">wizardry.</span>
           </h1>
-          <p class="hero-sub">WavWiz turns your always-on Windows PC into a whole-home music server. Your library and internet radio play in perfect sync on every PC, TV and phone in the house. Phones join right from the browser. No app to install, nothing to pay.</p>
+          <p class="hero-sub">Turn an always-on Windows PC into a music server for the whole house. Your library and internet radio play in sync on your PCs, phones and tablets. Phones just open a web page.</p>
           <div class="hero-ctas">
             <a class="btn btn-primary btn-lg" href="https://github.com/vdubbin74/WavWiz/releases/latest" target="_blank" rel="noopener">
               <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M2 4.3 10 3.2v7.7H2V4.3Zm9-1.2L22 1.5v9.4H11V3.1ZM2 12h8v7.8l-8-1.1V12Zm9 0h11v10.5l-11-1.6V12Z"/></svg>
@@ -242,8 +227,7 @@
               View on GitHub
             </a>
           </div>
-          <p class="hero-links"><a href="https://github.com/vdubbin74/WavWiz/releases/latest" target="_blank" rel="noopener">Release notes</a><span aria-hidden="true">·</span><a href="#requirements">System requirements</a></p>
-          <p class="hero-meta">Server runs on Windows. Listeners: any PC, TV or phone with a web browser.</p>
+          <p class="hero-links"><span class="hero-fact">Free (MIT)</span><span aria-hidden="true">·</span><span class="hero-fact">64-bit Windows 10 or 11</span><span aria-hidden="true">·</span><a href="https://github.com/vdubbin74/WavWiz/releases/latest" target="_blank" rel="noopener">Release notes</a></p>
         </div>
 
       </div>
@@ -262,182 +246,61 @@
         <header class="section-head reveal">
           <p class="eyebrow">Inside the app</p>
           <h2 id="app-title">One window runs the <span class="accent-t">whole house</span>.</h2>
-          <p class="section-lead">This is the real WavWiz window on the server PC, in the Midnight Neon theme. Your library, a live visualizer, Now Playing, your devices and zones, and the shared playlist all sit on one screen.</p>
         </header>
         <figure class="app-frame reveal">
           <img src="assets/img/wavwiz-app-window.webp" srcset="assets/img/wavwiz-app-window-960.webp 960w, assets/img/wavwiz-app-window.webp 1600w" sizes="(max-width: 1200px) calc(100vw - 36px), 1152px" width="1600" height="837" loading="lazy" decoding="async" alt="The WavWiz app window. Library panel on the left, the Ring visualizer in its own panel in the middle with the Now Playing controls below it and master volume at 70 percent, Devices and zones on the right with Living Room, Kitchen and Patio online, and the three-track Playlist across the bottom.">
-        </figure>
-        <ul class="app-legend">
-          <li class="reveal"><b>Library</b><span>Search and browse by artist, album, genre or folder.</span></li>
-          <li class="reveal"><b>Visualizer</b><span>Live visuals in their own panel, one click from full screen on the TV.</span></li>
-          <li class="reveal"><b>Now Playing</b><span>Transport, master volume and speaker status. Collapse it and the visualizer grows.</span></li>
-          <li class="reveal"><b>Devices &amp; zones</b><span>Every speaker, PC and phone, grouped into zones however you like.</span></li>
-          <li class="reveal"><b>Playlist</b><span>One shared queue that anyone in the house can add to.</span></li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- ============ SYNC (per-device delay) ============ -->
-    <section class="section sync" id="sync" aria-labelledby="sync-title">
-      <div class="container sync-inner">
-        <div class="sync-copy reveal">
-          <p class="eyebrow">Per-device delay</p>
-          <h2 id="sync-title" class="sync-title">Every room, perfectly <span class="accent-t">in sync</span>.</h2>
-          <p class="sync-lead">Bluetooth speakers, TVs and Wi-Fi PCs each add their own lag, and in a whole-home setup that lag turns into an echo between rooms. Open any device in WavWiz and its speaker output gets its own live delay slider from 0 to 1000&nbsp;ms, paired with a number box for exact values. Adjust it while the music plays and that room falls into line, so walking through the house sounds like one big room.</p>
-          <ul class="sync-points">
-            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5 10 17l9-10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>A live 0&ndash;1000&nbsp;ms delay slider and number box for each device</li>
-            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5 10 17l9-10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Fine-tune while music plays, no restart needed</li>
-            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5 10 17l9-10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Calibrate and delay history buttons right next to the slider</li>
-            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5 10 17l9-10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Bluetooth, TVs, Wi-Fi PCs and wired speakers all line up</li>
-          </ul>
-        </div>
-
-        <figure class="sync-shot reveal">
-          <div class="sync-shot-frame">
-            <img src="assets/img/wavwiz-delay-sliders.webp" width="1170" height="900" loading="lazy" decoding="async" alt="The WavWiz device dialog for Living Room. Under Speakers, the Living Room Soundbar output has a Delay slider with minus and plus buttons and a number box set to 120 ms, plus Calibrate and Save to history buttons. Behind it, the Devices panel lists Living Room, Kitchen and Patio, all online.">
-          </div>
-          <figcaption>Real screenshot: the Living Room device dialog, with its soundbar's delay set to 120&nbsp;ms. Kitchen and Patio each have their own delay in their own device dialog.</figcaption>
+          <figcaption>The real WavWiz window: library, visualizer, Now Playing, devices and zones, and the shared playlist.</figcaption>
         </figure>
       </div>
     </section>
 
-    <!-- ============ FEATURES ============ -->
+    <!-- ============ FEATURES (each feature once) ============ -->
     <section class="section" id="features" aria-labelledby="features-title">
       <div class="container">
         <header class="section-head reveal">
           <p class="eyebrow">Features</p>
-          <h2 id="features-title">Every room. Every device. <span class="accent-o">Zero</span> drift.</h2>
-          <p class="section-lead">Everything the Ultimate Music App should do—fill the house from the kitchen speaker to the phone in your pocket.</p>
+          <h2 id="features-title">What it <span class="accent-o">does</span></h2>
         </header>
-
-        <div class="feature-new-grid">
-          <article class="card feature feature-new reveal">
-            <div class="feature-ico ico-t"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="2.2" fill="currentColor"/><path d="M8.2 15.8a5.4 5.4 0 0 1 0-7.6M15.8 8.2a5.4 5.4 0 0 1 0 7.6M5.4 18.6a9.3 9.3 0 0 1 0-13.2M18.6 5.4a9.3 9.3 0 0 1 0 13.2" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg></div>
-            <h3>AirPlay, built in</h3>
-            <p>Your WavWiz server shows up on iPhone, iPad and Mac as the AirPlay speaker <span class="speaker-name">WavWiz &ndash; Whole House</span>. Send audio from any app, like Spotify, Apple Music, YouTube or podcasts, and it plays in every room in sync, with title and artwork on Now Playing and the visualizers reacting to the music.</p>
-          </article>
-          <article class="card feature feature-new reveal">
-            <div class="feature-ico ico-o"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="6" width="7" height="12" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.9"/><rect x="15" y="4" width="6.5" height="16" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.9"/><circle cx="18.25" cy="14.5" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M11.5 9.5c.9.7.9 4.3 0 5M13.2 8c1.6 1.4 1.6 6.6 0 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
-            <h3>Spotify Connect <span class="opt-tag">Optional</span></h3>
-            <p>Turn it on in Admin settings and WavWiz appears in Spotify's device list. The server streams straight from Spotify to every room at once. Off by default, and it requires your own Spotify Premium account.</p>
-          </article>
-        </div>
-
-        <div class="feature-grid">
-          <article class="card feature reveal">
+        <ol class="feature-list">
+          <li class="card feature reveal">
             <div class="feature-ico ico-o"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h3l2-6 4 12 3-9 2 3h4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <h3>Sample-accurate multi-room sync</h3>
-            <p>Every speaker plays the same sample at the same moment, so walking between rooms sounds like one big room.</p>
-          </article>
-          <article class="card feature reveal">
-            <div class="feature-ico ico-t"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M11 18h2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
-            <h3>Any phone joins from its browser</h3>
-            <p>Open the address, tap play. No app store, nothing to install. Guests can join in seconds.</p>
-          </article>
-          <article class="card feature reveal">
-            <div class="feature-ico ico-o"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M20 18h0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="16" cy="6" r="2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="10" cy="12" r="2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="18" r="2" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
-            <h3>Zones &amp; per-device delay</h3>
-            <p>Group rooms into zones and fine-tune the delay on each device to compensate for Bluetooth or TV audio lag.</p>
-          </article>
-          <article class="card feature feature-wide reveal">
-            <div class="feature-ico ico-t"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M8 20V4M12 20v-7M16 20V7M20 20v-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
-            <h3>8 visualizers</h3>
-            <p>Throw the music up on the TV. Each one has its own effect controls, and they follow your theme's colors or your own.</p>
-            <ul class="chips" aria-label="Visualizers">
-              <li>Particle burst</li><li>Waveform river</li><li>Speaker cone</li><li>Ring</li>
-              <li>Neon tunnel</li><li>Terrain</li><li>VU meters</li><li>Graphic EQ</li>
-            </ul>
-            <div class="mini-eq" id="mini-eq" aria-hidden="true"></div>
-          </article>
-          <article class="card feature reveal">
-            <div class="feature-ico ico-o"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3a9 9 0 0 0 0 18Z" fill="currentColor"/></svg></div>
-            <h3>Themes</h3>
-            <p>Restyle the whole player to match your setup—Midnight Neon, Ember, Arctic, Violet Pulse or Pepecoin—or dial in your own colors. <a href="#themes">Preview them below.</a></p>
-          </article>
-          <article class="card feature reveal">
+            <div class="feature-text"><h3>Rooms stay in sync</h3><p>Every device plays the same stream against a shared clock, and WavWiz keeps correcting each device's drift.</p></div>
+          </li>
+          <li class="card feature reveal">
+            <div class="feature-ico ico-t"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M20 18h0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="16" cy="6" r="2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="10" cy="12" r="2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="18" r="2" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
+            <div class="feature-text"><h3>Per-device delay</h3><p>Bluetooth speakers and TV audio run late. Give each device its own 0&ndash;1000&nbsp;ms delay and adjust it live while the music plays.</p></div>
+          </li>
+          <li class="card feature reveal">
+            <div class="feature-ico ico-o"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M11 18h2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+            <div class="feature-text"><h3>Plays on what you own</h3><p>Windows PCs play through their own speakers (wired, HDMI or Bluetooth) with WavWiz Player. Phones, tablets and Macs play in a web browser, with no app to install.</p></div>
+          </li>
+          <li class="card feature reveal">
+            <div class="feature-ico ico-t"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="2.2" fill="currentColor"/><path d="M8.2 15.8a5.4 5.4 0 0 1 0-7.6M15.8 8.2a5.4 5.4 0 0 1 0 7.6M5.4 18.6a9.3 9.3 0 0 1 0-13.2M18.6 5.4a9.3 9.3 0 0 1 0 13.2" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg></div>
+            <div class="feature-text"><h3>AirPlay built in</h3><p>iPhone, iPad and Mac see one speaker, &ldquo;WavWiz &ndash; Whole House&rdquo;. Whatever you send plays in every room, with title and artwork.</p></div>
+          </li>
+          <li class="card feature reveal">
+            <div class="feature-ico ico-o"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="6" width="7" height="12" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.9"/><rect x="15" y="4" width="6.5" height="16" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.9"/><circle cx="18.25" cy="14.5" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M11.5 9.5c.9.7.9 4.3 0 5M13.2 8c1.6 1.4 1.6 6.6 0 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+            <div class="feature-text"><h3>Spotify Connect, optional</h3><p>Off by default. Needs your own Spotify Premium account. Unofficial.</p></div>
+          </li>
+          <li class="card feature reveal">
             <div class="feature-ico ico-t"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9a10 10 0 0 1 14 0M8 12a6 6 0 0 1 8 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="16" r="2" fill="currentColor"/><path d="M12 18v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
-            <h3>Internet radio finder</h3>
-            <p>Search and play internet radio stations, synced across the house just like your own library.</p>
-          </article>
-          <article class="card feature reveal">
-            <div class="feature-ico ico-o"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
-            <h3>CD ripping to FLAC</h3>
-            <p>Pop in a disc and rip it to lossless FLAC, straight into your library.</p>
-          </article>
-          <article class="card feature reveal">
-            <div class="feature-ico ico-t"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12V4h8l10 10-8 8L3 12Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="7.5" cy="8.5" r="1.5" fill="currentColor"/></svg></div>
-            <h3>Auto-tagging</h3>
-            <p>Fill in missing track details automatically so your library stays tidy and easy to browse.</p>
-          </article>
-          <article class="card feature reveal">
-            <div class="feature-ico ico-o"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 10h18M8 3v4M16 3v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
-            <h3>Scenes &amp; schedules</h3>
-            <p>Save your favorite room-and-playlist combos as scenes and start them on a schedule. Wake-up music, dinner time, you name it.</p>
-          </article>
-          <article class="card feature reveal">
-            <div class="feature-ico ico-t"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h12M4 12h12M4 18h8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M18 14v6l4-3-4-3Z" fill="currentColor"/></svg></div>
-            <h3>Shared queue from any device</h3>
-            <p>Everyone in the house can add songs from their own phone. One queue, no fighting over the aux cord.</p>
-          </article>
-          <article class="card feature reveal">
-            <div class="feature-ico ico-o"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
-            <h3>Private remote access via Tailscale</h3>
-            <p>Reach your library away from home over your own private Tailscale network, without opening ports to the internet.</p>
-          </article>
-        </div>
-
-        <div class="card theme-gallery reveal" id="themes">
-          <div class="theme-copy">
-            <h3>Five built-in themes</h3>
-            <p>Every panel, slider and visualizer follows the theme you pick. Tap one to see the real app in it, or set your own background, accent and text colors in the app.</p>
-            <div class="theme-swatches" role="group" aria-label="Preview a theme">
-              <button type="button" class="theme-swatch is-active" aria-pressed="true" data-theme="midnight-neon" data-src="assets/img/wavwiz-theme-midnight-neon.webp" data-alt="The WavWiz app window in the Midnight Neon theme." style="--sw-bg:#222428;--sw-ac:#ff3c00;--sw-ac2:#2ec4b6"><span class="theme-dot theme-dot-3" aria-hidden="true"></span>Midnight Neon</button>
-              <button type="button" class="theme-swatch" aria-pressed="false" data-theme="ember" data-src="assets/img/wavwiz-theme-ember.webp" data-alt="The WavWiz app window in the Ember theme." style="--sw-bg:#231d19;--sw-ac:#f55a1a"><span class="theme-dot" aria-hidden="true"></span>Ember</button>
-              <button type="button" class="theme-swatch" aria-pressed="false" data-theme="arctic" data-src="assets/img/wavwiz-theme-arctic.webp" data-alt="The WavWiz app window in the Arctic theme." style="--sw-bg:#1a2125;--sw-ac:#38a8f5"><span class="theme-dot" aria-hidden="true"></span>Arctic</button>
-              <button type="button" class="theme-swatch" aria-pressed="false" data-theme="violet-pulse" data-src="assets/img/wavwiz-theme-violet-pulse.webp" data-alt="The WavWiz app window in the Violet Pulse theme." style="--sw-bg:#271f33;--sw-ac:#a855f7"><span class="theme-dot" aria-hidden="true"></span>Violet Pulse</button>
-              <button type="button" class="theme-swatch" aria-pressed="false" data-theme="pepecoin" data-src="assets/img/wavwiz-theme-pepecoin.webp" data-alt="The WavWiz app window in the Pepecoin theme." style="--sw-bg:#2c2d2d;--sw-ac:#269b4d"><span class="theme-dot" aria-hidden="true"></span>Pepecoin</button>
-            </div>
-            <p class="theme-note">Pepecoin theme uses the Pepecoin brand colors. WavWiz is not affiliated with Pepecoin.</p>
-          </div>
-          <figure class="theme-preview">
-            <img id="theme-img" src="assets/img/wavwiz-theme-midnight-neon.webp" width="1280" height="720" loading="lazy" decoding="async" alt="The WavWiz app window in the Midnight Neon theme.">
-            <figcaption id="theme-name">Midnight Neon</figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ HOW IT WORKS ============ -->
-    <section class="section" id="how" aria-labelledby="how-title">
-      <div class="container">
-        <header class="section-head reveal">
-          <p class="eyebrow">How it works</p>
-          <h2 id="how-title">Three steps to <span class="accent-o">whole-home</span> sound.</h2>
-        </header>
-        <ol class="steps">
-          <li class="card step reveal">
-            <span class="step-num">01</span>
-            <h3>Install WavWiz on the PC that stays on</h3>
-            <p>Download the free Windows installer and choose WavWiz Server on the PC that holds your music. That PC runs the music for the whole house.</p>
-            <div class="step-media">
-              <img src="assets/img/wavwiz-step-installer.webp" width="602" height="464" loading="lazy" decoding="async" alt="The WavWiz Setup wizard's welcome page on Windows, with the WavWiz wizard artwork and Next and Cancel buttons.">
-            </div>
+            <div class="feature-text"><h3>Your library and radio</h3><p>Local folders and NAS shares, search and browse by artist, album, genre or folder, playlists, gapless albums, ReplayGain/R128 volume leveling, and an internet radio finder.</p></div>
           </li>
-          <li class="card step reveal">
-            <span class="step-num">02</span>
-            <h3>Point it at your music folder</h3>
-            <p>Open <em>Settings</em> and add the folder that holds your music, on a local drive or a network share. WavWiz scans it and your artists, albums and genres show up in the Library.</p>
-            <div class="step-media">
-              <img src="assets/img/wavwiz-step-library.webp" width="720" height="620" loading="lazy" decoding="async" alt="WavWiz Settings, Music folders: D:\Music is added with 3 tracks, a network share path is typed in next to the Add button, and below it Network share logins lets you save a NAS user name and password.">
-            </div>
+          <li class="card feature reveal">
+            <div class="feature-ico ico-o"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h12M4 12h12M4 18h8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M18 14v6l4-3-4-3Z" fill="currentColor"/></svg></div>
+            <div class="feature-text"><h3>One house, one queue</h3><p>Everyone can add songs from their own phone. Group rooms into zones, save scenes, and start them on a schedule.</p></div>
           </li>
-          <li class="card step reveal">
-            <span class="step-num">03</span>
-            <h3>Open the player on every device</h3>
-            <p>PCs with speakers run WavWiz Player. Phones, tablets and TVs just open the WavWiz address in a web browser. Press play and every room starts on the same beat.</p>
-            <div class="step-media">
-              <img src="assets/img/wavwiz-step-phone-iphone.webp" width="600" height="1176" loading="lazy" decoding="async" alt="WavWiz Now Playing in an iPhone's web browser: the Ring visualizer, the song Night Drive by Demo Artist, transport controls, master volume at 70 percent, and Living Room, Kitchen and Patio all playing.">
-            </div>
+          <li class="card feature reveal">
+            <div class="feature-ico ico-t"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
+            <div class="feature-text"><h3>CD ripping and tag help</h3><p>Rip CDs to FLAC on the server PC. WavWiz looks up missing tags and covers on MusicBrainz and writes nothing until you approve it.</p></div>
+          </li>
+          <li class="card feature reveal">
+            <div class="feature-ico ico-o"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M8 20V4M12 20v-7M16 20V7M20 20v-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+            <div class="feature-text"><h3>Visualizers and themes</h3><p>Eight visualizers for a big screen. Five themes, or pick your own colors.</p></div>
+          </li>
+          <li class="card feature reveal">
+            <div class="feature-ico ico-t"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
+            <div class="feature-text"><h3>Private</h3><p>No cloud account, no analytics, no telemetry. Local network only by default. For access away from home, use your own Tailscale. WavWiz doesn't open ports to the internet.</p></div>
           </li>
         </ol>
       </div>
@@ -448,8 +311,8 @@
       <div class="container">
         <header class="section-head reveal">
           <p class="eyebrow">Visualizer showcase</p>
-          <h2 id="viz-title">Turn the TV into a <span class="accent-t">light show</span>.</h2>
-          <p class="section-lead">All eight visualizers, as real 8-second loops captured from the WavWiz app. In the app, every one reacts to whatever is playing and follows your theme's colors.</p>
+          <h2 id="viz-title">Turn a big screen into a <span class="accent-t">light show</span>.</h2>
+          <p class="section-lead">All eight visualizers, captured from the app.</p>
         </header>
 
         <div class="viz-wrap reveal">
@@ -500,44 +363,75 @@
       </div>
     </section>
 
-    <!-- ============ SYSTEM REQUIREMENTS ============ -->
-    <section class="section" id="requirements" aria-labelledby="req-title">
+    <!-- ============ HOW IT WORKS ============ -->
+    <section class="section" id="how" aria-labelledby="how-title">
       <div class="container">
         <header class="section-head reveal">
-          <p class="eyebrow">System requirements</p>
-          <h2 id="req-title">What you <span class="accent-o">need</span>.</h2>
-          <p class="section-lead">One Windows PC runs the house. Everything else just needs a web browser on your home network.</p>
+          <p class="eyebrow">How it works</p>
+          <h2 id="how-title">Three steps to <span class="accent-o">whole-home</span> sound.</h2>
         </header>
-        <div class="req-grid">
-          <article class="card req reveal">
-            <div class="feature-ico ico-o"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M9 20h6M12 16v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
-            <h3>Server PC</h3>
-            <ul>
-              <li>64-bit Windows 10 (October 2018 Update or newer) or Windows 11</li>
-              <li>A PC that stays on, ideally the one that holds your music</li>
-              <li>Music on local drives or network shares the PC can reach</li>
-              <li>Admin rights to install. Everything else comes in the installer.</li>
-            </ul>
-          </article>
-          <article class="card req reveal">
-            <div class="feature-ico ico-t"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M11 18h2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
-            <h3>Listening devices</h3>
-            <ul>
-              <li>Any modern web browser on a PC, Mac, phone, tablet or TV</li>
-              <li>Windows PCs with speakers can run WavWiz Player</li>
-              <li>Same home network as the server, set to Private in Windows</li>
-            </ul>
-          </article>
-          <article class="card req reveal">
-            <div class="feature-ico ico-o"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="2.2" fill="currentColor"/><path d="M8.2 15.8a5.4 5.4 0 0 1 0-7.6M15.8 8.2a5.4 5.4 0 0 1 0 7.6M5.4 18.6a9.3 9.3 0 0 1 0-13.2M18.6 5.4a9.3 9.3 0 0 1 0 13.2" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg></div>
-            <h3>AirPlay &amp; Spotify Connect</h3>
-            <ul>
-              <li>AirPlay from an iPhone, iPad or Mac on the same home Wi-Fi</li>
-              <li>Spotify Connect is optional, off by default, and needs your own Spotify Premium account</li>
-            </ul>
-          </article>
+        <ol class="steps">
+          <li class="card step reveal">
+            <span class="step-num">01</span>
+            <h3>Install the server</h3>
+            <p>Run the installer on the PC that stays on (ideally the one with your music) and choose WavWiz Server. Keep the suggested home-network address and set an admin password.</p>
+            <div class="step-media">
+              <img src="assets/img/wavwiz-step-installer.webp" width="602" height="464" loading="lazy" decoding="async" alt="The WavWiz Setup wizard's welcome page on Windows, with the WavWiz wizard artwork and Next and Cancel buttons.">
+            </div>
+          </li>
+          <li class="card step reveal">
+            <span class="step-num">02</span>
+            <h3>Add your music</h3>
+            <p>In <em>Settings › Library</em>, add a local folder or a network share like \\NAS\Music. If the share needs a password, save it under <em>Network share logins</em> first.</p>
+            <div class="step-media">
+              <img src="assets/img/wavwiz-step-library.webp" width="720" height="620" loading="lazy" decoding="async" alt="WavWiz Settings, Music folders: D:\Music is added with 3 tracks, a network share path is typed in next to the Add button, and below it Network share logins lets you save a NAS user name and password.">
+            </div>
+          </li>
+          <li class="card step reveal">
+            <span class="step-num">03</span>
+            <h3>Add rooms</h3>
+            <p>On each Windows PC with speakers, run the installer and choose WavWiz Player. It finds the server (enter the pairing code if asked). On phones and tablets, open the server's address in the browser. For a TV, use a PC or laptop connected to it.</p>
+            <div class="step-media">
+              <img src="assets/img/wavwiz-step-phone-iphone.webp" width="600" height="1176" loading="lazy" decoding="async" alt="WavWiz Now Playing in an iPhone's web browser: the Ring visualizer, the song Night Drive by Demo Artist, transport controls, master volume at 70 percent, and Living Room, Kitchen and Patio all playing.">
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section section-alt" id="faq" aria-labelledby="faq-title">
+      <div class="container container-narrow">
+        <header class="section-head reveal">
+          <p class="eyebrow">FAQ</p>
+          <h2 id="faq-title">Questions, answered.</h2>
+        </header>
+        <div class="faq">
+          <details class="card reveal" open>
+            <summary>Is WavWiz really free?</summary>
+            <p>Yes. WavWiz is free and open source under the MIT license. There's nothing to buy, no subscription and no account to create.</p>
+          </details>
+          <details class="card reveal">
+            <summary>How tight is the sync?</summary>
+            <p>Every device plays the same stream against a shared clock, and WavWiz keeps correcting each device's drift so rooms stay together. Bluetooth speakers and TVs add their own lag, so if a room sounds behind, raise that device's delay (0 to 1000 ms) while the music plays until the echo is gone. No sync measurements have been published yet.</p>
+          </details>
+          <details class="card reveal">
+            <summary>What doesn't work yet?</summary>
+            <p>WavWiz is a public beta. Today: smart-TV built-in browsers (LG webOS confirmed) freeze and don't join as a speaker, so for a TV use a PC or laptop connected to it. The server runs only on 64-bit Windows 10 or 11, with no Mac or Linux server and no Docker image. AirPlay shows up as one whole-house speaker, not one per room, and it's classic AirPlay, so iPhone won't group it with AirPlay 2 speakers. WavWiz can't play to Sonos, Chromecast or DLNA speakers. On iPhone, tap the page once to start the sound.</p>
+          </details>
+          <details class="card reveal">
+            <summary>Why does Windows SmartScreen warn me when I install WavWiz?</summary>
+            <p>The installer isn't code-signed yet, so SmartScreen doesn't recognize it. If you downloaded it from the official <a href="https://github.com/vdubbin74/WavWiz/releases/latest" target="_blank" rel="noopener">WavWiz releases page on GitHub</a>, click <em>More info</em>, then <em>Run anyway</em>. To double-check the file, compare its SHA-256 checksum with the one on the release page.</p>
+          </details>
+          <details class="card reveal">
+            <summary>Who makes WavWiz, and was it built with AI?</summary>
+            <p>WavWiz is a hobby project by vdubbin74, who builds his own speakers and keeps an always-on Windows PC at home. He came up with WavWiz, set the spec, makes the design decisions and tests the builds at home. AI coding agents wrote the code, and AI helped write the docs and this site. The source is on <a href="https://github.com/vdubbin74/WavWiz" target="_blank" rel="noopener">GitHub</a> under the MIT license.</p>
+          </details>
+          <details class="card reveal">
+            <summary>Where do I report bugs or ask questions?</summary>
+            <p>Report bugs on <a href="https://github.com/vdubbin74/WavWiz/issues" target="_blank" rel="noopener">GitHub Issues</a>. For questions, ideas and setup help, use <a href="https://github.com/vdubbin74/WavWiz/discussions" target="_blank" rel="noopener">WavWiz Discussions</a> on GitHub.</p>
+          </details>
         </div>
-        <p class="req-note reveal">The WavWiz Player window uses Microsoft Edge WebView2, which comes with Windows 11 and current Windows 10. If it's missing, the player opens in your default browser instead.</p>
       </div>
     </section>
 
@@ -545,20 +439,10 @@
     <section class="section" id="support" aria-labelledby="support-title">
       <div class="container">
         <header class="section-head reveal">
-          <p class="eyebrow">Donate</p>
           <h2 id="support-title">Support <span class="wm-wav">Wav</span><span class="wm-wiz">Wiz</span></h2>
-          <p class="section-lead">WavWiz is free and always will be. If it makes your house sound better, a tip helps keep development going.</p>
+          <p class="section-lead">WavWiz is free. If it makes your house sound better, a tip helps keep it going.</p>
         </header>
 
-        <div class="coin-accept reveal">
-          <span class="coin-accept-label">We accept</span>
-          <ul class="coin-accept-list">
-            <li><a href="#donate-ltc"><img src="assets/img/coins/ltc.svg" alt="" width="22" height="22" decoding="async">Litecoin</a></li>
-            <li><a href="#donate-xmr"><img src="assets/img/coins/xmr.svg" alt="" width="22" height="22" decoding="async">Monero</a></li>
-            <li><a href="#donate-btc"><img src="assets/img/coins/btc.svg" alt="" width="22" height="22" decoding="async">Bitcoin</a></li>
-            <li><a href="#donate-pep"><img src="assets/img/coins/pep.svg" alt="" width="22" height="22" decoding="async">Pepecoin</a></li>
-          </ul>
-        </div>
         <div class="donate-grid">
           <article class="card coin coin-ltc reveal" data-coin="LTC" id="donate-ltc">
             <header class="coin-head"><span class="coin-logo" aria-hidden="true"><img src="assets/img/coins/ltc.svg" alt="" width="56" height="56" decoding="async"></span><div><h3>Litecoin</h3><p class="coin-tick">LTC</p></div></header>
@@ -588,66 +472,30 @@
         </div>
         <p class="donate-note reveal"><strong>Double-check the address in your wallet before sending.</strong> Crypto transactions can't be reversed.</p>
         <noscript><p class="donate-note">QR codes and copy buttons need JavaScript. You can still select and copy the addresses above.</p></noscript>
-        <p class="support-more reveal">Not into crypto? Bug reports help just as much. <a href="https://github.com/vdubbin74/WavWiz/issues" target="_blank" rel="noopener">Report a bug</a> or share an idea on GitHub.</p>
+        <p class="support-more reveal">Not into crypto? <a href="https://github.com/vdubbin74/WavWiz/issues" target="_blank" rel="noopener">A good bug report</a> helps just as much.</p>
       </div>
     </section>
 
-    <!-- ============ FAQ ============ -->
-    <section class="section section-alt" id="faq" aria-labelledby="faq-title">
+    <!-- ============ DOWNLOAD & REQUIREMENTS (closing block) ============ -->
+    <section class="section section-alt get" id="download" aria-labelledby="download-title">
       <div class="container container-narrow">
         <header class="section-head reveal">
-          <p class="eyebrow">FAQ</p>
-          <h2 id="faq-title">Questions, answered.</h2>
+          <h2 id="download-title">Get <span class="wm-wav">Wav</span><span class="wm-wiz">Wiz</span></h2>
         </header>
-        <div class="faq">
-          <details class="card reveal" open>
-            <summary>Is WavWiz really free?</summary>
-            <p>Yes. WavWiz is free and open source under the MIT license. There's nothing to buy, no subscription and no cloud account to sign up for. The source code is in the <a href="https://github.com/vdubbin74/WavWiz" target="_blank" rel="noopener">WavWiz GitHub repository</a>.</p>
-          </details>
-          <details class="card reveal">
-            <summary>What speakers and devices does WavWiz work with?</summary>
-            <p>The ones you already own. Windows PCs run WavWiz Player and play through whatever speakers are connected to them, wired or Bluetooth. Phones, tablets, Macs and TVs with a modern web browser just open the WavWiz address. You can also send audio to WavWiz from an iPhone, iPad or Mac with AirPlay, or from Spotify with the optional Spotify Connect feature (requires your own Spotify Premium account).</p>
-          </details>
-          <details class="card reveal">
-            <summary>Do I need special hardware?</summary>
-            <p>No. You need one 64-bit Windows 10 or Windows 11 PC that stays on, ideally the one that holds your music. Every other device just needs a web browser on the same home network. There are no proprietary multi-room speakers or hubs to buy. See the <a href="#requirements">full system requirements</a>.</p>
-          </details>
-          <details class="card reveal">
-            <summary>Does WavWiz work with music on a NAS?</summary>
-            <p>Yes. In <em>Settings</em>, add any music folder the PC can reach, on a local drive or a network share such as \\NAS\Music. If the share asks for a user name and password, save it first under <em>Settings</em> &gt; <em>Library</em> &gt; <em>Network share logins (NAS)</em>. WavWiz scans the folder, and your artists, albums and genres show up in the Library.</p>
-          </details>
-          <details class="card reveal">
-            <summary>Can I control WavWiz from my phone?</summary>
-            <p>Yes, with no app to install. Open the WavWiz address in your phone's web browser while it's on the same Wi-Fi as the server. You can control playback and volume, add songs to the shared queue, and even play the music on the phone itself. If the phone asks, complete the one-time pairing.</p>
-          </details>
-          <details class="card reveal">
-            <summary>Will every room stay in sync? What if one lags behind?</summary>
-            <p>WavWiz keeps every speaker on the same beat, so walking between rooms sounds like one big room. Bluetooth speakers and TVs add their own lag, though. If one room sounds behind, open that device in WavWiz and move its delay slider (0 to 1000&nbsp;ms) while the music plays until the echo disappears. <a href="#sync">See how per-device delay works</a>.</p>
-          </details>
-          <details class="card reveal">
-            <summary>Why does Windows SmartScreen warn me when I install WavWiz?</summary>
-            <p>WavWiz is a public beta and its installer isn't code-signed yet, so SmartScreen doesn't recognize it. If you downloaded it from the official <a href="https://github.com/vdubbin74/WavWiz/releases/latest" target="_blank" rel="noopener">WavWiz releases page on GitHub</a>, click <em>More info</em>, then <em>Run anyway</em>. To double-check the file, compare its SHA-256 checksum with the one listed on the release page. Only download WavWiz from the official repository.</p>
-          </details>
-          <details class="card reveal">
-            <summary>Where do I report bugs or ask questions?</summary>
-            <p><a href="https://github.com/vdubbin74/WavWiz/issues" target="_blank" rel="noopener">Report bugs on GitHub Issues</a>. For questions, ideas and setup help, join <a href="https://github.com/vdubbin74/WavWiz/discussions" target="_blank" rel="noopener">WavWiz Discussions</a> on GitHub. The <a href="https://github.com/vdubbin74/WavWiz/releases/latest" target="_blank" rel="noopener">release notes</a> list what changed in the latest build.</p>
-          </details>
+        <div class="get-ctas reveal">
+            <a class="btn btn-primary btn-lg" href="https://github.com/vdubbin74/WavWiz/releases/latest" target="_blank" rel="noopener">
+              <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M2 4.3 10 3.2v7.7H2V4.3Zm9-1.2L22 1.5v9.4H11V3.1ZM2 12h8v7.8l-8-1.1V12Zm9 0h11v10.5l-11-1.6V12Z"/></svg>
+              Download for Windows
+            </a>
+          <p class="hero-links"><a href="https://github.com/vdubbin74/WavWiz/releases/latest" target="_blank" rel="noopener">Release notes</a><span aria-hidden="true">·</span><a href="https://github.com/vdubbin74/WavWiz" target="_blank" rel="noopener">Source on GitHub</a></p>
         </div>
-      </div>
-    </section>
-
-    <!-- ============ FINAL CTA ============ -->
-    <section class="cta-band" aria-label="Download WavWiz">
-      <div class="container cta-inner reveal">
-        <h2>Ready for the Ultimate Music App across the house?</h2>
-        <div class="hero-ctas">
-          <a class="btn btn-primary btn-lg" href="https://github.com/vdubbin74/WavWiz/releases/latest" target="_blank" rel="noopener">
-            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M2 4.3 10 3.2v7.7H2V4.3Zm9-1.2L22 1.5v9.4H11V3.1ZM2 12h8v7.8l-8-1.1V12Zm9 0h11v10.5l-11-1.6V12Z"/></svg>
-            Download for Windows
-          </a>
-          <a class="btn btn-ghost btn-lg" href="https://github.com/vdubbin74/WavWiz" target="_blank" rel="noopener">View on GitHub</a>
-        </div>
-        <p class="hero-links cta-links"><a href="https://github.com/vdubbin74/WavWiz/releases/latest" target="_blank" rel="noopener">Release notes</a><span aria-hidden="true">·</span><a href="https://github.com/vdubbin74/WavWiz/issues" target="_blank" rel="noopener">Report a bug</a></p>
+        <ul class="card get-req reveal">
+          <li><b>Server PC:</b> 64-bit Windows 10 (October 2018 Update or newer) or Windows 11, on a PC that stays on. Admin rights to install. Everything else comes in the installer.</li>
+          <li><b>Players:</b> Windows PCs with WavWiz Player, or any modern browser on a PC, Mac, phone or tablet. The Player window uses Microsoft Edge WebView2 (included with Windows 11 and current Windows 10). Without it, the player opens in your browser.</li>
+          <li><b>Network:</b> the same home network as the server, set to Private in Windows.</li>
+          <li><b>AirPlay:</b> iPhone, iPad or Mac on the same Wi-Fi. <b>Spotify Connect:</b> your own Spotify Premium account.</li>
+        </ul>
+        <p class="get-note reveal">Public beta. The installer isn't code-signed yet, so Windows SmartScreen will warn. Check the SHA-256 on the release page.</p>
       </div>
     </section>
   </main>
@@ -657,7 +505,7 @@
     <div class="container footer-inner">
       <div class="footer-brand">
         <a class="wordmark" href="#top" aria-label="WavWiz home"><span class="wm-wav">Wav</span><span class="wm-wiz">Wiz</span></a>
-        <p>The Ultimate Music App—free, open-source whole-home synced music for Windows.</p>
+        <p>Free, open-source whole-home audio for Windows.</p>
       </div>
       <nav class="footer-links" aria-label="Footer">
         <a href="https://github.com/vdubbin74/WavWiz" target="_blank" rel="noopener">GitHub</a>
@@ -669,7 +517,7 @@
     </div>
     <div class="container footer-privacy" id="privacy">
       <p><strong>Privacy:</strong> this site has no analytics, no trackers, no cookies and no third-party requests. Fonts and scripts are served from this site. Hosted on GitHub Pages, which may keep standard server logs.</p>
-      <p class="trademark">AirPlay is a trademark of Apple Inc. Spotify is a trademark of Spotify AB. WavWiz is not affiliated with either.</p>
+      <p class="trademark">AirPlay is a trademark of Apple Inc. Spotify is a trademark of Spotify AB. The Pepecoin theme uses Pepecoin brand colors. WavWiz is not affiliated with Apple, Spotify or Pepecoin. Coin logos belong to their projects; Monero logo by The Monero Project, CC BY-SA 4.0.</p>
       <p class="copyright">© 2026 vdubbin74. Released under the MIT License. Security reports: <a href="mailto:vdubbin74@proton.me">vdubbin74@proton.me</a>.</p>
     </div>
   </footer>
