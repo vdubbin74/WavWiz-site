@@ -242,7 +242,7 @@ const WAVWIZ_CONFIG = {
     const order = tabs.map((t) => t.dataset.viz);
     const names = {};
     tabs.forEach((t) => { names[t.dataset.viz] = t.textContent.replace(/^\s*\d+\s*/, "").trim(); });
-    let cur = "particles", visible = false, primed = false, loops = 0, need = 1;
+    let cur = "geq", visible = false, primed = false, loops = 0, need = 1;
     const vidFor = (k) => vids.find((v) => v.dataset.viz === k);
 
     const next = (k) => order[(order.indexOf(k) + 1) % order.length];

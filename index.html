@@ -19,7 +19,7 @@
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="The WavWiz app window with Library, the Ring visualizer, Now Playing, Devices (Living Room, Kitchen and Patio online) and Playlist panels, under the WavWiz wordmark and the line Whole-home audio wizardry.">
+  <meta property="og:image:alt" content="The WavWiz app window with Library, the Graphic EQ visualizer, Now Playing, Devices (master volume, Mute all, and Living Room, Kitchen, Patio and Office playing) and Playlist panels, under the WavWiz wordmark and the line Whole-home audio wizardry.">
   <meta property="og:locale" content="en_US">
   <meta property="og:image:secure_url" content="https://wavwiz.com/assets/img/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -92,17 +92,20 @@
         "featureList": [
           "Multi-room playback from one stream with a shared clock and drift correction",
           "Per-device delay from 0 to 1000 ms",
+          "Master volume, Mute all and a 10-band EQ per speaker",
           "Built-in AirPlay receiver",
           "Optional Spotify Connect (Spotify Premium required)",
-          "Phones and tablets play from a web browser",
+          "Browsers join as speakers automatically, with no app to install",
+          "Delay calibration with your phone as the microphone",
           "Music library from local folders and NAS shares",
+          "Album pages and favorites",
           "Internet radio finder",
           "Gapless album playback",
           "ReplayGain / R128 volume leveling",
           "Shared queue, zones, scenes and schedules",
           "CD ripping to FLAC",
           "Eight visualizers",
-          "Five themes"
+          "Ten themes"
         ],
         "sameAs": [
           "https://github.com/vdubbin74/WavWiz"
@@ -141,7 +144,7 @@
             "name": "What doesn't work yet?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "WavWiz is a public beta. Today: smart-TV built-in browsers (LG webOS confirmed) freeze and don't join as a speaker, so for a TV use a PC or laptop connected to it. The server runs only on 64-bit Windows 10 or 11, with no Mac or Linux server and no Docker image. AirPlay shows up as one whole-house speaker, not one per room, and it's classic AirPlay, so iPhone won't group it with AirPlay 2 speakers. WavWiz can't play to Sonos, Chromecast or DLNA speakers. On iPhone, tap the page once to start the sound."
+              "text": "WavWiz is a public beta. Smart-TV browsers are still in testing: WavWiz gives TVs a lighter layout and visualizer, but some (including an older LG webOS set) don't finish loading yet. For now, the reliable way to use a TV is a PC or laptop connected to it, and if you try your TV's browser, we'd love to hear how it went. The server runs only on 64-bit Windows 10 or 11, with no Mac or Linux server and no Docker image. AirPlay shows up as one whole-house speaker, not one per room, and it's classic AirPlay, so iPhone won't group it with AirPlay 2 speakers. WavWiz can't play to Sonos, Chromecast or DLNA speakers. On iPhone, tap the page once to start the sound."
             }
           },
           {
@@ -248,7 +251,7 @@
           <h2 id="app-title">One window runs the <span class="accent-t">whole house</span>.</h2>
         </header>
         <figure class="app-frame reveal">
-          <img src="assets/img/wavwiz-app-window.webp" srcset="assets/img/wavwiz-app-window-960.webp 960w, assets/img/wavwiz-app-window.webp 1600w" sizes="(max-width: 1200px) calc(100vw - 36px), 1152px" width="1600" height="837" loading="lazy" decoding="async" alt="The WavWiz app window. Library panel on the left, the Ring visualizer in its own panel in the middle with the Now Playing controls below it and master volume at 70 percent, Devices and zones on the right with Living Room, Kitchen and Patio online, and the three-track Playlist across the bottom.">
+          <img src="assets/img/wavwiz-app-window.webp" srcset="assets/img/wavwiz-app-window-960.webp 960w, assets/img/wavwiz-app-window.webp 1600w" sizes="(max-width: 1200px) calc(100vw - 36px), 1152px" width="1600" height="837" loading="lazy" decoding="async" alt="The WavWiz app window. Library panel on the left, the Graphic EQ visualizer in the middle with Now Playing below it, Devices on the right with master volume, Mute all, and Living Room, Kitchen, Patio and Office playing, and the Playlist across the bottom.">
           <figcaption>The real WavWiz window: library, visualizer, Now Playing, devices and zones, and the shared playlist.</figcaption>
         </figure>
       </div>
@@ -264,15 +267,15 @@
         <ol class="feature-list">
           <li class="card feature reveal">
             <div class="feature-ico ico-o"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h3l2-6 4 12 3-9 2 3h4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="feature-text"><h3>Rooms stay in sync</h3><p>Every device plays the same stream against a shared clock, and WavWiz keeps correcting each device's drift.</p></div>
+            <div class="feature-text"><h3>Rooms stay in sync</h3><p>Every device plays the same stream against a shared clock, and WavWiz keeps correcting each device's drift. Master volume, Mute all, and a 10-band EQ per speaker.</p></div>
           </li>
           <li class="card feature reveal">
             <div class="feature-ico ico-t"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M20 18h0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="16" cy="6" r="2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="10" cy="12" r="2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="18" r="2" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
-            <div class="feature-text"><h3>Per-device delay</h3><p>Bluetooth speakers and TV audio run late. Give each device its own 0&ndash;1000&nbsp;ms delay and adjust it live while the music plays.</p></div>
+            <div class="feature-text"><h3>Per-device delay</h3><p>Bluetooth speakers and TV audio run late. Give each device its own 0&ndash;1000&nbsp;ms delay and adjust it live, or measure it with your phone as the microphone (needs a one-time HTTPS setup).</p></div>
           </li>
           <li class="card feature reveal">
             <div class="feature-ico ico-o"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M11 18h2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
-            <div class="feature-text"><h3>Plays on what you own</h3><p>Windows PCs play through their own speakers (wired, HDMI or Bluetooth) with WavWiz Player. Phones, tablets and Macs play in a web browser, with no app to install.</p></div>
+            <div class="feature-text"><h3>Plays on what you own</h3><p>Windows PCs play through their own speakers (wired, HDMI or Bluetooth) with WavWiz Player. Phones, tablets and Macs open a web page and join as a speaker automatically, with no app to install.</p></div>
           </li>
           <li class="card feature reveal">
             <div class="feature-ico ico-t"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="2.2" fill="currentColor"/><path d="M8.2 15.8a5.4 5.4 0 0 1 0-7.6M15.8 8.2a5.4 5.4 0 0 1 0 7.6M5.4 18.6a9.3 9.3 0 0 1 0-13.2M18.6 5.4a9.3 9.3 0 0 1 0 13.2" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg></div>
@@ -284,7 +287,7 @@
           </li>
           <li class="card feature reveal">
             <div class="feature-ico ico-t"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9a10 10 0 0 1 14 0M8 12a6 6 0 0 1 8 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="16" r="2" fill="currentColor"/><path d="M12 18v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
-            <div class="feature-text"><h3>Your library and radio</h3><p>Local folders and NAS shares, search and browse by artist, album, genre or folder, playlists, gapless albums, ReplayGain/R128 volume leveling, and an internet radio finder.</p></div>
+            <div class="feature-text"><h3>Your library and radio</h3><p>Local folders and NAS shares, album pages and favorites, search and browse by artist, album, genre or folder, playlists, gapless albums, ReplayGain/R128 volume leveling, and an internet radio finder.</p></div>
           </li>
           <li class="card feature reveal">
             <div class="feature-ico ico-o"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h12M4 12h12M4 18h8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M18 14v6l4-3-4-3Z" fill="currentColor"/></svg></div>
@@ -296,11 +299,11 @@
           </li>
           <li class="card feature reveal">
             <div class="feature-ico ico-o"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M8 20V4M12 20v-7M16 20V7M20 20v-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
-            <div class="feature-text"><h3>Visualizers and themes</h3><p>Eight visualizers for a big screen. Five themes, or pick your own colors.</p></div>
+            <div class="feature-text"><h3>Visualizers and themes</h3><p>Eight visualizers for a big screen. Ten themes, or pick your own colors.</p></div>
           </li>
           <li class="card feature reveal">
             <div class="feature-ico ico-t"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
-            <div class="feature-text"><h3>Private</h3><p>No cloud account, no analytics, no telemetry. Local network only by default. For access away from home, use your own Tailscale. WavWiz doesn't open ports to the internet.</p></div>
+            <div class="feature-text"><h3>Private</h3><p>No cloud account, no analytics, no telemetry, and WavWiz doesn't open ports to the internet. Internet radio, tag and cover lookups, online album covers and artist photos (on by default; switch them off in <em>Settings &rsaquo; Library</em>), and optional Spotify Connect reach the internet. For access away from home, use your own Tailscale.</p></div>
           </li>
         </ol>
       </div>
@@ -312,52 +315,36 @@
         <header class="section-head reveal">
           <p class="eyebrow">Visualizer showcase</p>
           <h2 id="viz-title">Turn a big screen into a <span class="accent-t">light show</span>.</h2>
-          <p class="section-lead">All eight visualizers, captured from the app.</p>
+          <p class="section-lead">Four of the eight visualizers, captured from the app as they react to the beat.</p>
         </header>
 
         <div class="viz-wrap reveal">
           <div class="viz-stage card" id="viz-stage">
-            <video class="viz-video is-active" id="viz-particles" data-viz="particles" muted loop playsinline preload="none" width="1280" height="720" data-poster="assets/img/wavwiz-viz-particle-burst.webp" aria-label="Particle burst visualizer, captured from the WavWiz app">
+            <video class="viz-video is-active" id="viz-geq" data-viz="geq" muted loop playsinline preload="none" width="960" height="540" data-poster="assets/img/wavwiz-viz-graphic-eq.webp" aria-label="Graphic EQ visualizer reacting to music, captured from the WavWiz app">
+              <source src="assets/video/wavwiz-viz-graphic-eq.mp4" type="video/mp4">
+            </video>
+            <video class="viz-video" id="viz-spectrum" data-viz="spectrum" muted loop playsinline preload="none" width="960" height="540" data-poster="assets/img/wavwiz-viz-spectrum.webp" aria-hidden="true" aria-label="Spectrum visualizer reacting to music, captured from the WavWiz app">
+              <source src="assets/video/wavwiz-viz-spectrum.mp4" type="video/mp4">
+            </video>
+            <video class="viz-video" id="viz-particles" data-viz="particles" muted loop playsinline preload="none" width="960" height="540" data-poster="assets/img/wavwiz-viz-particle-burst.webp" aria-hidden="true" aria-label="Particle burst visualizer reacting to music, captured from the WavWiz app">
               <source src="assets/video/wavwiz-viz-particle-burst.mp4" type="video/mp4">
             </video>
-            <video class="viz-video" id="viz-river" data-viz="river" muted loop playsinline preload="none" width="1280" height="720" data-poster="assets/img/wavwiz-viz-waveform-river.webp" aria-hidden="true" aria-label="Waveform river visualizer, captured from the WavWiz app">
+            <video class="viz-video" id="viz-river" data-viz="river" muted loop playsinline preload="none" width="960" height="540" data-poster="assets/img/wavwiz-viz-waveform-river.webp" aria-hidden="true" aria-label="Waveform river visualizer reacting to music, captured from the WavWiz app">
               <source src="assets/video/wavwiz-viz-waveform-river.mp4" type="video/mp4">
-            </video>
-            <video class="viz-video" id="viz-cone" data-viz="cone" muted loop playsinline preload="none" width="1280" height="720" data-poster="assets/img/wavwiz-viz-speaker-cone.webp" aria-hidden="true" aria-label="Speaker cone visualizer, captured from the WavWiz app">
-              <source src="assets/video/wavwiz-viz-speaker-cone.mp4" type="video/mp4">
-            </video>
-            <video class="viz-video" id="viz-ring" data-viz="ring" muted loop playsinline preload="none" width="1280" height="720" data-poster="assets/img/wavwiz-viz-ring.webp" aria-hidden="true" aria-label="Ring visualizer, captured from the WavWiz app">
-              <source src="assets/video/wavwiz-viz-ring.mp4" type="video/mp4">
-            </video>
-            <video class="viz-video" id="viz-tunnel" data-viz="tunnel" muted loop playsinline preload="none" width="1280" height="720" data-poster="assets/img/wavwiz-viz-neon-tunnel.webp" aria-hidden="true" aria-label="Neon tunnel visualizer, captured from the WavWiz app">
-              <source src="assets/video/wavwiz-viz-neon-tunnel.mp4" type="video/mp4">
-            </video>
-            <video class="viz-video" id="viz-terrain" data-viz="terrain" muted loop playsinline preload="none" width="1280" height="720" data-poster="assets/img/wavwiz-viz-terrain.webp" aria-hidden="true" aria-label="Terrain visualizer, captured from the WavWiz app">
-              <source src="assets/video/wavwiz-viz-terrain.mp4" type="video/mp4">
-            </video>
-            <video class="viz-video" id="viz-vu" data-viz="vu" muted loop playsinline preload="none" width="1280" height="720" data-poster="assets/img/wavwiz-viz-vu-meters.webp" aria-hidden="true" aria-label="VU meters visualizer, captured from the WavWiz app">
-              <source src="assets/video/wavwiz-viz-vu-meters.mp4" type="video/mp4">
-            </video>
-            <video class="viz-video" id="viz-geq" data-viz="geq" muted loop playsinline preload="none" width="1280" height="720" data-poster="assets/img/wavwiz-viz-graphic-eq.webp" aria-hidden="true" aria-label="Graphic EQ visualizer, captured from the WavWiz app">
-              <source src="assets/video/wavwiz-viz-graphic-eq.mp4" type="video/mp4">
             </video>
             <div class="viz-hud">
               <span class="viz-live"><span class="badge-dot" aria-hidden="true"></span>Real app capture</span>
-              <span class="viz-name" id="viz-name">Particle burst</span>
+              <span class="viz-name" id="viz-name">Graphic EQ</span>
             </div>
           </div>
           <aside class="viz-side">
             <div class="viz-tabs" role="tablist" aria-label="Visualizer style">
-              <button type="button" role="tab" class="viz-tab is-active" aria-selected="true" aria-controls="viz-particles" data-viz="particles"><span class="viz-tab-num" aria-hidden="true">01</span>Particle burst</button>
-              <button type="button" role="tab" class="viz-tab" aria-selected="false" aria-controls="viz-river" data-viz="river" tabindex="-1"><span class="viz-tab-num" aria-hidden="true">02</span>Waveform river</button>
-              <button type="button" role="tab" class="viz-tab" aria-selected="false" aria-controls="viz-cone" data-viz="cone" tabindex="-1"><span class="viz-tab-num" aria-hidden="true">03</span>Speaker cone</button>
-              <button type="button" role="tab" class="viz-tab" aria-selected="false" aria-controls="viz-ring" data-viz="ring" tabindex="-1"><span class="viz-tab-num" aria-hidden="true">04</span>Ring</button>
-              <button type="button" role="tab" class="viz-tab" aria-selected="false" aria-controls="viz-tunnel" data-viz="tunnel" tabindex="-1"><span class="viz-tab-num" aria-hidden="true">05</span>Neon tunnel</button>
-              <button type="button" role="tab" class="viz-tab" aria-selected="false" aria-controls="viz-terrain" data-viz="terrain" tabindex="-1"><span class="viz-tab-num" aria-hidden="true">06</span>Terrain</button>
-              <button type="button" role="tab" class="viz-tab" aria-selected="false" aria-controls="viz-vu" data-viz="vu" tabindex="-1"><span class="viz-tab-num" aria-hidden="true">07</span>VU meters</button>
-              <button type="button" role="tab" class="viz-tab" aria-selected="false" aria-controls="viz-geq" data-viz="geq" tabindex="-1"><span class="viz-tab-num" aria-hidden="true">08</span>Graphic EQ</button>
+              <button type="button" role="tab" class="viz-tab is-active" aria-selected="true" aria-controls="viz-geq" data-viz="geq"><span class="viz-tab-num" aria-hidden="true">01</span>Graphic EQ</button>
+              <button type="button" role="tab" class="viz-tab" aria-selected="false" aria-controls="viz-spectrum" data-viz="spectrum" tabindex="-1"><span class="viz-tab-num" aria-hidden="true">02</span>Spectrum</button>
+              <button type="button" role="tab" class="viz-tab" aria-selected="false" aria-controls="viz-particles" data-viz="particles" tabindex="-1"><span class="viz-tab-num" aria-hidden="true">03</span>Particle burst</button>
+              <button type="button" role="tab" class="viz-tab" aria-selected="false" aria-controls="viz-river" data-viz="river" tabindex="-1"><span class="viz-tab-num" aria-hidden="true">04</span>Waveform river</button>
             </div>
-            <label class="viz-auto"><input type="checkbox" id="viz-auto" checked> Auto-cycle all 8</label>
+            <label class="viz-auto"><input type="checkbox" id="viz-auto" checked> Auto-cycle</label>
           </aside>
         </div>
       </div>
@@ -384,15 +371,15 @@
             <h3>Add your music</h3>
             <p>In <em>Settings › Library</em>, add a local folder or a network share like \\NAS\Music. If the share needs a password, save it under <em>Network share logins</em> first.</p>
             <div class="step-media">
-              <img src="assets/img/wavwiz-step-library.webp" width="720" height="620" loading="lazy" decoding="async" alt="WavWiz Settings, Music folders: D:\Music is added with 3 tracks, a network share path is typed in next to the Add button, and below it Network share logins lets you save a NAS user name and password.">
+              <img src="assets/img/wavwiz-step-library.webp" width="720" height="620" loading="lazy" decoding="async" alt="WavWiz Settings, Music folders: D:\Music is added with 27 tracks, a network share path is typed in next to the Add button, and below it Network share logins lets you save a NAS user name and password.">
             </div>
           </li>
           <li class="card step reveal">
             <span class="step-num">03</span>
             <h3>Add rooms</h3>
-            <p>On each Windows PC with speakers, run the installer and choose WavWiz Player. It finds the server (enter the pairing code if asked). On phones and tablets, open the server's address in the browser. For a TV, use a PC or laptop connected to it.</p>
+            <p>On each Windows PC with speakers, run the installer and choose WavWiz Player. It finds the server (enter the pairing code if asked). On phones and tablets, open the server's address in the browser. TV browsers are still in testing, so for a TV a connected PC or laptop is the reliable option.</p>
             <div class="step-media">
-              <img src="assets/img/wavwiz-step-phone-iphone.webp" width="600" height="1176" loading="lazy" decoding="async" alt="WavWiz Now Playing in an iPhone's web browser: the Ring visualizer, the song Night Drive by Demo Artist, transport controls, master volume at 70 percent, and Living Room, Kitchen and Patio all playing.">
+              <img src="assets/img/wavwiz-step-phone-iphone.webp" width="600" height="1176" loading="lazy" decoding="async" alt="WavWiz Devices in an iPhone's web browser: master volume and Mute all, then the Living Room and Kitchen speakers playing, each with its own volume and delay, and the playing song in the mini player at the bottom.">
             </div>
           </li>
         </ol>
@@ -417,7 +404,7 @@
           </details>
           <details class="card reveal">
             <summary>What doesn't work yet?</summary>
-            <p>WavWiz is a public beta. Today: smart-TV built-in browsers (LG webOS confirmed) freeze and don't join as a speaker, so for a TV use a PC or laptop connected to it. The server runs only on 64-bit Windows 10 or 11, with no Mac or Linux server and no Docker image. AirPlay shows up as one whole-house speaker, not one per room, and it's classic AirPlay, so iPhone won't group it with AirPlay 2 speakers. WavWiz can't play to Sonos, Chromecast or DLNA speakers. On iPhone, tap the page once to start the sound.</p>
+            <p>WavWiz is a public beta. Smart-TV browsers are still in testing: WavWiz gives TVs a lighter layout and visualizer, but some (including an older LG webOS set) don't finish loading yet. For now, the reliable way to use a TV is a PC or laptop connected to it, and if you try your TV's browser, we'd love to hear how it went. The server runs only on 64-bit Windows 10 or 11, with no Mac or Linux server and no Docker image. AirPlay shows up as one whole-house speaker, not one per room, and it's classic AirPlay, so iPhone won't group it with AirPlay 2 speakers. WavWiz can't play to Sonos, Chromecast or DLNA speakers. On iPhone, tap the page once to start the sound.</p>
           </details>
           <details class="card reveal">
             <summary>Why does Windows SmartScreen warn me when I install WavWiz?</summary>
@@ -506,6 +493,7 @@
       <div class="footer-brand">
         <a class="wordmark" href="#top" aria-label="WavWiz home"><span class="wm-wav">Wav</span><span class="wm-wiz">Wiz</span></a>
         <p>Free, open-source whole-home audio for Windows.</p>
+        <p class="community">Community: Discord server and r/WavWiz, coming soon.</p>
       </div>
       <nav class="footer-links" aria-label="Footer">
         <a href="https://github.com/vdubbin74/WavWiz" target="_blank" rel="noopener">GitHub</a>
