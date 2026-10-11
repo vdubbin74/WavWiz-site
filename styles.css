@@ -164,8 +164,23 @@ p { margin: 0 0 1em; }
   0%, 100% { filter: drop-shadow(0 0 6px rgba(255,90,31,.45)) drop-shadow(0 0 22px rgba(255,90,31,.25)); }
   50% { filter: drop-shadow(0 0 14px rgba(46,196,182,.75)) drop-shadow(0 0 44px rgba(46,196,182,.4)); }
 }
-.hero-sub { font-size: clamp(1.05rem, 1.6vw, 1.25rem); color: #c5cde0; max-width: 40em; margin-bottom: 32px; }
-.hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; }
+.hero-sub { font-size: clamp(1.05rem, 1.6vw, 1.25rem); color: #c5cde0; max-width: 40em; margin-bottom: 46px; }
+.hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; position: relative; }
+/* "New release" note: sits in the gap above the buttons (absolutely placed, so showing it never moves the layout) */
+.release-badge { position: absolute; left: 0; bottom: calc(100% + 9px); max-width: 100%; display: inline-flex; align-items: center; gap: 8px; padding: 4px 10px 4px 4px;
+  border-radius: var(--r); border: 1px solid rgba(46,196,182,.4); background: rgba(7,11,23,.72); color: #e9edf7; font-size: .84rem; font-weight: 500; line-height: 1.2;
+  text-decoration: none; white-space: nowrap; overflow: hidden; transition: border-color .2s, background .2s; }
+.release-badge[hidden] { display: none; }
+.release-badge:hover { border-color: rgba(255,122,69,.7); background: rgba(255,90,31,.08); }
+.release-badge .rb-new { display: inline-flex; align-items: center; gap: 6px; padding: 2px 7px; border-radius: 3px; background: var(--orange); color: #fff; font-family: var(--font-head);
+  font-weight: 700; font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; flex: none; }
+.release-badge .rb-dot { width: 6px; height: 6px; border-radius: 50%; background: #fff; flex: none; }
+.release-badge .rb-text { overflow: hidden; text-overflow: ellipsis; }
+.release-badge .rb-sep { color: var(--line-2); }
+.release-badge .rb-more { color: var(--teal-2); flex: none; }
+@media (prefers-reduced-motion: no-preference) { .release-badge .rb-dot { animation: rb-pulse 2s ease-in-out infinite; } }
+@keyframes rb-pulse { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
+@media (max-width: 360px) { .release-badge .rb-sep, .release-badge .rb-more { display: none; } }
 .hero-links { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; margin: 20px 0 0; font-size: .95rem; font-weight: 500; }
 .hero-links .hero-fact { color: var(--muted); }
 .hero-links span { color: var(--line-2); }

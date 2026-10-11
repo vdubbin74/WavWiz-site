@@ -397,3 +397,40 @@ const WAVWIZ_CONFIG = {
 
   window.__wavwizWarp = Warp;
 })();
+
+/* "New release" note in the hero. The version comes only from GitHub's latest release at runtime (nothing is hard-coded),
+   cached for an hour in sessionStorage. Shown only for releases published in the last 30 days; any error or timeout shows nothing. */
+(() => {
+  "use strict";
+  const el = document.getElementById("release-badge");
+  if (!el || !window.fetch) return;
+  const API = "https://api.github.com/repos/vdubbin74/WavWiz/releases/latest";
+  const KEY = "wavwiz.site.latestRelease.v1", HOUR = 36e5, FRESH_DAYS = 30;
+  const show = r => {
+    const tag = typeof r.tag_name === "string" ? r.tag_name.trim() : "";
+    const m = /^v?(\d+\.\d+\.\d+(?:[-.][0-9A-Za-z.]+)?)$/.exec(tag);
+    const url = typeof r.html_url === "string" ? r.html_url : "";
+    const when = Date.parse(r.published_at);
+    if (!m || !/^https:\/\/github\.com\/vdubbin74\/WavWiz\/releases\/tag\/[^\s"<>]+$/.test(url) || !isFinite(when)) return;
+    const age = Date.now() - when;
+    if (age < -864e5 || age > FRESH_DAYS * 864e5) return;
+    el.querySelector(".rb-text").textContent = "WavWiz " + m[1] + " is out";
+    el.href = url;
+    el.setAttribute("aria-label", "New release: WavWiz " + m[1] + " is out. What's new (opens on GitHub)");
+    el.hidden = false;
+  };
+  let cached = null;
+  try { cached = JSON.parse(sessionStorage.getItem(KEY) || "null"); } catch (e) { cached = null; }
+  if (cached && typeof cached.t === "number" && Date.now() - cached.t < HOUR) { if (cached.r) show(cached.r); return; }
+  const ctl = "AbortController" in window ? new AbortController() : null;
+  const timer = setTimeout(() => ctl && ctl.abort(), 4000);
+  const save = r => { try { sessionStorage.setItem(KEY, JSON.stringify({ t: Date.now(), r })); } catch (e) { /* private mode */ } };
+  fetch(API, { headers: { Accept: "application/vnd.github+json" }, signal: ctl ? ctl.signal : undefined, credentials: "omit", referrerPolicy: "no-referrer" })
+    .then(res => (res.ok ? res.json() : null))
+    .then(d => {
+      clearTimeout(timer);
+      const r = d && typeof d === "object" ? { tag_name: d.tag_name, html_url: d.html_url, published_at: d.published_at } : null;
+      save(r); if (r) show(r);
+    })
+    .catch(() => clearTimeout(timer));
+})();
