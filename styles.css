@@ -431,7 +431,7 @@ p { margin: 0 0 1em; }
 /* ---- EQ & visualizers: 2 + 2 tiles ---- */
 .eqviz-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
 .eqviz-tile { margin: 0; padding: 0; overflow: hidden; }
-.eqviz-tile img { display: block; width: 100%; aspect-ratio: 16 / 8; height: auto; object-fit: cover; background: #0b0d10; border-bottom: 1px solid var(--line); }
+.eqviz-tile img { display: block; width: 100%; aspect-ratio: 748 / 338; height: auto; object-fit: cover; background: #0b0d10; border-bottom: 1px solid var(--line); }
 .eqviz-tile figcaption { display: flex; align-items: center; gap: 10px; padding: 12px 16px; font-family: var(--font-head); font-weight: 600; }
 .eqviz-kind { font-family: var(--font-mono); font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; padding: 2px 7px; border-radius: var(--r); border: 1px solid rgba(46,196,182,.45); color: var(--teal); }
 .eqviz-kind.eqviz-visualizer { color: var(--orange); border-color: rgba(255,90,31,.4); }
