@@ -36,7 +36,7 @@
   <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
-  {
+{
     "@context": "https://schema.org",
     "@graph": [
       {
@@ -105,7 +105,13 @@
           "Shared queue, zones, scenes and schedules",
           "CD ripping to FLAC",
           "Eight visualizers",
-          "Ten themes"
+          "Ten themes",
+          "Jukebox mode: guests add songs from their phones by QR code (beta)",
+          "Mini player window",
+          "Alarms with fade-in and snooze, sleep timer and crossfade",
+          "Scenes and schedules",
+          "Zones and per-speaker max-volume lock",
+          "Backup and restore"
         ],
         "sameAs": [
           "https://github.com/vdubbin74/WavWiz"
@@ -133,10 +139,66 @@
           },
           {
             "@type": "Question",
-            "name": "How tight is the sync?",
+            "name": "Can my phone be a speaker? Can it play to a Bluetooth speaker?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Every device plays the same stream against a shared clock, and WavWiz keeps correcting each device's drift so rooms stay together. Bluetooth speakers and TVs add their own lag, so if a room sounds behind, raise that device's delay (0 to 1000 ms) while the music plays until the echo is gone. No sync measurements have been published yet."
+              "text": "Yes. Open the WavWiz page in your phone's browser on your home Wi-Fi and tap Play music here. There's no app to install. The phone plays through whatever it's using for sound, so if it's paired with a Bluetooth speaker or headphones, the music comes out there. Bluetooth adds its own lag, so give that phone a little delay (or calibrate it) to line it up with the other rooms. On iPhone, tap the page once to start the sound, and keep the WavWiz page open while it plays."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I use old PCs or laptops as speakers?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Any Windows 10 or 11 PC can run WavWiz Player and play through its own speakers, headphones, HDMI, optical, USB or Bluetooth output. Anything else with a modern browser, like a Mac, a Chromebook or an older laptop, can join by opening the WavWiz page."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does it keep rooms in sync?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Every device plays the same stream against a shared clock, and WavWiz keeps correcting each device's drift so rooms stay together. Bluetooth speakers and TVs add their own lag, so each device gets its own delay (0 to 1000 ms). Set it by ear while the music plays, or let Calibrate speakers measure it with a PC mic or your phone. No sync measurements have been published yet."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need special hardware?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. You need one Windows PC that stays on to run the server, and whatever speakers you already have: PCs, laptops, phones, tablets, and the speakers, TVs and receivers they connect to."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does it work with Bluetooth, HDMI and receivers?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, through a PC. WavWiz Player plays to any output Windows can use, including HDMI to a TV or receiver, optical, USB DACs and Bluetooth speakers, and each speaker shows which output it's using. WavWiz can't send audio to Sonos, Chromecast or DLNA speakers directly."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can guests add songs?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Anyone on your network can add songs from their own phone. For parties, Jukebox mode puts a QR code on a big screen. Guests scan it and add songs with no app and no sign-in, within your rules: allowed music, songs per guest, vote to skip and more."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I cap the volume in a kid's room?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. As an admin, set a max-volume lock on any speaker. Nothing can raise that room past the cap, and turning it down always works."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What do I need to run it?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The server needs a 64-bit Windows 10 (October 2018 Update or newer) or Windows 11 PC that stays on, and everything else comes in the installer. Speakers need WavWiz Player on Windows or any modern browser on the same home network."
             }
           },
           {
@@ -191,6 +253,7 @@
       </button>
       <nav class="site-nav" id="site-nav" aria-label="Main">
         <a href="#features">Features</a>
+        <a href="#new">What's new</a>
         <a href="#visualizers">Visualizers</a>
         <a href="#how">How it works</a>
         <a href="#faq">FAQ</a>
@@ -310,6 +373,55 @@
       </div>
     </section>
 
+
+    <!-- ============ NEW IN 0.3 ============ -->
+    <section class="section section-alt" id="new" aria-labelledby="new-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">New in 0.3</p>
+          <h2 id="new-title">Party mode, a pocket-size player, and <span class="accent-t">a lot more</span>.</h2>
+        </header>
+        <div class="spot-grid">
+          <article class="card spot reveal" aria-labelledby="spot-jukebox">
+            <div class="feature-ico ico-o"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3v3M12 18v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+            <p class="spot-tag">Beta</p>
+            <h3 id="spot-jukebox">Jukebox mode</h3>
+            <p>Turn a PC into a locked party screen. Guests scan a QR code and add songs from their own phone, with no app and no sign-in. They see big cover art, what's playing and who asked for each song, with the visualizer behind it.</p>
+            <ul class="spot-list">
+              <li><b>Your rules:</b> pick the allowed folders and playlists, set songs per guest (3 by default), and turn on vote to skip, an artist cooldown or an explicit filter.</li>
+              <li><b>Never silent:</b> auto-fill keeps music going when the queue runs dry.</li>
+              <li><b>Host stays in charge:</b> pin a song next, remove a song, ban a guest or lock the queue. Only your host PIN leaves the Jukebox screen.</li>
+              <li><b>Two looks:</b> Modern or Retro CD.</li>
+            </ul>
+          </article>
+          <article class="card spot reveal" aria-labelledby="spot-mini">
+            <div class="feature-ico ico-t"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="7" width="19" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><rect x="5" y="9.5" width="5" height="5" rx="1" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m14 10 3 2-3 2Z" fill="currentColor"/></svg></div>
+            <p class="spot-tag spot-tag-t">New</p>
+            <h3 id="spot-mini">Mini player</h3>
+            <p>A small window that keeps the whole house within reach while you work. Park it at the top of your screen and forget about it.</p>
+            <ul class="spot-list">
+              <li><b>Everything you reach for:</b> cover, title, seek, previous, play and next, volume and mute.</li>
+              <li><b>Stays put:</b> pin it on top of other windows, drag it anywhere, and it remembers where you left it.</li>
+              <li><b>Follows your theme</b> and opens the full app with one click.</li>
+              <li><b>Just a remote:</b> opening the mini player never adds a second speaker.</li>
+            </ul>
+          </article>
+        </div>
+        <ul class="more-grid reveal" aria-label="More new features">
+          <li><b>Alarms</b>Wake up to a playlist, song or station with a fade-in, on chosen days, with Snooze. <em>(beta)</em></li>
+          <li><b>Sleep timer</b>15 to 90 minutes, end of song or end of album, then a gentle fade-out.</li>
+          <li><b>Crossfade</b>0 to 12 seconds, off by default, and never inside an album.</li>
+          <li><b>Scenes &amp; Schedules</b>Save a setup for the house and run it with a tap or on a schedule.</li>
+          <li><b>Zones and volume caps</b>One volume bar and mute per zone, plus a max-volume lock per room that nobody can turn past.</li>
+          <li><b>EQ view</b>The live 10-band EQ sits in the middle of Now Playing, one tap from the visualizer, with Lock EQ.</li>
+          <li><b>Themes</b>Ten themes, or set your own colors, with live previews.</li>
+          <li><b>Backup and restore</b>One file with your settings, playlists, scenes, alarms and EQ presets. No passwords inside.</li>
+          <li><b>Speaker calibration</b>Measure each speaker's delay with a PC mic or your phone's mic, step by step.</li>
+          <li><b>See every output</b>Each speaker shows what it plays through, like HDMI, Bluetooth or USB.</li>
+        </ul>
+      </div>
+    </section>
+
     <!-- ============ VISUALIZER SHOWCASE ============ -->
     <section class="section section-alt" id="visualizers" aria-labelledby="viz-title">
       <div class="container">
@@ -400,8 +512,36 @@
             <p>Yes. WavWiz is free and open source under the MIT license. There's nothing to buy, no subscription and no account to create.</p>
           </details>
           <details class="card reveal">
-            <summary>How tight is the sync?</summary>
-            <p>Every device plays the same stream against a shared clock, and WavWiz keeps correcting each device's drift so rooms stay together. Bluetooth speakers and TVs add their own lag, so if a room sounds behind, raise that device's delay (0 to 1000 ms) while the music plays until the echo is gone. No sync measurements have been published yet.</p>
+            <summary>Can my phone be a speaker? Can it play to a Bluetooth speaker?</summary>
+            <p>Yes. Open the WavWiz page in your phone's browser on your home Wi-Fi and tap <em>Play music here</em>. There's no app to install. The phone plays through whatever it's using for sound, so if it's paired with a Bluetooth speaker or headphones, the music comes out there. Bluetooth adds its own lag, so give that phone a little delay (or calibrate it) to line it up with the other rooms. On iPhone, tap the page once to start the sound, and keep the WavWiz page open while it plays.</p>
+          </details>
+          <details class="card reveal">
+            <summary>Can I use old PCs or laptops as speakers?</summary>
+            <p>Yes. Any Windows 10 or 11 PC can run WavWiz Player and play through its own speakers, headphones, HDMI, optical, USB or Bluetooth output. Anything else with a modern browser, like a Mac, a Chromebook or an older laptop, can join by opening the WavWiz page.</p>
+          </details>
+          <details class="card reveal">
+            <summary>Does it keep rooms in sync?</summary>
+            <p>Every device plays the same stream against a shared clock, and WavWiz keeps correcting each device's drift so rooms stay together. Bluetooth speakers and TVs add their own lag, so each device gets its own delay (0 to 1000 ms). Set it by ear while the music plays, or let <em>Calibrate speakers</em> measure it with a PC mic or your phone. No sync measurements have been published yet.</p>
+          </details>
+          <details class="card reveal">
+            <summary>Do I need special hardware?</summary>
+            <p>No. You need one Windows PC that stays on to run the server, and whatever speakers you already have: PCs, laptops, phones, tablets, and the speakers, TVs and receivers they connect to.</p>
+          </details>
+          <details class="card reveal">
+            <summary>Does it work with Bluetooth, HDMI and receivers?</summary>
+            <p>Yes, through a PC. WavWiz Player plays to any output Windows can use, including HDMI to a TV or receiver, optical, USB DACs and Bluetooth speakers, and each speaker shows which output it's using. WavWiz can't send audio to Sonos, Chromecast or DLNA speakers directly.</p>
+          </details>
+          <details class="card reveal">
+            <summary>Can guests add songs?</summary>
+            <p>Yes. Anyone on your network can add songs from their own phone. For parties, Jukebox mode puts a QR code on a big screen. Guests scan it and add songs with no app and no sign-in, within your rules: allowed music, songs per guest, vote to skip and more.</p>
+          </details>
+          <details class="card reveal">
+            <summary>Can I cap the volume in a kid's room?</summary>
+            <p>Yes. As an admin, set a max-volume lock on any speaker. Nothing can raise that room past the cap, and turning it down always works.</p>
+          </details>
+          <details class="card reveal">
+            <summary>What do I need to run it?</summary>
+            <p>The server needs a 64-bit Windows 10 (October 2018 Update or newer) or Windows 11 PC that stays on, and everything else comes in the installer. Speakers need WavWiz Player on Windows or any modern browser on the same home network.</p>
           </details>
           <details class="card reveal">
             <summary>What doesn't work yet?</summary>

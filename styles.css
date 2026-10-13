@@ -411,3 +411,19 @@ p { margin: 0 0 1em; }
   .eq-bar { transform: scaleY(var(--s0, .5)); }
   .glow-text { filter: drop-shadow(0 0 12px rgba(255,90,31,.45)); }
 }
+
+/* ---- New in 0.3: spotlight cards + compact feature grid ---- */
+.spot-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.spot h3 { margin: 6px 0 8px; font-size: 1.4rem; }
+.spot > p { color: var(--muted); margin: 0 0 12px; }
+.spot-tag { display: inline-block; margin: 16px 0 0; padding: 2px 8px; font-family: var(--font-mono); font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--orange); border: 1px solid rgba(255,90,31,.4); border-radius: var(--r); }
+.spot-tag-t { color: var(--teal); border-color: rgba(46,196,182,.45); }
+.spot-list { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; }
+.spot-list li { position: relative; padding-left: 18px; color: var(--muted); font-size: .96rem; }
+.spot-list li::before { content: ""; position: absolute; left: 0; top: .62em; width: 8px; height: 2px; background: var(--teal); }
+.spot-list b { color: var(--text); font-weight: 600; }
+.more-grid { list-style: none; margin: 22px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
+.more-grid li { padding: 14px 16px; border: 1px solid var(--line); border-left: 2px solid var(--teal); border-radius: var(--r); background: rgba(19,26,46,.6); color: var(--muted); font-size: .92rem; }
+.more-grid li:nth-child(even) { border-left-color: var(--orange); }
+.more-grid b { display: block; color: var(--text); font-family: var(--font-head); font-weight: 600; margin-bottom: 4px; }
+@media (max-width: 760px) { .spot-grid { grid-template-columns: 1fr; } }
