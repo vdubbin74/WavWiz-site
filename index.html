@@ -70,7 +70,7 @@
         "@id": "https://wavwiz.com/#software",
         "name": "WavWiz",
         "url": "https://wavwiz.com/",
-        "description": "WavWiz turns an always-on Windows PC into a whole-home music server. Your music library (local folders or NAS shares) and internet radio play in sync on Windows PCs, phones and tablets, and iPhone, iPad and Mac can AirPlay to every room at once. Phones and tablets play from a web browser, with no app to install.",
+        "description": "WavWiz turns an always-on Windows PC into a whole-home music server. Your music library (local folders or NAS shares) and internet radio play in sync on Windows PCs, phones and tablets, and iPhone, iPad and Mac can AirPlay to every device at once. Phones and tablets play from a web browser, with no app to install.",
         "applicationCategory": "MultimediaApplication",
         "applicationSubCategory": "Whole-home audio",
         "operatingSystem": "Windows 10, Windows 11",
@@ -97,21 +97,20 @@
           "Built-in AirPlay receiver",
           "Optional Spotify Connect (Spotify Premium required)",
           "Browsers join as speakers automatically, with no app to install",
-          "Delay calibration with your phone as the microphone",
+          "Delay calibration with a PC mic (USB, 3.5 mm or audio-interface) or your phone as the microphone (iPhone still in testing)",
           "Music library from local folders and NAS shares",
           "Album pages and favorites",
           "Internet radio finder",
           "Gapless album playback",
           "ReplayGain / R128 volume leveling",
-          "Shared queue, zones, scenes and schedules",
+          "Shared queue with playlist drag and drop",
           "CD ripping to FLAC",
           "Eight visualizers",
           "Ten themes",
           "Jukebox mode: guests add songs from their phones by QR code (beta)",
           "Mini player window",
           "Alarms with fade-in and snooze, sleep timer and crossfade",
-          "Scenes and schedules",
-          "Zones and per-speaker max-volume lock",
+          "Zones, scenes and schedules, and per-speaker max-volume lock",
           "Backup and restore"
         ],
         "sameAs": [
@@ -191,7 +190,7 @@
             "name": "Can guests add songs?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. Anyone on your network can add songs from their own phone. For parties, Jukebox mode puts a QR code on a big screen. Guests scan it and add songs with no app and no sign-in, within your rules: allowed music, songs per guest, vote to skip and more. The Jukebox screen runs in a web browser, so you can put it on a smart TV, a tablet or a spare screen (any TV with a modern web browser; TV browsers are still in testing, so a PC or laptop connected to the TV is the most reliable)."
+              "text": "Yes. Anyone on your network can add songs from their own phone. For parties, Jukebox mode puts a QR code on a big screen. Guests scan it and add songs with no app and no sign-in, within your rules: allowed music, songs per guest, vote to skip and more. The Jukebox screen runs in a web browser on a PC, laptop or tablet. A PC or laptop connected to the TV works best; smart-TV browsers are still in testing."
             }
           },
           {
@@ -215,7 +214,7 @@
             "name": "What doesn't work yet?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "WavWiz is a public beta. Smart-TV browsers are still in testing: WavWiz gives TVs a lighter layout and visualizer, but some (including an older LG webOS set) don't finish loading yet. For now, the reliable way to use a TV is a PC or laptop connected to it, and if you try your TV's browser, we'd love to hear how it went. The server runs only on 64-bit Windows 10 or 11, with no Mac or Linux server and no Docker image. AirPlay shows up as one whole-house speaker, not one per room, and it's classic AirPlay, so iPhone won't group it with AirPlay 2 speakers. WavWiz can't play to Sonos, Chromecast or DLNA speakers. On iPhone, tap the page once to start the sound."
+              "text": "WavWiz is a public beta. Smart-TV browsers are still in testing: WavWiz gives TVs a lighter layout and visualizer, but some (including an older LG webOS set) don't finish loading yet. For now, the reliable way to use a TV is a PC or laptop connected to it, and if you try your TV's browser, we'd love to hear how it went. The server runs only on 64-bit Windows 10 or 11, with no Mac or Linux server and no Docker image. AirPlay shows up as one whole-house speaker, not one per device, and it's classic AirPlay, so iPhone won't group it with AirPlay 2 speakers. WavWiz can't play to Sonos, Chromecast or DLNA speakers. On iPhone, tap the page once to start the sound."
             }
           },
           {
@@ -344,7 +343,7 @@
           </li>
           <li class="card feature reveal">
             <div class="feature-ico ico-t"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M20 18h0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="16" cy="6" r="2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="10" cy="12" r="2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="18" r="2" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
-            <div class="feature-text"><h3>Per-device delay</h3><p>Bluetooth speakers and TV audio run late. Give each device its own 0&ndash;1000&nbsp;ms delay and adjust it live, or measure it with your phone as the microphone (needs a one-time HTTPS setup).</p></div>
+            <div class="feature-text"><h3>Per-device delay</h3><p>Bluetooth speakers and TV audio run late. Give each device its own 0&ndash;1000&nbsp;ms delay and adjust it live, or measure it with a PC mic (recommended) or your phone as the microphone (needs a one-time HTTPS setup; iPhone is still in testing).</p></div>
           </li>
           <li class="card feature reveal">
             <div class="feature-ico ico-o"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M11 18h2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
@@ -364,7 +363,7 @@
           </li>
           <li class="card feature reveal">
             <div class="feature-ico ico-o"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h12M4 12h12M4 18h8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M18 14v6l4-3-4-3Z" fill="currentColor"/></svg></div>
-            <div class="feature-text"><h3>One house, one queue</h3><p>Everyone can add songs from their own phone. Group devices into zones, save scenes, and start them on a schedule.</p></div>
+            <div class="feature-text"><h3>One house, one queue</h3><p>Everyone can add songs from their own phone, and you can drag songs to reorder the playlist or drop them in from the Library. Group devices into zones, save scenes, and start them on a schedule.</p></div>
           </li>
           <li class="card feature reveal">
             <div class="feature-ico ico-t"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
@@ -401,7 +400,7 @@
               <li><b>Never silent:</b> auto-fill keeps music going when the queue runs dry.</li>
               <li><b>Host stays in charge:</b> pin a song next, remove a song, ban a guest or lock the queue. Only your host PIN leaves the Jukebox screen.</li>
               <li><b>Two looks:</b> Modern or Retro CD.</li>
-              <li><b>Any big screen:</b> start it on your PC, then open the big screen in the browser on a smart TV, tablet or spare PC from the &ldquo;Jukebox on&rdquo; button. Guests keep queuing from their phones. Smart-TV browsers are still in testing, so a PC or laptop plugged into the TV is the surest bet.</li>
+              <li><b>Any big screen:</b> start it on your PC, then open the big screen on a spare PC, laptop or tablet from the &ldquo;Jukebox on&rdquo; button, or plug a PC into the TV. Guests keep queuing from their phones. Smart-TV browsers are still in testing.</li>
             </ul>
           </article>
           <article class="card spot reveal" aria-labelledby="spot-mini">
@@ -426,7 +425,7 @@
           <li><b>EQ view</b>The live 10-band EQ sits in the middle of Now Playing, one tap from the visualizer, with Lock EQ.</li>
           <li><b>Themes</b>Ten themes, or set your own colors, with live previews.</li>
           <li><b>Backup and restore</b>One file with your settings, playlists, scenes, alarms and EQ presets. No passwords inside.</li>
-          <li><b>Speaker calibration</b>Measure each device's delay with a PC mic or your phone's mic, step by step.</li>
+          <li><b>Speaker calibration</b>Measure each device's delay with a PC mic or your phone's mic, step by step. Phone-mic calibration on iPhone is still in testing.</li>
           <li><b>See every output</b>Each device shows what it plays through, like HDMI, Bluetooth or USB.</li>
         </ul>
       </div>
@@ -536,7 +535,7 @@
           </details>
           <details class="card reveal">
             <summary>Can guests add songs?</summary>
-            <p>Yes. Anyone on your network can add songs from their own phone. For parties, Jukebox mode puts a QR code on a big screen. Guests scan it and add songs with no app and no sign-in, within your rules: allowed music, songs per guest, vote to skip and more. The Jukebox screen runs in a web browser, so you can put it on a smart TV, a tablet or a spare screen (any TV with a modern web browser; TV browsers are still in testing, so a PC or laptop connected to the TV is the most reliable).</p>
+            <p>Yes. Anyone on your network can add songs from their own phone. For parties, Jukebox mode puts a QR code on a big screen. Guests scan it and add songs with no app and no sign-in, within your rules: allowed music, songs per guest, vote to skip and more. The Jukebox screen runs in a web browser on a PC, laptop or tablet. A PC or laptop connected to the TV works best; smart-TV browsers are still in testing.</p>
           </details>
           <details class="card reveal">
             <summary>Can I cap the volume in a kid's room?</summary>
@@ -548,7 +547,7 @@
           </details>
           <details class="card reveal">
             <summary>What doesn't work yet?</summary>
-            <p>WavWiz is a public beta. Smart-TV browsers are still in testing: WavWiz gives TVs a lighter layout and visualizer, but some (including an older LG webOS set) don't finish loading yet. For now, the reliable way to use a TV is a PC or laptop connected to it, and if you try your TV's browser, we'd love to hear how it went. The server runs only on 64-bit Windows 10 or 11, with no Mac or Linux server and no Docker image. AirPlay shows up as one whole-house speaker, not one per room, and it's classic AirPlay, so iPhone won't group it with AirPlay 2 speakers. WavWiz can't play to Sonos, Chromecast or DLNA speakers. On iPhone, tap the page once to start the sound.</p>
+            <p>WavWiz is a public beta. Smart-TV browsers are still in testing: WavWiz gives TVs a lighter layout and visualizer, but some (including an older LG webOS set) don't finish loading yet. For now, the reliable way to use a TV is a PC or laptop connected to it, and if you try your TV's browser, we'd love to hear how it went. The server runs only on 64-bit Windows 10 or 11, with no Mac or Linux server and no Docker image. AirPlay shows up as one whole-house speaker, not one per device, and it's classic AirPlay, so iPhone won't group it with AirPlay 2 speakers. WavWiz can't play to Sonos, Chromecast or DLNA speakers. On iPhone, tap the page once to start the sound.</p>
           </details>
           <details class="card reveal">
             <summary>Why does Windows SmartScreen warn me when I install WavWiz?</summary>
