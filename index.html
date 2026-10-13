@@ -435,40 +435,29 @@
     <section class="section section-alt" id="visualizers" aria-labelledby="viz-title">
       <div class="container">
         <header class="section-head reveal">
-          <p class="eyebrow">Visualizer showcase</p>
-          <h2 id="viz-title">Turn a big screen into a <span class="accent-t">light show</span>.</h2>
-          <p class="section-lead">Four of the eight visualizers, captured from the app as they react to the beat.</p>
+          <p class="eyebrow">EQ &amp; visualizers</p>
+          <h2 id="viz-title">Watch it or <span class="accent-t">tune it</span>.</h2>
+          <p class="section-lead">Flip the center screen between a live EQ you can drag and a visualizer that moves to the beat.</p>
         </header>
-
-        <div class="viz-wrap reveal">
-          <div class="viz-stage card" id="viz-stage">
-            <video class="viz-video is-active" id="viz-geq" data-viz="geq" muted loop playsinline preload="none" width="960" height="540" data-poster="assets/img/wavwiz-viz-graphic-eq.webp" aria-label="Graphic EQ visualizer reacting to music, captured from the WavWiz app">
-              <source src="assets/video/wavwiz-viz-graphic-eq.mp4" type="video/mp4">
-            </video>
-            <video class="viz-video" id="viz-spectrum" data-viz="spectrum" muted loop playsinline preload="none" width="960" height="540" data-poster="assets/img/wavwiz-viz-spectrum.webp" aria-hidden="true" aria-label="Spectrum visualizer reacting to music, captured from the WavWiz app">
-              <source src="assets/video/wavwiz-viz-spectrum.mp4" type="video/mp4">
-            </video>
-            <video class="viz-video" id="viz-particles" data-viz="particles" muted loop playsinline preload="none" width="960" height="540" data-poster="assets/img/wavwiz-viz-particle-burst.webp" aria-hidden="true" aria-label="Particle burst visualizer reacting to music, captured from the WavWiz app">
-              <source src="assets/video/wavwiz-viz-particle-burst.mp4" type="video/mp4">
-            </video>
-            <video class="viz-video" id="viz-river" data-viz="river" muted loop playsinline preload="none" width="960" height="540" data-poster="assets/img/wavwiz-viz-waveform-river.webp" aria-hidden="true" aria-label="Waveform river visualizer reacting to music, captured from the WavWiz app">
-              <source src="assets/video/wavwiz-viz-waveform-river.mp4" type="video/mp4">
-            </video>
-            <div class="viz-hud">
-              <span class="viz-live"><span class="badge-dot" aria-hidden="true"></span>Real app capture</span>
-              <span class="viz-name" id="viz-name">Graphic EQ</span>
-            </div>
-          </div>
-          <aside class="viz-side">
-            <div class="viz-tabs" role="tablist" aria-label="Visualizer style">
-              <button type="button" role="tab" class="viz-tab is-active" aria-selected="true" aria-controls="viz-geq" data-viz="geq"><span class="viz-tab-num" aria-hidden="true">01</span>Graphic EQ</button>
-              <button type="button" role="tab" class="viz-tab" aria-selected="false" aria-controls="viz-spectrum" data-viz="spectrum" tabindex="-1"><span class="viz-tab-num" aria-hidden="true">02</span>Spectrum</button>
-              <button type="button" role="tab" class="viz-tab" aria-selected="false" aria-controls="viz-particles" data-viz="particles" tabindex="-1"><span class="viz-tab-num" aria-hidden="true">03</span>Particle burst</button>
-              <button type="button" role="tab" class="viz-tab" aria-selected="false" aria-controls="viz-river" data-viz="river" tabindex="-1"><span class="viz-tab-num" aria-hidden="true">04</span>Waveform river</button>
-            </div>
-            <label class="viz-auto"><input type="checkbox" id="viz-auto" checked> Auto-cycle</label>
-          </aside>
+        <div class="eqviz-grid">
+          <figure class="card eqviz-tile reveal">
+            <img src="assets/img/wavwiz-eq-led-bars.webp" width="748" height="338" loading="lazy" decoding="async" alt="The WavWiz 10-band EQ in the LED bars style: glowing bars with draggable caps, the 500 Hz band raised to +9 dB, over a faint live-music glow.">
+            <figcaption><span class="eqviz-kind eqviz-eq">EQ</span>LED bars</figcaption>
+          </figure>
+          <figure class="card eqviz-tile reveal">
+            <img src="assets/img/wavwiz-eq-spectrum-curve.webp" width="748" height="336" loading="lazy" decoding="async" alt="The WavWiz EQ in the Spectrum curve style: ten numbered nodes on the response line, node 5 raised, over the live-music fill.">
+            <figcaption><span class="eqviz-kind eqviz-eq">EQ</span>Spectrum curve</figcaption>
+          </figure>
+          <figure class="card eqviz-tile reveal">
+            <img src="assets/img/wavwiz-viz-spectrum.webp" width="960" height="540" loading="lazy" decoding="async" alt="The Spectrum visualizer reacting to music, captured from the WavWiz app.">
+            <figcaption><span class="eqviz-kind eqviz-visualizer">Visualizer</span>Spectrum</figcaption>
+          </figure>
+          <figure class="card eqviz-tile reveal">
+            <img src="assets/img/wavwiz-viz-particle-burst.webp" width="960" height="540" loading="lazy" decoding="async" alt="The Particle burst visualizer reacting to music, captured from the WavWiz app.">
+            <figcaption><span class="eqviz-kind eqviz-visualizer">Visualizer</span>Particle burst</figcaption>
+          </figure>
         </div>
+        <p class="eqviz-note reveal">Real app captures. Three EQ styles and eight visualizers in all.</p>
       </div>
     </section>
 
