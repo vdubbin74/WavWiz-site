@@ -19,7 +19,7 @@
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="The WavWiz app window with Library, the Graphic EQ visualizer, Now Playing, Devices (master volume, Mute all, and Living Room, Kitchen, Patio and Office playing) and Playlist panels, under the WavWiz wordmark and the line Whole-home audio wizardry.">
+  <meta property="og:image:alt" content="The WavWiz app window: Library on the left, the live LED-bar EQ in the middle with a slim Now Playing bar below it, Devices on the right (master volume and Living Room, Kitchen, Patio and Office playing) and the Playlist.">
   <meta property="og:locale" content="en_US">
   <meta property="og:image:secure_url" content="https://wavwiz.com/assets/img/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -78,7 +78,7 @@
         "softwareRequirements": "Microsoft Edge WebView2 Runtime for the player window (included with Windows 11 and current Windows 10)",
         "image": "https://wavwiz.com/assets/img/og-image.png",
         "screenshot": "https://wavwiz.com/assets/img/wavwiz-app-window.webp",
-        "softwareVersion": "0.3.5",
+        "softwareVersion": "0.3.6",
         "downloadUrl": "https://github.com/vdubbin74/WavWiz/releases/latest",
         "installUrl": "https://github.com/vdubbin74/WavWiz/releases/latest",
         "releaseNotes": "https://github.com/vdubbin74/WavWiz/releases/latest",
@@ -111,7 +111,9 @@
           "Mini player window",
           "Alarms with fade-in and snooze, sleep timer and crossfade",
           "Zones, scenes and schedules, and per-speaker max-volume lock",
-          "Backup and restore"
+          "Speaker profiles, including a profile per device in each scene",
+          "Playlist columns you can show, hide, resize, reorder and sort",
+          "Backup and restore, with Back up now and Undo restore"
         ],
         "sameAs": [
           "https://github.com/vdubbin74/WavWiz"
@@ -323,7 +325,7 @@
           <h2 id="app-title">One window runs the <span class="accent-t">whole house</span>.</h2>
         </header>
         <figure class="app-frame reveal">
-          <img src="assets/img/wavwiz-app-window.webp" srcset="assets/img/wavwiz-app-window-960.webp 960w, assets/img/wavwiz-app-window.webp 1600w" sizes="(max-width: 1200px) calc(100vw - 36px), 1152px" width="1600" height="837" loading="lazy" decoding="async" alt="The WavWiz app window. Library panel on the left, the 10-band EQ with live music in the middle and Now Playing below it, Devices on the right with master volume and Living Room, Kitchen, Office and Patio playing, and the Playlist across the bottom.">
+          <img src="assets/img/wavwiz-app-window.webp" srcset="assets/img/wavwiz-app-window-960.webp 960w, assets/img/wavwiz-app-window.webp 1600w" sizes="(max-width: 1200px) calc(100vw - 36px), 1152px" width="1600" height="837" loading="lazy" decoding="async" alt="The WavWiz app window. Library panel on the left, the 10-band LED-bar EQ moving with live music in the middle and a slim one-line Now Playing bar below it, Devices on the right with master volume and Living Room, Kitchen, Patio and Office playing, and the Playlist across the bottom.">
           <figcaption>The real WavWiz window: library, visualizer, Now Playing, devices and zones, and the shared playlist.</figcaption>
         </figure>
       </div>
@@ -363,7 +365,7 @@
           </li>
           <li class="card feature reveal">
             <div class="feature-ico ico-o"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h12M4 12h12M4 18h8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M18 14v6l4-3-4-3Z" fill="currentColor"/></svg></div>
-            <div class="feature-text"><h3>One house, one queue</h3><p>Everyone can add songs from their own phone, and you can drag songs to reorder the playlist or drop them in from the Library. Group devices into zones, save scenes, and start them on a schedule.</p></div>
+            <div class="feature-text"><h3>One house, one queue</h3><p>Everyone can add songs from their own phone, and you can drag songs to reorder the playlist or drop them in from the Library. Group devices into zones, save scenes, and start them on a schedule, or run one from File &rsaquo; Run.</p></div>
           </li>
           <li class="card feature reveal">
             <div class="feature-ico ico-t"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
@@ -421,10 +423,10 @@
           <li><b>Alarms</b>Wake up to a playlist, song or station with a fade-in, on chosen days, with Snooze. <em>(beta)</em></li>
           <li><b>Sleep timer</b>15 to 90 minutes, end of song or end of album, then a gentle fade-out.</li>
           <li><b>Crossfade</b>0 to 12 seconds, off by default, and never inside an album.</li>
-          <li><b>Zones, scenes and caps</b>Group devices into zones, save scenes and run them on a schedule, and lock a max volume per device.</li>
-          <li><b>EQ view</b>The live 10-band EQ sits in the middle of Now Playing, one tap from the visualizer, with Lock EQ.</li>
-          <li><b>Themes</b>Ten themes, or set your own colors, with live previews.</li>
-          <li><b>Backup and restore</b>One file with your settings, playlists, scenes, alarms and EQ presets. No passwords inside.</li>
+          <li><b>Speaker profiles</b>Save a speaker's volume, cap, delay, balance, bass, treble, EQ and output as a profile, then pick a profile per device in each scene. Balance is applied by WavWiz Player.</li>
+          <li><b>LED EQ</b>The live 10-band EQ sits in the middle of Now Playing with LED bars that follow the real level of each band, one tap from the visualizer, with Lock EQ.</li>
+          <li><b>Hover menus</b>Sleep timer, New and Run (scenes, schedules, alarms) open as hover submenus, so one click does it. Playlist columns can be shown, hidden, resized, reordered and sorted.</li>
+          <li><b>Backup and restore</b>Import, export, Back up now and Restore from the File menu, with a summary first and Undo restore. No passwords inside.</li>
           <li><b>Speaker calibration</b>Measure each device's delay with a PC mic or your phone's mic, step by step. Phone-mic calibration on iPhone is still in testing.</li>
           <li><b>See every output</b>Each device shows what it plays through, like HDMI, Bluetooth or USB.</li>
         </ul>
@@ -441,11 +443,11 @@
         </header>
         <div class="eqviz-grid">
           <figure class="card eqviz-tile reveal">
-            <img src="assets/img/wavwiz-eq-led-bars.webp" width="748" height="338" loading="lazy" decoding="async" alt="The WavWiz 10-band EQ in the LED bars style: glowing bars with draggable caps, the 500 Hz band raised to +9 dB, over a faint live-music glow.">
+            <img src="assets/img/wavwiz-eq-led-bars.webp" width="748" height="338" loading="lazy" decoding="async" alt="The WavWiz 10-band EQ in the LED bars style: each band's bar moves with the real level of that frequency, with a draggable cap on every band.">
             <figcaption><span class="eqviz-kind eqviz-eq">EQ</span>LED bars</figcaption>
           </figure>
           <figure class="card eqviz-tile reveal">
-            <img src="assets/img/wavwiz-eq-spectrum-curve.webp" width="748" height="336" loading="lazy" decoding="async" alt="The WavWiz EQ in the Spectrum curve style: ten numbered nodes on the response line, node 5 raised, over the live-music fill.">
+            <img src="assets/img/wavwiz-eq-spectrum-curve.webp" width="748" height="338" loading="lazy" decoding="async" alt="The WavWiz EQ in the Spectrum curve style: ten numbered nodes on the response line, with the live LED level bars behind them.">
             <figcaption><span class="eqviz-kind eqviz-eq">EQ</span>Spectrum curve</figcaption>
           </figure>
           <figure class="card eqviz-tile reveal">
@@ -457,7 +459,7 @@
             <figcaption><span class="eqviz-kind eqviz-visualizer">Visualizer</span>Particle burst</figcaption>
           </figure>
         </div>
-        <p class="eqviz-note reveal">Real app captures. Three EQ styles and eight visualizers in all.</p>
+        <p class="eqviz-note reveal">Real app captures. Three EQ styles, all with live LED level bars, and eight visualizers in all.</p>
       </div>
     </section>
 
@@ -490,7 +492,7 @@
             <h3>Line up and play</h3>
             <p>Calibrate once with a PC mic or your phone so every device lines up, group devices into zones, and play on every device in sync. Having people over? Hand the queue to Jukebox mode.</p>
             <div class="step-media">
-              <img src="assets/img/wavwiz-app-window-960.webp" width="960" height="502" loading="lazy" decoding="async" alt="The WavWiz app window with the library, the 10-band EQ and Now Playing in the middle, and Devices on the right with Living Room, Kitchen, Office and Patio playing together.">
+              <img src="assets/img/wavwiz-app-window-960.webp" width="960" height="502" loading="lazy" decoding="async" alt="The WavWiz app window with the library, the 10-band LED-bar EQ and Now Playing in the middle, and Devices on the right with Living Room, Kitchen, Patio and Office playing together.">
             </div>
           </li>
         </ol>
