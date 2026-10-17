@@ -414,9 +414,9 @@ const WAVWIZ_CONFIG = {
     if (!m || !/^https:\/\/github\.com\/vdubbin74\/WavWiz\/releases\/tag\/[^\s"<>]+$/.test(url) || !isFinite(when)) return;
     const age = Date.now() - when;
     if (age < -864e5 || age > FRESH_DAYS * 864e5) return;
-    el.querySelector(".rb-text").textContent = "WavWiz " + m[1] + " is out";
+    el.querySelector(".rb-text").textContent = "A new release is out";
     el.href = url;
-    el.setAttribute("aria-label", "New release: WavWiz " + m[1] + " is out. What's new (opens on GitHub)");
+    el.setAttribute("aria-label", "A new release is out. What's new (opens on GitHub)");
     el.hidden = false;
   };
   let cached = null;
@@ -433,4 +433,15 @@ const WAVWIZ_CONFIG = {
       save(r); if (r) show(r);
     })
     .catch(() => clearTimeout(timer));
+})();
+
+/* Optional real screenshots: each figure with data-optional-shot stays hidden until its image file exists, so new captures drop in with no page edits. */
+(function () {
+  document.querySelectorAll("figure[data-optional-shot]").forEach(function (fig) {
+    var img = fig.querySelector("img");
+    if (!img) return;
+    var probe = new Image();
+    probe.onload = function () { fig.hidden = false; };
+    probe.src = img.getAttribute("src");
+  });
 })();

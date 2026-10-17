@@ -19,7 +19,7 @@
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="The WavWiz app window: Library on the left, the live LED-bar EQ in the middle with a slim Now Playing bar below it, Devices on the right (master volume and Living Room, Kitchen, Patio and Office playing) and the Playlist.">
+  <meta property="og:image:alt" content="The WavWiz app window: Library on the left, the live LED-bar EQ in the middle with a slim Now Playing bar below it, Devices on the right (master volume, speakers and zones) and the Queue below the EQ.">
   <meta property="og:locale" content="en_US">
   <meta property="og:image:secure_url" content="https://wavwiz.com/assets/img/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -78,7 +78,7 @@
         "softwareRequirements": "Microsoft Edge WebView2 Runtime for the player window (included with Windows 11 and current Windows 10)",
         "image": "https://wavwiz.com/assets/img/og-image.png",
         "screenshot": "https://wavwiz.com/assets/img/wavwiz-app-window.webp",
-        "softwareVersion": "0.3.6",
+        "softwareVersion": "0.3.9",
         "downloadUrl": "https://github.com/vdubbin74/WavWiz/releases/latest",
         "installUrl": "https://github.com/vdubbin74/WavWiz/releases/latest",
         "releaseNotes": "https://github.com/vdubbin74/WavWiz/releases/latest",
@@ -263,6 +263,7 @@
       </button>
       <nav class="site-nav" id="site-nav" aria-label="Main">
         <a href="#features">Features</a>
+        <a href="#devices">Devices</a>
         <a href="#new">What's new</a>
         <a href="#visualizers">Visualizers</a>
         <a href="#how">How it works</a>
@@ -325,8 +326,8 @@
           <h2 id="app-title">One window runs the <span class="accent-t">whole house</span>.</h2>
         </header>
         <figure class="app-frame reveal">
-          <img src="assets/img/wavwiz-app-window.webp" srcset="assets/img/wavwiz-app-window-960.webp 960w, assets/img/wavwiz-app-window.webp 1600w" sizes="(max-width: 1200px) calc(100vw - 36px), 1152px" width="1600" height="837" loading="lazy" decoding="async" alt="The WavWiz app window. Library panel on the left, the 10-band LED-bar EQ moving with live music in the middle and a slim one-line Now Playing bar below it, Devices on the right with master volume and Living Room, Kitchen, Patio and Office playing, and the Playlist across the bottom.">
-          <figcaption>The real WavWiz window: library, visualizer, Now Playing, devices and zones, and the shared playlist.</figcaption>
+          <img src="assets/img/wavwiz-app-window.webp" srcset="assets/img/wavwiz-app-window-960.webp 960w, assets/img/wavwiz-app-window.webp 1600w" sizes="(max-width: 1200px) calc(100vw - 36px), 1152px" width="1600" height="837" loading="lazy" decoding="async" alt="The WavWiz app window. Library panel on the left, the 10-band LED-bar EQ moving with live music in the middle and a slim one-line Now Playing bar below it, Devices on the right with master volume, speakers and zones, and the Queue below the EQ. The All sound settings button and the EQ padlock sit above the bands.">
+          <figcaption>The WavWiz window: Library, the EQ with its All sound settings button and padlock, the Queue, Now Playing, and the Devices bar.</figcaption>
         </figure>
       </div>
     </section>
@@ -384,12 +385,43 @@
     </section>
 
 
-    <!-- ============ NEW IN 0.3 ============ -->
+    <!-- ============ DEVICES (real screenshots drop in by file name; each figure shows once its image exists) ============ -->
+    <section class="section" id="devices" aria-labelledby="devices-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Devices</p>
+          <h2 id="devices-title">Use the speakers you <span class="accent-o">already own</span>.</h2>
+        </header>
+        <div class="devices-grid">
+          <ul class="device-types reveal" aria-label="Devices WavWiz plays on">
+            <li><b>Wired and USB speakers</b>Plug them into a PC that runs WavWiz Player and pick the output. Each device shows what it plays through.</li>
+            <li><b>HDMI and AV receivers</b>Send a PC's HDMI output to a TV or receiver.</li>
+            <li><b>Bluetooth speakers</b>Pair one to a PC. Bluetooth adds lag, so give that device a little delay or calibrate it to line it up.</li>
+            <li><b>Other PCs</b>Any Windows 10 or 11 PC running WavWiz Player plays through its own speakers.</li>
+            <li><b>Phones and tablets</b>Open the page in a browser to play as a speaker, or just to control the music without playing. Smart-TV browsers are still in testing, so a PC plugged into the TV is the surest bet.</li>
+          </ul>
+            <figure class="shot shot-tall reveal" data-optional-shot hidden>
+              <img src="assets/img/wavwiz-devices-bar.webp" width="800" height="1000" loading="lazy" decoding="async" alt="The WavWiz Devices bar: master volume with All off and All on, then five speakers (AV Receiver, Basement PC, Office PC, Kitchen Speaker and Living Room PC), each with an on/off switch and volume.">
+              <figcaption>The Devices bar: master volume, and each speaker with its on/off switch and volume.</figcaption>
+            </figure>
+            <figure class="shot reveal" data-optional-shot hidden>
+              <img src="assets/img/wavwiz-devices-expanded.webp" width="1600" height="900" loading="lazy" decoding="async" alt="The expanded Devices view: Scenes and Schedules on the left, the Basement, Kitchen, Living Room and Office zones in the middle, and the five speakers with their output devices on the right.">
+              <figcaption>Expanded Devices: Scenes &amp; Schedules, Zones and Speakers side by side.</figcaption>
+            </figure>
+            <figure class="shot reveal" data-optional-shot hidden>
+              <img src="assets/img/wavwiz-speaker-settings.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Speaker Settings for one speaker: volume, volume cap, delay, balance, bass and treble sliders, the 10-band EQ with a padlock, and the output for the Kitchen Speaker, a Bluetooth speaker with a 187 ms delay.">
+              <figcaption>Speaker Settings: volume, cap, delay, balance, bass and treble sliders, the EQ with a padlock, and the output.</figcaption>
+            </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHAT'S NEW ============ -->
     <section class="section section-alt" id="new" aria-labelledby="new-title">
       <div class="container">
         <header class="section-head reveal">
-          <p class="eyebrow">New in 0.3</p>
-          <h2 id="new-title">Party mode, perfect sync, and <span class="accent-t">a lot more</span>.</h2>
+          <p class="eyebrow">What&rsquo;s new</p>
+          <h2 id="new-title">Party mode, a pocket-size player, and <span class="accent-t">a lot more</span>.</h2>
         </header>
         <div class="spot-grid">
           <article class="card spot reveal" aria-labelledby="spot-jukebox">
@@ -418,8 +450,17 @@
             </ul>
           </article>
         </div>
-        <ul class="more-grid reveal" aria-label="More new features">
-          <li><b>Mini player</b>A small window with cover, seek, play and volume. Pin it on top; it remembers where you left it.</li>
+        <p class="new-sub reveal">Latest updates</p>
+        <ul class="more-grid reveal" aria-label="Latest updates">
+          <li><b>Expanded Devices</b>Scenes &amp; Schedules, Zones and Speakers in three columns. Each speaker card shows its output, status and delay. There's a master row (All off, All on, master volume), click a card to open its settings, and drag cards to reorder them.</li>
+          <li><b>Calibration, easier</b>A louder test sound with its own volume slider, and a mic check with advice before each measurement. Your music stays paused until you resume, and a silent speaker is retried and named. Wired PC mics have worked on more than one setup; phone-mic calibration on iPhone is still in testing.</li>
+          <li><b>A stronger queue</b>Drag to reorder in every view, lock the queue and its sort, and right-click (or long-press) a song for Play next, Move to top, Remove and more. Clear has an Undo, and the queue comes back after an unexpected exit.</li>
+          <li><b>One EQ, all sound settings</b>Every EQ button opens the same center EQ. An All sound settings button adds presets, Bass, Treble, Loudness and Limiter in place, with one padlock to lock it all.</li>
+          <li><b>Shortcuts and pins</b>Keyboard shortcuts (Space, Ctrl+Right / Left, M, Alt+M and more, listed in Help &rsaquo; Keyboard shortcuts), media keys with WavWiz Player on Windows, and up to five one-click pins next to Home. Media keys and Alt shortcuts are still in testing on more PCs.</li>
+        </ul>
+        <p class="new-sub reveal">Also in this beta</p>
+        <ul class="more-grid reveal" aria-label="More features">
+          <li><b>Mini player</b>A small window with cover, seek, play, mute and a large volume bar. Pin it on top; it remembers where you left it.</li>
           <li><b>Alarms</b>Wake up to a playlist, song or station with a fade-in, on chosen days, with Snooze. <em>(beta)</em></li>
           <li><b>Sleep timer</b>15 to 90 minutes, end of song or end of album, then a gentle fade-out.</li>
           <li><b>Crossfade</b>0 to 12 seconds, off by default, and never inside an album.</li>
@@ -427,7 +468,6 @@
           <li><b>LED EQ</b>The live 10-band EQ sits in the middle of Now Playing with LED bars that follow the real level of each band, one tap from the visualizer, with Lock EQ.</li>
           <li><b>Hover menus</b>Sleep timer, New and Run (scenes, schedules, alarms) open as hover submenus, so one click does it. Playlist columns can be shown, hidden, resized, reordered and sorted.</li>
           <li><b>Backup and restore</b>Import, export, Back up now and Restore from the File menu, with a summary first and Undo restore. No passwords inside.</li>
-          <li><b>Speaker calibration</b>Measure each device's delay with a PC mic or your phone's mic, step by step. Phone-mic calibration on iPhone is still in testing.</li>
           <li><b>See every output</b>Each device shows what it plays through, like HDMI, Bluetooth or USB.</li>
         </ul>
       </div>
@@ -492,7 +532,7 @@
             <h3>Line up and play</h3>
             <p>Calibrate once with a PC mic or your phone so every device lines up, group devices into zones, and play on every device in sync. Having people over? Hand the queue to Jukebox mode.</p>
             <div class="step-media">
-              <img src="assets/img/wavwiz-app-window-960.webp" width="960" height="502" loading="lazy" decoding="async" alt="The WavWiz app window with the library, the 10-band LED-bar EQ and Now Playing in the middle, and Devices on the right with Living Room, Kitchen, Patio and Office playing together.">
+              <img src="assets/img/wavwiz-app-window-960.webp" width="960" height="502" loading="lazy" decoding="async" alt="The WavWiz app window with the library, the 10-band LED-bar EQ and Now Playing in the middle, and Devices on the right with master volume, speakers and zones.">
             </div>
           </li>
         </ol>
@@ -638,8 +678,7 @@
       <div class="footer-brand">
         <a class="wordmark" href="#top" aria-label="WavWiz home"><span class="wm-wav">Wav</span><span class="wm-wiz">Wiz</span></a>
         <p>Free, open-source whole-home audio for Windows.</p>
-        <p class="community">Community: Discord server and r/WavWiz, coming soon.</p>
-      </div>
+              </div>
       <nav class="footer-links" aria-label="Footer">
         <a href="https://github.com/vdubbin74/WavWiz" target="_blank" rel="noopener">GitHub</a>
         <a href="https://github.com/vdubbin74/WavWiz/releases/latest" target="_blank" rel="noopener">Release notes</a>
