@@ -240,7 +240,7 @@ p { margin: 0 0 1em; }
 @keyframes icon-pop { 50% { transform: scale(1.12) rotate(-4deg); } }
 
 /* ---------------- Steps ---------------- */
-.steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; position: relative; counter-reset: s; }
+.steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; position: relative; counter-reset: s; }
 .steps::before { content: ""; position: absolute; left: 8%; right: 8%; top: 52px; height: 2px; z-index: 0;
   background: linear-gradient(90deg, var(--orange), var(--teal), var(--orange)); background-size: 200% 100%; animation: flow 3s linear infinite; opacity: .55; }
 @keyframes flow { to { background-position: -200% 0; } }
