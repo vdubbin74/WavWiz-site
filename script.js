@@ -1,3 +1,10 @@
+/* Version: the single source of truth is <html data-version>. This fills every [data-ver] and the JSON-LD.
+   The HTML also carries the same number as a static fallback; bump both with tools/bump-version.sh NEW. */
+(() => {
+  const v = document.documentElement.dataset.version; if (!v) return;
+  document.querySelectorAll("[data-ver]").forEach(e => { e.textContent = v; });
+})();
+
 /* =========================================================
    WavWiz landing page script. Plain JS, no build step, no trackers.
    ========================================================= */
