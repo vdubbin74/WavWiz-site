@@ -36,6 +36,8 @@ const WAVWIZ_CONFIG = {
   const COLORS = { orange: [255, 90, 31], teal: [46, 196, 182], bg: "#0b1020" };
   const mq = window.matchMedia ? window.matchMedia("(prefers-reduced-motion: reduce)") : { matches: false };
   let reduced = mq.matches;
+  /* Coarse pointer (phones/tablets): skip GPU-heavy effects that kill Safari at extreme zoom. */
+  const coarse = !!(window.matchMedia && window.matchMedia("(hover: none) and (pointer: coarse)").matches);
   const rgba = (c, a) => `rgba(${c[0]},${c[1]},${c[2]},${a})`;
   const lerpColor = (a, b, t) => [a[0] + (b[0] - a[0]) * t, a[1] + (b[1] - a[1]) * t, a[2] + (b[2] - a[2]) * t].map(Math.round);
   const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
@@ -98,6 +100,7 @@ const WAVWIZ_CONFIG = {
   const Warp = (function () {
     const canvas = document.getElementById("warp");
     if (!canvas || !canvas.getContext) return null;
+    if (coarse) { canvas.remove(); return null; }
     const ctx = canvas.getContext("2d");
     let w = 0, h = 0, dpr = 1, stars = [], running = false, visible = true, raf = 0, last = 0;
     let cx = 0, cy = 0, tcx = 0, tcy = 0;
@@ -179,7 +182,7 @@ const WAVWIZ_CONFIG = {
   /* ---------------- EQ strip ---------------- */
   (function buildEq() {
     const track = document.getElementById("eq-track");
-    if (!track) return;
+    if (!track || coarse) return;
     const r = rng(74);
     const n = 110, frag = document.createDocumentFragment(), bars = [];
     for (let i = 0; i < n; i++) {
@@ -229,7 +232,7 @@ const WAVWIZ_CONFIG = {
     let ticking = false;
     function apply() {
       ticking = false;
-      if (reduced) { items.forEach((el) => (el.style.transform = "")); return; }
+      if (reduced || coarse) { items.forEach((el) => (el.style.transform = "")); return; }
       const y = window.scrollY;
       if (y > hero.offsetHeight * 1.2) return;
       items.forEach((el) => { const f = parseFloat(el.dataset.parallax) || 0; el.style.transform = `translate3d(0, ${(y * f).toFixed(1)}px, 0)`; });
