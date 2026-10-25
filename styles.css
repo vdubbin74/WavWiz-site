@@ -467,3 +467,12 @@ p { margin: 0 0 1em; }
 @media (max-width: 900px) { .device-types, .shot-tall { grid-column: 1 / -1; } .shot-tall { width: 100%; max-width: 460px; justify-self: center; } }
 @media (max-width: 640px) { .devices-grid { grid-template-columns: 1fr; } .device-types { grid-auto-rows: auto; } }
 .new-sub { margin: 26px 0 10px; font-family: var(--font-head); font-weight: 600; letter-spacing: .08em; text-transform: uppercase; font-size: .85rem; color: var(--teal); }
+/* Phone/tablet: cut GPU/memory load so iOS Safari WebContent isn't killed at extreme pinch-zoom. */
+@media (hover: none) and (pointer: coarse) {
+  .hero-glow { filter: none; opacity: .35; }              /* blur(70px) on 520-560px layers */
+  .watermark { filter: none; opacity: .07; }              /* fixed + blurred full-viewport layer */
+  .site-header { -webkit-backdrop-filter: none; backdrop-filter: none; background: rgba(11,16,32,.96); }
+  .hero-copy { will-change: auto; }
+  .hero-grid { animation: none; }                          /* 3D-perspective animated layer */
+  .glow-text { animation: hue-slide 6s ease-in-out infinite alternate; } /* drop animated drop-shadow filters */
+}
