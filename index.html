@@ -217,7 +217,7 @@
             "name": "What doesn't work yet?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "WavWiz is a public beta. Smart-TV browsers are still in testing: WavWiz gives TVs a lighter layout and visualizer, but some (including an older LG webOS set) don't finish loading yet. For now, the reliable way to use a TV is a PC or laptop connected to it, and if you try your TV's browser, we'd love to hear how it went. The server runs only on 64-bit Windows 10 or 11, with no Mac or Linux server and no Docker image. AirPlay shows up as one speaker per zone plus &ldquo;WavWiz &ndash; Everywhere&rdquo;, not one per device, and it's classic AirPlay, so iPhone won't group it with AirPlay 2 speakers. WavWiz can play to AirPlay 1 speakers; AirPlay 2 output (Sonos and similar) is experimental, and Chromecast and DLNA aren't supported. On iPhone, tap the page once to start the sound."
+              "text": "WavWiz is a public beta. Smart-TV browsers are still in testing: WavWiz gives TVs a lighter layout and visualizer, but some (including an older LG webOS set) don't finish loading yet. For now, the reliable way to use a TV is a PC or laptop connected to it, and if you try your TV's browser, we'd love to hear how it went. The server runs on 64-bit Windows 10 or 11, or on Linux with Docker (64-bit x86 only for now; no Mac server yet). To play through a PC's own speakers you still need the Windows Player. AirPlay shows up as one speaker per zone plus &ldquo;WavWiz &ndash; Everywhere&rdquo;, not one per device, and it's classic AirPlay, so iPhone won't group it with AirPlay 2 speakers. WavWiz can play to AirPlay 1 speakers; AirPlay 2 output (Sonos and similar) is experimental, and Chromecast and DLNA aren't supported. On iPhone, tap the page once to start the sound."
             }
           },
           {
@@ -528,7 +528,7 @@
         </div>
         <ul class="more-grid grid-3 reveal" aria-label="New in 0.6.0">
           <li><b>Linux server</b>Headless WavWiz Server for Linux, so a NAS, mini PC or Pi can run the house.</li>
-          <li><b>Docker (Hub image coming)</b>An image (<code>vdubbin74/wavwiz-server</code>) is built; the Docker Hub listing is still on its way.</li>
+          <li><b>Docker</b>The server image is on <a href="https://hub.docker.com/r/vdubbin74/wavwiz-server">Docker Hub</a>: <code>docker pull vdubbin74/wavwiz-server:0.6.0</code> (64-bit x86). Compose setup is in the <a href="https://github.com/vdubbin74/WavWiz/blob/main/docs/DOCKER.md">Docker guide</a>.</li>
           <li><b>AirPlay as real Speakers</b>AirPlay devices now show up as Speakers you can put in any zone.</li>
           <li><b>Home Assistant</b>Let Home Assistant drive and control WavWiz playback.</li>
           <li><b>Subsonic &amp; Navidrome</b>Play from a remote Subsonic or Navidrome library.</li>
@@ -594,7 +594,7 @@
             <p>Run the WavWiz server on almost any always-on box, not just a Windows PC.</p>
             <ul class="spot-list">
               <li><b>Linux server:</b> headless WavWiz Server for 64-bit Intel/AMD (ARM later), so a NAS, mini PC or Raspberry Pi can run the house.</li>
-              <li><b>Docker:</b> an official server image (<code>vdubbin74/wavwiz-server</code>). The Docker Hub listing is coming soon.</li>
+              <li><b>Docker:</b> an official server image, now on <a href="https://hub.docker.com/r/vdubbin74/wavwiz-server">Docker Hub</a> (<code>vdubbin74/wavwiz-server:0.6.0</code> and <code>:latest</code>, 64-bit x86). See the <a href="https://github.com/vdubbin74/WavWiz/blob/main/docs/DOCKER.md">Docker guide</a> for compose.</li>
               <li><b>Remote libraries:</b> play from a Subsonic or OpenSubsonic server, with Navidrome tested first.</li>
               <li><b>Home Assistant:</b> let Home Assistant control playback with a secure token.</li>
               <li><b>Nothing to relearn:</b> the same web app, zones, scenes and schedules.</li>
@@ -682,7 +682,7 @@
           </details>
           <details class="card reveal">
             <summary>What doesn't work yet?</summary>
-            <p>WavWiz is a public beta. Smart-TV browsers are still in testing: WavWiz gives TVs a lighter layout and visualizer, but some (including an older LG webOS set) don't finish loading yet. For now, the reliable way to use a TV is a PC or laptop connected to it, and if you try your TV's browser, we'd love to hear how it went. The server runs only on 64-bit Windows 10 or 11, with no Mac or Linux server and no Docker image. AirPlay shows up as one speaker per zone plus &ldquo;WavWiz &ndash; Everywhere&rdquo;, not one per device, and it's classic AirPlay, so iPhone won't group it with AirPlay 2 speakers. WavWiz can play to AirPlay 1 speakers; AirPlay 2 output (Sonos and similar) is experimental, and Chromecast and DLNA aren't supported. On iPhone, tap the page once to start the sound.</p>
+            <p>WavWiz is a public beta. Smart-TV browsers are still in testing: WavWiz gives TVs a lighter layout and visualizer, but some (including an older LG webOS set) don't finish loading yet. For now, the reliable way to use a TV is a PC or laptop connected to it, and if you try your TV's browser, we'd love to hear how it went. The server runs on 64-bit Windows 10 or 11, or on Linux with Docker (64-bit x86 only for now; no Mac server yet). To play through a PC's own speakers you still need the Windows Player. AirPlay shows up as one speaker per zone plus &ldquo;WavWiz &ndash; Everywhere&rdquo;, not one per device, and it's classic AirPlay, so iPhone won't group it with AirPlay 2 speakers. WavWiz can play to AirPlay 1 speakers; AirPlay 2 output (Sonos and similar) is experimental, and Chromecast and DLNA aren't supported. On iPhone, tap the page once to start the sound.</p>
           </details>
           <details class="card reveal">
             <summary>Why does Windows SmartScreen warn me when I install WavWiz?</summary>
