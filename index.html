@@ -528,7 +528,7 @@
         </div>
         <ul class="more-grid grid-3 reveal" aria-label="New in 0.6.0">
           <li><b>Linux server</b>Headless WavWiz Server for Linux, so a NAS, mini PC or Pi can run the house.</li>
-          <li><b>Docker</b>The server image is on <a href="https://hub.docker.com/r/vdubbin74/wavwiz-server">Docker Hub</a>: <code>docker pull vdubbin74/wavwiz-server:0.6.0</code> (64-bit x86). Compose setup is in the <a href="https://github.com/vdubbin74/WavWiz/blob/main/docs/DOCKER.md">Docker guide</a>, including a <a href="https://github.com/vdubbin74/WavWiz/blob/main/docs/DOCKER.md#windows-docker-desktop-step-by-step">Windows Docker Desktop walkthrough</a>.</li>
+          <li><b>Docker</b>The server image is on <a href="https://hub.docker.com/r/vdubbin74/wavwiz-server">Docker Hub</a>: <code>docker pull vdubbin74/wavwiz-server:0.6.0</code> (64-bit x86). Compose setup is in the <a href="https://github.com/vdubbin74/WavWiz/blob/main/docs/DOCKER.md">Docker guide</a>, including a <a href="https://github.com/vdubbin74/WavWiz/blob/main/docs/DOCKER.md#windows-docker-desktop-step-by-step">Windows Docker Desktop walkthrough</a>. <b>Not the full Windows app:</b> Docker is a headless server with no local speakers or mic, no CD ripping, no Windows share logins, no Linux Player, and no AirPlay 2 / Sonos / HomePod output. On Windows Docker Desktop, discovery is weaker (no host networking). Pair a Windows Player for PC speakers. <a href="https://github.com/vdubbin74/WavWiz/blob/main/docs/DOCKER.md#limits-vs-the-windows-app">See the limits</a>.</li>
           <li><b>AirPlay as real Speakers</b>AirPlay devices now show up as Speakers you can put in any zone.</li>
           <li><b>Home Assistant</b>Let Home Assistant drive and control WavWiz playback.</li>
           <li><b>Subsonic &amp; Navidrome</b>Play from a remote Subsonic or Navidrome library.</li>
@@ -599,7 +599,14 @@
               <li><b>Home Assistant:</b> let Home Assistant control playback with a secure token.</li>
               <li><b>Nothing to relearn:</b> the same web app, zones, scenes and schedules.</li>
             </ul>
-            <p>Docker runs the server only. Music still plays on the Windows Player, phones and browsers, and AirPlay speakers.</p>
+            <p><b>Docker limits vs the Windows app:</b> Docker runs the server only. It has the web UI, zones, scenes, schedules, alarms, Jukebox and Remote, and plays to Windows Players, phones and browsers, and AirPlay 1 speakers. It does not have:</p>
+            <ul>
+              <li>Local speakers or microphone on the Docker host (headless)</li>
+              <li>CD ripping, Windows share logins, or a Linux Player</li>
+              <li>AirPlay 2, Sonos, or HomePod output</li>
+              <li>Full discovery on Windows Docker Desktop: there's no real host networking, so mDNS/AirPlay discovery is weaker; use published ports (<a href="https://github.com/vdubbin74/WavWiz/blob/main/docs/DOCKER.md#windows-docker-desktop-step-by-step">walkthrough</a>)</li>
+            </ul>
+            <p>For PC speakers or richer output, pair a Windows Player. <a href="https://github.com/vdubbin74/WavWiz/blob/main/docs/DOCKER.md#limits-vs-the-windows-app">Full limits list</a>.</p>
           </article>
           <article class="card spot reveal" aria-labelledby="rm-070">
             <p class="spot-tag">Next &middot; 0.7.0</p>
