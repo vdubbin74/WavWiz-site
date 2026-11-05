@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US" data-version="0.6.0" data-release-date="2026-11-01">
+<html lang="en-US" data-version="0.6.6" data-release-date="2026-11-04">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -78,11 +78,11 @@
         "softwareRequirements": "Microsoft Edge WebView2 Runtime for the player window (included with Windows 11 and current Windows 10)",
         "image": "https://wavwiz.com/assets/img/og-image.png",
         "screenshot": "https://wavwiz.com/assets/img/wavwiz-050-app-window.webp",
-        "softwareVersion": "0.6.0",
-        "datePublished": "2026-11-01",
-        "downloadUrl": "https://github.com/vdubbin74/WavWiz/releases/download/v0.6.0/WavWiz-Setup-0.6.0.exe",
+        "softwareVersion": "0.6.6",
+        "datePublished": "2026-11-04",
+        "downloadUrl": "https://github.com/vdubbin74/WavWiz/releases/download/v0.6.6/WavWiz-Setup-0.6.6.exe",
         "installUrl": "https://github.com/vdubbin74/WavWiz/releases/latest",
-        "releaseNotes": "https://github.com/vdubbin74/WavWiz/releases/tag/v0.6.0",
+        "releaseNotes": "https://github.com/vdubbin74/WavWiz/releases/tag/v0.6.6",
         "license": "https://opensource.org/license/mit",
         "isAccessibleForFree": true,
         "inLanguage": "en-US",
@@ -290,7 +290,7 @@
 
       <div class="container hero-inner">
         <div class="hero-copy" data-parallax="0.12">
-          <a class="badge badge-ver" href="#new"><span class="bv-new">New</span><b>v<span data-ver>0.6.0</span> Beta</b><span class="bv-sep" aria-hidden="true">·</span><span class="bv-date">Released <span data-reldate>Nov 1, 2026</span></span><span class="bv-sep" aria-hidden="true">·</span><span class="bv-more">What&rsquo;s new <span aria-hidden="true">&rarr;</span></span></a>
+          <a class="badge badge-ver" href="#new"><span class="bv-new">New</span><b>v<span data-ver>0.6.6</span> Beta</b><span class="bv-sep" aria-hidden="true">·</span><span class="bv-date">Released <span data-reldate>Nov 4, 2026</span></span><span class="bv-sep" aria-hidden="true">·</span><span class="bv-more">What&rsquo;s new <span aria-hidden="true">&rarr;</span></span></a>
           <h1 id="hero-title" class="hero-title">
             <span class="line">Multi-zone audio</span>
             <span class="line glow-text">wizardry.</span>
@@ -493,7 +493,7 @@
     <section class="section section-alt" id="new" aria-labelledby="new-title">
       <div class="container">
         <header class="section-head reveal">
-          <p class="eyebrow">What&rsquo;s new in v<span data-ver>0.6.0</span> &middot; <span data-reldate>Nov 1, 2026</span></p>
+          <p class="eyebrow">What&rsquo;s new in v<span data-ver>0.6.6</span> &middot; <span data-reldate>Nov 4, 2026</span></p>
           <h2 id="new-title">Linux &amp; Docker server, <span class="accent-t">Home Assistant</span>, remote libraries.</h2>
         </header>
         <div class="spot-grid">
@@ -526,9 +526,14 @@
           <figure><img src="assets/img/wavwiz-050-mix-cassette-v2.webp" width="1440" height="900" loading="lazy" decoding="async" alt="WavWiz 0.5.0 in Violet Pulse with Cassette album art on Now Playing: Harbor Lights, EQ, Devices, and Kitchen controlling."><figcaption>Mix and match: cassette art</figcaption></figure>
           <figure><img src="assets/img/wavwiz-050-mini-v2.webp" width="840" height="240" loading="lazy" decoding="async" alt="The redesigned purple mini player: Shortcuts on the title bar, volume, transport with Shuffle and Repeat, and Harbor Lights on Kitchen."><figcaption>Redesigned mini player</figcaption></figure>
         </div>
-        <ul class="more-grid grid-3 reveal" aria-label="New in 0.6.0">
+        <ul class="more-grid grid-3 reveal" aria-label="New in 0.6.6">
+          <li><b>Library sources</b>Local, Remote, Radio and Playlists as top Library sources, with Favorites from the song menu.</li>
+          <li><b>Quieter remote banner</b>On phone, the REMOTE bar docks flush above the bottom menu instead of floating over Library and Devices.</li>
+          <li><b>Phone &amp; Devices polish</b>Live zone play/pause paint, AirPlay list stay-put, matching menu pins, and a proper iPhone Home Screen icon.</li>
+        </ul>
+        <ul class="more-grid grid-3 reveal" aria-label="From 0.6.0">
           <li><b>Linux server</b>Headless WavWiz Server for Linux, so a NAS, mini PC or Pi can run the house.</li>
-          <li><b>Docker</b>The server image is on <a href="https://hub.docker.com/r/vdubbin74/wavwiz-server">Docker Hub</a>: <code>docker pull vdubbin74/wavwiz-server:0.6.0</code> (64-bit x86). Compose setup is in the <a href="https://github.com/vdubbin74/WavWiz/blob/main/docs/DOCKER.md">Docker guide</a>, including a <a href="https://github.com/vdubbin74/WavWiz/blob/main/docs/DOCKER.md#windows-docker-desktop-step-by-step">Windows Docker Desktop walkthrough</a>. <b>Not the full Windows app:</b> Docker is a headless server with no local speakers or mic, no CD ripping, no Windows share logins, no Linux Player, and no AirPlay 2 / Sonos / HomePod output. On Windows Docker Desktop, discovery is weaker (no host networking). Pair a Windows Player for PC speakers. <a href="https://github.com/vdubbin74/WavWiz/blob/main/docs/DOCKER.md#limits-vs-the-windows-app">See the limits</a>.</li>
+          <li><b>Docker</b>The server image is on <a href="https://hub.docker.com/r/vdubbin74/wavwiz-server">Docker Hub</a>: <code>docker pull vdubbin74/wavwiz-server:0.6.6</code> (64-bit x86). Compose setup is in the <a href="https://github.com/vdubbin74/WavWiz/blob/main/docs/DOCKER.md">Docker guide</a>, including a <a href="https://github.com/vdubbin74/WavWiz/blob/main/docs/DOCKER.md#windows-docker-desktop-step-by-step">Windows Docker Desktop walkthrough</a>. <b>Not the full Windows app:</b> Docker is a headless server with no local speakers or mic, no CD ripping, no Windows share logins, no Linux Player, and no AirPlay 2 / Sonos / HomePod output. On Windows Docker Desktop, discovery is weaker (no host networking). Pair a Windows Player for PC speakers. <a href="https://github.com/vdubbin74/WavWiz/blob/main/docs/DOCKER.md#limits-vs-the-windows-app">See the limits</a>.</li>
           <li><b>AirPlay as real Speakers</b>AirPlay devices now show up as Speakers you can put in any zone.</li>
           <li><b>Home Assistant</b>Let Home Assistant drive and control WavWiz playback.</li>
           <li><b>Subsonic &amp; Navidrome</b>Play from a remote Subsonic or Navidrome library.</li>
@@ -542,7 +547,7 @@
           <li><b>Fullscreen player</b>F11 for borderless fullscreen; Esc to leave.</li>
           <li><b>Tidier Settings</b>Clear sections from General to About.</li>
         </ul>
-        <p class="new-more reveal">AirPlay 2 output is experimental in this beta. See the <a href="https://github.com/vdubbin74/WavWiz/releases/tag/v0.6.0" target="_blank" rel="noopener">0.6.0 release notes</a> for every fix.</p>
+        <p class="new-more reveal">AirPlay 2 output is experimental in this beta. See the <a href="https://github.com/vdubbin74/WavWiz/releases/tag/v0.6.6" target="_blank" rel="noopener">0.6.6 release notes</a> for every fix.</p>
       </div>
     </section>
 
@@ -586,7 +591,7 @@
           <h2 id="roadmap-title">Where WavWiz is <span class="accent-t">headed</span>.</h2>
           <p class="section-lead">Here's what's coming next, in order. These are plans, not promises, so there are no ship dates. Each one lands when it's solid.</p>
         </header>
-        <p class="new-more reveal"><b>Out now in 0.6.0:</b> whole-home sync, zones, scenes, alarms and schedules, the phone Remote, EQ, eight visualizers, themes, AirPlay speakers as zone-able Speakers (AirPlay 2 is experimental), a Linux server, Home Assistant, Subsonic/Navidrome libraries, and library tiles.</p>
+        <p class="new-more reveal"><b>Out now in 0.6.6:</b> whole-home sync, zones, scenes, alarms and schedules, the phone Remote, EQ, eight visualizers, themes, AirPlay speakers as zone-able Speakers (AirPlay 2 is experimental), a Linux server, Home Assistant, Subsonic/Navidrome libraries, library tiles, and Library Local / Remote / Radio / Playlists sources.</p>
         <div class="spot-grid">
           <article class="card spot reveal" aria-labelledby="rm-060">
             <p class="spot-tag">Shipped &middot; 0.6.0</p>
@@ -594,7 +599,7 @@
             <p>Run the WavWiz server on almost any always-on box, not just a Windows PC.</p>
             <ul class="spot-list">
               <li><b>Linux server:</b> headless WavWiz Server for 64-bit Intel/AMD (ARM later), so a NAS, mini PC or Raspberry Pi can run the house.</li>
-              <li><b>Docker:</b> an official server image, now on <a href="https://hub.docker.com/r/vdubbin74/wavwiz-server">Docker Hub</a> (<code>vdubbin74/wavwiz-server:0.6.0</code> and <code>:latest</code>, 64-bit x86). See the <a href="https://github.com/vdubbin74/WavWiz/blob/main/docs/DOCKER.md">Docker guide</a> for compose, including a <a href="https://github.com/vdubbin74/WavWiz/blob/main/docs/DOCKER.md#windows-docker-desktop-step-by-step">Windows Docker Desktop walkthrough</a>.</li>
+              <li><b>Docker:</b> an official server image, now on <a href="https://hub.docker.com/r/vdubbin74/wavwiz-server">Docker Hub</a> (<code>vdubbin74/wavwiz-server:0.6.6</code> and <code>:latest</code>, 64-bit x86). See the <a href="https://github.com/vdubbin74/WavWiz/blob/main/docs/DOCKER.md">Docker guide</a> for compose, including a <a href="https://github.com/vdubbin74/WavWiz/blob/main/docs/DOCKER.md#windows-docker-desktop-step-by-step">Windows Docker Desktop walkthrough</a>.</li>
               <li><b>Remote libraries:</b> play from a Subsonic or OpenSubsonic server, with Navidrome tested first.</li>
               <li><b>Home Assistant:</b> let Home Assistant control playback with a secure token.</li>
               <li><b>Nothing to relearn:</b> the same web app, zones, scenes and schedules.</li>
@@ -759,7 +764,7 @@
               <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M2 4.3 10 3.2v7.7H2V4.3Zm9-1.2L22 1.5v9.4H11V3.1ZM2 12h8v7.8l-8-1.1V12Zm9 0h11v10.5l-11-1.6V12Z"/></svg>
               Download for Windows
             </a>
-          <p class="hero-links"><span class="hero-fact">v<span data-ver>0.6.0</span> Beta</span><span aria-hidden="true">·</span><a href="https://github.com/vdubbin74/WavWiz/releases/latest" target="_blank" rel="noopener">Release notes</a><span aria-hidden="true">·</span><a href="https://github.com/vdubbin74/WavWiz" target="_blank" rel="noopener">Source on GitHub</a></p>
+          <p class="hero-links"><span class="hero-fact">v<span data-ver>0.6.6</span> Beta</span><span aria-hidden="true">·</span><a href="https://github.com/vdubbin74/WavWiz/releases/latest" target="_blank" rel="noopener">Release notes</a><span aria-hidden="true">·</span><a href="https://github.com/vdubbin74/WavWiz" target="_blank" rel="noopener">Source on GitHub</a></p>
         </div>
         <ul class="card get-req reveal">
           <li><b>Server PC:</b> 64-bit Windows 10 (October 2018 Update or newer) or Windows 11, on a PC that stays on. Admin rights to install. Everything else comes in the installer.</li>
