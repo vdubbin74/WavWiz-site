@@ -494,8 +494,31 @@
       <div class="container">
         <header class="section-head reveal">
           <p class="eyebrow">What&rsquo;s new in v<span data-ver>0.6.7</span> &middot; <span data-reldate>Nov 7, 2026</span></p>
-          <h2 id="new-title">Linux &amp; Docker server, <span class="accent-t">Home Assistant</span>, remote libraries.</h2>
+          <h2 id="new-title">Simpler network setup, <span class="accent-t">steadier Devices</span>, phone polish.</h2>
         </header>
+        <div class="spot-grid">
+          <article class="card spot reveal" aria-labelledby="spot-net067">
+            <p class="spot-tag spot-tag-t">New in 0.6.7</p>
+            <h3 id="spot-net067">Pick your network, not an address</h3>
+            <p>The installer's network page now offers two plain choices instead of a typed address.</p>
+            <ul class="spot-list">
+              <li><b>Home network only (recommended):</b> uses this PC's detected home-network address; the default for new installs.</li>
+              <li><b>Home network + Tailscale/VPN:</b> listens on all networks, and Setup no longer fails with exit code 1 when you pick it.</li>
+              <li><b>Upgrades keep your choice:</b> an existing listening address is preserved.</li>
+            </ul>
+          </article>
+          <article class="card spot reveal" aria-labelledby="spot-dev067">
+            <p class="spot-tag">New in 0.6.7</p>
+            <h3 id="spot-dev067">Steadier Devices and phone</h3>
+            <p>Smaller fixes that make everyday control calmer.</p>
+            <ul class="spot-list">
+              <li><b>Drag and drop:</b> a dragged speaker lands in its new zone at once and can be dragged straight back.</li>
+              <li><b>Tidy zones:</b> every zone box folds to one row; on the PC app, hovering no longer flickers or drops tooltips.</li>
+              <li><b>Phone:</b> cleaner Speaker Settings and Queue, a way out of the calibration mic page, and a &ldquo;Rotate your phone to portrait&rdquo; screen when it is turned sideways.</li>
+            </ul>
+          </article>
+        </div>
+        <h3 class="eyebrow reveal" style="margin-top:2.5rem">From earlier releases</h3>
         <div class="spot-grid">
           <article class="card spot reveal" aria-labelledby="spot-airplay-out">
             <div class="feature-ico ico-t"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 17H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1h-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 14l5 6H7z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
@@ -526,11 +549,6 @@
           <figure><img src="assets/img/wavwiz-050-mix-cassette-v2.webp" width="1440" height="900" loading="lazy" decoding="async" alt="WavWiz 0.5.0 in Violet Pulse with Cassette album art on Now Playing: Harbor Lights, EQ, Devices, and Kitchen controlling."><figcaption>Mix and match: cassette art</figcaption></figure>
           <figure><img src="assets/img/wavwiz-050-mini-v2.webp" width="840" height="240" loading="lazy" decoding="async" alt="The redesigned purple mini player: Shortcuts on the title bar, volume, transport with Shuffle and Repeat, and Harbor Lights on Kitchen."><figcaption>Redesigned mini player</figcaption></figure>
         </div>
-        <ul class="more-grid grid-3 reveal" aria-label="New in 0.6.7">
-          <li><b>Simpler network setup</b>The installer asks &ldquo;Home network only&rdquo; or &ldquo;Home network + Tailscale/VPN&rdquo; instead of an address, and the Tailscale/VPN choice no longer fails with exit code 1.</li>
-          <li><b>Smoother Devices</b>A dragged speaker lands in its new zone at once and can be dragged straight back; zone boxes fold to one row; no hover flicker on the PC app.</li>
-          <li><b>Phone polish</b>Tidier Speaker Settings and Queue, a way out of the calibration mic page, and a &ldquo;rotate to portrait&rdquo; screen when the phone is turned sideways.</li>
-        </ul>
         <ul class="more-grid grid-3 reveal" aria-label="From 0.6.6">
           <li><b>Library sources</b>Local, Remote, Radio and Playlists as top Library sources, with Favorites from the song menu.</li>
           <li><b>Quieter remote banner</b>On phone, the REMOTE bar docks flush above the bottom menu instead of floating over Library and Devices.</li>
