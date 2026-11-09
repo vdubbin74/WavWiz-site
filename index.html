@@ -217,7 +217,7 @@
             "name": "What doesn't work yet?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "WavWiz is a public beta. Smart-TV browsers are still in testing: WavWiz gives TVs a lighter layout and visualizer, but some (including an older LG webOS set) don't finish loading yet. For now, the reliable way to use a TV is a PC or laptop connected to it, and if you try your TV's browser, we'd love to hear how it went. The server runs on 64-bit Windows 10 or 11, or on Linux with Docker (64-bit x86 only for now; no Mac server yet). To play through a PC's own speakers you still need the Windows Player. AirPlay shows up as one speaker per zone plus &ldquo;WavWiz &ndash; Everywhere&rdquo;, not one per device, and it's classic AirPlay, so iPhone won't group it with AirPlay 2 speakers. WavWiz can play to AirPlay 1 speakers; AirPlay 2 output (Sonos and similar) is experimental, and Chromecast and DLNA aren't supported. On iPhone, tap the page once to start the sound."
+              "text": "WavWiz is a public beta. Smart-TV browsers are still in testing: WavWiz gives TVs a lighter layout and visualizer, but some (including an older LG webOS set) don't finish loading yet. For now, the reliable way to use a TV is a PC or laptop connected to it, and if you try your TV's browser, we'd love to hear how it went. The server runs on 64-bit Windows 10 or 11, or on Linux with Docker (64-bit x86 / amd64 only for now — not Raspberry Pi / ARM64 yet; no Mac server yet). Docker and the Linux build are a headless server only. To play through a PC's own speakers you still need the Windows Player. AirPlay shows up as one speaker per zone plus &ldquo;WavWiz &ndash; Everywhere&rdquo;, not one per device, and it's classic AirPlay, so iPhone won't group it with AirPlay 2 speakers. WavWiz can play to AirPlay 1 speakers; AirPlay 2 output (Sonos and similar) is experimental, and Chromecast and DLNA aren't supported. On iPhone, tap the page once to start the sound."
             }
           },
           {
@@ -555,7 +555,7 @@
           <li><b>Phone &amp; Devices polish</b>Live zone play/pause paint, AirPlay list stay-put, matching menu pins, and a proper iPhone Home Screen icon.</li>
         </ul>
         <ul class="more-grid grid-3 reveal" aria-label="From 0.6.0">
-          <li><b>Linux server</b>Headless WavWiz Server for Linux, so a NAS, mini PC or Pi can run the house.</li>
+          <li><b>Linux server</b>Headless WavWiz Server for 64-bit Intel/AMD Linux (Docker Hub <code>linux/amd64</code> only), so a NAS or mini PC can run the house. ARM64 / Raspberry Pi is planned for 0.7.0 (not available yet).</li>
           <li><b>Docker</b>The server image is on <a href="https://hub.docker.com/r/vdubbin74/wavwiz-server">Docker Hub</a>: <code>docker pull vdubbin74/wavwiz-server:0.6.7</code> (64-bit x86). Compose setup is in the <a href="https://github.com/vdubbin74/WavWiz/blob/main/docs/DOCKER.md">Docker guide</a>, including a <a href="https://github.com/vdubbin74/WavWiz/blob/main/docs/DOCKER.md#windows-docker-desktop-step-by-step">Windows Docker Desktop walkthrough</a>. <b>Not the full Windows app:</b> Docker is a headless server with no local speakers or mic, no CD ripping, no Windows share logins, no Linux Player, and no AirPlay 2 / Sonos / HomePod output. On Windows Docker Desktop, discovery is weaker (no host networking). Pair a Windows Player for PC speakers. <a href="https://github.com/vdubbin74/WavWiz/blob/main/docs/DOCKER.md#limits-vs-the-windows-app">See the limits</a>.</li>
           <li><b>AirPlay as real Speakers</b>AirPlay devices now show up as Speakers you can put in any zone.</li>
           <li><b>Home Assistant</b>Let Home Assistant drive and control WavWiz playback.</li>
@@ -621,7 +621,7 @@
             <h3 id="rm-060">Linux &amp; Docker</h3>
             <p>Run the WavWiz server on almost any always-on box, not just a Windows PC.</p>
             <ul class="spot-list">
-              <li><b>Linux server:</b> headless WavWiz Server for 64-bit Intel/AMD (ARM later), so a NAS, mini PC or Raspberry Pi can run the house.</li>
+              <li><b>Linux server:</b> headless WavWiz Server for <b>64-bit Intel/AMD</b> today (Docker Hub image and supported Linux host: <code>linux/amd64</code>). A NAS or x86-64 mini PC can run the house. <b>ARM64 / Raspberry Pi</b> is planned for <b>0.7.0</b>, subject to hardware verification — not published or supported yet.</li>
               <li><b>Docker:</b> an official server image, now on <a href="https://hub.docker.com/r/vdubbin74/wavwiz-server">Docker Hub</a> (<code>vdubbin74/wavwiz-server:0.6.7</code> and <code>:latest</code>, 64-bit x86). See the <a href="https://github.com/vdubbin74/WavWiz/blob/main/docs/DOCKER.md">Docker guide</a> for compose, including a <a href="https://github.com/vdubbin74/WavWiz/blob/main/docs/DOCKER.md#windows-docker-desktop-step-by-step">Windows Docker Desktop walkthrough</a>.</li>
               <li><b>Remote libraries:</b> play from a Subsonic or OpenSubsonic server, with Navidrome tested first.</li>
               <li><b>Home Assistant:</b> let Home Assistant control playback with a secure token.</li>
@@ -644,6 +644,7 @@
               <li><b>Cast speakers:</b> Nest speakers, Chromecast Audio, and Cast TVs and soundbars.</li>
               <li><b>The basics:</b> WavWiz finds them on your network, and you get play, pause and volume.</li>
               <li><b>Mixed rooms:</b> a delay slider to line Cast speakers up with your other devices.</li>
+              <li><b>ARM64 / Raspberry Pi server:</b> publish and verify a native arm64 Docker/server build (planned; not available in 0.6.7).</li>
             </ul>
           </article>
           <article class="card spot reveal" aria-labelledby="rm-089">
@@ -717,7 +718,7 @@
           </details>
           <details class="card reveal">
             <summary>What doesn't work yet?</summary>
-            <p>WavWiz is a public beta. Smart-TV browsers are still in testing: WavWiz gives TVs a lighter layout and visualizer, but some (including an older LG webOS set) don't finish loading yet. For now, the reliable way to use a TV is a PC or laptop connected to it, and if you try your TV's browser, we'd love to hear how it went. The server runs on 64-bit Windows 10 or 11, or on Linux with Docker (64-bit x86 only for now; no Mac server yet). To play through a PC's own speakers you still need the Windows Player. AirPlay shows up as one speaker per zone plus &ldquo;WavWiz &ndash; Everywhere&rdquo;, not one per device, and it's classic AirPlay, so iPhone won't group it with AirPlay 2 speakers. WavWiz can play to AirPlay 1 speakers; AirPlay 2 output (Sonos and similar) is experimental, and Chromecast and DLNA aren't supported. On iPhone, tap the page once to start the sound.</p>
+            <p>WavWiz is a public beta. Smart-TV browsers are still in testing: WavWiz gives TVs a lighter layout and visualizer, but some (including an older LG webOS set) don't finish loading yet. For now, the reliable way to use a TV is a PC or laptop connected to it, and if you try your TV's browser, we'd love to hear how it went. The server runs on 64-bit Windows 10 or 11, or on Linux with Docker (64-bit x86 / amd64 only for now — not Raspberry Pi / ARM64 yet; no Mac server yet). Docker and the Linux build are a headless server only. To play through a PC's own speakers you still need the Windows Player. AirPlay shows up as one speaker per zone plus &ldquo;WavWiz &ndash; Everywhere&rdquo;, not one per device, and it's classic AirPlay, so iPhone won't group it with AirPlay 2 speakers. WavWiz can play to AirPlay 1 speakers; AirPlay 2 output (Sonos and similar) is experimental, and Chromecast and DLNA aren't supported. On iPhone, tap the page once to start the sound.</p>
           </details>
           <details class="card reveal">
             <summary>Why does Windows SmartScreen warn me when I install WavWiz?</summary>
