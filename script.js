@@ -4,8 +4,12 @@
   const v = document.documentElement.dataset.version; if (!v) return;
   document.querySelectorAll("[data-ver]").forEach(e => { e.textContent = v; });
   const d = document.documentElement.dataset.releaseDate, t = d && new Date(d + "T12:00:00");
-  if (t && !isNaN(t)) { const us = t.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
-    document.querySelectorAll("[data-reldate]").forEach(e => { e.textContent = us; }); }
+  if (t && !isNaN(t)) {
+    const us = t.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
+    const short = t.toLocaleDateString("en-US", { month: "short", day: "numeric" });
+    document.querySelectorAll("[data-reldate]").forEach(e => { e.textContent = us; });
+    document.querySelectorAll("[data-reldate-short]").forEach(e => { e.textContent = short; });
+  }
 })();
 
 /* =========================================================
