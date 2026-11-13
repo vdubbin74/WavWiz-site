@@ -296,11 +296,9 @@ p { margin: 0 0 1em; }
 .viz-auto input { accent-color: var(--teal); width: 16px; height: 16px; }
 
 /* ---------------- Donate ---------------- */
-.donate-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+.donate-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; max-width: 900px; margin: 0 auto; }
 .coin { --coin: 46,196,182; --coin-ring: 46,196,182; display: flex; flex-direction: column; gap: 16px; text-align: center; }
 .coin-ltc { --coin: 52,93,157; --coin-ring: 138,170,222; }
-.coin-xmr { --coin: 255,102,0; --coin-ring: 255,128,48; }
-.coin-btc { --coin: 247,147,26; --coin-ring: 247,160,58; }
 .coin-pep { --coin: 38,155,77; --coin-ring: 70,190,108; }
 /* hairline of brand color along the top edge */
 .coin::after { content: ""; position: absolute; left: 18%; right: 18%; top: -1px; height: 1px; border-radius: 1px; pointer-events: none;
