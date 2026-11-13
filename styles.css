@@ -85,7 +85,8 @@ p { margin: 0 0 1em; }
 }
 .site-header.is-scrolled { background: rgba(11, 16, 32, .9); border-bottom-color: var(--line); }
 .header-inner { height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
-.wordmark { font-family: var(--font-head); font-weight: 700; font-size: 1.6rem; letter-spacing: -0.03em; text-decoration: none; line-height: 1; }
+.wordmark { display: inline-flex; align-items: center; font-family: var(--font-head); font-weight: 700; font-size: 1.6rem; letter-spacing: -0.03em; text-decoration: none; line-height: 1; }
+.wm-emblem { width: 1.45em; height: 1.45em; margin-right: .3em; flex: none; display: block; filter: drop-shadow(0 0 6px rgba(255,90,31,.25)); }
 .wordmark:hover .wm-wav { text-shadow: 0 0 18px rgba(255, 90, 31, .7); }
 .wordmark:hover .wm-wiz { text-shadow: 0 0 18px rgba(46, 196, 182, .7); }
 .site-nav { display: flex; align-items: center; gap: 4px; }
