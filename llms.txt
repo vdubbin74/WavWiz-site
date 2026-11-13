@@ -1,17 +1,18 @@
 # WavWiz
 
-> Free, MIT-licensed multi-zone music system built around Windows. Optional Linux/Docker server (amd64 only). No cloud account, no telemetry. Public beta.
+> Free, MIT-licensed multi-zone music system built around Windows. Optional Linux/Docker server (amd64, plus arm64 for Raspberry Pi since 0.7.0; arm64 not yet verified on real Pi hardware). No cloud account, no telemetry. Public beta.
 
-Current public beta: **0.6.8**, released 10 November 2026. Windows installer: `WavWiz-Setup-0.6.8.exe`. Docker image tags `0.6.8` and `latest` are `linux/amd64` only; ARM64 / Raspberry Pi is planned for 0.7.0 and is not available yet. Chromecast is also planned for 0.7.0.
+Current public beta: **0.7.0**, released 13 November 2026. Windows installer: `WavWiz-Setup-0.7.0.exe` (SHA-256 `D0BC98E5293F76A1ACA901F8CE90144E066EA2D2DE90DEBB6ABFDAC4CB6C724C`). Linux server tarballs: `wavwiz-server-0.7.0-linux-x64.tar.gz` and `wavwiz-server-0.7.0-linux-arm64.tar.gz`. Docker image tags `0.7.0` and `latest` are multi-arch `linux/amd64` + `linux/arm64`. The arm64 build is intended for Raspberry Pi 4/5 but has not been verified on real Raspberry Pi hardware. New in 0.7.0: Google Cast speaker output (still in testing), local audio output on Linux, AirPlay 2 fixes. Not yet: AirPlay receiver on Linux / Raspberry Pi, and calibration for AirPlay and Cast speakers (both planned for the next version).
 
-WavWiz runs a server on an always-on Windows PC (or in Docker on a 64-bit Intel/AMD Linux host) and plays through Windows WavWiz Players or any modern browser on phones, tablets, Macs and Linux PCs. Zones play different music or link for sync, with per-speaker delay, volume and EQ. Sources: local folders, NAS shares, internet radio, Subsonic/Navidrome. AirPlay in from iPhone, iPad and Mac; AirPlay 1 speaker output; AirPlay 2 output is experimental and off by default. HomePod and Apple TV are unsupported. AirPlay 1 password speakers, FairPlay, and AirPlay 2 PIN devices are not covered. The Docker image is server-only (no local speakers, no AirPlay 2 output); ARM64 / Raspberry Pi is not available yet. Home Assistant control is via REST plus an optional custom component (not on HACS). Spotify Connect is unofficial, off by default, and needs Premium. AI coding agents wrote the code; the developer designs and tests.
+WavWiz runs a server on an always-on Windows PC (or on Linux, bare or in Docker, on 64-bit Intel/AMD; a 64-bit ARM build for Raspberry Pi 4/5 is new in 0.7.0 and not yet verified on real Pi hardware) and plays through Windows WavWiz Players or any modern browser on phones, tablets, Macs and Linux PCs. Zones play different music or link for sync, with per-speaker delay, volume and EQ. Sources: local folders, NAS shares, internet radio, Subsonic/Navidrome. AirPlay in from iPhone, iPad and Mac; AirPlay 1 speaker output; AirPlay 2 output is experimental and off by default. Google Cast speaker output is new in 0.7.0 and still in testing. HomePod and Apple TV are unsupported. AirPlay 1 password speakers, FairPlay, and AirPlay 2 PIN devices are not covered. The Docker image (0.7.0 and latest) is a multi-arch amd64 + arm64 server: no AirPlay receiver yet, no AirPlay 2 output; since 0.7.0 it can play through the host sound card. Calibrate speakers does not support AirPlay or Cast speakers yet. Home Assistant control is via REST plus an optional custom component (not on HACS). Spotify Connect is unofficial, off by default, and needs Premium. AI coding agents wrote the code; the developer designs and tests.
 
 ## Links
 
 - [Website](https://wavwiz.com/): product overview and FAQ
 - [GitHub repo](https://github.com/vdubbin74/WavWiz): source, issues, discussions
-- [Latest release](https://github.com/vdubbin74/WavWiz/releases/latest): Windows installer
-- [Docker image](https://hub.docker.com/r/vdubbin74/wavwiz-server): amd64 server only
+- [Latest release](https://github.com/vdubbin74/WavWiz/releases/latest): Windows installer and Linux server tarballs
+- [Docker image](https://hub.docker.com/r/vdubbin74/wavwiz-server): amd64 + arm64 server
 - [Docker guide](https://github.com/vdubbin74/WavWiz/blob/main/docs/DOCKER.md): limits and compose
+- [Raspberry Pi guide](https://github.com/vdubbin74/WavWiz/blob/main/docs/RASPBERRY-PI.md): arm64 server, not yet verified on real Pi hardware
 - [Home Assistant](https://github.com/vdubbin74/WavWiz/blob/main/docs/HOME-ASSISTANT.md): REST API + custom component
 - [AlternativeTo](https://alternativeto.net/software/wavwiz/): directory listing
