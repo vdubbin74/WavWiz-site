@@ -70,7 +70,7 @@
         "@id": "https://wavwiz.com/#software",
         "name": "WavWiz",
         "url": "https://wavwiz.com/",
-        "description": "WavWiz is a free, MIT-licensed multi-zone music system built around Windows. Run a Windows server (or an optional Linux/Docker server for amd64 or arm64; the arm64 build is intended for Raspberry Pi and not yet verified on real Pi hardware) and play through Windows Players or any modern browser on phones, tablets, Macs and Linux PCs. Zones play different music or link for sync, with per-speaker delay, volume and EQ. Local/NAS library, internet radio, Subsonic/Navidrome, AirPlay in, AirPlay 1 out; AirPlay 2 output is experimental and off by default; Google Cast output, added in 0.7.0, is still in testing. Live sources can stream a PC's own sound or its microphone to any zone. No cloud account, no telemetry.",
+        "description": "WavWiz is a free, MIT-licensed multi-zone music system built around Windows. Run a Windows server (or an optional Linux/Docker server for amd64 or arm64; the arm64 build is intended for Raspberry Pi and not yet verified on real Pi hardware) and play through Windows Players or any modern browser on phones, tablets, Macs and Linux PCs. Zones play different music or link for sync, with per-speaker delay, volume and EQ. Local/NAS library, internet radio, Subsonic/Navidrome, AirPlay in, AirPlay 1 out; AirPlay 2 output is experimental and off by default; Google Cast output, added in 0.7.0, is still in testing. Live sources in the Windows Player can stream that PC's own sound or its microphone to any zone. No cloud account, no telemetry.",
         "applicationCategory": "MultimediaApplication",
         "applicationSubCategory": "Multi-zone audio",
         "operatingSystem": "Windows 10, Windows 11",
@@ -99,7 +99,7 @@
           "Local/NAS library, internet radio, Subsonic/Navidrome",
           "AirPlay receiver; AirPlay 1 speaker output; AirPlay 2 experimental and off by default",
           "Google Cast speaker output (since 0.7.0; still in testing)",
-          "Live sources: stream a PC's own sound or microphone to any zone (Real time or Sync with WavWiz)",
+          "Live sources in the Windows Player: stream that PC's own sound or microphone to any zone (Real time or Sync with WavWiz)",
           "Scenes, schedules, alarms and guest Jukebox",
           "Optional Home Assistant control via REST (custom component not on HACS)",
           "Optional unofficial Spotify Connect (off by default; Premium required)",
@@ -287,7 +287,7 @@
             <span class="line">Multi-zone audio</span>
             <span class="line glow-text">wizardry.</span>
           </h1>
-          <p class="hero-sub">Turn the PCs, phones and speakers you already own into one multi-zone music system, for free. For homes, shops, restaurants and offices: your library, internet radio and AirPlay play in sync in every zone, or different music in each one. New in 0.7.2: stream a PC's own sound or its microphone to any zone.</p>
+          <p class="hero-sub">Turn the PCs, phones and speakers you already own into one multi-zone music system, for free. For homes, shops, restaurants and offices: your library, internet radio and AirPlay play in sync in every zone, or different music in each one. New in 0.7.2: from the Windows Player, stream that PC's own sound or its microphone to any zone.</p>
           <div class="hero-ctas">
             
             <a class="btn btn-primary btn-lg" href="https://github.com/vdubbin74/WavWiz/releases/latest" target="_blank" rel="noopener">
@@ -430,7 +430,7 @@
           </li>
           <li class="card feature reveal">
             <div class="feature-ico ico-o"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M6 11a6 6 0 0 0 12 0M12 17v4M8 21h8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
-            <div class="feature-text"><h3>Live sources</h3><p>Stream a PC's own sound (This PC · Speakers) or its microphone to any zone. Real time keeps that PC playing with no extra lag; Sync with WavWiz lines its speakers up with the house. New in 0.7.2.</p></div>
+            <div class="feature-text"><h3>Live sources</h3><p>In the Windows Player, stream that PC's own sound (This PC · Speakers) or its microphone to any zone. Real time keeps that PC playing with no extra lag; Sync with WavWiz lines its speakers up with the house. New in 0.7.2.</p></div>
           </li>
           <li class="card feature reveal">
             <div class="feature-ico ico-o"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h12M4 12h12M4 18h8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M18 14v6l4-3-4-3Z" fill="currentColor"/></svg></div>
@@ -492,7 +492,7 @@
           <article class="card spot reveal" aria-labelledby="spot-live072">
             <p class="spot-tag spot-tag-t">New in 0.7.2</p>
             <h3 id="spot-live072">Stream a PC's sound or mic to any zone</h3>
-            <p>WavWiz Player on a Windows PC can send its own sound (This PC · Speakers) or its microphone to any zone, the same way AirPlay already can.</p>
+            <p>Only the Windows Player can send that PC's own sound (This PC · Speakers) or its microphone to any zone, the same way AirPlay already can.</p>
             <ul class="spot-list">
               <li><b>Real time:</b> the PC keeps playing with no extra lag, and the house follows. If that PC is in the same zone, WavWiz doesn't play the sound a second time there.</li>
               <li><b>Sync with WavWiz:</b> the PC's own speakers play in time with every zone. WavWiz moves Windows to a spare output for this &mdash; optical first, never a headset that's in use &mdash; and a tray item, Restore my speakers, puts your usual output back.</li>
@@ -671,7 +671,7 @@
           <h2 id="roadmap-title">Where WavWiz is <span class="accent-t">headed</span>.</h2>
           <p class="section-lead">Here's what's coming next, in order. These are plans, not promises, so there are no ship dates. Each one lands when it's solid.</p>
         </header>
-        <p class="new-more reveal"><b>Out now in 0.7.2:</b> live sources (a PC's own sound or its microphone, in Real time or Sync with WavWiz), Announce from the Windows Player or a phone, phone drag onto Now Playing, multi-zone sync, zones, scenes, alarms and schedules, the phone Remote, EQ, eight visualizers, themes, AirPlay speakers as zone-able Speakers (AirPlay 2 is experimental), Google Cast speakers (still in testing), a Linux server for amd64 and arm64 (arm64 not yet verified on real Raspberry Pi hardware), Home Assistant, Subsonic/Navidrome libraries, library tiles, and Library Local / Remote / Radio / Playlists sources.</p>
+        <p class="new-more reveal"><b>Out now in 0.7.2:</b> live sources in the Windows Player (that PC's own sound or its microphone, in Real time or Sync with WavWiz), Announce from the Windows Player or a phone, phone drag onto Now Playing, multi-zone sync, zones, scenes, alarms and schedules, the phone Remote, EQ, eight visualizers, themes, AirPlay speakers as zone-able Speakers (AirPlay 2 is experimental), Google Cast speakers (still in testing), a Linux server for amd64 and arm64 (arm64 not yet verified on real Raspberry Pi hardware), Home Assistant, Subsonic/Navidrome libraries, library tiles, and Library Local / Remote / Radio / Playlists sources.</p>
         <div class="spot-grid">
           <article class="card spot reveal" aria-labelledby="rm-060">
             <p class="spot-tag">Shipped &middot; 0.6.0</p>
@@ -844,9 +844,8 @@
               Download for Windows
             </a>
           <p class="hero-links"><span class="hero-fact">v<span data-ver>0.7.2</span> Beta</span><span aria-hidden="true">·</span><span>Released <span data-reldate>Nov 21, 2026</span></span><span aria-hidden="true">·</span><a href="https://github.com/vdubbin74/WavWiz/releases/tag/v0.7.2" target="_blank" rel="noopener">Release notes</a><span aria-hidden="true">·</span><a href="https://github.com/vdubbin74/WavWiz" target="_blank" rel="noopener">Source on GitHub</a></p>
-          <!-- PENDING_RELEASE_ASSETS: fill installer size and the full SHA-256 from the v0.7.2 SHA256SUMS.txt once published. Expected installer SHA-256 starts B889C5FE and ends 214D. Docker tags 0.7.2 and latest (amd64+arm64) also pending. -->
-          <p class="get-note">Windows installer: <a href="https://github.com/vdubbin74/WavWiz/releases/download/v0.7.2/WavWiz-Setup-0.7.2.exe">WavWiz-Setup-0.7.2.exe</a>. Size and the full SHA-256 will be on the <a href="https://github.com/vdubbin74/WavWiz/releases/tag/v0.7.2" target="_blank" rel="noopener">release page</a> when the files are up (the installer checksum starts with <code>B889C5FE</code> and ends with <code>214D</code>).</p>
-          <p class="get-note">Linux server: <a href="https://github.com/vdubbin74/WavWiz/releases/download/v0.7.2/wavwiz-server-0.7.2-linux-x64.tar.gz">linux-x64</a> or <a href="https://github.com/vdubbin74/WavWiz/releases/download/v0.7.2/wavwiz-server-0.7.2-linux-arm64.tar.gz">linux-arm64</a> (for Raspberry Pi 4/5; not yet verified on real Pi hardware).<br>Docker: <code>vdubbin74/wavwiz-server:0.7.2</code> (amd64 + arm64, once the Hub tag is published). Checksums: <a href="https://github.com/vdubbin74/WavWiz/releases/download/v0.7.2/SHA256SUMS.txt">SHA256SUMS.txt</a>.</p>
+          <p class="get-note">Windows installer: <a href="https://github.com/vdubbin74/WavWiz/releases/download/v0.7.2/WavWiz-Setup-0.7.2.exe">WavWiz-Setup-0.7.2.exe</a> (104,992,447 bytes).<br>SHA-256: <code>48032FCDB6B0CA460AAE7D4B97C990E30B1D5565776A540E54181C0E7F8C7E32</code></p>
+          <p class="get-note">Linux server: <a href="https://github.com/vdubbin74/WavWiz/releases/download/v0.7.2/wavwiz-server-0.7.2-linux-x64.tar.gz">linux-x64</a> or <a href="https://github.com/vdubbin74/WavWiz/releases/download/v0.7.2/wavwiz-server-0.7.2-linux-arm64.tar.gz">linux-arm64</a> (for Raspberry Pi 4/5; not yet verified on real Pi hardware).<br>Docker: <code>vdubbin74/wavwiz-server:0.7.2</code> (amd64 + arm64). Checksums: <a href="https://github.com/vdubbin74/WavWiz/releases/download/v0.7.2/SHA256SUMS.txt">SHA256SUMS.txt</a>.</p>
         </div>
         <ul class="card get-req reveal">
           <li><b>Server PC:</b> 64-bit Windows 10 (October 2018 Update or newer) or Windows 11, on a PC that stays on. Admin rights to install. Everything else comes in the installer.</li>
