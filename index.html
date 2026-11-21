@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US" data-version="0.7.0" data-release-date="2026-11-13">
+<html lang="en-US" data-version="0.7.2" data-release-date="2026-11-21">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -34,7 +34,7 @@
 
   <link rel="preload" href="assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=070b">
+  <link rel="stylesheet" href="styles.css?v=072">
   <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -70,7 +70,7 @@
         "@id": "https://wavwiz.com/#software",
         "name": "WavWiz",
         "url": "https://wavwiz.com/",
-        "description": "WavWiz is a free, MIT-licensed multi-zone music system built around Windows. Run a Windows server (or an optional Linux/Docker server for amd64 or arm64; the arm64 build is intended for Raspberry Pi and not yet verified on real Pi hardware) and play through Windows Players or any modern browser on phones, tablets, Macs and Linux PCs. Zones play different music or link for sync, with per-speaker delay, volume and EQ. Local/NAS library, internet radio, Subsonic/Navidrome, AirPlay in, AirPlay 1 out; AirPlay 2 output is experimental and off by default; Google Cast output is new in 0.7.0 and still in testing. No cloud account, no telemetry.",
+        "description": "WavWiz is a free, MIT-licensed multi-zone music system built around Windows. Run a Windows server (or an optional Linux/Docker server for amd64 or arm64; the arm64 build is intended for Raspberry Pi and not yet verified on real Pi hardware) and play through Windows Players or any modern browser on phones, tablets, Macs and Linux PCs. Zones play different music or link for sync, with per-speaker delay, volume and EQ. Local/NAS library, internet radio, Subsonic/Navidrome, AirPlay in, AirPlay 1 out; AirPlay 2 output is experimental and off by default; Google Cast output, added in 0.7.0, is still in testing. Live sources can stream a PC's own sound or its microphone to any zone. No cloud account, no telemetry.",
         "applicationCategory": "MultimediaApplication",
         "applicationSubCategory": "Multi-zone audio",
         "operatingSystem": "Windows 10, Windows 11",
@@ -78,12 +78,12 @@
         "softwareRequirements": "Microsoft Edge WebView2 Runtime for the player window (included with Windows 11 and current Windows 10)",
         "image": "https://wavwiz.com/assets/img/og-image-070.jpg",
         "screenshot": "https://wavwiz.com/assets/img/wavwiz-070-app-window.webp",
-        "softwareVersion": "0.7.0",
-        "datePublished": "2026-11-13",
-        "dateModified": "2026-11-13",
-        "downloadUrl": "https://github.com/vdubbin74/WavWiz/releases/download/v0.7.0/WavWiz-Setup-0.7.0.exe",
+        "softwareVersion": "0.7.2",
+        "datePublished": "2026-11-21",
+        "dateModified": "2026-11-21",
+        "downloadUrl": "https://github.com/vdubbin74/WavWiz/releases/download/v0.7.2/WavWiz-Setup-0.7.2.exe",
         "installUrl": "https://github.com/vdubbin74/WavWiz/releases/latest",
-        "releaseNotes": "https://github.com/vdubbin74/WavWiz/releases/tag/v0.7.0",
+        "releaseNotes": "https://github.com/vdubbin74/WavWiz/releases/tag/v0.7.2",
         "license": "https://opensource.org/license/mit",
         "isAccessibleForFree": true,
         "inLanguage": "en-US",
@@ -98,7 +98,8 @@
           "Windows Players plus browser speakers on phones, tablets, Mac and Linux",
           "Local/NAS library, internet radio, Subsonic/Navidrome",
           "AirPlay receiver; AirPlay 1 speaker output; AirPlay 2 experimental and off by default",
-          "Google Cast speaker output (new in 0.7.0; still in testing)",
+          "Google Cast speaker output (since 0.7.0; still in testing)",
+          "Live sources: stream a PC's own sound or microphone to any zone (Real time or Sync with WavWiz)",
           "Scenes, schedules, alarms and guest Jukebox",
           "Optional Home Assistant control via REST (custom component not on HACS)",
           "Optional unofficial Spotify Connect (off by default; Premium required)",
@@ -176,7 +177,7 @@
             "name": "Does it work with Bluetooth, HDMI and receivers?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes, through a PC. WavWiz Player plays to any output Windows can use, including HDMI to a TV or receiver, optical, USB DACs and Bluetooth speakers, and each speaker shows which output it's using. New in 0.7.0, WavWiz can also play straight to Google Cast speakers (still in testing). Sonos works only through the experimental AirPlay 2 output, and DLNA speakers aren't supported."
+              "text": "Yes, through a PC. WavWiz Player plays to any output Windows can use, including HDMI to a TV or receiver, optical, USB DACs and Bluetooth speakers, and each speaker shows which output it's using. Since 0.7.0, WavWiz can also play straight to Google Cast speakers (still in testing). Sonos works only through the experimental AirPlay 2 output, and DLNA speakers aren't supported."
             }
           },
           {
@@ -208,7 +209,7 @@
             "name": "What doesn't work yet?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "WavWiz is a public beta. Smart-TV browsers are still in testing: WavWiz gives TVs a lighter layout and visualizer, but some (including an older LG webOS set) don't finish loading yet. For now, the reliable way to use a TV is a PC or laptop connected to it, and if you try your TV's browser, we'd love to hear how it went. The server runs on 64-bit Windows 10 or 11, or on Linux, bare or in Docker (64-bit x86 / amd64; no Mac server yet). New in 0.7.0 there's also a 64-bit ARM build of the Linux server and Docker image, intended for Raspberry Pi 4 and 5, but it hasn't been verified on real Raspberry Pi hardware yet. The Linux server can play through the machine's own sound card (new in 0.7.0, also not yet verified on a real Pi) and has no AirPlay receiver yet (planned for the next version). Windows PCs play through WavWiz Player. AirPlay shows up as one speaker per zone plus &ldquo;WavWiz &ndash; Everywhere&rdquo;, not one per device, and it's classic AirPlay, so iPhone won't group it with AirPlay 2 speakers. WavWiz can play to AirPlay 1 speakers; AirPlay 2 output (Sonos and similar) is experimental. Google Cast output is new in 0.7.0 and still being tested on real Cast hardware, and DLNA isn't supported. Calibrate speakers doesn't support AirPlay or Cast speakers yet (planned for the next version). On iPhone, tap the page once to start the sound."
+              "text": "WavWiz is a public beta. Smart-TV browsers are still in testing: WavWiz gives TVs a lighter layout and visualizer, but some (including an older LG webOS set) don't finish loading yet. For now, the reliable way to use a TV is a PC or laptop connected to it, and if you try your TV's browser, we'd love to hear how it went. The server runs on 64-bit Windows 10 or 11, or on Linux, bare or in Docker (64-bit x86 / amd64; no Mac server yet). Since 0.7.0 there's also a 64-bit ARM build of the Linux server and Docker image, intended for Raspberry Pi 4 and 5, but it hasn't been verified on real Raspberry Pi hardware yet. The Linux server can play through the machine's own sound card (since 0.7.0, also not yet verified on a real Pi) and has no AirPlay receiver yet (planned for the next version). Windows PCs play through WavWiz Player. AirPlay shows up as one speaker per zone plus &ldquo;WavWiz &ndash; Everywhere&rdquo;, not one per device, and it's classic AirPlay, so iPhone won't group it with AirPlay 2 speakers. WavWiz can play to AirPlay 1 speakers; AirPlay 2 output (Sonos and similar) is experimental. Google Cast output, added in 0.7.0, is still being tested on real Cast hardware, and DLNA isn't supported. Calibrate speakers doesn't support AirPlay or Cast speakers yet (planned for the next version). On iPhone, tap the page once to start the sound."
             }
           },
           {
@@ -281,12 +282,12 @@
 
       <div class="container hero-inner">
         <div class="hero-copy" data-parallax="0.12">
-          <a class="badge badge-ver" href="#new" aria-label="What's new in v0.7.0 Beta, released Nov 13, 2026"><span class="bv-new">New</span><b>v<span data-ver>0.7.0</span> Beta</b><span class="bv-sep" aria-hidden="true">·</span><span class="bv-date"><span class="bv-date-long">Released <span data-reldate>Nov 13, 2026</span></span><span class="bv-date-short" data-reldate-short>Nov 13</span></span><span class="bv-sep bv-sep-more" aria-hidden="true">·</span><span class="bv-more"><span class="bv-more-label">What&rsquo;s new </span><span class="bv-more-arrow" aria-hidden="true">&rarr;</span></span></a>
+          <a class="badge badge-ver" href="#new" aria-label="What's new in v0.7.2 Beta, released Nov 21, 2026"><span class="bv-new">New</span><b>v<span data-ver>0.7.2</span> Beta</b><span class="bv-sep" aria-hidden="true">·</span><span class="bv-date"><span class="bv-date-long">Released <span data-reldate>Nov 21, 2026</span></span><span class="bv-date-short" data-reldate-short>Nov 21</span></span><span class="bv-sep bv-sep-more" aria-hidden="true">·</span><span class="bv-more"><span class="bv-more-label">What&rsquo;s new </span><span class="bv-more-arrow" aria-hidden="true">&rarr;</span></span></a>
           <h1 id="hero-title" class="hero-title">
             <span class="line">Multi-zone audio</span>
             <span class="line glow-text">wizardry.</span>
           </h1>
-          <p class="hero-sub">Turn the PCs, phones and speakers you already own into one multi-zone music system, for free. For homes, shops, restaurants and offices: your library, internet radio and AirPlay play in sync in every zone, or different music in each one.</p>
+          <p class="hero-sub">Turn the PCs, phones and speakers you already own into one multi-zone music system, for free. For homes, shops, restaurants and offices: your library, internet radio and AirPlay play in sync in every zone, or different music in each one. New in 0.7.2: stream a PC's own sound or its microphone to any zone.</p>
           <div class="hero-ctas">
             
             <a class="btn btn-primary btn-lg" href="https://github.com/vdubbin74/WavWiz/releases/latest" target="_blank" rel="noopener">
@@ -405,7 +406,7 @@
         <ol class="feature-list">
           <li class="card feature reveal">
             <div class="feature-ico ico-o"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h3l2-6 4 12 3-9 2 3h4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="feature-text"><h3>Devices stay in sync</h3><p>Every device plays the same stream against a shared clock, and WavWiz keeps correcting each device's drift. Master volume, Mute all, and a 10-band EQ per speaker. The Master Volume mixer shows every speaker&rsquo;s volume in one place, next to the master slider.</p></div>
+            <div class="feature-text"><h3>Devices stay in sync</h3><p>Every device plays the same stream against a shared clock, and WavWiz keeps correcting each device's drift. Master volume, Mute all, and a 10-band EQ per speaker. Master volume opens a Volume Mixer in Devices, with every speaker&rsquo;s volume on one line.</p></div>
           </li>
           <li class="card feature reveal">
             <div class="feature-ico ico-t"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M20 18h0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="16" cy="6" r="2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="10" cy="12" r="2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="18" r="2" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
@@ -413,7 +414,7 @@
           </li>
           <li class="card feature reveal">
             <div class="feature-ico ico-o"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M11 18h2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
-            <div class="feature-text"><h3>Plays on what you own</h3><p>Windows PCs play through their own speakers (wired, HDMI or Bluetooth) with WavWiz Player. Phones, tablets and Macs open a web page and join as a speaker automatically, with no app to install. New in 0.7.0: Google Cast speakers can join a zone too (still in testing). On a phone, the remote opens full screen.</p></div>
+            <div class="feature-text"><h3>Plays on what you own</h3><p>Windows PCs play through their own speakers (wired, HDMI or Bluetooth) with WavWiz Player. Phones, tablets and Macs open a web page and join as a speaker automatically, with no app to install. Since 0.7.0: Google Cast speakers can join a zone too (still in testing). On a phone, the remote opens full screen.</p></div>
           </li>
           <li class="card feature reveal">
             <div class="feature-ico ico-t"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="2.2" fill="currentColor"/><path d="M8.2 15.8a5.4 5.4 0 0 1 0-7.6M15.8 8.2a5.4 5.4 0 0 1 0 7.6M5.4 18.6a9.3 9.3 0 0 1 0-13.2M18.6 5.4a9.3 9.3 0 0 1 0 13.2" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg></div>
@@ -426,6 +427,10 @@
           <li class="card feature reveal">
             <div class="feature-ico ico-t"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9a10 10 0 0 1 14 0M8 12a6 6 0 0 1 8 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="16" r="2" fill="currentColor"/><path d="M12 18v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
             <div class="feature-text"><h3>Your library and radio</h3><p>Local folders and NAS shares, album pages and favorites, search and browse by artist, album, genre or folder, playlists, gapless albums, ReplayGain/R128 volume leveling, an internet radio finder, and an optional Studio Max 96&nbsp;kHz streaming setting.</p></div>
+          </li>
+          <li class="card feature reveal">
+            <div class="feature-ico ico-o"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M6 11a6 6 0 0 0 12 0M12 17v4M8 21h8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+            <div class="feature-text"><h3>Live sources</h3><p>Stream a PC's own sound (This PC · Speakers) or its microphone to any zone. Real time keeps that PC playing with no extra lag; Sync with WavWiz lines its speakers up with the house. New in 0.7.2.</p></div>
           </li>
           <li class="card feature reveal">
             <div class="feature-ico ico-o"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h12M4 12h12M4 18h8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M18 14v6l4-3-4-3Z" fill="currentColor"/></svg></div>
@@ -461,7 +466,7 @@
             <li><b>HDMI and AV receivers</b>Send a PC's HDMI output to a TV or receiver.</li>
             <li><b>Bluetooth speakers</b>Pair one to a PC. Bluetooth adds lag, so give that device a little delay or calibrate it to line it up.</li>
             <li><b>Other PCs</b>Any Windows 10 or 11 PC running WavWiz Player plays through its own speakers.</li>
-            <li><b>Google Cast speakers</b>New in 0.7.0 and still in testing: Nest speakers, Chromecast Audio and Cast TVs or soundbars join a zone from the Cast speakers card. Sync is close but approximate, so fine-tune each one with its delay.</li>
+            <li><b>Google Cast speakers</b>Since 0.7.0 and still in testing: Nest speakers, Chromecast Audio and Cast TVs or soundbars join a zone from the Cast speakers card. Sync is close but approximate, so fine-tune each one with its delay.</li>
             <li><b>Phones and tablets</b>Open the page in a browser to play as a speaker, or just to control the music without playing. Smart-TV browsers are still in testing, so a PC plugged into the TV is the surest bet.</li>
           </ul>
             <figure class="shot shot-tall reveal" data-optional-shot hidden>
@@ -480,12 +485,47 @@
     <section class="section section-alt" id="new" aria-labelledby="new-title">
       <div class="container">
         <header class="section-head reveal">
-          <p class="eyebrow">What&rsquo;s new in v<span data-ver>0.7.0</span> &middot; <span data-reldate>Nov 13, 2026</span></p>
-          <h2 id="new-title">Google Cast, <span class="accent-t">an ARM64 server</span>, AirPlay fixes.</h2>
+          <p class="eyebrow">What&rsquo;s new in v<span data-ver>0.7.2</span> &middot; <span data-reldate>Nov 21, 2026</span></p>
+          <h2 id="new-title">Live sources, <span class="accent-t">Announce in the Player</span>, phone drag.</h2>
         </header>
         <div class="spot-grid">
+          <article class="card spot reveal" aria-labelledby="spot-live072">
+            <p class="spot-tag spot-tag-t">New in 0.7.2</p>
+            <h3 id="spot-live072">Stream a PC's sound or mic to any zone</h3>
+            <p>WavWiz Player on a Windows PC can send its own sound (This PC · Speakers) or its microphone to any zone, the same way AirPlay already can.</p>
+            <ul class="spot-list">
+              <li><b>Real time:</b> the PC keeps playing with no extra lag, and the house follows. If that PC is in the same zone, WavWiz doesn't play the sound a second time there.</li>
+              <li><b>Sync with WavWiz:</b> the PC's own speakers play in time with every zone. WavWiz moves Windows to a spare output for this &mdash; optical first, never a headset that's in use &mdash; and a tray item, Restore my speakers, puts your usual output back.</li>
+              <li><b>A calm stop:</b> stopping PC audio asks first, with a one-tap Pause PC audio. When Sync hands back, the Windows volume is matched to what you heard, so nothing blares.</li>
+            </ul>
+          </article>
+          <article class="card spot reveal" aria-labelledby="spot-announce072">
+            <p class="spot-tag">New in 0.7.2</p>
+            <h3 id="spot-announce072">Announce from the Windows Player, or a phone</h3>
+            <p>Hold Announce to talk over the house. The music ducks, then fades back up when you let go. It works in the Windows Player window and in a browser on a phone.</p>
+            <ul class="spot-list">
+              <li><b>Mic gain:</b> microphone inputs go up to +24&nbsp;dB, with a built-in limiter so a boosted mic doesn't clip.</li>
+              <li><b>Privacy:</b> if Windows is blocking the microphone, the Player says so clearly and offers an Open microphone settings button.</li>
+            </ul>
+          </article>
+        </div>
+        <ul class="more-grid grid-3 reveal" aria-label="More in 0.7.2">
+          <li><b>Phone drag</b>Drag an album, song or station onto Now Playing to play it now. Drag speakers between zones. Hold still for the menu; a drag won't select text by accident.</li>
+          <li><b>Gradient edge light</b>The whole zone edge cross-fades through your theme colors. Heartbeat and Heartthrob are new too, and they replace the older comet, pulse and streak styles.</li>
+          <li><b>Volume mixer</b>Master volume now opens Devices in a Volume Mixer mode: every speaker on one line, in the same order as Devices.</li>
+          <li><b>Check with phone</b>A zone's Timing vs house row can measure how two zones line up where you stand, then suggest a timing value. Only an admin can apply it.</li>
+          <li><b>Add speaker</b>AirPlay and Cast no longer sit in separate cards. One Add speaker button opens WavWiz, Browser, AirPlay and Cast tabs. (This landed in 0.7.1, which wasn't a public release.)</li>
+          <li><b>Live limiter</b>A limiter after the AirPlay and Spotify Connect boost keeps loud tracks from clipping. Live sources use it too.</li>
+        </ul>
+        <div class="np-gallery reveal" aria-label="WavWiz 0.7.0 in the app">
+          <figure><img src="assets/img/wavwiz-070-library.webp" srcset="assets/img/wavwiz-070-library-960.webp 960w, assets/img/wavwiz-070-library.webp 1600w" sizes="(max-width: 700px) calc(100vw - 36px), 400px" width="1600" height="1000" loading="lazy" decoding="async" alt="WavWiz 0.7.0 expanded Library in Midnight Neon: six album tiles with Directionless EP playing, and a 69-track Everywhere queue on the right with the compact Now Playing below it."><figcaption>Expanded Library with a full queue</figcaption></figure>
+          <figure><img src="assets/img/wavwiz-070-devices.webp" srcset="assets/img/wavwiz-070-devices-960.webp 960w, assets/img/wavwiz-070-devices.webp 1600w" sizes="(max-width: 700px) calc(100vw - 36px), 400px" width="1600" height="1000" loading="lazy" decoding="async" alt="WavWiz 0.7.0 expanded Devices: Scenes and Schedules, the Everywhere zone's settings, and the zone tree with its four speakers."><figcaption>Expanded Devices</figcaption></figure>
+          <figure><img src="assets/img/wavwiz-070-mini.webp" width="840" height="242" loading="lazy" decoding="async" alt="The WavWiz 0.7.0 mini player: spinning CD art, Night Owl by Broke For Free from Directionless EP on Everywhere, LED seek bar, volume and soft transport buttons."><figcaption>Mini player</figcaption></figure>
+        </div>
+        <h3 class="eyebrow reveal" style="margin-top:2.5rem">From earlier releases</h3>
+        <div class="spot-grid">
           <article class="card spot reveal" aria-labelledby="spot-cast070">
-            <p class="spot-tag spot-tag-t">New in 0.7.0</p>
+            <p class="spot-tag spot-tag-t">From 0.7.0</p>
             <h3 id="spot-cast070">Google Cast speakers join your zones</h3>
             <p>Nest speakers, Chromecast Audio and Cast TVs or soundbars show up in a new Cast speakers card, right below AirPlay speakers in Devices.</p>
             <ul class="spot-list">
@@ -495,7 +535,7 @@
             </ul>
           </article>
           <article class="card spot reveal" aria-labelledby="spot-arm070">
-            <p class="spot-tag">New in 0.7.0</p>
+            <p class="spot-tag">From 0.7.0</p>
             <h3 id="spot-arm070">An ARM64 Linux server, made for Raspberry Pi</h3>
             <p>The headless server now also builds for 64-bit ARM, as a <code>linux-arm64</code> download and in a multi-arch Docker image (amd64 + arm64).</p>
             <ul class="spot-list">
@@ -505,7 +545,7 @@
             </ul>
           </article>
         </div>
-        <ul class="more-grid grid-3 reveal" aria-label="More in 0.7.0">
+        <ul class="more-grid grid-3 reveal" aria-label="From 0.7.0">
           <li><b>AirPlay 2 fixes</b>Setup now always opens the narrow PTP timing rule, fixing TVs that showed the song title but stayed at 0:00 with no sound. AirPlay 2 output is still experimental and off by default.</li>
           <li><b>LG webOS TVs</b>WavWiz automatically switches LG webOS TVs to realtime AirPlay mode instead of buffered AAC.</li>
           <li><b>Radio logos and song titles</b>AirPlay screens show the station&rsquo;s logo, and the song a station names shows in the mini player, Queue, Devices and on the phone.</li>
@@ -513,12 +553,7 @@
           <li><b>Zone clicks and Add to</b>Clicking a zone switches Now Playing and the Queue to it, the zone name opens its settings, and the Add-to-zone dropdown stays open across a refresh.</li>
           <li><b>AirPlay card and restores</b>The AirPlay speakers card no longer sticks on &ldquo;Looking&hellip;&rdquo; after a reload, and restoring a backup onto a fresh install keeps zones playable.</li>
         </ul>
-        <div class="np-gallery reveal" aria-label="WavWiz 0.7.0 in the app">
-          <figure><img src="assets/img/wavwiz-070-library.webp" srcset="assets/img/wavwiz-070-library-960.webp 960w, assets/img/wavwiz-070-library.webp 1600w" sizes="(max-width: 700px) calc(100vw - 36px), 400px" width="1600" height="1000" loading="lazy" decoding="async" alt="WavWiz 0.7.0 expanded Library in Midnight Neon: six album tiles with Directionless EP playing, and a 69-track Everywhere queue on the right with the compact Now Playing below it."><figcaption>Expanded Library with a full queue</figcaption></figure>
-          <figure><img src="assets/img/wavwiz-070-devices.webp" srcset="assets/img/wavwiz-070-devices-960.webp 960w, assets/img/wavwiz-070-devices.webp 1600w" sizes="(max-width: 700px) calc(100vw - 36px), 400px" width="1600" height="1000" loading="lazy" decoding="async" alt="WavWiz 0.7.0 expanded Devices: Scenes and Schedules, the Everywhere zone's settings, and the zone tree with its four speakers."><figcaption>Expanded Devices</figcaption></figure>
-          <figure><img src="assets/img/wavwiz-070-mini.webp" width="840" height="242" loading="lazy" decoding="async" alt="The WavWiz 0.7.0 mini player: spinning CD art, Night Owl by Broke For Free from Directionless EP on Everywhere, LED seek bar, volume and soft transport buttons."><figcaption>Mini player</figcaption></figure>
-        </div>
-        <h3 class="eyebrow reveal" style="margin-top:2.5rem">From earlier releases</h3>
+
         <div class="spot-grid">
           <article class="card spot reveal" aria-labelledby="spot-radio068">
             <p class="spot-tag spot-tag-t">From 0.6.8</p>
@@ -586,7 +621,7 @@
         </ul>
         <ul class="more-grid grid-3 reveal" aria-label="From 0.6.0">
           <li><b>Linux server</b>Headless WavWiz Server for 64-bit Intel/AMD Linux (Docker Hub <code>linux/amd64</code> only), so a NAS or mini PC can run the house. A 64-bit ARM build followed in 0.7.0 (intended for Raspberry Pi; not yet verified on real Pi hardware).</li>
-          <li><b>Docker</b>The server image is on <a href="https://hub.docker.com/r/vdubbin74/wavwiz-server">Docker Hub</a>: <code>docker pull vdubbin74/wavwiz-server:0.7.0</code> (multi-arch since 0.7.0: amd64 and arm64). Compose setup is in the <a href="https://github.com/vdubbin74/WavWiz/blob/main/docs/DOCKER.md">Docker guide</a>, including a <a href="https://github.com/vdubbin74/WavWiz/blob/main/docs/DOCKER.md#windows-docker-desktop-step-by-step">Windows Docker Desktop walkthrough</a>. <b>Not the full Windows app:</b> Docker is a server only: no mic, no CD ripping, no Windows share logins, no Linux Player, no AirPlay receiver yet, and no AirPlay 2 / Sonos / HomePod output. Since 0.7.0 it can play through the host&rsquo;s sound card if you pass in <code>/dev/snd</code>. On Windows Docker Desktop, discovery is weaker (no host networking). Pair a Windows Player for PC speakers. <a href="https://github.com/vdubbin74/WavWiz/blob/main/docs/DOCKER.md#limits-vs-the-windows-app">See the limits</a>.</li>
+          <li><b>Docker</b>The server image is on <a href="https://hub.docker.com/r/vdubbin74/wavwiz-server">Docker Hub</a>: <code>docker pull vdubbin74/wavwiz-server:0.7.2</code> (multi-arch since 0.7.0: amd64 and arm64). Compose setup is in the <a href="https://github.com/vdubbin74/WavWiz/blob/main/docs/DOCKER.md">Docker guide</a>, including a <a href="https://github.com/vdubbin74/WavWiz/blob/main/docs/DOCKER.md#windows-docker-desktop-step-by-step">Windows Docker Desktop walkthrough</a>. <b>Not the full Windows app:</b> Docker is a server only: no mic, no CD ripping, no Windows share logins, no Linux Player, no AirPlay receiver yet, and no AirPlay 2 / Sonos / HomePod output. Since 0.7.0 it can play through the host&rsquo;s sound card if you pass in <code>/dev/snd</code>. On Windows Docker Desktop, discovery is weaker (no host networking). Pair a Windows Player for PC speakers. <a href="https://github.com/vdubbin74/WavWiz/blob/main/docs/DOCKER.md#limits-vs-the-windows-app">See the limits</a>.</li>
           <li><b>AirPlay as real Speakers</b>AirPlay devices now show up as Speakers you can put in any zone.</li>
           <li><b>Home Assistant</b>Let Home Assistant drive and control WavWiz playback.</li>
           <li><b>Subsonic &amp; Navidrome</b>Play from a remote Subsonic or Navidrome library.</li>
@@ -600,7 +635,7 @@
           <li><b>Fullscreen player</b>F11 for borderless fullscreen; Esc to leave.</li>
           <li><b>Tidier Settings</b>Clear sections from General to About.</li>
         </ul>
-        <p class="new-more reveal">AirPlay 2 output is experimental in this beta, Google Cast output is new and still in testing, and the ARM64 server isn&rsquo;t verified on real Raspberry Pi hardware yet. See the <a href="https://github.com/vdubbin74/WavWiz/releases/tag/v0.7.0" target="_blank" rel="noopener">0.7.0 release notes</a> and the <a href="https://github.com/vdubbin74/WavWiz/blob/main/CHANGELOG.md" target="_blank" rel="noopener">changelog</a> for every fix.</p>
+        <p class="new-more reveal">AirPlay 2 output is experimental in this beta, Google Cast output is still in testing, and the ARM64 server isn&rsquo;t verified on real Raspberry Pi hardware yet. See the <a href="https://github.com/vdubbin74/WavWiz/releases/tag/v0.7.2" target="_blank" rel="noopener">0.7.2 release notes</a> and the <a href="https://github.com/vdubbin74/WavWiz/blob/main/CHANGELOG.md" target="_blank" rel="noopener">changelog</a> for every fix.</p>
       </div>
     </section>
 
@@ -636,15 +671,15 @@
           <h2 id="roadmap-title">Where WavWiz is <span class="accent-t">headed</span>.</h2>
           <p class="section-lead">Here's what's coming next, in order. These are plans, not promises, so there are no ship dates. Each one lands when it's solid.</p>
         </header>
-        <p class="new-more reveal"><b>Out now in 0.7.0:</b> multi-zone sync, zones, scenes, alarms and schedules, the phone Remote, EQ, eight visualizers, themes, AirPlay speakers as zone-able Speakers (AirPlay 2 is experimental), Google Cast speakers (new, still in testing), a Linux server for amd64 and arm64 (arm64 not yet verified on real Raspberry Pi hardware), Home Assistant, Subsonic/Navidrome libraries, library tiles, and Library Local / Remote / Radio / Playlists sources.</p>
+        <p class="new-more reveal"><b>Out now in 0.7.2:</b> live sources (a PC's own sound or its microphone, in Real time or Sync with WavWiz), Announce from the Windows Player or a phone, phone drag onto Now Playing, multi-zone sync, zones, scenes, alarms and schedules, the phone Remote, EQ, eight visualizers, themes, AirPlay speakers as zone-able Speakers (AirPlay 2 is experimental), Google Cast speakers (still in testing), a Linux server for amd64 and arm64 (arm64 not yet verified on real Raspberry Pi hardware), Home Assistant, Subsonic/Navidrome libraries, library tiles, and Library Local / Remote / Radio / Playlists sources.</p>
         <div class="spot-grid">
           <article class="card spot reveal" aria-labelledby="rm-060">
             <p class="spot-tag">Shipped &middot; 0.6.0</p>
             <h3 id="rm-060">Linux &amp; Docker</h3>
             <p>Run the WavWiz server on almost any always-on box, not just a Windows PC.</p>
             <ul class="spot-list">
-              <li><b>Linux server:</b> headless WavWiz Server for <b>64-bit Intel/AMD</b> (<code>linux/amd64</code>), so a NAS or x86-64 mini PC can run the house. <b>New in 0.7.0:</b> a <b>64-bit ARM</b> build (<code>linux/arm64</code>) intended for Raspberry Pi 4/5, published but <b>not yet verified on real Raspberry Pi hardware</b>.</li>
-              <li><b>Docker:</b> an official server image, now on <a href="https://hub.docker.com/r/vdubbin74/wavwiz-server">Docker Hub</a> (<code>vdubbin74/wavwiz-server:0.7.0</code> and <code>:latest</code>, multi-arch amd64 + arm64). See the <a href="https://github.com/vdubbin74/WavWiz/blob/main/docs/DOCKER.md">Docker guide</a> for compose, including a <a href="https://github.com/vdubbin74/WavWiz/blob/main/docs/DOCKER.md#windows-docker-desktop-step-by-step">Windows Docker Desktop walkthrough</a>.</li>
+              <li><b>Linux server:</b> headless WavWiz Server for <b>64-bit Intel/AMD</b> (<code>linux/amd64</code>), so a NAS or x86-64 mini PC can run the house. <b>Since 0.7.0:</b> a <b>64-bit ARM</b> build (<code>linux/arm64</code>) intended for Raspberry Pi 4/5, published but <b>not yet verified on real Raspberry Pi hardware</b>.</li>
+              <li><b>Docker:</b> an official server image, now on <a href="https://hub.docker.com/r/vdubbin74/wavwiz-server">Docker Hub</a> (<code>vdubbin74/wavwiz-server:0.7.2</code> and <code>:latest</code>, multi-arch amd64 + arm64). See the <a href="https://github.com/vdubbin74/WavWiz/blob/main/docs/DOCKER.md">Docker guide</a> for compose, including a <a href="https://github.com/vdubbin74/WavWiz/blob/main/docs/DOCKER.md#windows-docker-desktop-step-by-step">Windows Docker Desktop walkthrough</a>.</li>
               <li><b>Remote libraries:</b> play from a Subsonic or OpenSubsonic server, with Navidrome tested first.</li>
               <li><b>Home Assistant:</b> let Home Assistant control playback with a secure token.</li>
               <li><b>Nothing to relearn:</b> the same web app, zones, scenes and schedules.</li>
@@ -734,7 +769,7 @@
           </details>
           <details class="card reveal">
             <summary>Does it work with Bluetooth, HDMI and receivers?</summary>
-            <p>Yes, through a PC. WavWiz Player plays to any output Windows can use, including HDMI to a TV or receiver, optical, USB DACs and Bluetooth speakers, and each speaker shows which output it's using. New in 0.7.0, WavWiz can also play straight to Google Cast speakers (still in testing). Sonos works only through the experimental AirPlay 2 output, and DLNA speakers aren't supported.</p>
+            <p>Yes, through a PC. WavWiz Player plays to any output Windows can use, including HDMI to a TV or receiver, optical, USB DACs and Bluetooth speakers, and each speaker shows which output it's using. Since 0.7.0, WavWiz can also play straight to Google Cast speakers (still in testing). Sonos works only through the experimental AirPlay 2 output, and DLNA speakers aren't supported.</p>
           </details>
           <details class="card reveal">
             <summary>Can guests add songs?</summary>
@@ -750,7 +785,7 @@
           </details>
           <details class="card reveal">
             <summary>What doesn't work yet?</summary>
-            <p>WavWiz is a public beta. Smart-TV browsers are still in testing: WavWiz gives TVs a lighter layout and visualizer, but some (including an older LG webOS set) don't finish loading yet. For now, the reliable way to use a TV is a PC or laptop connected to it, and if you try your TV's browser, we'd love to hear how it went. The server runs on 64-bit Windows 10 or 11, or on Linux, bare or in Docker (64-bit x86 / amd64; no Mac server yet). New in 0.7.0 there's also a 64-bit ARM build of the Linux server and Docker image, intended for Raspberry Pi 4 and 5, but it hasn't been verified on real Raspberry Pi hardware yet. The Linux server can play through the machine's own sound card (new in 0.7.0, also not yet verified on a real Pi) and has no AirPlay receiver yet (planned for the next version). Windows PCs play through WavWiz Player. AirPlay shows up as one speaker per zone plus &ldquo;WavWiz &ndash; Everywhere&rdquo;, not one per device, and it's classic AirPlay, so iPhone won't group it with AirPlay 2 speakers. WavWiz can play to AirPlay 1 speakers; AirPlay 2 output (Sonos and similar) is experimental. Google Cast output is new in 0.7.0 and still being tested on real Cast hardware, and DLNA isn't supported. Calibrate speakers doesn't support AirPlay or Cast speakers yet (planned for the next version). On iPhone, tap the page once to start the sound.</p>
+            <p>WavWiz is a public beta. Smart-TV browsers are still in testing: WavWiz gives TVs a lighter layout and visualizer, but some (including an older LG webOS set) don't finish loading yet. For now, the reliable way to use a TV is a PC or laptop connected to it, and if you try your TV's browser, we'd love to hear how it went. The server runs on 64-bit Windows 10 or 11, or on Linux, bare or in Docker (64-bit x86 / amd64; no Mac server yet). Since 0.7.0 there's also a 64-bit ARM build of the Linux server and Docker image, intended for Raspberry Pi 4 and 5, but it hasn't been verified on real Raspberry Pi hardware yet. The Linux server can play through the machine's own sound card (since 0.7.0, also not yet verified on a real Pi) and has no AirPlay receiver yet (planned for the next version). Windows PCs play through WavWiz Player. AirPlay shows up as one speaker per zone plus &ldquo;WavWiz &ndash; Everywhere&rdquo;, not one per device, and it's classic AirPlay, so iPhone won't group it with AirPlay 2 speakers. WavWiz can play to AirPlay 1 speakers; AirPlay 2 output (Sonos and similar) is experimental. Google Cast output, added in 0.7.0, is still being tested on real Cast hardware, and DLNA isn't supported. Calibrate speakers doesn't support AirPlay or Cast speakers yet (planned for the next version). On iPhone, tap the page once to start the sound.</p>
           </details>
           <details class="card reveal">
             <summary>Why does Windows SmartScreen warn me when I install WavWiz?</summary>
@@ -808,9 +843,10 @@
               <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M2 4.3 10 3.2v7.7H2V4.3Zm9-1.2L22 1.5v9.4H11V3.1ZM2 12h8v7.8l-8-1.1V12Zm9 0h11v10.5l-11-1.6V12Z"/></svg>
               Download for Windows
             </a>
-          <p class="hero-links"><span class="hero-fact">v<span data-ver>0.7.0</span> Beta</span><span aria-hidden="true">·</span><span>Released <span data-reldate>Nov 13, 2026</span></span><span aria-hidden="true">·</span><a href="https://github.com/vdubbin74/WavWiz/releases/tag/v0.7.0" target="_blank" rel="noopener">Release notes</a><span aria-hidden="true">·</span><a href="https://github.com/vdubbin74/WavWiz" target="_blank" rel="noopener">Source on GitHub</a></p>
-          <p class="get-note">Windows installer: <a href="https://github.com/vdubbin74/WavWiz/releases/download/v0.7.0/WavWiz-Setup-0.7.0.exe">WavWiz-Setup-0.7.0.exe</a> (104,738,608 bytes).<br>SHA-256: <code>D0BC98E5293F76A1ACA901F8CE90144E066EA2D2DE90DEBB6ABFDAC4CB6C724C</code></p>
-          <p class="get-note">Linux server: <a href="https://github.com/vdubbin74/WavWiz/releases/download/v0.7.0/wavwiz-server-0.7.0-linux-x64.tar.gz">linux-x64</a> or <a href="https://github.com/vdubbin74/WavWiz/releases/download/v0.7.0/wavwiz-server-0.7.0-linux-arm64.tar.gz">linux-arm64</a> (for Raspberry Pi 4/5; not yet verified on real Pi hardware).<br>Docker: <code>vdubbin74/wavwiz-server:0.7.0</code> (amd64 + arm64). Checksums: <a href="https://github.com/vdubbin74/WavWiz/releases/download/v0.7.0/SHA256SUMS.txt">SHA256SUMS.txt</a>.</p>
+          <p class="hero-links"><span class="hero-fact">v<span data-ver>0.7.2</span> Beta</span><span aria-hidden="true">·</span><span>Released <span data-reldate>Nov 21, 2026</span></span><span aria-hidden="true">·</span><a href="https://github.com/vdubbin74/WavWiz/releases/tag/v0.7.2" target="_blank" rel="noopener">Release notes</a><span aria-hidden="true">·</span><a href="https://github.com/vdubbin74/WavWiz" target="_blank" rel="noopener">Source on GitHub</a></p>
+          <!-- PENDING_RELEASE_ASSETS: fill installer size and the full SHA-256 from the v0.7.2 SHA256SUMS.txt once published. Expected installer SHA-256 starts B889C5FE and ends 214D. Docker tags 0.7.2 and latest (amd64+arm64) also pending. -->
+          <p class="get-note">Windows installer: <a href="https://github.com/vdubbin74/WavWiz/releases/download/v0.7.2/WavWiz-Setup-0.7.2.exe">WavWiz-Setup-0.7.2.exe</a>. Size and the full SHA-256 will be on the <a href="https://github.com/vdubbin74/WavWiz/releases/tag/v0.7.2" target="_blank" rel="noopener">release page</a> when the files are up (the installer checksum starts with <code>B889C5FE</code> and ends with <code>214D</code>).</p>
+          <p class="get-note">Linux server: <a href="https://github.com/vdubbin74/WavWiz/releases/download/v0.7.2/wavwiz-server-0.7.2-linux-x64.tar.gz">linux-x64</a> or <a href="https://github.com/vdubbin74/WavWiz/releases/download/v0.7.2/wavwiz-server-0.7.2-linux-arm64.tar.gz">linux-arm64</a> (for Raspberry Pi 4/5; not yet verified on real Pi hardware).<br>Docker: <code>vdubbin74/wavwiz-server:0.7.2</code> (amd64 + arm64, once the Hub tag is published). Checksums: <a href="https://github.com/vdubbin74/WavWiz/releases/download/v0.7.2/SHA256SUMS.txt">SHA256SUMS.txt</a>.</p>
         </div>
         <ul class="card get-req reveal">
           <li><b>Server PC:</b> 64-bit Windows 10 (October 2018 Update or newer) or Windows 11, on a PC that stays on. Admin rights to install. Everything else comes in the installer.</li>
@@ -851,6 +887,6 @@
   </footer>
 
   <script src="assets/vendor/qrcode.js"></script>
-  <script src="script.js?v=070b"></script>
+  <script src="script.js?v=072"></script>
 </body>
 </html>
