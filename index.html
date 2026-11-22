@@ -209,7 +209,7 @@
             "name": "What doesn't work yet?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "WavWiz is a public beta. Smart-TV browsers are still in testing: WavWiz gives TVs a lighter layout and visualizer, but some (including an older LG webOS set) don't finish loading yet. For now, the reliable way to use a TV is a PC or laptop connected to it, and if you try your TV's browser, we'd love to hear how it went. The server runs on 64-bit Windows 10 or 11, or on Linux, bare or in Docker (64-bit x86 / amd64; no Mac server yet). Since 0.7.0 there's also a 64-bit ARM build of the Linux server and Docker image, intended for Raspberry Pi 4 and 5, but it hasn't been verified on real Raspberry Pi hardware yet. The Linux server can play through the machine's own sound card (since 0.7.0, also not yet verified on a real Pi) and has no AirPlay receiver yet (planned for the next version). Windows PCs play through WavWiz Player. AirPlay shows up as one speaker per zone plus &ldquo;WavWiz &ndash; Everywhere&rdquo;, not one per device, and it's classic AirPlay, so iPhone won't group it with AirPlay 2 speakers. WavWiz can play to AirPlay 1 speakers; AirPlay 2 output (Sonos and similar) is experimental. Google Cast output, added in 0.7.0, is still being tested on real Cast hardware, and DLNA isn't supported. Calibrate speakers doesn't support AirPlay or Cast speakers yet (planned for the next version). On iPhone, tap the page once to start the sound."
+              "text": "WavWiz is a public beta. Smart-TV browsers are still in testing: WavWiz gives TVs a lighter layout and visualizer, but some (including an older LG webOS set) don't finish loading yet. For now, the reliable way to use a TV is a PC or laptop connected to it, and if you try your TV's browser, we'd love to hear how it went. The server runs on 64-bit Windows 10 or 11, or on Linux, bare or in Docker (64-bit x86 / amd64; no Mac server yet). Since 0.7.0 there's also a 64-bit ARM build of the Linux server and Docker image, intended for Raspberry Pi 4 and 5, but it hasn't been verified on real Raspberry Pi hardware yet. The Linux server can play through the machine's own sound card (since 0.7.0, also not yet verified on a real Pi) and has no AirPlay receiver yet (still planned). Windows PCs play through WavWiz Player. AirPlay shows up as one speaker per zone plus &ldquo;WavWiz &ndash; Everywhere&rdquo;, not one per device, and it's classic AirPlay, so iPhone won't group it with AirPlay 2 speakers. WavWiz can play to AirPlay 1 speakers; AirPlay 2 output (Sonos and similar) is experimental. Google Cast output, added in 0.7.0, is still being tested on real Cast hardware, and DLNA isn't supported. Calibrate speakers doesn't support AirPlay or Cast speakers yet (still planned). On iPhone, tap the page once to start the sound."
             }
           },
           {
@@ -669,10 +669,31 @@
         <header class="section-head reveal">
           <p class="eyebrow">Roadmap</p>
           <h2 id="roadmap-title">Where WavWiz is <span class="accent-t">headed</span>.</h2>
-          <p class="section-lead">Here's what's coming next, in order. These are plans, not promises, so there are no ship dates. Each one lands when it's solid.</p>
+          <p class="section-lead">Next up is audiophile accuracy: cleaner gain and a bit-perfect path, then an official Linux Player and tools to tune every speaker to the room. Everything below that isn't marked shipped is planned, not available yet, and there are no dates.</p>
         </header>
         <p class="new-more reveal"><b>Out now in 0.7.2:</b> live sources in the Windows Player (that PC's own sound or its microphone, in Real time or Sync with WavWiz), Announce from the Windows Player or a phone, phone drag onto Now Playing, multi-zone sync, zones, scenes, alarms and schedules, the phone Remote, EQ, eight visualizers, themes, AirPlay speakers as zone-able Speakers (AirPlay 2 is experimental), Google Cast speakers (still in testing), a Linux server for amd64 and arm64 (arm64 not yet verified on real Raspberry Pi hardware), Home Assistant, Subsonic/Navidrome libraries, library tiles, and Library Local / Remote / Radio / Playlists sources.</p>
         <div class="spot-grid">
+          <article class="card spot reveal" aria-labelledby="rm-073">
+            <p class="spot-tag">Coming next in 0.7.3 (planned)</p>
+            <h3 id="rm-073">Auto pre-gain and bit-perfect</h3>
+            <p>Cleaner, more accurate playback so boosts don't cost you volume, and a way to hear the file untouched.</p>
+            <ul class="spot-list">
+              <li><b>Auto pre-gain:</b> a planned fix so EQ, Bass/Treble boosts and Loudness no longer make the music quieter.</li>
+              <li><b>Bit-perfect:</b> a planned switch that bypasses all DSP, so the stream stays as it is in the file.</li>
+            </ul>
+          </article>
+          <article class="card spot reveal" aria-labelledby="rm-080">
+            <p class="spot-tag spot-tag-t">Upcoming in 0.8.0 (planned)</p>
+            <h3 id="rm-080">Linux Player and acoustic accuracy</h3>
+            <p>A planned official Player for Linux, plus tools to measure and correct each speaker in the room.</p>
+            <ul class="spot-list">
+              <li><b>Linux Player:</b> an official Linux Player app (x64 and arm64) that pairs with a WavWiz server and shows up as a zone, like the Windows Player.</li>
+              <li><b>Parametric EQ:</b> exact frequency, gain and Q per band, with REW (Room EQ Wizard) filter import.</li>
+              <li><b>Per-speaker room correction:</b> use a microphone to correct each speaker for the room.</li>
+              <li><b>Convolution / FIR:</b> load professional room-correction filter files.</li>
+              <li><b>Equal-loudness:</b> standards-based equal-loudness curves for Loudness.</li>
+            </ul>
+          </article>
           <article class="card spot reveal" aria-labelledby="rm-060">
             <p class="spot-tag">Shipped &middot; 0.6.0</p>
             <h3 id="rm-060">Linux &amp; Docker</h3>
@@ -705,9 +726,9 @@
             </ul>
           </article>
           <article class="card spot reveal" aria-labelledby="rm-next">
-            <p class="spot-tag">Next</p>
+            <p class="spot-tag">Also planned</p>
             <h3 id="rm-next">AirPlay on Linux &amp; calibration</h3>
-            <p>Filling the gaps 0.7.0 left open.</p>
+            <p>Filling the gaps 0.7.0 left open. Still planned; not tied to a version yet.</p>
             <ul class="spot-list">
               <li><b>AirPlay receiver on Linux / Raspberry Pi:</b> AirPlay from an iPhone, iPad or Mac to a Linux or Pi server.</li>
               <li><b>Calibration for AirPlay and Cast speakers:</b> let Calibrate speakers measure them too, not just set by ear.</li>
@@ -715,7 +736,7 @@
             </ul>
           </article>
           <article class="card spot reveal" aria-labelledby="rm-089">
-            <p class="spot-tag spot-tag-t">Planned &middot; 0.8 &amp; 0.9</p>
+            <p class="spot-tag spot-tag-t">Later (planned)</p>
             <h3 id="rm-089">Visualizers, Jukebox &amp; polish</h3>
             <ul class="spot-list">
               <li><b>Visualizers:</b> more depth for the light show on your TV.</li>
@@ -732,6 +753,7 @@
             </ul>
           </article>
         </div>
+        <p class="new-more reveal">Plans can change; features ship when they're ready.</p>
       </div>
     </section>
 
@@ -785,7 +807,7 @@
           </details>
           <details class="card reveal">
             <summary>What doesn't work yet?</summary>
-            <p>WavWiz is a public beta. Smart-TV browsers are still in testing: WavWiz gives TVs a lighter layout and visualizer, but some (including an older LG webOS set) don't finish loading yet. For now, the reliable way to use a TV is a PC or laptop connected to it, and if you try your TV's browser, we'd love to hear how it went. The server runs on 64-bit Windows 10 or 11, or on Linux, bare or in Docker (64-bit x86 / amd64; no Mac server yet). Since 0.7.0 there's also a 64-bit ARM build of the Linux server and Docker image, intended for Raspberry Pi 4 and 5, but it hasn't been verified on real Raspberry Pi hardware yet. The Linux server can play through the machine's own sound card (since 0.7.0, also not yet verified on a real Pi) and has no AirPlay receiver yet (planned for the next version). Windows PCs play through WavWiz Player. AirPlay shows up as one speaker per zone plus &ldquo;WavWiz &ndash; Everywhere&rdquo;, not one per device, and it's classic AirPlay, so iPhone won't group it with AirPlay 2 speakers. WavWiz can play to AirPlay 1 speakers; AirPlay 2 output (Sonos and similar) is experimental. Google Cast output, added in 0.7.0, is still being tested on real Cast hardware, and DLNA isn't supported. Calibrate speakers doesn't support AirPlay or Cast speakers yet (planned for the next version). On iPhone, tap the page once to start the sound.</p>
+            <p>WavWiz is a public beta. Smart-TV browsers are still in testing: WavWiz gives TVs a lighter layout and visualizer, but some (including an older LG webOS set) don't finish loading yet. For now, the reliable way to use a TV is a PC or laptop connected to it, and if you try your TV's browser, we'd love to hear how it went. The server runs on 64-bit Windows 10 or 11, or on Linux, bare or in Docker (64-bit x86 / amd64; no Mac server yet). Since 0.7.0 there's also a 64-bit ARM build of the Linux server and Docker image, intended for Raspberry Pi 4 and 5, but it hasn't been verified on real Raspberry Pi hardware yet. The Linux server can play through the machine's own sound card (since 0.7.0, also not yet verified on a real Pi) and has no AirPlay receiver yet (still planned). Windows PCs play through WavWiz Player. AirPlay shows up as one speaker per zone plus &ldquo;WavWiz &ndash; Everywhere&rdquo;, not one per device, and it's classic AirPlay, so iPhone won't group it with AirPlay 2 speakers. WavWiz can play to AirPlay 1 speakers; AirPlay 2 output (Sonos and similar) is experimental. Google Cast output, added in 0.7.0, is still being tested on real Cast hardware, and DLNA isn't supported. Calibrate speakers doesn't support AirPlay or Cast speakers yet (still planned). On iPhone, tap the page once to start the sound.</p>
           </details>
           <details class="card reveal">
             <summary>Why does Windows SmartScreen warn me when I install WavWiz?</summary>
