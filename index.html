@@ -669,17 +669,17 @@
         <header class="section-head reveal">
           <p class="eyebrow">Roadmap</p>
           <h2 id="roadmap-title">Where WavWiz is <span class="accent-t">headed</span>.</h2>
-          <p class="section-lead">Next up is audiophile accuracy: cleaner gain and a bit-perfect path, then an official Linux Player and tools to tune every speaker to the room. Everything below that isn't marked shipped is planned, not available yet, and there are no dates.</p>
+          <p class="section-lead">Next up is audiophile accuracy: cleaner gain and a Direct (no processing) switch, then true bit-perfect playback, an official Linux Player and tools to tune every speaker to the room. Everything below that isn't marked shipped is planned, not available yet, and there are no dates.</p>
         </header>
         <p class="new-more reveal"><b>Out now in 0.7.2:</b> live sources in the Windows Player (that PC's own sound or its microphone, in Real time or Sync with WavWiz), Announce from the Windows Player or a phone, phone drag onto Now Playing, multi-zone sync, zones, scenes, alarms and schedules, the phone Remote, EQ, eight visualizers, themes, AirPlay speakers as zone-able Speakers (AirPlay 2 is experimental), Google Cast speakers (still in testing), a Linux server for amd64 and arm64 (arm64 not yet verified on real Raspberry Pi hardware), Home Assistant, Subsonic/Navidrome libraries, library tiles, and Library Local / Remote / Radio / Playlists sources.</p>
         <div class="spot-grid">
           <article class="card spot reveal" aria-labelledby="rm-073">
             <p class="spot-tag">Coming next in 0.7.3 (planned)</p>
-            <h3 id="rm-073">Auto pre-gain and bit-perfect</h3>
-            <p>Cleaner, more accurate playback so boosts don't cost you volume, and a way to hear the file untouched.</p>
+            <h3 id="rm-073">Auto pre-gain and Direct mode</h3>
+            <p>Cleaner, more accurate playback so boosts don't cost you volume, and a way to switch off all of WavWiz's processing.</p>
             <ul class="spot-list">
               <li><b>Auto pre-gain:</b> a planned fix so EQ, Bass/Treble boosts and Loudness no longer make the music quieter.</li>
-              <li><b>Bit-perfect:</b> a planned switch that bypasses all DSP, so the stream stays as it is in the file.</li>
+              <li><b>Direct (no processing):</b> a planned switch that bypasses all of WavWiz's own processing (EQ, Bass/Treble and Loudness).</li>
             </ul>
           </article>
           <article class="card spot reveal" aria-labelledby="rm-080">
@@ -692,6 +692,7 @@
               <li><b>Per-speaker room correction:</b> use a microphone to correct each speaker for the room.</li>
               <li><b>Convolution / FIR:</b> load professional room-correction filter files.</li>
               <li><b>Equal-loudness:</b> standards-based equal-loudness curves for Loudness.</li>
+              <li><b>True bit-perfect playback:</b> native sample rate with exclusive output, so the file reaches the DAC untouched.</li>
             </ul>
           </article>
           <article class="card spot reveal" aria-labelledby="rm-060">
