@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>WavWiz: Free Multi-Zone Audio &amp; Multi-Room Music for Windows</title>
-  <meta name="description" content="Free, open-source multi-zone audio for Windows, for homes, shops, restaurants and offices. One always-on PC plays your music, internet radio and AirPlay in sync, or different music in each zone, on your PCs, phones and tablets.">
+  <title>WavWiz: Multi-zone mesh audio wizardry, for gear old and new</title>
+  <meta name="description" content="One mesh for every speaker you own. Free, open-source multi-room music for Windows PCs, phones, and streamers and receivers with AirPlay or Cast, with no cloud and no lock-in.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="theme-color" content="#0b1020">
   <meta name="color-scheme" content="dark">
@@ -12,8 +12,8 @@
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="WavWiz">
-  <meta property="og:title" content="WavWiz: Multi-zone audio wizardry for Windows">
-  <meta property="og:description" content="Free, open-source multi-room music from your Windows PC. Your library, internet radio and AirPlay play in sync on PCs, phones and tablets.">
+  <meta property="og:title" content="WavWiz: Multi-zone mesh audio wizardry, for gear old and new">
+  <meta property="og:description" content="One mesh for every speaker you own. Free, open-source multi-room music for Windows PCs, phones, and streamers and receivers with AirPlay or Cast.">
   <meta property="og:url" content="https://wavwiz.com/">
   <meta property="og:image" content="https://wavwiz.com/assets/img/og-image-070.jpg">
   <meta property="og:image:type" content="image/jpeg">
@@ -23,8 +23,8 @@
   <meta property="og:locale" content="en_US">
   <meta property="og:image:secure_url" content="https://wavwiz.com/assets/img/og-image-070.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="WavWiz: Multi-zone audio wizardry for Windows">
-  <meta name="twitter:description" content="Free, open-source multi-room music from your Windows PC. Your library, internet radio and AirPlay play in sync on PCs, phones and tablets.">
+  <meta name="twitter:title" content="WavWiz: Multi-zone mesh audio wizardry, for gear old and new">
+  <meta name="twitter:description" content="One mesh for every speaker you own. Free, open-source multi-room music for Windows PCs, phones, and streamers and receivers with AirPlay or Cast.">
   <meta name="twitter:image" content="https://wavwiz.com/assets/img/og-image-070.jpg">
   <meta name="twitter:image:alt" content="The WavWiz 0.7.0 window in Midnight Neon: the Library, big album art for Night Owl by Broke For Free, and Devices with the Everywhere zone and its four speakers.">
 
@@ -34,7 +34,7 @@
 
   <link rel="preload" href="assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=072">
+  <link rel="stylesheet" href="styles.css?v=073m">
   <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -60,7 +60,7 @@
         "name": "WavWiz",
         "url": "https://wavwiz.com/",
         "inLanguage": "en-US",
-        "description": "Multi-zone audio wizardry: free, open-source multi-room music for Windows.",
+        "description": "Multi-zone mesh audio wizardry, for gear old and new. One mesh for every speaker you own: free, open-source multi-room music for Windows.",
         "publisher": {
           "@id": "https://wavwiz.com/#organization"
         }
@@ -70,7 +70,7 @@
         "@id": "https://wavwiz.com/#software",
         "name": "WavWiz",
         "url": "https://wavwiz.com/",
-        "description": "WavWiz is a free, MIT-licensed multi-zone music system built around Windows. Run a Windows server (or an optional Linux/Docker server for amd64 or arm64; the arm64 build is intended for Raspberry Pi and not yet verified on real Pi hardware) and play through Windows Players or any modern browser on phones, tablets, Macs and Linux PCs. Zones play different music or link for sync, with per-speaker delay, volume and EQ. Local/NAS library, internet radio, Subsonic/Navidrome, AirPlay in, AirPlay 1 out; AirPlay 2 output is experimental and off by default; Google Cast output, added in 0.7.0, is still in testing. Live sources in the Windows Player can stream that PC's own sound or its microphone to any zone. No cloud account, no telemetry.",
+        "description": "Multi-zone mesh audio wizardry, for gear old and new. WavWiz is a free, MIT-licensed multi-room music system. One mesh for every speaker you own. Run a Windows server (or an optional Linux/Docker server for amd64 or arm64; the arm64 build is intended for Raspberry Pi and not yet verified on real Pi hardware) and play through Windows Players or any modern browser on phones, tablets, Macs and Linux PCs. Streamers and receivers with AirPlay or Cast can join a zone: AirPlay 1 output works; AirPlay 2 output is experimental and off by default; Google Cast output, added in 0.7.0, is still in testing. HomePod and Apple TV are not supported. DLNA / UPnP renderer output is planned for 0.8.0 and is not available yet. An official Linux and Raspberry Pi Player is planned for 0.8.0. Local/NAS library, internet radio, Subsonic/Navidrome, AirPlay in, and live sources in the Windows Player. No cloud account, no telemetry.",
         "applicationCategory": "MultimediaApplication",
         "applicationSubCategory": "Multi-zone audio",
         "operatingSystem": "Windows 10, Windows 11",
@@ -169,7 +169,7 @@
             "name": "Do I need special hardware?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "No. You need one Windows PC that stays on to run the server, and whatever speakers you already have: PCs, laptops, phones, tablets, and the speakers, TVs and receivers they connect to."
+              "text": "No. You need one always-on Windows PC (or an optional Linux or Docker server) and the speakers you already have. See Works with what you own for what works today, what is in testing, and what is planned."
             }
           },
           {
@@ -177,7 +177,7 @@
             "name": "Does it work with Bluetooth, HDMI and receivers?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes, through a PC. WavWiz Player plays to any output Windows can use, including HDMI to a TV or receiver, optical, USB DACs and Bluetooth speakers, and each speaker shows which output it's using. Since 0.7.0, WavWiz can also play straight to Google Cast speakers (still in testing). Sonos works only through the experimental AirPlay 2 output, and DLNA speakers aren't supported."
+              "text": "Yes, through a Windows PC running WavWiz Player. Pick any output Windows can play to, including HDMI, optical, USB and Bluetooth. Since 0.7.0, streamers and receivers with Google Cast can join a zone too (still in testing). Streamers and receivers with AirPlay can be added over AirPlay (AirPlay 2 output is experimental and off by default). HomePod and Apple TV are not supported. DLNA / UPnP renderer output is planned for 0.8.0 and is not available yet."
             }
           },
           {
@@ -209,7 +209,7 @@
             "name": "What doesn't work yet?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "WavWiz is a public beta. Smart-TV browsers are still in testing: WavWiz gives TVs a lighter layout and visualizer, but some (including an older LG webOS set) don't finish loading yet. For now, the reliable way to use a TV is a PC or laptop connected to it, and if you try your TV's browser, we'd love to hear how it went. The server runs on 64-bit Windows 10 or 11, or on Linux, bare or in Docker (64-bit x86 / amd64; no Mac server yet). Since 0.7.0 there's also a 64-bit ARM build of the Linux server and Docker image, intended for Raspberry Pi 4 and 5, but it hasn't been verified on real Raspberry Pi hardware yet. The Linux server can play through the machine's own sound card (since 0.7.0, also not yet verified on a real Pi) and has no AirPlay receiver yet (still planned). Windows PCs play through WavWiz Player. AirPlay shows up as one speaker per zone plus &ldquo;WavWiz &ndash; Everywhere&rdquo;, not one per device, and it's classic AirPlay, so iPhone won't group it with AirPlay 2 speakers. WavWiz can play to AirPlay 1 speakers; AirPlay 2 output (Sonos and similar) is experimental. Google Cast output, added in 0.7.0, is still being tested on real Cast hardware, and DLNA isn't supported. Calibrate speakers doesn't support AirPlay or Cast speakers yet (still planned). On iPhone, tap the page once to start the sound."
+              "text": "WavWiz is a public beta. AirPlay 2 output is experimental and off by default. Google Cast output (since 0.7.0) is still in testing. Calibrate speakers can't measure AirPlay or Cast yet; set those delays by ear. The Linux/Docker arm64 server, intended for Raspberry Pi 4 and 5, has not been verified on real Pi hardware, and there is no official Linux or Pi Player yet (planned for 0.8.0). There is no AirPlay receiver on Linux yet (still planned). HomePod and Apple TV are not supported. DLNA / UPnP renderer output is planned for 0.8.0 and is not available yet. Smart-TV browsers are still in testing; a PC connected to the TV is the reliable path. On iPhone, tap the page once to start the sound."
             }
           },
           {
@@ -256,7 +256,7 @@
       </button>
       <nav class="site-nav" id="site-nav" aria-label="Main">
         <a href="#features">Features</a>
-        <a href="#devices">Devices</a>
+        <a href="#devices">Speakers</a>
         <a href="#new">What's new</a>
         <a href="#visualizers">Visualizers</a>
         <a href="#how">How it works</a>
@@ -284,10 +284,11 @@
         <div class="hero-copy" data-parallax="0.12">
           <a class="badge badge-ver" href="#new" aria-label="What's new in v0.7.2 Beta, released Nov 21, 2026"><span class="bv-new">New</span><b>v<span data-ver>0.7.2</span> Beta</b><span class="bv-sep" aria-hidden="true">·</span><span class="bv-date"><span class="bv-date-long">Released <span data-reldate>Nov 21, 2026</span></span><span class="bv-date-short" data-reldate-short>Nov 21</span></span><span class="bv-sep bv-sep-more" aria-hidden="true">·</span><span class="bv-more"><span class="bv-more-label">What&rsquo;s new </span><span class="bv-more-arrow" aria-hidden="true">&rarr;</span></span></a>
           <h1 id="hero-title" class="hero-title">
-            <span class="line">Multi-zone audio</span>
-            <span class="line glow-text">wizardry.</span>
+            <span class="line">Multi-zone mesh audio wizardry,</span>
+            <span class="line glow-text">for gear old and new.</span>
           </h1>
-          <p class="hero-sub">Turn the PCs, phones and speakers you already own into one multi-zone music system, for free. For homes, shops, restaurants and offices: your library, internet radio and AirPlay play in sync in every zone, or different music in each one. New in 0.7.2: from the Windows Player, stream that PC's own sound or its microphone to any zone.</p>
+          <p class="hero-kicker">One mesh for every speaker you own.</p>
+          <p class="hero-sub">WavWiz links Windows PCs, phones, and streamers and receivers with AirPlay or Cast into one free multi-room system, with no cloud and no lock-in. Native Linux and Raspberry Pi players are planned.</p>
           <div class="hero-ctas">
             
             <a class="btn btn-primary btn-lg" href="https://github.com/vdubbin74/WavWiz/releases/latest" target="_blank" rel="noopener">
@@ -304,7 +305,7 @@
 
       </div>
 
-      <a class="scroll-cue" href="#app" aria-label="Scroll to the next section"><span></span></a>
+      <a class="scroll-cue" href="#devices" aria-label="Scroll to the next section"><span></span></a>
     </section>
 
     <!-- ============ EQ STRIP ============ -->
@@ -312,7 +313,405 @@
       <div class="eq-track" id="eq-track"></div>
     </div>
 
-    <!-- ============ INSIDE THE APP (real screenshot) ============ -->
+    <!-- ============ WORKS WITH / MESH ============ -->
+    <section class="section works" id="devices" aria-labelledby="devices-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Speakers</p>
+          <h2 id="devices-title">Works with what you <span class="accent-o">own</span>.</h2>
+          <p class="section-lead">One mesh for every speaker you own, including streamers and receivers with AirPlay or Cast. Status tags tell you what works today, what is still in testing, and what is planned.</p>
+        </header>
+
+        <figure class="mesh-diagram reveal">
+          <svg class="mesh-wide" viewBox="0 0 1200 956" role="img" aria-labelledby="mesh-title mesh-desc">
+                        <title id="mesh-title">How audio flows through a WavWiz mesh</title>
+                        <desc id="mesh-desc">A hub-and-spoke map. The WavWiz server is in the center. Sources (a local or NAS library, internet radio, and Subsonic or Navidrome) and AirPlay in from an iPhone, iPad or Mac (Windows server only; no AirPlay receiver on Linux or Docker yet) send audio into the server. The server sends audio out to a Windows Player, a browser player on a phone, AirPlay speakers such as Sonos (AirPlay 1 works today; AirPlay 2 is experimental), and streamers and receivers such as WiiM over AirPlay or Google Cast. HomePod and Apple TV are not supported. The Windows Player also sends that PC's sound or microphone, and Announce, back into the server (since 0.7.2). A phone can send Announce in. The Windows Player can use HDMI, analog, optical, a USB DAC, or Bluetooth; a vintage amp can hook up to analog or optical today. A streamer can connect to an amp or powered speakers. Cast output is in testing. A Linux and Raspberry Pi Player is planned for 0.8.0, with a planned path from that Pi to a vintage amp. Two-way arrows show audio in both directions. Sonos and WiiM are examples, not a promise that every model works.</desc>
+                        <defs>
+              <linearGradient id="mw-hub" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#FF3C00"/>
+                <stop offset="1" stop-color="#12D6C2"/>
+              </linearGradient>
+              <filter id="mw-glow" x="-40%" y="-40%" width="180%" height="180%">
+                <feGaussianBlur stdDeviation="3.5" result="b"/>
+                <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+              <marker id="mw-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+                <path d="M0 1.2 L10 5 L0 8.8 Z" fill="#12D6C2"/>
+              </marker>
+              <marker id="mw-orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+                <path d="M0 1.2 L10 5 L0 8.8 Z" fill="#FF3C00"/>
+              </marker>
+            </defs>
+            <g filter="url(#mw-glow)"><ellipse cx="600.0" cy="520.0" rx="114.0" ry="114.0" fill="#131a2e" stroke="url(#mw-hub)" stroke-width="3"/></g>
+            <text x="600.0" y="513.0" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="22" font-weight="700">WavWiz</text>
+            <text x="600.0" y="531.9" text-anchor="middle" fill="#9aa5c0" font-family="Inter, system-ui, sans-serif" font-size="14">server</text>
+            <text x="600.0" y="554.0" text-anchor="middle" fill="#9aa5c0" font-family="Inter, system-ui, sans-serif" font-size="13">Windows · Linux · Docker</text>
+            <path d="M551.7 416.3 L512.1 347.8" fill="none" stroke="#12D6C2" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mw-teal)"/>
+            <path d="M493.5 355.6 L533.1 424.1" fill="none" stroke="#12D6C2" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mw-teal)"/>
+            <path d="M534.3 613.7 L494.8 682.2" fill="none" stroke="#12D6C2" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mw-teal)"/>
+            <path d="M510.9 694.4 L550.4 625.9" fill="none" stroke="#12D6C2" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mw-teal)"/>
+            <path d="M424.0 520.0 L483.5 520.0" fill="none" stroke="#12D6C2" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mw-teal)"/>
+            <path d="M355.3 629.0 L493.6 567.4" fill="none" stroke="#12D6C2" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mw-teal)"/>
+            <path d="M657.0 421.3 L696.6 352.8" fill="none" stroke="#12D6C2" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mw-teal)"/>
+            <path d="M714.0 520.0 L773.5 520.0" fill="none" stroke="#12D6C2" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mw-teal)"/>
+            <path d="M657.0 618.7 L696.6 687.2" fill="none" stroke="#FF3C00" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="6 5" marker-end="url(#mw-orange)"/>
+            <path d="M493.9 205.4 L520.1 146.6" fill="none" stroke="#12D6C2" stroke-width="1.4" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mw-teal)"/>
+            <path d="M444.6 202.3 L430.5 135.9" fill="none" stroke="#12D6C2" stroke-width="1.4" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mw-teal)"/>
+            <path d="M397.7 218.1 L360.3 182.0" fill="none" stroke="#12D6C2" stroke-width="1.4" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mw-teal)"/>
+            <path d="M359.4 286.3 L338.0 287.8" fill="none" stroke="#12D6C2" stroke-width="1.4" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mw-teal)"/>
+            <path d="M387.1 333.0 L350.1 359.8" fill="none" stroke="#12D6C2" stroke-width="1.4" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mw-teal)"/>
+            <path d="M271.2 266.6 L244.6 221.9" fill="none" stroke="#12D6C2" stroke-width="1.4" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mw-teal)"/>
+            <path d="M293.3 171.9 L277.4 177.4" fill="none" stroke="#12D6C2" stroke-width="1.4" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mw-teal)"/>
+            <path d="M763.6 203.5 L770.9 181.2" fill="none" stroke="#12D6C2" stroke-width="1.4" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mw-teal)"/>
+            <path d="M714.4 203.5 L688.0 122.2" fill="none" stroke="#FF3C00" stroke-width="1.4" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mw-orange)"/>
+            <path d="M961.7 475.5 L979.0 466.3" fill="none" stroke="#12D6C2" stroke-width="1.4" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mw-teal)"/>
+            <path d="M961.7 564.5 L979.0 573.7" fill="none" stroke="#12D6C2" stroke-width="1.4" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mw-teal)"/>
+            <path d="M211.3 571.6 L232.6 561.7" fill="none" stroke="#12D6C2" stroke-width="1.4" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mw-teal)"/>
+            <path d="M198.0 520.0 L217.5 520.0" fill="none" stroke="#12D6C2" stroke-width="1.4" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mw-teal)"/>
+            <path d="M209.5 467.6 L232.6 478.3" fill="none" stroke="#12D6C2" stroke-width="1.4" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mw-teal)"/>
+            <path d="M419.8 832.1 L410.1 849.0" fill="none" stroke="#12D6C2" stroke-width="1.4" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mw-teal)"/>
+            <path d="M780.2 832.1 L792.9 854.2" fill="none" stroke="#FF3C00" stroke-width="1.4" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="6 5" marker-end="url(#mw-orange)"/>
+            <text x="501.2" y="388.9" text-anchor="middle" fill="#12D6C2" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600">PC sound / mic</text>
+            <text x="501.2" y="404.9" text-anchor="middle" fill="#9aa5c0" font-family="Inter, system-ui, sans-serif" font-size="13">and Announce · 0.7.2</text>
+            <text x="542.8" y="667.1" text-anchor="middle" fill="#12D6C2" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600">Announce</text>
+            <ellipse cx="461.0" cy="279.2" rx="102.0" ry="78.0" fill="#131a2e" stroke="#12D6C2" stroke-width="2.2"/>
+            <text x="461.0" y="276.8" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="16" font-weight="700">Windows Player</text>
+            <text x="461.0" y="293.2" text-anchor="middle" fill="#12D6C2" font-family="Inter, system-ui, sans-serif" font-size="13">Works today</text>
+            <ellipse cx="739.0" cy="279.2" rx="102.0" ry="78.0" fill="#131a2e" stroke="#12D6C2" stroke-width="2.2"/>
+            <text x="739.0" y="276.5" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="15" font-weight="700">Streamers &amp; receivers</text>
+            <text x="739.0" y="292.6" text-anchor="middle" fill="#9aa5c0" font-family="Inter, system-ui, sans-serif" font-size="13">such as WiiM</text>
+            <ellipse cx="878.0" cy="520.0" rx="102.0" ry="78.0" fill="#131a2e" stroke="#12D6C2" stroke-width="2.2"/>
+            <text x="878.0" y="517.6" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="16" font-weight="700">AirPlay speakers</text>
+            <text x="878.0" y="534.0" text-anchor="middle" fill="#9aa5c0" font-family="Inter, system-ui, sans-serif" font-size="13">such as Sonos</text>
+            <ellipse cx="322.0" cy="520.0" rx="102.0" ry="78.0" fill="#131a2e" stroke="#12D6C2" stroke-width="2.2"/>
+            <text x="322.0" y="525.4" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="16" font-weight="700">Sources</text>
+            <ellipse cx="461.0" cy="760.8" rx="102.0" ry="78.0" fill="#131a2e" stroke="#12D6C2" stroke-width="2.2"/>
+            <text x="461.0" y="758.3" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="16" font-weight="700">Phone / browser</text>
+            <text x="461.0" y="774.7" text-anchor="middle" fill="#12D6C2" font-family="Inter, system-ui, sans-serif" font-size="13">Works today</text>
+            <ellipse cx="739.0" cy="760.8" rx="102.0" ry="78.0" fill="#131a2e" stroke="#FF3C00" stroke-width="2.2" stroke-dasharray="6 5"/>
+            <text x="739.0" y="758.0" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="15" font-weight="700">Linux / Pi Player</text>
+            <text x="739.0" y="774.1" text-anchor="middle" fill="#FF3C00" font-family="Inter, system-ui, sans-serif" font-size="13">Planned for 0.8.0</text>
+            <ellipse cx="289.4" cy="658.3" rx="92.0" ry="42.0" fill="#131a2e" stroke="#12D6C2" stroke-width="1.8"/>
+            <text x="289.4" y="649.2" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="14" font-weight="700">AirPlay in</text>
+            <text x="289.4" y="664.1" text-anchor="middle" fill="#e9edf7" font-family="Inter, system-ui, sans-serif" font-size="12">iPhone, iPad or Mac</text>
+            <text x="289.4" y="677.6" text-anchor="middle" fill="#9aa5c0" font-family="Inter, system-ui, sans-serif" font-size="11">Windows server only</text>
+            <ellipse cx="532.4" cy="118.9" rx="52.0" ry="26.0" fill="#131a2e" stroke="#12D6C2" stroke-width="1.6"/>
+            <text x="532.4" y="123.3" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="13" font-weight="600">Bluetooth</text>
+            <ellipse cx="424.5" cy="107.6" rx="50.0" ry="26.0" fill="#131a2e" stroke="#12D6C2" stroke-width="1.6"/>
+            <text x="424.5" y="111.9" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="13" font-weight="600">USB DAC</text>
+            <ellipse cx="334.8" cy="157.3" rx="50.0" ry="26.0" fill="#131a2e" stroke="#12D6C2" stroke-width="1.6"/>
+            <text x="334.8" y="161.7" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="13" font-weight="600">Optical</text>
+            <ellipse cx="285.9" cy="291.5" rx="50.0" ry="26.0" fill="#131a2e" stroke="#12D6C2" stroke-width="1.6"/>
+            <text x="285.9" y="295.9" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="13" font-weight="600">Analog</text>
+            <ellipse cx="319.0" cy="382.4" rx="50.0" ry="26.0" fill="#131a2e" stroke="#12D6C2" stroke-width="1.6"/>
+            <text x="319.0" y="386.8" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="13" font-weight="600">HDMI</text>
+            <ellipse cx="228.4" cy="194.6" rx="60.0" ry="26.0" fill="#131a2e" stroke="#12D6C2" stroke-width="1.6"/>
+            <text x="228.4" y="199.0" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="13" font-weight="600">Vintage amp</text>
+            <ellipse cx="781.9" cy="147.1" rx="76.0" ry="32.0" fill="#131a2e" stroke="#12D6C2" stroke-width="1.6"/>
+            <text x="781.9" y="143.7" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="13" font-weight="600">Amp /</text>
+            <text x="781.9" y="159.3" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="13" font-weight="600">powered speakers</text>
+            <ellipse cx="676.9" cy="88.2" rx="68.0" ry="32.0" fill="#131a2e" stroke="#FF3C00" stroke-width="1.6"/>
+            <text x="676.9" y="85.4" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="13" font-weight="700">Cast</text>
+            <text x="676.9" y="100.1" text-anchor="middle" fill="#FF3C00" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600">In testing</text>
+            <ellipse cx="1025.1" cy="441.8" rx="70.0" ry="30.0" fill="#131a2e" stroke="#12D6C2" stroke-width="1.6"/>
+            <text x="1025.1" y="446.2" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="13" font-weight="600">AirPlay 1</text>
+            <ellipse cx="1028.4" cy="599.9" rx="76.0" ry="32.0" fill="#131a2e" stroke="#12D6C2" stroke-width="1.6"/>
+            <text x="1028.4" y="597.1" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="13" font-weight="700">AirPlay 2</text>
+            <text x="1028.4" y="611.8" text-anchor="middle" fill="#FF3C00" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600">experimental</text>
+            <ellipse cx="165.5" cy="593.0" rx="68.0" ry="29.0" fill="#131a2e" stroke="#12D6C2" stroke-width="1.6"/>
+            <text x="165.5" y="597.4" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="13" font-weight="600">Local / NAS</text>
+            <ellipse cx="126.0" cy="520.0" rx="72.0" ry="29.0" fill="#131a2e" stroke="#12D6C2" stroke-width="1.6"/>
+            <text x="126.0" y="524.4" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="13" font-weight="600">Internet radio</text>
+            <ellipse cx="160.5" cy="444.7" rx="70.0" ry="32.0" fill="#131a2e" stroke="#12D6C2" stroke-width="1.6"/>
+            <text x="160.5" y="441.3" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="13" font-weight="600">Subsonic /</text>
+            <text x="160.5" y="456.9" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="13" font-weight="600">Navidrome</text>
+            <ellipse cx="390.9" cy="882.1" rx="70.0" ry="32.0" fill="#131a2e" stroke="#12D6C2" stroke-width="1.6"/>
+            <text x="390.9" y="878.7" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="13" font-weight="600">Bluetooth /</text>
+            <text x="390.9" y="894.3" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="13" font-weight="600">speaker</text>
+            <ellipse cx="812.1" cy="887.4" rx="74.0" ry="32.0" fill="#131a2e" stroke="#FF3C00" stroke-width="1.6" stroke-dasharray="6 5"/>
+            <text x="812.1" y="884.6" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="13" font-weight="700">Vintage amp</text>
+            <text x="812.1" y="899.2" text-anchor="middle" fill="#FF3C00" font-family="Inter, system-ui, sans-serif" font-size="12">via Pi + DAC</text>
+                      </svg>
+
+          <svg class="mesh-narrow" viewBox="0 0 390 1102" role="img" aria-labelledby="mesh-title-sm mesh-desc-sm">
+                        <title id="mesh-title-sm">How audio flows through a WavWiz mesh</title>
+                        <desc id="mesh-desc-sm">A vertical view of the same mesh. Sources and AirPlay in feed a central WavWiz server. The server sends audio out to a Windows Player, AirPlay speakers such as Sonos (AirPlay 1 works today; AirPlay 2 is experimental), streamers and receivers such as WiiM, and a phone or browser player. HomePod and Apple TV are not supported. Two-way arrows mark the Windows Player (PC sound, microphone and Announce) and the phone (Announce). A Linux and Pi Player is planned. Sonos and WiiM are examples, not a promise that every model works.</desc>
+                        <defs>
+              <linearGradient id="mn-hub" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#FF3C00"/>
+                <stop offset="1" stop-color="#12D6C2"/>
+              </linearGradient>
+              <filter id="mn-glow" x="-40%" y="-40%" width="180%" height="180%">
+                <feGaussianBlur stdDeviation="3.5" result="b"/>
+                <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+              <marker id="mn-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+                <path d="M0 1.2 L10 5 L0 8.8 Z" fill="#12D6C2"/>
+              </marker>
+              <marker id="mn-orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+                <path d="M0 1.2 L10 5 L0 8.8 Z" fill="#FF3C00"/>
+              </marker>
+            </defs>
+            <path d="M107.5 96.5 L137.1 82.8" fill="none" stroke="#12D6C2" stroke-width="1.3" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mn-teal)"/>
+            <path d="M195.0 94.0 L195.0 86.0" fill="none" stroke="#12D6C2" stroke-width="1.3" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mn-teal)"/>
+            <path d="M282.5 96.5 L252.9 82.8" fill="none" stroke="#12D6C2" stroke-width="1.3" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mn-teal)"/>
+            <path d="M195.0 202.0 L195.0 235.5" fill="none" stroke="#12D6C2" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mn-teal)"/>
+            <path d="M45.0 56.0 H16.0 V259.8 H147.2" fill="none" stroke="#12D6C2" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mn-teal)"/>
+            <text x="179.0" y="220.0" text-anchor="end" fill="#9aa5c0" font-family="Inter, system-ui, sans-serif" font-size="12">into the server</text>
+            <path d="M203.0 354.0 V379.5" fill="none" stroke="#12D6C2" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mn-teal)"/>
+            <path d="M187.0 382.0 V356.5" fill="none" stroke="#12D6C2" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mn-teal)"/>
+            <text x="173.0" y="360.0" text-anchor="end" fill="#12D6C2" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600">PC sound / mic</text>
+            <text x="173.0" y="378.0" text-anchor="end" fill="#9aa5c0" font-family="Inter, system-ui, sans-serif" font-size="12">and Announce · 0.7.2</text>
+            <path d="M126.3 442.4 L81.5 461.0" fill="none" stroke="#12D6C2" stroke-width="1.3" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mn-teal)"/>
+            <path d="M157.6 445.0 L143.3 456.8" fill="none" stroke="#12D6C2" stroke-width="1.3" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mn-teal)"/>
+            <path d="M195.0 446.0 L195.0 453.5" fill="none" stroke="#12D6C2" stroke-width="1.3" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mn-teal)"/>
+            <path d="M232.4 445.0 L246.7 456.8" fill="none" stroke="#12D6C2" stroke-width="1.3" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mn-teal)"/>
+            <path d="M263.7 442.4 L308.5 461.0" fill="none" stroke="#12D6C2" stroke-width="1.3" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mn-teal)"/>
+            <path d="M143.6 484.8 L167.3 501.0" fill="none" stroke="#12D6C2" stroke-width="1.3" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mn-teal)"/>
+            <path d="M195.0 488.0 L195.0 499.5" fill="none" stroke="#12D6C2" stroke-width="1.3" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mn-teal)"/>
+            <path d="M253.0 296.0 H353.0 V559.5 H195.0" fill="none" stroke="#12D6C2" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mn-teal)"/>
+            <path d="M353.0 562.0 V693.5 H195.0" fill="none" stroke="#12D6C2" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mn-teal)"/>
+            <path d="M155.6 628.8 L143.4 639.0" fill="none" stroke="#12D6C2" stroke-width="1.3" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mn-teal)"/>
+            <path d="M234.4 628.8 L246.6 639.0" fill="none" stroke="#12D6C2" stroke-width="1.3" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mn-teal)"/>
+            <path d="M155.6 762.8 L143.4 773.0" fill="none" stroke="#FF3C00" stroke-width="1.3" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mn-orange)"/>
+            <path d="M234.4 762.8 L246.6 773.0" fill="none" stroke="#12D6C2" stroke-width="1.3" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mn-teal)"/>
+            <path d="M137.0 296.0 H37.0 V827.5 H195.0" fill="none" stroke="#12D6C2" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mn-teal)"/>
+            <path d="M185.0 830.0 H47.0 V304.0 H134.5" fill="none" stroke="#12D6C2" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mn-teal)"/>
+            <text x="45.0" y="825.0" text-anchor="start" fill="#12D6C2" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600">Announce</text>
+            <path d="M195.0 894.0 L195.0 901.5" fill="none" stroke="#12D6C2" stroke-width="1.3" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mn-teal)"/>
+            <path d="M253.0 310.0 H365.0 V957.5 H195.0" fill="none" stroke="#FF3C00" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="6 5" marker-end="url(#mn-orange)"/>
+            <path d="M195.0 1024.0 L195.0 1031.5" fill="none" stroke="#FF3C00" stroke-width="1.3" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="3.5 3" marker-end="url(#mn-orange)"/>
+            <g filter="url(#mn-glow)"><ellipse cx="195.0" cy="296.0" rx="58.0" ry="58.0" fill="#131a2e" stroke="url(#mn-hub)" stroke-width="3"/></g>
+            <text x="195.0" y="290.2" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="18" font-weight="700">WavWiz</text>
+            <text x="195.0" y="307.2" text-anchor="middle" fill="#9aa5c0" font-family="Inter, system-ui, sans-serif" font-size="13">server</text>
+            <text x="195.0" y="324.0" text-anchor="middle" fill="#9aa5c0" font-family="Inter, system-ui, sans-serif" font-size="11">Windows · Linux · Docker</text>
+            <ellipse cx="195.0" cy="56.0" rx="150.0" ry="28.0" fill="#131a2e" stroke="#12D6C2" stroke-width="2"/>
+            <text x="195.0" y="61.4" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="16" font-weight="700">Sources</text>
+            <ellipse cx="78.3" cy="110.0" rx="54.3" ry="16.0" fill="#131a2e" stroke="#12D6C2" stroke-width="1.5"/>
+            <text x="78.3" y="114.0" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="12" font-weight="600">Local / NAS</text>
+            <ellipse cx="195.0" cy="110.0" rx="54.3" ry="16.0" fill="#131a2e" stroke="#12D6C2" stroke-width="1.5"/>
+            <text x="195.0" y="114.0" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="12" font-weight="600">Internet radio</text>
+            <ellipse cx="311.7" cy="110.0" rx="54.3" ry="16.0" fill="#131a2e" stroke="#12D6C2" stroke-width="1.5"/>
+            <text x="311.7" y="106.8" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="12" font-weight="600">Subsonic /</text>
+            <text x="311.7" y="121.2" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="12" font-weight="600">Navidrome</text>
+            <ellipse cx="195.0" cy="168.0" rx="150.0" ry="34.0" fill="#131a2e" stroke="#12D6C2" stroke-width="2"/>
+            <text x="195.0" y="158.6" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="15" font-weight="700">AirPlay in</text>
+            <text x="195.0" y="173.8" text-anchor="middle" fill="#e9edf7" font-family="Inter, system-ui, sans-serif" font-size="12">iPhone, iPad or Mac</text>
+            <text x="195.0" y="188.2" text-anchor="middle" fill="#9aa5c0" font-family="Inter, system-ui, sans-serif" font-size="12">Windows server only</text>
+            <ellipse cx="195.0" cy="414.0" rx="150.0" ry="32.0" fill="#131a2e" stroke="#12D6C2" stroke-width="2"/>
+            <text x="195.0" y="411.6" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="16" font-weight="700">Windows Player</text>
+            <text x="195.0" y="428.0" text-anchor="middle" fill="#12D6C2" font-family="Inter, system-ui, sans-serif" font-size="13">Works today</text>
+            <ellipse cx="55.0" cy="472.0" rx="31.0" ry="16.0" fill="#131a2e" stroke="#12D6C2" stroke-width="1.5"/>
+            <text x="55.0" y="476.0" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="12" font-weight="600">HDMI</text>
+            <ellipse cx="125.0" cy="472.0" rx="31.0" ry="16.0" fill="#131a2e" stroke="#12D6C2" stroke-width="1.5"/>
+            <text x="125.0" y="476.0" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="12" font-weight="600">Analog</text>
+            <ellipse cx="195.0" cy="472.0" rx="31.0" ry="16.0" fill="#131a2e" stroke="#12D6C2" stroke-width="1.5"/>
+            <text x="195.0" y="476.0" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="12" font-weight="600">Optical</text>
+            <ellipse cx="265.0" cy="472.0" rx="31.0" ry="16.0" fill="#131a2e" stroke="#12D6C2" stroke-width="1.5"/>
+            <text x="265.0" y="476.0" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="12" font-weight="600">USB DAC</text>
+            <ellipse cx="335.0" cy="472.0" rx="31.0" ry="16.0" fill="#131a2e" stroke="#12D6C2" stroke-width="1.5"/>
+            <text x="335.0" y="476.0" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="12" font-weight="600">Bluetooth</text>
+            <ellipse cx="195.0" cy="520.0" rx="120.0" ry="18.0" fill="#131a2e" stroke="#12D6C2" stroke-width="1.6"/>
+            <text x="195.0" y="524.4" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="13" font-weight="600">Vintage amp</text>
+            <ellipse cx="195.0" cy="596.0" rx="150.0" ry="34.0" fill="#131a2e" stroke="#12D6C2" stroke-width="2"/>
+            <text x="195.0" y="593.2" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="15" font-weight="700">AirPlay speakers</text>
+            <text x="195.0" y="609.4" text-anchor="middle" fill="#9aa5c0" font-family="Inter, system-ui, sans-serif" font-size="13">such as Sonos</text>
+            <ellipse cx="123.0" cy="656.0" rx="68.0" ry="16.0" fill="#131a2e" stroke="#12D6C2" stroke-width="1.5"/>
+            <text x="123.0" y="660.0" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="12" font-weight="600">AirPlay 1</text>
+            <ellipse cx="267.0" cy="656.0" rx="68.0" ry="16.0" fill="#131a2e" stroke="#12D6C2" stroke-width="1.5"/>
+            <text x="267.0" y="652.8" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="12" font-weight="600">AirPlay 2</text>
+            <text x="267.0" y="667.2" text-anchor="middle" fill="#FF3C00" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="12" font-weight="600">experimental</text>
+            <ellipse cx="195.0" cy="730.0" rx="150.0" ry="34.0" fill="#131a2e" stroke="#12D6C2" stroke-width="2"/>
+            <text x="195.0" y="727.2" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="15" font-weight="700">Streamers &amp; receivers</text>
+            <text x="195.0" y="743.4" text-anchor="middle" fill="#9aa5c0" font-family="Inter, system-ui, sans-serif" font-size="13">such as WiiM</text>
+            <ellipse cx="123.0" cy="790.0" rx="68.0" ry="16.0" fill="#131a2e" stroke="#FF3C00" stroke-width="1.5"/>
+            <text x="123.0" y="786.8" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="12" font-weight="600">Cast</text>
+            <text x="123.0" y="801.2" text-anchor="middle" fill="#FF3C00" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="12" font-weight="600">In testing</text>
+            <ellipse cx="267.0" cy="790.0" rx="68.0" ry="16.0" fill="#131a2e" stroke="#12D6C2" stroke-width="1.5"/>
+            <text x="267.0" y="794.0" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="12" font-weight="600">Amp / speakers</text>
+            <ellipse cx="195.0" cy="862.0" rx="150.0" ry="32.0" fill="#131a2e" stroke="#12D6C2" stroke-width="2"/>
+            <text x="195.0" y="859.6" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="16" font-weight="700">Phone / browser</text>
+            <text x="195.0" y="876.0" text-anchor="middle" fill="#12D6C2" font-family="Inter, system-ui, sans-serif" font-size="13">Works today</text>
+            <ellipse cx="195.0" cy="920.0" rx="110.0" ry="16.0" fill="#131a2e" stroke="#12D6C2" stroke-width="1.5"/>
+            <text x="195.0" y="924.0" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="12" font-weight="600">Bluetooth / speaker</text>
+            <ellipse cx="195.0" cy="992.0" rx="150.0" ry="32.0" fill="#131a2e" stroke="#FF3C00" stroke-width="2" stroke-dasharray="6 5"/>
+            <text x="195.0" y="989.2" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="15" font-weight="700">Linux / Pi Player</text>
+            <text x="195.0" y="1005.4" text-anchor="middle" fill="#FF3C00" font-family="Inter, system-ui, sans-serif" font-size="13">Planned for 0.8.0</text>
+            <ellipse cx="195.0" cy="1050.0" rx="100.0" ry="16.0" fill="#131a2e" stroke="#FF3C00" stroke-width="1.5" stroke-dasharray="3.5 3"/>
+            <text x="195.0" y="1046.8" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="12" font-weight="600">Vintage amp</text>
+            <text x="195.0" y="1061.2" text-anchor="middle" fill="#FF3C00" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="12" font-weight="600">via Pi + DAC</text>
+                      </svg>
+          <figcaption>Arrows show the direction of audio. Two-way arrows mean audio also comes back: the Windows Player can send PC sound or its microphone, and Announce, into the server (since 0.7.2), and a phone can send Announce in. AirPlay in works on a Windows server; there is no AirPlay receiver on Linux or Docker yet (still planned). A vintage amp can hook up to a PC today; the Pi path is planned. AirPlay speakers such as Sonos join the server directly: AirPlay 1 output works today; AirPlay 2 output is experimental. HomePod and Apple TV are not supported. Streamers and receivers such as WiiM join over AirPlay or Cast. Sonos and WiiM are examples, not a promise that every model works.</figcaption>
+          <ul class="mesh-legend">
+            <li><span class="mesh-swatch mesh-swatch-arrow" aria-hidden="true"></span> Works today (arrow = audio direction)</li>
+            <li><span class="mesh-swatch mesh-swatch-twoway" aria-hidden="true"></span> Two-way</li>
+            <li><span class="mesh-swatch is-test">In testing</span></li>
+            <li><span class="mesh-swatch is-planned"></span> Planned</li>
+          </ul>
+        </figure>
+
+        <div class="protocol-strip" aria-labelledby="protocol-title">
+          <h3 id="protocol-title">Protocols</h3>
+          <ul class="protocol-list">
+            <li>
+              <div class="protocol-copy">
+                <div class="protocol-name">WavWiz Player (Windows)</div>
+                <p class="protocol-note">Plays to any output Windows can use.</p>
+              </div>
+              <span class="status status-today">Works today</span>
+            </li>
+            <li>
+              <div class="protocol-copy">
+                <div class="protocol-name">Browser player</div>
+                <p class="protocol-note">Any modern browser on a phone, tablet, Mac or Linux PC.</p>
+              </div>
+              <span class="status status-today">Works today</span>
+            </li>
+            <li>
+              <div class="protocol-copy">
+                <div class="protocol-name">AirPlay in (receiver)</div>
+                <p class="protocol-note">Works today on a Windows server. Not on Linux or Docker yet (still planned).</p>
+              </div>
+              <div class="status-row"><span class="status status-today">Works today</span><span class="status status-planned">Planned</span></div>
+            </li>
+            <li>
+              <div class="protocol-copy">
+                <div class="protocol-name">AirPlay 1 out</div>
+                <p class="protocol-note">Streamers and receivers with AirPlay 1.</p>
+              </div>
+              <span class="status status-today">Works today</span>
+            </li>
+            <li>
+              <div class="protocol-copy">
+                <div class="protocol-name">AirPlay 2 out</div>
+                <p class="protocol-note">Off by default. Still being tested. HomePod and Apple TV are not supported.</p>
+              </div>
+              <span class="status status-test">Experimental</span>
+            </li>
+            <li>
+              <div class="protocol-copy">
+                <div class="protocol-name">Google Cast out</div>
+                <p class="protocol-note">Available since 0.7.0, still in testing.</p>
+              </div>
+              <span class="status status-test">In testing</span>
+            </li>
+            <li>
+              <div class="protocol-copy">
+                <div class="protocol-name">Bluetooth</div>
+                <p class="protocol-note">Via a Windows Player or a phone. Bluetooth adds lag, so set a delay.</p>
+              </div>
+              <span class="status status-today">Works today</span>
+            </li>
+            <li>
+              <div class="protocol-copy">
+                <div class="protocol-name">Spotify Connect</div>
+                <p class="protocol-note">Unofficial, off by default, and needs Premium. Windows server only.</p>
+              </div>
+              <span class="status status-optional">Optional</span>
+            </li>
+            <li>
+              <div class="protocol-copy">
+                <div class="protocol-name">Local / NAS, internet radio, Subsonic / Navidrome</div>
+                <p class="protocol-note">Library and radio sources.</p>
+              </div>
+              <span class="status status-today">Works today</span>
+            </li>
+            <li>
+              <div class="protocol-copy">
+                <div class="protocol-name">Home Assistant REST</div>
+                <p class="protocol-note">Control playback with a token. Optional custom component, not on HACS yet.</p>
+              </div>
+              <span class="status status-today">Works today</span>
+            </li>
+            <li>
+              <div class="protocol-copy">
+                <div class="protocol-name">Linux / Pi Player</div>
+                <p class="protocol-note">Official Player app planned for 0.8.0. Not verified on real Raspberry Pi hardware.</p>
+              </div>
+              <span class="status status-planned">Planned</span>
+            </li>
+            <li>
+              <div class="protocol-copy">
+                <div class="protocol-name">DLNA / UPnP renderer out</div>
+                <p class="protocol-note">Planned for 0.8.0. Not available yet.</p>
+              </div>
+              <span class="status status-planned">Planned &middot; 0.8.0</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="works-grid">
+          <article class="card works-card reveal">
+            <span class="status status-today">Works today</span>
+            <h3>Windows PCs</h3>
+            <p>The WavWiz Player plays to any output Windows can use. A vintage amp or receiver can hook up to that PC&rsquo;s analog or optical output today.</p>
+          </article>
+          <article class="card works-card reveal">
+            <span class="status status-today">Works today</span>
+            <h3>Phones, tablets, Macs and Linux PCs</h3>
+            <p>Open the page in a browser. No app to install. Plays through the built-in speaker or a paired Bluetooth speaker.</p>
+          </article>
+          <article class="card works-card reveal">
+            <div class="status-row">
+              <span class="status status-today">Works today</span>
+              <span class="status status-test">AirPlay 2 experimental</span>
+            </div>
+            <h3>AirPlay speakers</h3>
+            <p>Streamers and receivers with AirPlay, such as WiiM, can join a zone. AirPlay 1 output works. AirPlay 2 output is experimental and off by default. HomePod and Apple TV are not supported.</p>
+          </article>
+          <article class="card works-card reveal">
+            <span class="status status-today">Works today</span>
+            <h3>Bluetooth speakers</h3>
+            <p>Bluetooth adds lag, whether it is on a Windows Player or a phone. Give that device a delay.</p>
+          </article>
+          <article class="card works-card reveal">
+            <span class="status status-test">In testing</span>
+            <h3>Google Cast speakers</h3>
+            <p>Streamers and receivers with Google Cast, such as WiiM, can join a zone. Available since 0.7.0, still in testing.</p>
+          </article>
+          <article class="card works-card reveal">
+            <span class="status status-planned">Planned</span>
+            <h3>Linux &amp; Raspberry Pi Player</h3>
+            <p>An official Player app (x64 and arm64) is planned for 0.8.0. It is not available yet, and is not verified on real Raspberry Pi hardware.</p>
+          </article>
+          <article class="card works-card reveal">
+            <div class="status-row">
+              <span class="status status-today">Works today</span>
+              <span class="status status-planned">Planned</span>
+            </div>
+            <h3>Vintage amps and receivers</h3>
+            <p>Hook one up to a PC&rsquo;s analog or optical output today. A Pi and DAC DIY guide is planned after the Pi Player exists.</p>
+          </article>
+        </div>
+
+        <div class="norip" id="norip">
+          <header class="norip-head reveal">
+            <h3 id="norip-title">No rip and replace</h3>
+            <p>Keep what you have. Mix brands in one system. Line them up so they play as one.</p>
+          </header>
+          <div class="norip-grid">
+            <article class="card norip-item reveal">
+              <h4>Keep your speakers</h4>
+              <p>WavWiz is software for the speakers you already own. There is no new ecosystem to switch to.</p>
+            </article>
+            <article class="card norip-item reveal">
+              <h4>Mix brands in one system</h4>
+              <p>Put a PC, a phone and an AirPlay or Cast speaker in the same zone, or give each room its own queue.</p>
+            </article>
+            <article class="card norip-item reveal">
+              <h4>Delay, volume and EQ</h4>
+              <p>Every speaker gets its own delay and volume so they play in sync, plus EQ on WavWiz Players. AirPlay and Cast speakers can&rsquo;t be auto-calibrated yet &mdash; set those delays by ear.</p>
+            </article>
+          </div>
+        </div>
+
+        <figure class="shot works-shot reveal">
+          <img src="assets/img/wavwiz-070-devices.webp" srcset="assets/img/wavwiz-070-devices-960.webp 960w, assets/img/wavwiz-070-devices.webp 1600w" sizes="(max-width: 1200px) calc(100vw - 36px), 900px" width="1600" height="1000" loading="lazy" decoding="async" alt="The expanded Devices view in WavWiz 0.7.0: Scenes and Schedules on the left, the Everywhere zone's settings in the middle with its volume, queue and four speakers, and the zone tree on the right.">
+          <figcaption>Devices: one place to group the speakers you already own.</figcaption>
+        </figure>
+      </div>
+    </section>
+
     <!-- ============ HOW IT WORKS ============ -->
     <section class="section" id="how" aria-labelledby="how-title">
       <div class="container">
@@ -324,24 +723,24 @@
           <li class="card step reveal">
             <span class="step-num">01</span>
             <h3>Install it on one PC</h3>
-            <p>WavWiz is free. Install it on a Windows 10 or 11 PC that stays on. That PC becomes your music server. Have your own music? Point it at a folder on the PC or a NAS share. It&rsquo;s optional.</p>
+            <p>Install it on a Windows 10 or 11 PC that stays on, or run the optional Linux or Docker server. Point it at a folder or NAS share if you have a library &mdash; it&rsquo;s optional.</p>
           </li>
           <li class="card step reveal">
             <span class="step-num">02</span>
             <h3>Add your speakers</h3>
-            <p>Use what you already own. Any Windows PC with WavWiz Player plays through its own speakers: wired, USB, HDMI to a TV or receiver, or Bluetooth. Phones and tablets just open a web page and join as a speaker, no app needed.</p>
+            <p>Use what you already own. <a href="#devices">Works with what you own</a> shows what plays today, what&rsquo;s in testing, and what&rsquo;s planned.</p>
             <div class="step-media"><img src="assets/img/wavwiz-070-devices-column.webp" width="600" height="1299" loading="lazy" decoding="async" alt="WavWiz 0.7.0 Devices in Midnight Neon: master volume with All off and All on, the Everywhere zone playing Night Owl with its Studio, Living Room, Kitchen and Office speakers, then the Unassigned row and the collapsed AirPlay speakers and Cast speakers cards for finding and adding speakers."></div>
           </li>
           <li class="card step reveal">
             <span class="step-num">03</span>
             <h3>Make zones and line them up</h3>
-            <p>Group speakers into zones like Kitchen or Basement. Calibrate each speaker once with a PC mic, or set its delay by ear, so every zone plays in sync with no echo.</p>
+            <p>Group speakers into zones. Set each speaker&rsquo;s delay by ear, or use Calibrate speakers with a PC mic. AirPlay and Cast speakers are set by ear for now.</p>
             <div class="step-media"><img src="assets/img/wavwiz-070-zone-editor.webp" width="900" height="701" loading="lazy" decoding="async" alt="The WavWiz 0.7.0 zone editor for Everywhere: name and Rename, the playing song, zone volume, its queue, the four speakers in the zone with Remove buttons, and phone casting options."></div>
           </li>
           <li class="card step reveal">
             <span class="step-num">04</span>
             <h3>Play from anywhere</h3>
-            <p><b>No music library? No problem.</b> AirPlay from any app on your iPhone, iPad or Mac to one zone or to &ldquo;WavWiz &ndash; Everywhere&rdquo;. Your phone is the remote.</p>
+            <p>Play your library, internet radio, or AirPlay from an iPhone, iPad or Mac to one zone or to &ldquo;WavWiz &ndash; Everywhere.&rdquo; Your phone is the remote.</p>
             <div class="step-media"><img src="assets/img/wavwiz-070-phone.webp" width="780" height="1688" loading="lazy" decoding="async" alt="WavWiz 0.7.0 on a phone in Midnight Neon: Now Playing on Everywhere, the Directionless EP cover, Night Owl by Broke For Free, seek bar, transport, volume, and Queue and Sound buttons."></div>
           </li>
         </ol>
@@ -360,24 +759,13 @@
             <div class="feature-ico ico-o"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="7" height="7" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="14" y="4" width="7" height="7" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="14" width="7" height="7" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="14" y="14" width="7" height="7" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
             <p class="spot-tag">Multi-room</p>
             <h3 id="spot-zone-own">A different playlist in every zone</h3>
-            <p>Group your speakers into zones like Kitchen, Patio, Dining room or Office. Each zone can play its own music from its own queue, while the other zones play something else.</p>
-            <ul class="spot-list">
-              <li><b>Pick a zone&rsquo;s queue:</b> the Queue dropdown shows any zone&rsquo;s queue, on the PC and on your phone, and marks the one that&rsquo;s playing.</li>
-              <li><b>Send music anywhere:</b> drag songs from the Library into any zone&rsquo;s queue, or copy a queue to another zone.</li>
-              <li><b>See every zone:</b> each zone shows what it&rsquo;s playing, with its own volume.</li>
-            </ul>
+            <p>Group speakers into zones like Kitchen or Office. Each zone can play its own queue, and you can drag songs into any of them from the Library or your phone.</p>
           </article>
           <article class="card spot reveal" aria-labelledby="spot-zone-link">
             <div class="feature-ico ico-t"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
             <p class="spot-tag spot-tag-t">Or all together</p>
             <h3 id="spot-zone-link">Link zones for one sound</h3>
-            <p>Link zones and they share one queue, playing in sync. Split a zone off when it wants its own music, or use Link all to bring every zone back together.</p>
-            <p><b>AirPlay to any zone, or everywhere.</b> From an iPhone, iPad or Mac, pick &ldquo;WavWiz &ndash; &lt;zone&gt;&rdquo; to play in just that zone, or &ldquo;WavWiz &ndash; Everywhere&rdquo; to play in every zone at once. Turn on phone casting per zone in the zone editor.</p>
-            <ul class="spot-list">
-              <li><b>Scenes and schedules:</b> a scene saves your zones and how they&rsquo;re linked. Schedules and alarms start music in the zone you choose.</li>
-              <li><b>Jukebox zone:</b> give guest requests their own speakers.</li>
-              <li><b>One mixer:</b> the Master Volume mixer shows every zone and speaker in one window.</li>
-            </ul>
+            <p>Link zones to share one queue and play in sync, or split a zone off when it wants its own music. AirPlay from an iPhone, iPad or Mac to one zone, or to &ldquo;WavWiz &ndash; Everywhere.&rdquo; Scenes, schedules and a Jukebox zone cover the rest.</p>
           </article>
         </div>
       </div>
@@ -406,80 +794,40 @@
         <ol class="feature-list">
           <li class="card feature reveal">
             <div class="feature-ico ico-o"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h3l2-6 4 12 3-9 2 3h4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="feature-text"><h3>Devices stay in sync</h3><p>Every device plays the same stream against a shared clock, and WavWiz keeps correcting each device's drift. Master volume, Mute all, and a 10-band EQ per speaker. Master volume opens a Volume Mixer in Devices, with every speaker&rsquo;s volume on one line.</p></div>
+            <div class="feature-text"><h3>Devices stay in sync</h3><p>Every device plays the same stream against a shared clock. Each speaker has its own volume and a 0&ndash;1000&nbsp;ms delay you can set live. Calibrate speakers can measure WavWiz Players with a PC mic or phone; AirPlay and Cast are set by ear for now.</p></div>
           </li>
           <li class="card feature reveal">
-            <div class="feature-ico ico-t"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M20 18h0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="16" cy="6" r="2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="10" cy="12" r="2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="18" r="2" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
-            <div class="feature-text"><h3>Per-device delay</h3><p>Bluetooth speakers and TV audio run late. Give each device its own 0&ndash;1000&nbsp;ms delay and adjust it live, or measure it with a PC mic (recommended) or your phone as the microphone (needs a one-time HTTPS setup; iPhone is still in testing). AirPlay and Cast speakers are set by ear for now.</p></div>
-          </li>
-          <li class="card feature reveal">
-            <div class="feature-ico ico-o"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M11 18h2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
-            <div class="feature-text"><h3>Plays on what you own</h3><p>Windows PCs play through their own speakers (wired, HDMI or Bluetooth) with WavWiz Player. Phones, tablets and Macs open a web page and join as a speaker automatically, with no app to install. Since 0.7.0: Google Cast speakers can join a zone too (still in testing). On a phone, the remote opens full screen.</p></div>
-          </li>
-          <li class="card feature reveal">
-            <div class="feature-ico ico-t"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="2.2" fill="currentColor"/><path d="M8.2 15.8a5.4 5.4 0 0 1 0-7.6M15.8 8.2a5.4 5.4 0 0 1 0 7.6M5.4 18.6a9.3 9.3 0 0 1 0-13.2M18.6 5.4a9.3 9.3 0 0 1 0 13.2" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg></div>
-            <div class="feature-text"><h3>AirPlay built in</h3><p>iPhone, iPad and Mac see &ldquo;WavWiz &ndash; Everywhere&rdquo; for every zone, and each zone can have its own speaker name too. Title and artwork come along. Since 0.5.0: WavWiz can also play <i>to</i> AirPlay speakers (AirPlay 2 is experimental).</p></div>
-          </li>
-          <li class="card feature reveal">
-            <div class="feature-ico ico-o"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="6" width="7" height="12" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.9"/><rect x="15" y="4" width="6.5" height="16" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.9"/><circle cx="18.25" cy="14.5" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M11.5 9.5c.9.7.9 4.3 0 5M13.2 8c1.6 1.4 1.6 6.6 0 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
-            <div class="feature-text"><h3>Spotify Connect, optional</h3><p>Off by default. Needs your own Spotify Premium account. Unofficial.</p></div>
-          </li>
-          <li class="card feature reveal">
-            <div class="feature-ico ico-t"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9a10 10 0 0 1 14 0M8 12a6 6 0 0 1 8 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="16" r="2" fill="currentColor"/><path d="M12 18v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
-            <div class="feature-text"><h3>Your library and radio</h3><p>Local folders and NAS shares, album pages and favorites, search and browse by artist, album, genre or folder, playlists, gapless albums, ReplayGain/R128 volume leveling, an internet radio finder, and an optional Studio Max 96&nbsp;kHz streaming setting.</p></div>
+            <div class="feature-ico ico-t"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9a10 10 0 0 1 14 0M8 12a6 6 0 0 1 8 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="16" r="2" fill="currentColor"/><path d="M12 18v3M8 21h8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+            <div class="feature-text"><h3>Your library and radio</h3><p>Local folders and NAS shares, internet radio, playlists, gapless albums and ReplayGain/R128 leveling. Rip CDs to FLAC on the server PC; tag lookups wait for your approval. Optional Subsonic or Navidrome libraries too.</p></div>
           </li>
           <li class="card feature reveal">
             <div class="feature-ico ico-o"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M6 11a6 6 0 0 0 12 0M12 17v4M8 21h8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
-            <div class="feature-text"><h3>Live sources</h3><p>In the Windows Player, stream that PC's own sound (This PC · Speakers) or its microphone to any zone. Real time keeps that PC playing with no extra lag; Sync with WavWiz lines its speakers up with the house. New in 0.7.2.</p></div>
+            <div class="feature-text"><h3>Live sources</h3><p>In the Windows Player, stream that PC&rsquo;s own sound or its microphone to any zone. New in 0.7.2. See <a href="#new">What&rsquo;s new</a>.</p></div>
           </li>
           <li class="card feature reveal">
-            <div class="feature-ico ico-o"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h12M4 12h12M4 18h8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M18 14v6l4-3-4-3Z" fill="currentColor"/></svg></div>
-            <div class="feature-text"><h3>One house, one queue</h3><p>Everyone can add songs from their own phone, and you can drag songs to reorder the playlist or drop them in from the Library. Group devices into zones, save scenes, and start them on a schedule, or run one from File &rsaquo; Run. A Jukebox zone lets you pick which speakers play guest requests.</p></div>
+            <div class="feature-ico ico-t"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h12M4 12h12M4 18h8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M18 14v6l4-3-4-3Z" fill="currentColor"/></svg></div>
+            <div class="feature-text"><h3>One house, one queue</h3><p>Everyone can add songs from a phone. Save scenes, run schedules and alarms, or give guest requests a Jukebox zone.</p></div>
           </li>
           <li class="card feature reveal">
-            <div class="feature-ico ico-t"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
-            <div class="feature-text"><h3>CD ripping and tag help</h3><p>Rip CDs to FLAC on the server PC. WavWiz looks up missing tags and covers on MusicBrainz and writes nothing until you approve it.</p></div>
+            <div class="feature-ico ico-o"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="2.2" fill="currentColor"/><path d="M8.2 15.8a5.4 5.4 0 0 1 0-7.6M15.8 8.2a5.4 5.4 0 0 1 0 7.6M5.4 18.6a9.3 9.3 0 0 1 0-13.2M18.6 5.4a9.3 9.3 0 0 1 0 13.2" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg></div>
+            <div class="feature-text"><h3>AirPlay in</h3><p>iPhone, iPad and Mac can AirPlay to a zone or to &ldquo;WavWiz &ndash; Everywhere.&rdquo; Playing out to streamers and receivers with AirPlay or Cast is covered in <a href="#devices">Works with what you own</a>.</p></div>
+          </li>
+          <li class="card feature reveal">
+            <div class="feature-ico ico-t"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="6" width="7" height="12" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.9"/><rect x="15" y="4" width="6.5" height="16" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.9"/><circle cx="18.25" cy="14.5" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></div>
+            <div class="feature-text"><h3>Spotify Connect, optional</h3><p>Off by default. Needs your own Spotify Premium account. Unofficial.</p></div>
           </li>
           <li class="card feature reveal">
             <div class="feature-ico ico-o"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M8 20V4M12 20v-7M16 20V7M20 20v-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
-            <div class="feature-text"><h3>Visualizers and themes</h3><p>Eight visualizers for a big screen. Ten themes, or pick your own colors.</p></div>
+            <div class="feature-text"><h3>Visualizers and themes</h3><p>Eight visualizers for a big screen, and ten themes or your own colors. See <a href="#visualizers">EQ &amp; visualizers</a>.</p></div>
           </li>
           <li class="card feature reveal">
             <div class="feature-ico ico-t"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
-            <div class="feature-text"><h3>Private</h3><p>No cloud account, no analytics, no telemetry, and WavWiz doesn't open ports to the internet. Internet radio, tag and cover lookups, online album covers and artist photos (on by default; switch them off in <em>Settings &rsaquo; Library</em>), and optional Spotify Connect reach the internet. For access away from home, use your own Tailscale.</p></div>
+            <div class="feature-text"><h3>Private</h3><p>No cloud account, no analytics, no telemetry, and WavWiz doesn&rsquo;t open ports to the internet. Optional internet features (radio, covers, Spotify Connect) can be switched off. For access away from home, use your own Tailscale.</p></div>
           </li>
-        </ol>
+        </ol>>
       </div>
     </section>
 
-
-    <!-- ============ DEVICES (real screenshots drop in by file name; each figure shows once its image exists) ============ -->
-    <section class="section" id="devices" aria-labelledby="devices-title">
-      <div class="container">
-        <header class="section-head reveal">
-          <p class="eyebrow">Devices</p>
-          <h2 id="devices-title">Use the speakers you <span class="accent-o">already own</span>.</h2>
-        </header>
-        <div class="devices-grid">
-          <ul class="device-types reveal" aria-label="Devices WavWiz plays on">
-            <li><b>Wired and USB speakers</b>Plug them into a PC that runs WavWiz Player and pick the output. Each device shows what it plays through.</li>
-            <li><b>HDMI and AV receivers</b>Send a PC's HDMI output to a TV or receiver.</li>
-            <li><b>Bluetooth speakers</b>Pair one to a PC. Bluetooth adds lag, so give that device a little delay or calibrate it to line it up.</li>
-            <li><b>Other PCs</b>Any Windows 10 or 11 PC running WavWiz Player plays through its own speakers.</li>
-            <li><b>Google Cast speakers</b>Since 0.7.0 and still in testing: Nest speakers, Chromecast Audio and Cast TVs or soundbars join a zone from the Cast speakers card. Sync is close but approximate, so fine-tune each one with its delay.</li>
-            <li><b>Phones and tablets</b>Open the page in a browser to play as a speaker, or just to control the music without playing. Smart-TV browsers are still in testing, so a PC plugged into the TV is the surest bet.</li>
-          </ul>
-            <figure class="shot shot-tall reveal" data-optional-shot hidden>
-              <img src="assets/img/wavwiz-070-devices-column.webp" width="600" height="1299" loading="lazy" decoding="async" alt="WavWiz 0.7.0 Devices in Midnight Neon: master volume with All off and All on, the Everywhere zone playing Night Owl with its Studio, Living Room, Kitchen and Office speakers, then the Unassigned row and the collapsed AirPlay speakers and Cast speakers cards for finding and adding speakers.">
-              <figcaption>Devices: master volume, then the Everywhere zone with its song, volume and four speakers.</figcaption>
-            </figure>
-            <figure class="shot reveal" data-optional-shot hidden style="grid-column: 1 / -1">
-              <img src="assets/img/wavwiz-070-devices.webp" srcset="assets/img/wavwiz-070-devices-960.webp 960w, assets/img/wavwiz-070-devices.webp 1600w" sizes="(max-width: 1200px) calc(100vw - 36px), 1152px" width="1600" height="1000" loading="lazy" decoding="async" alt="The expanded Devices view in WavWiz 0.7.0: Scenes and Schedules on the left (nothing scheduled yet), the Everywhere zone's settings in the middle with its volume, queue and four speakers, and the zone tree on the right, with collapsed AirPlay speakers and Cast speakers cards below it.">
-              <figcaption>Expanded Devices: Scenes &amp; Schedules, the selected zone&rsquo;s settings, and the zone tree.</figcaption>
-            </figure>
-        </div>
-      </div>
-    </section>
 
     <!-- ============ WHAT'S NEW ============ -->
     <section class="section section-alt" id="new" aria-labelledby="new-title">
@@ -522,12 +870,15 @@
           <figure><img src="assets/img/wavwiz-070-devices.webp" srcset="assets/img/wavwiz-070-devices-960.webp 960w, assets/img/wavwiz-070-devices.webp 1600w" sizes="(max-width: 700px) calc(100vw - 36px), 400px" width="1600" height="1000" loading="lazy" decoding="async" alt="WavWiz 0.7.0 expanded Devices: Scenes and Schedules, the Everywhere zone's settings, and the zone tree with its four speakers."><figcaption>Expanded Devices</figcaption></figure>
           <figure><img src="assets/img/wavwiz-070-mini.webp" width="840" height="242" loading="lazy" decoding="async" alt="The WavWiz 0.7.0 mini player: spinning CD art, Night Owl by Broke For Free from Directionless EP on Everywhere, LED seek bar, volume and soft transport buttons."><figcaption>Mini player</figcaption></figure>
         </div>
-        <h3 class="eyebrow reveal" style="margin-top:2.5rem">From earlier releases</h3>
+        <details class="prose-details prior-releases reveal">
+          <summary>From earlier releases (0.7.0 back to 0.5.0)</summary>
+          <div class="prose-details-body">
+<h3 class="eyebrow reveal" style="margin-top:2.5rem">From earlier releases</h3>
         <div class="spot-grid">
           <article class="card spot reveal" aria-labelledby="spot-cast070">
             <p class="spot-tag spot-tag-t">From 0.7.0</p>
             <h3 id="spot-cast070">Google Cast speakers join your zones</h3>
-            <p>Nest speakers, Chromecast Audio and Cast TVs or soundbars show up in a new Cast speakers card, right below AirPlay speakers in Devices.</p>
+            <p>Streamers and receivers with Google Cast show up in a Cast speakers card, right below AirPlay speakers in Devices.</p>
             <ul class="spot-list">
               <li><b>Find, test, add:</b> play a test chime, then add the speaker to a zone. It gets volume, mute, on/off, delay and Forget like any speaker, and reconnects after a restart.</li>
               <li><b>Add by IP address:</b> for a Cast device the network search can&rsquo;t see, such as one on another subnet or VLAN.</li>
@@ -580,8 +931,8 @@
             <h3 id="spot-airplay-out">AirPlay speakers join your zones</h3>
             <p>An AirPlay speaker can now be a WavWiz output. Add it to a zone and it follows play, pause, seek, skip and group moves with the rest of the house, with its own volume and delay.</p>
             <ul class="spot-list">
-              <li><b>AirPlay 1 speakers:</b> older AirPlay speakers, including AirPort Express, with lost packets resent.</li>
-              <li><b>AirPlay 2 speakers (experimental):</b> off by default. Turn it on in Settings &rsaquo; Network &rsaquo; AirPlay speakers. Sonos, WiiM and similar speakers are still being tested.</li>
+              <li><b>AirPlay 1 speakers:</b> older AirPlay 1 streamers and receivers, with lost packets resent.</li>
+              <li><b>AirPlay 2 speakers (experimental):</b> off by default. Turn it on in Settings &rsaquo; Network &rsaquo; AirPlay speakers. AirPlay 2 streamers and receivers are still being tested.</li>
               <li><b>Not yet:</b> HomePod and Apple TV, AirPlay 1 password speakers, FairPlay, and AirPlay 2 PIN devices aren't supported yet.</li>
             </ul>
           </article>
@@ -621,7 +972,7 @@
         </ul>
         <ul class="more-grid grid-3 reveal" aria-label="From 0.6.0">
           <li><b>Linux server</b>Headless WavWiz Server for 64-bit Intel/AMD Linux (Docker Hub <code>linux/amd64</code> only), so a NAS or mini PC can run the house. A 64-bit ARM build followed in 0.7.0 (intended for Raspberry Pi; not yet verified on real Pi hardware).</li>
-          <li><b>Docker</b>The server image is on <a href="https://hub.docker.com/r/vdubbin74/wavwiz-server">Docker Hub</a>: <code>docker pull vdubbin74/wavwiz-server:0.7.2</code> (multi-arch since 0.7.0: amd64 and arm64). Compose setup is in the <a href="https://github.com/vdubbin74/WavWiz/blob/main/docs/DOCKER.md">Docker guide</a>, including a <a href="https://github.com/vdubbin74/WavWiz/blob/main/docs/DOCKER.md#windows-docker-desktop-step-by-step">Windows Docker Desktop walkthrough</a>. <b>Not the full Windows app:</b> Docker is a server only: no mic, no CD ripping, no Windows share logins, no Linux Player, no AirPlay receiver yet, and no AirPlay 2 / Sonos / HomePod output. Since 0.7.0 it can play through the host&rsquo;s sound card if you pass in <code>/dev/snd</code>. On Windows Docker Desktop, discovery is weaker (no host networking). Pair a Windows Player for PC speakers. <a href="https://github.com/vdubbin74/WavWiz/blob/main/docs/DOCKER.md#limits-vs-the-windows-app">See the limits</a>.</li>
+          <li><b>Docker</b>The server image is on <a href="https://hub.docker.com/r/vdubbin74/wavwiz-server">Docker Hub</a>: <code>docker pull vdubbin74/wavwiz-server:0.7.2</code> (multi-arch since 0.7.0: amd64 and arm64). Compose setup is in the <a href="https://github.com/vdubbin74/WavWiz/blob/main/docs/DOCKER.md">Docker guide</a>, including a <a href="https://github.com/vdubbin74/WavWiz/blob/main/docs/DOCKER.md#windows-docker-desktop-step-by-step">Windows Docker Desktop walkthrough</a>. <b>Not the full Windows app:</b> Docker is a server only: no mic, no CD ripping, no Windows share logins, no Linux Player, no AirPlay receiver yet, and no AirPlay 2 or HomePod output. Since 0.7.0 it can play through the host&rsquo;s sound card if you pass in <code>/dev/snd</code>. On Windows Docker Desktop, discovery is weaker (no host networking). Pair a Windows Player for PC speakers. <a href="https://github.com/vdubbin74/WavWiz/blob/main/docs/DOCKER.md#limits-vs-the-windows-app">See the limits</a>.</li>
           <li><b>AirPlay as real Speakers</b>AirPlay devices now show up as Speakers you can put in any zone.</li>
           <li><b>Home Assistant</b>Let Home Assistant drive and control WavWiz playback.</li>
           <li><b>Subsonic &amp; Navidrome</b>Play from a remote Subsonic or Navidrome library.</li>
@@ -635,6 +986,8 @@
           <li><b>Fullscreen player</b>F11 for borderless fullscreen; Esc to leave.</li>
           <li><b>Tidier Settings</b>Clear sections from General to About.</li>
         </ul>
+                  </div>
+        </details>
         <p class="new-more reveal">AirPlay 2 output is experimental in this beta, Google Cast output is still in testing, and the ARM64 server isn&rsquo;t verified on real Raspberry Pi hardware yet. See the <a href="https://github.com/vdubbin74/WavWiz/releases/tag/v0.7.2" target="_blank" rel="noopener">0.7.2 release notes</a> and the <a href="https://github.com/vdubbin74/WavWiz/blob/main/CHANGELOG.md" target="_blank" rel="noopener">changelog</a> for every fix.</p>
       </div>
     </section>
@@ -669,9 +1022,9 @@
         <header class="section-head reveal">
           <p class="eyebrow">Roadmap</p>
           <h2 id="roadmap-title">Where WavWiz is <span class="accent-t">headed</span>.</h2>
-          <p class="section-lead">Next up is audiophile accuracy: cleaner gain and a Direct (no processing) switch, then true bit-perfect playback, an official Linux Player and tools to tune every speaker to the room. Everything below that isn't marked shipped is planned, not available yet, and there are no dates.</p>
+          <p class="section-lead">The goal: every speaker, old or new, in one synced mesh. Next up is audiophile accuracy and an official Linux Player. Everything below that isn&rsquo;t marked shipped is planned, not available yet, and there are no dates.</p>
         </header>
-        <p class="new-more reveal"><b>Out now in 0.7.2:</b> live sources in the Windows Player (that PC's own sound or its microphone, in Real time or Sync with WavWiz), Announce from the Windows Player or a phone, phone drag onto Now Playing, multi-zone sync, zones, scenes, alarms and schedules, the phone Remote, EQ, eight visualizers, themes, AirPlay speakers as zone-able Speakers (AirPlay 2 is experimental), Google Cast speakers (still in testing), a Linux server for amd64 and arm64 (arm64 not yet verified on real Raspberry Pi hardware), Home Assistant, Subsonic/Navidrome libraries, library tiles, and Library Local / Remote / Radio / Playlists sources.</p>
+        <p class="new-more reveal"><b>Out now in 0.7.2:</b> live sources, Announce and phone drag. See <a href="#new">What&rsquo;s new</a>. AirPlay 2 output is experimental, Google Cast is still in testing, and the ARM64 server is not yet verified on real Raspberry Pi hardware.</p>
         <div class="spot-grid">
           <article class="card spot reveal" aria-labelledby="rm-073">
             <p class="spot-tag">Coming next in 0.7.3 (planned)</p>
@@ -685,9 +1038,10 @@
           <article class="card spot reveal" aria-labelledby="rm-080">
             <p class="spot-tag spot-tag-t">Upcoming in 0.8.0 (planned)</p>
             <h3 id="rm-080">Linux Player and acoustic accuracy</h3>
-            <p>A planned official Player for Linux, plus tools to measure and correct each speaker in the room.</p>
+            <p>The goal: every speaker, old or new, in one synced mesh. A planned official Player for Linux and Raspberry Pi, plus tools to measure and correct each speaker in the room.</p>
             <ul class="spot-list">
               <li><b>Linux Player:</b> an official Linux Player app (x64 and arm64) that pairs with a WavWiz server and shows up as a zone, like the Windows Player.</li>
+              <li><b>DLNA / UPnP renderer output:</b> planned support so DLNA or UPnP renderers can join a zone. Not available yet.</li>
               <li><b>Parametric EQ:</b> exact frequency, gain and Q per band, with REW (Room EQ Wizard) filter import.</li>
               <li><b>Per-speaker room correction:</b> use a microphone to correct each speaker for the room.</li>
               <li><b>Convolution / FIR:</b> load professional room-correction filter files.</li>
@@ -706,21 +1060,20 @@
               <li><b>Home Assistant:</b> let Home Assistant control playback with a secure token.</li>
               <li><b>Nothing to relearn:</b> the same web app, zones, scenes and schedules.</li>
             </ul>
-            <p><b>Docker limits vs the Windows app:</b> Docker runs the server only. It has the web UI, zones, scenes, schedules, alarms, Jukebox and Remote, and plays to Windows Players, phones and browsers, Cast and AirPlay 1 speakers, and (since 0.7.0) the host&rsquo;s own sound card via <code>/dev/snd</code>. It does not have:</p>
-            <ul>
-              <li>A microphone on the Docker host, or an AirPlay receiver (still planned)</li>
-              <li>CD ripping, Windows share logins, or a Linux Player</li>
-              <li>AirPlay 2, Sonos, or HomePod output</li>
-              <li>Full discovery on Windows Docker Desktop: there's no real host networking, so mDNS/AirPlay discovery is weaker; use published ports (<a href="https://github.com/vdubbin74/WavWiz/blob/main/docs/DOCKER.md#windows-docker-desktop-step-by-step">walkthrough</a>)</li>
-            </ul>
-            <p>For PC speakers or richer output, pair a Windows Player. <a href="https://github.com/vdubbin74/WavWiz/blob/main/docs/DOCKER.md#limits-vs-the-windows-app">Full limits list</a>.</p>
+            <p>Docker is a server only. Pair a Windows Player for PC speakers. See the <a href="https://github.com/vdubbin74/WavWiz/blob/main/docs/DOCKER.md" target="_blank" rel="noopener">Docker guide</a> for compose and a Windows Docker Desktop walkthrough.</p>
+            <details class="prose-details">
+              <summary>Docker limits vs the Windows app</summary>
+              <div class="prose-details-body">
+                <p>Docker has the web UI, zones, scenes, schedules, alarms, Jukebox and Remote, and plays to Windows Players, phones and browsers, Cast and AirPlay 1 speakers, and (since 0.7.0) the host&rsquo;s own sound card via <code>/dev/snd</code>. It does not have a microphone on the Docker host, an AirPlay receiver (still planned), CD ripping, Windows share logins, a Linux Player, or AirPlay 2 or HomePod output. On Windows Docker Desktop, discovery is weaker (no host networking); use published ports. <a href="https://github.com/vdubbin74/WavWiz/blob/main/docs/DOCKER.md#limits-vs-the-windows-app" target="_blank" rel="noopener">Full limits list</a>.</p>
+              </div>
+            </details>
           </article>
           <article class="card spot reveal" aria-labelledby="rm-070">
             <p class="spot-tag">Shipped &middot; 0.7.0</p>
             <h3 id="rm-070">Google Cast &amp; ARM64</h3>
             <p>Google Cast speakers join the house, and the server builds for 64-bit ARM.</p>
             <ul class="spot-list">
-              <li><b>Cast speakers:</b> Nest speakers, Chromecast Audio, and Cast TVs and soundbars, found on your network or added by IP address. New and still in testing.</li>
+              <li><b>Cast speakers:</b> Streamers and receivers with Google Cast, found on your network or added by IP address. New and still in testing.</li>
               <li><b>The basics:</b> test chime, add to a zone, volume, mute, on/off, and a delay slider to line Cast speakers up with your other devices.</li>
               <li><b>ARM64 server:</b> a <code>linux-arm64</code> download and multi-arch Docker image, intended for Raspberry Pi 4/5. Not yet verified on real Pi hardware.</li>
               <li><b>Local audio on Linux:</b> the server plays through the machine&rsquo;s own jack, HDMI or USB DAC.</li>
@@ -766,13 +1119,13 @@
           <h2 id="faq-title">Questions, answered.</h2>
         </header>
         <div class="faq">
-          <details class="card reveal" open>
+          <details class="card reveal">
             <summary>Is WavWiz really free?</summary>
             <p>Yes. WavWiz is free and open source under the MIT license. There's nothing to buy, no subscription and no account to create.</p>
           </details>
           <details class="card reveal">
             <summary>Can my phone be a speaker? Can it play to a Bluetooth speaker?</summary>
-            <p>Yes. Open the WavWiz page in your phone's browser on your home Wi-Fi and tap <em>Play music here</em>. There's no app to install. The phone plays through whatever it's using for sound, so if it's paired with a Bluetooth speaker, headphones or a home AV receiver with Bluetooth, the music comes out there. Tablets work the same way. Bluetooth adds its own lag, so give that phone a little delay (or calibrate it) to line it up with the other devices. On iPhone, tap the page once to start the sound, and keep the WavWiz page open while it plays.</p>
+            <p>Yes. Open the WavWiz page in your phone&rsquo;s browser on your home Wi-Fi and tap <em>Play music here</em>. No app to install. If the phone is paired with a Bluetooth speaker, the music comes out there. Bluetooth adds lag, so give that phone a delay. On iPhone, tap the page once to start the sound and keep it open. See <a href="#devices">Works with what you own</a>.</p>
           </details>
           <details class="card reveal">
             <summary>Can I put WavWiz on my home screen like an app?</summary>
@@ -780,19 +1133,19 @@
           </details>
           <details class="card reveal">
             <summary>Can I use old PCs or laptops as speakers?</summary>
-            <p>Yes. Any Windows 10 or 11 PC can run WavWiz Player and play through its own speakers, headphones, HDMI, optical, USB or Bluetooth output. Anything else with a modern browser, like a Mac, a Chromebook or an older laptop, can join by opening the WavWiz page.</p>
+            <p>Yes. Any Windows 10 or 11 PC can run WavWiz Player and play through whatever output Windows can use. A Mac, Chromebook or older laptop can join in a browser. See <a href="#devices">Works with what you own</a>.</p>
           </details>
           <details class="card reveal">
             <summary>Does it keep devices in sync?</summary>
-            <p>Every device plays the same stream against a shared clock, and WavWiz keeps correcting each device's drift so devices stay together. Bluetooth speakers and TVs add their own lag, so each device gets its own delay (0 to 1000 ms). Set it by ear while the music plays, or let <em>Calibrate speakers</em> measure it with a PC mic or your phone (AirPlay and Cast speakers can't be calibrated yet; set those by ear). No sync measurements have been published yet.</p>
+            <p>Every device plays the same stream against a shared clock. Bluetooth speakers and TVs add lag, so each device gets its own delay (0 to 1000 ms). Set it by ear, or let <em>Calibrate speakers</em> measure a WavWiz Player with a PC mic or phone. AirPlay and Cast can&rsquo;t be auto-calibrated yet. No sync measurements have been published yet.</p>
           </details>
           <details class="card reveal">
             <summary>Do I need special hardware?</summary>
-            <p>No. You need one Windows PC that stays on to run the server, and whatever speakers you already have: PCs, laptops, phones, tablets, and the speakers, TVs and receivers they connect to.</p>
+            <p>No. You need one always-on Windows PC (or an optional Linux or Docker server) and the speakers you already have. See <a href="#devices">Works with what you own</a>.</p>
           </details>
           <details class="card reveal">
             <summary>Does it work with Bluetooth, HDMI and receivers?</summary>
-            <p>Yes, through a PC. WavWiz Player plays to any output Windows can use, including HDMI to a TV or receiver, optical, USB DACs and Bluetooth speakers, and each speaker shows which output it's using. Since 0.7.0, WavWiz can also play straight to Google Cast speakers (still in testing). Sonos works only through the experimental AirPlay 2 output, and DLNA speakers aren't supported.</p>
+            <p>Yes, through a Windows PC running WavWiz Player: HDMI, optical, USB or Bluetooth, plus any other output Windows can play to. Streamers and receivers with Google Cast can join a zone (since 0.7.0, still in testing). Streamers and receivers with AirPlay can be added over AirPlay (AirPlay 2 is experimental and off by default). HomePod and Apple TV are not supported. DLNA / UPnP renderer output is planned for 0.8.0 and is not available yet. See <a href="#devices">Works with what you own</a>.</p>
           </details>
           <details class="card reveal">
             <summary>Can guests add songs?</summary>
@@ -808,7 +1161,7 @@
           </details>
           <details class="card reveal">
             <summary>What doesn't work yet?</summary>
-            <p>WavWiz is a public beta. Smart-TV browsers are still in testing: WavWiz gives TVs a lighter layout and visualizer, but some (including an older LG webOS set) don't finish loading yet. For now, the reliable way to use a TV is a PC or laptop connected to it, and if you try your TV's browser, we'd love to hear how it went. The server runs on 64-bit Windows 10 or 11, or on Linux, bare or in Docker (64-bit x86 / amd64; no Mac server yet). Since 0.7.0 there's also a 64-bit ARM build of the Linux server and Docker image, intended for Raspberry Pi 4 and 5, but it hasn't been verified on real Raspberry Pi hardware yet. The Linux server can play through the machine's own sound card (since 0.7.0, also not yet verified on a real Pi) and has no AirPlay receiver yet (still planned). Windows PCs play through WavWiz Player. AirPlay shows up as one speaker per zone plus &ldquo;WavWiz &ndash; Everywhere&rdquo;, not one per device, and it's classic AirPlay, so iPhone won't group it with AirPlay 2 speakers. WavWiz can play to AirPlay 1 speakers; AirPlay 2 output (Sonos and similar) is experimental. Google Cast output, added in 0.7.0, is still being tested on real Cast hardware, and DLNA isn't supported. Calibrate speakers doesn't support AirPlay or Cast speakers yet (still planned). On iPhone, tap the page once to start the sound.</p>
+            <p>WavWiz is a public beta. AirPlay 2 output is experimental and off by default. Google Cast output (since 0.7.0) is still in testing. Calibrate speakers can&rsquo;t measure AirPlay or Cast yet; set those delays by ear. The Linux/Docker arm64 server, intended for Raspberry Pi 4 and 5, has not been verified on real Pi hardware, and there is no official Linux or Pi Player yet (planned for 0.8.0). There is no AirPlay receiver on Linux yet (still planned). HomePod and Apple TV are not supported. DLNA / UPnP renderer output is planned for 0.8.0 and is not available yet. Smart-TV browsers are still in testing; a PC connected to the TV is the reliable path. On iPhone, tap the page once to start the sound. See the <a href="#roadmap">roadmap</a> and <a href="#devices">Works with what you own</a>.</p>
           </details>
           <details class="card reveal">
             <summary>Why does Windows SmartScreen warn me when I install WavWiz?</summary>
@@ -887,7 +1240,7 @@
     <div class="container footer-inner">
       <div class="footer-brand">
         <a class="wordmark" href="#top" aria-label="WavWiz home" style="display:inline-flex;align-items:center;white-space:nowrap"><img class="wm-emblem" src="assets/img/wavwiz-emblem-site.svg" alt="" width="36" height="36" decoding="async"><span class="wm-wav">Wav</span><span class="wm-wiz">Wiz</span></a>
-        <p>Free, open-source multi-zone audio for Windows.</p>
+        <p>One mesh for every speaker you own. Free, open-source, and local.</p>
         <p class="small">Uses FFmpeg, shairplay and librespot. AirPlay, Spotify, Navidrome and Home Assistant are trademarks of their owners; WavWiz is not affiliated.</p>
               </div>
       <nav class="footer-links" aria-label="Footer">
@@ -902,13 +1255,13 @@
     </div>
     <div class="container footer-privacy" id="privacy">
       <p><strong>Privacy:</strong> this site has no analytics, no trackers and no cookies. Fonts and scripts are served from this site. The only outside request is an anonymous check of GitHub&rsquo;s public API for the latest WavWiz release, to show the &ldquo;New&rdquo; note. Hosted on GitHub Pages, which may keep standard server logs.</p>
-      <p class="trademark">AirPlay is a trademark of Apple Inc. Spotify is a trademark of Spotify AB. The Pepecoin theme uses Pepecoin brand colors. WavWiz is not affiliated with Apple, Spotify or Pepecoin. Coin logos belong to their projects.</p>
+      <p class="trademark">AirPlay is a trademark of Apple Inc. Spotify is a trademark of Spotify AB. Google Cast is a trademark of Google LLC. WiiM and Sonos are trademarks of their owners. The Pepecoin theme uses Pepecoin brand colors. WavWiz is not affiliated with Apple, Spotify, Google, WiiM, Sonos or Pepecoin. Coin logos belong to their projects.</p>
       <p class="trademark">Music in the screenshots: &ldquo;Directionless EP&rdquo; by Broke For Free (<a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a>), &ldquo;Audionautix: Tech, Urban, Dance&rdquo; by Jason Shaw (<a href="https://creativecommons.org/licenses/by/3.0/us/" target="_blank" rel="noopener">CC BY 3.0 US</a>) and &ldquo;The Black Dot&rdquo; by Rolemusic (<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>), all via the <a href="https://archive.org/" target="_blank" rel="noopener">Internet Archive</a>, with album art. Komiku and Loyalty Freak Music albums are CC0.</p>
       <p class="copyright">© 2026 vdubbin74. Released under the MIT License. Security reports: <a href="mailto:vdubbin74@proton.me">vdubbin74@proton.me</a>.</p>
     </div>
   </footer>
 
   <script src="assets/vendor/qrcode.js"></script>
-  <script src="script.js?v=072"></script>
+  <script src="script.js?v=073m"></script>
 </body>
 </html>
