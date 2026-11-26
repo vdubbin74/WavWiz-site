@@ -70,7 +70,7 @@
         "@id": "https://wavwiz.com/#software",
         "name": "WavWiz",
         "url": "https://wavwiz.com/",
-        "description": "Multi-zone mesh audio wizardry, for gear old and new. WavWiz is a free, MIT-licensed multi-room music system. One mesh for every speaker you own. Run a Windows server (or an optional Linux/Docker server for amd64 or arm64; the arm64 build is intended for Raspberry Pi and not yet verified on real Pi hardware) and play through Windows Players or any modern browser on phones, tablets, Macs and Linux PCs. Streamers and receivers with AirPlay or Cast can join a zone: AirPlay 1 output works; AirPlay 2 output is experimental and off by default; Google Cast output, added in 0.7.0, is still in testing. HomePod and Apple TV are not supported. DLNA / UPnP renderer output is planned for 0.8.0 and is not available yet. An official Linux and Raspberry Pi Player is planned for 0.8.0. Local/NAS library, internet radio, Subsonic/Navidrome, AirPlay in, and live sources in the Windows Player. No cloud account, no telemetry.",
+        "description": "Multi-zone mesh audio wizardry, for gear old and new. WavWiz is a free, MIT-licensed multi-room music system. One mesh for every speaker you own. Run a Windows server (or an optional Linux/Docker server for amd64 or arm64; the arm64 build is intended for Raspberry Pi and not yet verified on real Pi hardware) and play through Windows Players or any modern browser on phones, tablets, Macs, Chromebooks and PCs. Streamers and receivers with AirPlay or Cast can join a zone: AirPlay 1 output works; AirPlay 2 output is experimental and off by default; Google Cast output, added in 0.7.0, is still in testing. HomePod and Apple TV are not supported. DLNA / UPnP renderer output is planned for 0.8.0 and is not available yet. An official Linux and Raspberry Pi Player is planned for 0.8.0. Local/NAS library, internet radio, Subsonic/Navidrome, AirPlay in, and live sources in the Windows Player. No cloud account, no telemetry.",
         "applicationCategory": "MultimediaApplication",
         "applicationSubCategory": "Multi-zone audio",
         "operatingSystem": "Windows 10, Windows 11",
@@ -323,9 +323,9 @@
         </header>
 
         <figure class="mesh-diagram reveal">
-          <svg class="mesh-wide" viewBox="0 0 1200 956" role="img" aria-labelledby="mesh-title mesh-desc">
+          <svg class="mesh-wide" viewBox="0 0 1200 1083" role="img" aria-labelledby="mesh-title mesh-desc">
                         <title id="mesh-title">How audio flows through a WavWiz mesh</title>
-                        <desc id="mesh-desc">A hub-and-spoke map. The WavWiz server is in the center. Sources (a local or NAS library, internet radio, and Subsonic or Navidrome) and AirPlay in from an iPhone, iPad or Mac (Windows server only; no AirPlay receiver on Linux or Docker yet) send audio into the server. The server sends audio out to a Windows Player, a browser player on a phone, AirPlay speakers such as Sonos (AirPlay 1 works today; AirPlay 2 is experimental), and streamers and receivers such as WiiM over AirPlay or Google Cast. HomePod and Apple TV are not supported. The Windows Player also sends that PC's sound or microphone, and Announce, back into the server (since 0.7.2). A phone can send Announce in. The Windows Player can use HDMI, analog, optical, a USB DAC, or Bluetooth; a vintage amp can hook up to analog or optical today. A streamer can connect to an amp or powered speakers. Cast output is in testing. A Linux and Raspberry Pi Player is planned for 0.8.0, with a planned path from that Pi to a vintage amp. Two-way arrows show audio in both directions. Sonos and WiiM are examples, not a promise that every model works.</desc>
+                        <desc id="mesh-desc">A hub-and-spoke map. The WavWiz server is in the center. Sources (a local or NAS library, internet radio, and Subsonic or Navidrome) and AirPlay in from an iPhone, iPad or Mac (Windows server only; no AirPlay receiver on Linux or Docker yet) send audio into the server. The server sends audio out to a Windows Player, a browser player on a phone, AirPlay speakers such as Sonos (AirPlay 1 works today; AirPlay 2 is experimental), and streamers and receivers such as WiiM over AirPlay or Google Cast. HomePod and Apple TV are not supported. The Windows Player also sends that PC's sound or microphone, and Announce, back into the server (since 0.7.2). A phone can send Announce in. The Windows Player can use HDMI, analog, optical, a USB DAC, or Bluetooth; a vintage amp can hook up to analog or optical today, and an AV receiver can hook up over HDMI today. The browser player plays through the device's current system output: the built-in speaker, a paired Bluetooth speaker, or HDMI, analog or optical on a Mac, Chromebook or PC, depending on the model. WavWiz does not pick that output in the browser. WavWiz EQ applies to WavWiz Players only. A streamer can connect to an amp or powered speakers. Cast output is in testing. A Linux and Raspberry Pi Player is planned for 0.8.0, with a planned path from that Pi to a vintage amp. Two-way arrows show audio in both directions. Sonos and WiiM are examples, not a promise that every model works.</desc>
                         <defs>
               <linearGradient id="mw-hub" x1="0" y1="0" x2="1" y2="1">
                 <stop offset="0" stop-color="#FF3C00"/>
@@ -362,6 +362,7 @@
             <path d="M387.1 333.0 L350.1 359.8" fill="none" stroke="#12D6C2" stroke-width="1.4" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mw-teal)"/>
             <path d="M271.2 266.6 L244.6 221.9" fill="none" stroke="#12D6C2" stroke-width="1.4" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mw-teal)"/>
             <path d="M293.3 171.9 L277.4 177.4" fill="none" stroke="#12D6C2" stroke-width="1.4" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mw-teal)"/>
+            <path d="M271.7 374.1 L260.3 372.0" fill="none" stroke="#12D6C2" stroke-width="1.4" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mw-teal)"/>
             <path d="M763.6 203.5 L770.9 181.2" fill="none" stroke="#12D6C2" stroke-width="1.4" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mw-teal)"/>
             <path d="M714.4 203.5 L688.0 122.2" fill="none" stroke="#FF3C00" stroke-width="1.4" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mw-orange)"/>
             <path d="M961.7 475.5 L979.0 466.3" fill="none" stroke="#12D6C2" stroke-width="1.4" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mw-teal)"/>
@@ -369,7 +370,9 @@
             <path d="M211.3 571.6 L232.6 561.7" fill="none" stroke="#12D6C2" stroke-width="1.4" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mw-teal)"/>
             <path d="M198.0 520.0 L217.5 520.0" fill="none" stroke="#12D6C2" stroke-width="1.4" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mw-teal)"/>
             <path d="M209.5 467.6 L232.6 478.3" fill="none" stroke="#12D6C2" stroke-width="1.4" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mw-teal)"/>
-            <path d="M419.8 832.1 L410.1 849.0" fill="none" stroke="#12D6C2" stroke-width="1.4" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mw-teal)"/>
+            <path d="M385.8 813.4 L366.5 826.9" fill="none" stroke="#12D6C2" stroke-width="1.4" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mw-teal)"/>
+            <path d="M430.9 835.3 L408.6 890.4" fill="none" stroke="#12D6C2" stroke-width="1.4" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mw-teal)"/>
+            <path d="M474.6 838.1 L493.3 943.9" fill="none" stroke="#12D6C2" stroke-width="1.4" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mw-teal)"/>
             <path d="M780.2 832.1 L792.9 854.2" fill="none" stroke="#FF3C00" stroke-width="1.4" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="6 5" marker-end="url(#mw-orange)"/>
             <text x="501.2" y="388.9" text-anchor="middle" fill="#12D6C2" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600">PC sound / mic</text>
             <text x="501.2" y="404.9" text-anchor="middle" fill="#9aa5c0" font-family="Inter, system-ui, sans-serif" font-size="13">and Announce · 0.7.2</text>
@@ -386,8 +389,9 @@
             <ellipse cx="322.0" cy="520.0" rx="102.0" ry="78.0" fill="#131a2e" stroke="#12D6C2" stroke-width="2.2"/>
             <text x="322.0" y="525.4" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="16" font-weight="700">Sources</text>
             <ellipse cx="461.0" cy="760.8" rx="102.0" ry="78.0" fill="#131a2e" stroke="#12D6C2" stroke-width="2.2"/>
-            <text x="461.0" y="758.3" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="16" font-weight="700">Phone / browser</text>
-            <text x="461.0" y="774.7" text-anchor="middle" fill="#12D6C2" font-family="Inter, system-ui, sans-serif" font-size="13">Works today</text>
+            <text x="461.0" y="751.4" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="15" font-weight="700">Phone / browser</text>
+            <text x="461.0" y="766.6" text-anchor="middle" fill="#9aa5c0" font-family="Inter, system-ui, sans-serif" font-size="12">Phone, Mac,</text>
+            <text x="461.0" y="781.0" text-anchor="middle" fill="#9aa5c0" font-family="Inter, system-ui, sans-serif" font-size="12">Chromebook, any PC</text>
             <ellipse cx="739.0" cy="760.8" rx="102.0" ry="78.0" fill="#131a2e" stroke="#FF3C00" stroke-width="2.2" stroke-dasharray="6 5"/>
             <text x="739.0" y="758.0" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="15" font-weight="700">Linux / Pi Player</text>
             <text x="739.0" y="774.1" text-anchor="middle" fill="#FF3C00" font-family="Inter, system-ui, sans-serif" font-size="13">Planned for 0.8.0</text>
@@ -425,17 +429,26 @@
             <ellipse cx="160.5" cy="444.7" rx="70.0" ry="32.0" fill="#131a2e" stroke="#12D6C2" stroke-width="1.6"/>
             <text x="160.5" y="441.3" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="13" font-weight="600">Subsonic /</text>
             <text x="160.5" y="456.9" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="13" font-weight="600">Navidrome</text>
-            <ellipse cx="390.9" cy="882.1" rx="70.0" ry="32.0" fill="#131a2e" stroke="#12D6C2" stroke-width="1.6"/>
-            <text x="390.9" y="878.7" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="13" font-weight="600">Bluetooth /</text>
-            <text x="390.9" y="894.3" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="13" font-weight="600">speaker</text>
+            <ellipse cx="326.2" cy="855.1" rx="70.0" ry="32.0" fill="#131a2e" stroke="#12D6C2" stroke-width="1.6"/>
+            <text x="326.2" y="851.7" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="13" font-weight="600">Built-in</text>
+            <text x="326.2" y="867.3" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="13" font-weight="600">speaker</text>
+            <ellipse cx="396.5" cy="920.3" rx="62.0" ry="28.0" fill="#131a2e" stroke="#12D6C2" stroke-width="1.6"/>
+            <text x="396.5" y="924.7" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="13" font-weight="600">Bluetooth</text>
+            <ellipse cx="502.5" cy="996.2" rx="94.0" ry="50.0" fill="#131a2e" stroke="#12D6C2" stroke-width="1.6"/>
+            <text x="502.5" y="979.8" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="12" font-weight="600">HDMI / analog /</text>
+            <text x="502.5" y="994.2" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="12" font-weight="600">optical</text>
+            <text x="502.5" y="1007.7" text-anchor="middle" fill="#9aa5c0" font-family="Inter, system-ui, sans-serif" font-size="11">on Mac, Chromebook, PC</text>
+            <text x="502.5" y="1020.9" text-anchor="middle" fill="#9aa5c0" font-family="Inter, system-ui, sans-serif" font-size="11">depending on model</text>
+            <ellipse cx="196.9" cy="360.9" rx="66.0" ry="28.0" fill="#131a2e" stroke="#12D6C2" stroke-width="1.6"/>
+            <text x="196.9" y="365.2" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="13" font-weight="600">AV receiver</text>
             <ellipse cx="812.1" cy="887.4" rx="74.0" ry="32.0" fill="#131a2e" stroke="#FF3C00" stroke-width="1.6" stroke-dasharray="6 5"/>
             <text x="812.1" y="884.6" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="13" font-weight="700">Vintage amp</text>
             <text x="812.1" y="899.2" text-anchor="middle" fill="#FF3C00" font-family="Inter, system-ui, sans-serif" font-size="12">via Pi + DAC</text>
                       </svg>
 
-          <svg class="mesh-narrow" viewBox="0 0 390 1102" role="img" aria-labelledby="mesh-title-sm mesh-desc-sm">
+          <svg class="mesh-narrow" viewBox="0 0 390 1134" role="img" aria-labelledby="mesh-title-sm mesh-desc-sm">
                         <title id="mesh-title-sm">How audio flows through a WavWiz mesh</title>
-                        <desc id="mesh-desc-sm">A vertical view of the same mesh. Sources and AirPlay in feed a central WavWiz server. The server sends audio out to a Windows Player, AirPlay speakers such as Sonos (AirPlay 1 works today; AirPlay 2 is experimental), streamers and receivers such as WiiM, and a phone or browser player. HomePod and Apple TV are not supported. Two-way arrows mark the Windows Player (PC sound, microphone and Announce) and the phone (Announce). A Linux and Pi Player is planned. Sonos and WiiM are examples, not a promise that every model works.</desc>
+                        <desc id="mesh-desc-sm">A vertical view of the same mesh. Sources and AirPlay in feed a central WavWiz server. The server sends audio out to a Windows Player, AirPlay speakers such as Sonos (AirPlay 1 works today; AirPlay 2 is experimental), streamers and receivers such as WiiM, and a phone or browser player. HomePod and Apple TV are not supported. Two-way arrows mark the Windows Player (PC sound, microphone and Announce) and the phone (Announce). The Windows Player can play to HDMI, analog, optical, a USB DAC or Bluetooth; a vintage amp can hook up to analog or optical, and an AV receiver can hook up over HDMI. The browser player uses the device's current system output (built-in speaker, Bluetooth, or HDMI, analog or optical on a Mac, Chromebook or PC, depending on the model). WavWiz does not pick that output in the browser. WavWiz EQ applies to WavWiz Players only. A Linux and Pi Player is planned. Sonos and WiiM are examples, not a promise that every model works.</desc>
                         <defs>
               <linearGradient id="mn-hub" x1="0" y1="0" x2="1" y2="1">
                 <stop offset="0" stop-color="#FF3C00"/>
@@ -455,6 +468,8 @@
             <path d="M107.5 96.5 L137.1 82.8" fill="none" stroke="#12D6C2" stroke-width="1.3" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mn-teal)"/>
             <path d="M195.0 94.0 L195.0 86.0" fill="none" stroke="#12D6C2" stroke-width="1.3" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mn-teal)"/>
             <path d="M282.5 96.5 L252.9 82.8" fill="none" stroke="#12D6C2" stroke-width="1.3" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mn-teal)"/>
+            <text x="195.0" y="964.0" text-anchor="middle" fill="#9aa5c0" font-family="Inter, system-ui, sans-serif" font-size="11">On Mac, Chromebook or PC, depending on the model.</text>
+            <text x="195.0" y="978.0" text-anchor="middle" fill="#9aa5c0" font-family="Inter, system-ui, sans-serif" font-size="11">The browser uses the system output.</text>
             <path d="M195.0 202.0 L195.0 235.5" fill="none" stroke="#12D6C2" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mn-teal)"/>
             <path d="M45.0 56.0 H16.0 V259.8 H147.2" fill="none" stroke="#12D6C2" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mn-teal)"/>
             <text x="179.0" y="220.0" text-anchor="end" fill="#9aa5c0" font-family="Inter, system-ui, sans-serif" font-size="12">into the server</text>
@@ -467,20 +482,23 @@
             <path d="M195.0 446.0 L195.0 453.5" fill="none" stroke="#12D6C2" stroke-width="1.3" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mn-teal)"/>
             <path d="M232.4 445.0 L246.7 456.8" fill="none" stroke="#12D6C2" stroke-width="1.3" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mn-teal)"/>
             <path d="M263.7 442.4 L308.5 461.0" fill="none" stroke="#12D6C2" stroke-width="1.3" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mn-teal)"/>
-            <path d="M143.6 484.8 L167.3 501.0" fill="none" stroke="#12D6C2" stroke-width="1.3" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mn-teal)"/>
-            <path d="M195.0 488.0 L195.0 499.5" fill="none" stroke="#12D6C2" stroke-width="1.3" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mn-teal)"/>
-            <path d="M253.0 296.0 H353.0 V559.5 H195.0" fill="none" stroke="#12D6C2" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mn-teal)"/>
-            <path d="M353.0 562.0 V693.5 H195.0" fill="none" stroke="#12D6C2" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mn-teal)"/>
-            <path d="M155.6 628.8 L143.4 639.0" fill="none" stroke="#12D6C2" stroke-width="1.3" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mn-teal)"/>
-            <path d="M234.4 628.8 L246.6 639.0" fill="none" stroke="#12D6C2" stroke-width="1.3" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mn-teal)"/>
-            <path d="M155.6 762.8 L143.4 773.0" fill="none" stroke="#FF3C00" stroke-width="1.3" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mn-orange)"/>
-            <path d="M234.4 762.8 L246.6 773.0" fill="none" stroke="#12D6C2" stroke-width="1.3" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mn-teal)"/>
-            <path d="M137.0 296.0 H37.0 V827.5 H195.0" fill="none" stroke="#12D6C2" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mn-teal)"/>
-            <path d="M185.0 830.0 H47.0 V304.0 H134.5" fill="none" stroke="#12D6C2" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mn-teal)"/>
-            <text x="45.0" y="825.0" text-anchor="start" fill="#12D6C2" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600">Announce</text>
-            <path d="M195.0 894.0 L195.0 901.5" fill="none" stroke="#12D6C2" stroke-width="1.3" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mn-teal)"/>
-            <path d="M253.0 310.0 H365.0 V957.5 H195.0" fill="none" stroke="#FF3C00" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="6 5" marker-end="url(#mn-orange)"/>
-            <path d="M195.0 1024.0 L195.0 1031.5" fill="none" stroke="#FF3C00" stroke-width="1.3" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="3.5 3" marker-end="url(#mn-orange)"/>
+            <path d="M75.4 484.0 L106.3 502.2" fill="none" stroke="#12D6C2" stroke-width="1.3" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mn-teal)"/>
+            <path d="M150.7 481.0 L218.6 504.6" fill="none" stroke="#12D6C2" stroke-width="1.3" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mn-teal)"/>
+            <path d="M212.7 485.1 L234.8 501.5" fill="none" stroke="#12D6C2" stroke-width="1.3" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mn-teal)"/>
+            <path d="M253.0 296.0 H353.0 V555.5 H195.0" fill="none" stroke="#12D6C2" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mn-teal)"/>
+            <path d="M353.0 558.0 V689.5 H195.0" fill="none" stroke="#12D6C2" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mn-teal)"/>
+            <path d="M155.6 624.8 L143.4 635.0" fill="none" stroke="#12D6C2" stroke-width="1.3" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mn-teal)"/>
+            <path d="M234.4 624.8 L246.6 635.0" fill="none" stroke="#12D6C2" stroke-width="1.3" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mn-teal)"/>
+            <path d="M155.6 758.8 L143.4 769.0" fill="none" stroke="#FF3C00" stroke-width="1.3" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mn-orange)"/>
+            <path d="M234.4 758.8 L246.6 769.0" fill="none" stroke="#12D6C2" stroke-width="1.3" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mn-teal)"/>
+            <path d="M137.0 296.0 H37.0 V823.5 H195.0" fill="none" stroke="#12D6C2" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mn-teal)"/>
+            <path d="M185.0 826.0 H47.0 V304.0 H134.5" fill="none" stroke="#12D6C2" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mn-teal)"/>
+            <text x="45.0" y="821.0" text-anchor="start" fill="#12D6C2" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600">Announce</text>
+            <path d="M130.7 902.4 L105.6 916.6" fill="none" stroke="#12D6C2" stroke-width="1.3" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mn-teal)"/>
+            <path d="M195.0 906.0 L195.0 913.5" fill="none" stroke="#12D6C2" stroke-width="1.3" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mn-teal)"/>
+            <path d="M259.3 902.4 L284.4 916.6" fill="none" stroke="#12D6C2" stroke-width="1.3" stroke-linecap="butt" stroke-linejoin="miter" marker-end="url(#mn-teal)"/>
+            <path d="M253.0 310.0 H365.0 V989.5 H195.0" fill="none" stroke="#FF3C00" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="6 5" marker-end="url(#mn-orange)"/>
+            <path d="M195.0 1056.0 L195.0 1063.5" fill="none" stroke="#FF3C00" stroke-width="1.3" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="3.5 3" marker-end="url(#mn-orange)"/>
             <g filter="url(#mn-glow)"><ellipse cx="195.0" cy="296.0" rx="58.0" ry="58.0" fill="#131a2e" stroke="url(#mn-hub)" stroke-width="3"/></g>
             <text x="195.0" y="290.2" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="18" font-weight="700">WavWiz</text>
             <text x="195.0" y="307.2" text-anchor="middle" fill="#9aa5c0" font-family="Inter, system-ui, sans-serif" font-size="13">server</text>
@@ -511,37 +529,45 @@
             <text x="265.0" y="476.0" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="12" font-weight="600">USB DAC</text>
             <ellipse cx="335.0" cy="472.0" rx="31.0" ry="16.0" fill="#131a2e" stroke="#12D6C2" stroke-width="1.5"/>
             <text x="335.0" y="476.0" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="12" font-weight="600">Bluetooth</text>
-            <ellipse cx="195.0" cy="520.0" rx="120.0" ry="18.0" fill="#131a2e" stroke="#12D6C2" stroke-width="1.6"/>
-            <text x="195.0" y="524.4" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="13" font-weight="600">Vintage amp</text>
-            <ellipse cx="195.0" cy="596.0" rx="150.0" ry="34.0" fill="#131a2e" stroke="#12D6C2" stroke-width="2"/>
-            <text x="195.0" y="593.2" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="15" font-weight="700">AirPlay speakers</text>
-            <text x="195.0" y="609.4" text-anchor="middle" fill="#9aa5c0" font-family="Inter, system-ui, sans-serif" font-size="13">such as Sonos</text>
-            <ellipse cx="123.0" cy="656.0" rx="68.0" ry="16.0" fill="#131a2e" stroke="#12D6C2" stroke-width="1.5"/>
-            <text x="123.0" y="660.0" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="12" font-weight="600">AirPlay 1</text>
-            <ellipse cx="267.0" cy="656.0" rx="68.0" ry="16.0" fill="#131a2e" stroke="#12D6C2" stroke-width="1.5"/>
-            <text x="267.0" y="652.8" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="12" font-weight="600">AirPlay 2</text>
-            <text x="267.0" y="667.2" text-anchor="middle" fill="#FF3C00" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="12" font-weight="600">experimental</text>
-            <ellipse cx="195.0" cy="730.0" rx="150.0" ry="34.0" fill="#131a2e" stroke="#12D6C2" stroke-width="2"/>
-            <text x="195.0" y="727.2" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="15" font-weight="700">Streamers &amp; receivers</text>
-            <text x="195.0" y="743.4" text-anchor="middle" fill="#9aa5c0" font-family="Inter, system-ui, sans-serif" font-size="13">such as WiiM</text>
-            <ellipse cx="123.0" cy="790.0" rx="68.0" ry="16.0" fill="#131a2e" stroke="#FF3C00" stroke-width="1.5"/>
-            <text x="123.0" y="786.8" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="12" font-weight="600">Cast</text>
-            <text x="123.0" y="801.2" text-anchor="middle" fill="#FF3C00" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="12" font-weight="600">In testing</text>
-            <ellipse cx="267.0" cy="790.0" rx="68.0" ry="16.0" fill="#131a2e" stroke="#12D6C2" stroke-width="1.5"/>
-            <text x="267.0" y="794.0" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="12" font-weight="600">Amp / speakers</text>
-            <ellipse cx="195.0" cy="862.0" rx="150.0" ry="32.0" fill="#131a2e" stroke="#12D6C2" stroke-width="2"/>
-            <text x="195.0" y="859.6" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="16" font-weight="700">Phone / browser</text>
-            <text x="195.0" y="876.0" text-anchor="middle" fill="#12D6C2" font-family="Inter, system-ui, sans-serif" font-size="13">Works today</text>
-            <ellipse cx="195.0" cy="920.0" rx="110.0" ry="16.0" fill="#131a2e" stroke="#12D6C2" stroke-width="1.5"/>
-            <text x="195.0" y="924.0" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="12" font-weight="600">Bluetooth / speaker</text>
-            <ellipse cx="195.0" cy="992.0" rx="150.0" ry="32.0" fill="#131a2e" stroke="#FF3C00" stroke-width="2" stroke-dasharray="6 5"/>
-            <text x="195.0" y="989.2" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="15" font-weight="700">Linux / Pi Player</text>
-            <text x="195.0" y="1005.4" text-anchor="middle" fill="#FF3C00" font-family="Inter, system-ui, sans-serif" font-size="13">Planned for 0.8.0</text>
-            <ellipse cx="195.0" cy="1050.0" rx="100.0" ry="16.0" fill="#131a2e" stroke="#FF3C00" stroke-width="1.5" stroke-dasharray="3.5 3"/>
-            <text x="195.0" y="1046.8" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="12" font-weight="600">Vintage amp</text>
-            <text x="195.0" y="1061.2" text-anchor="middle" fill="#FF3C00" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="12" font-weight="600">via Pi + DAC</text>
+            <ellipse cx="133.0" cy="518.0" rx="58.0" ry="16.0" fill="#131a2e" stroke="#12D6C2" stroke-width="1.5"/>
+            <text x="133.0" y="522.0" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="12" font-weight="600">AV receiver</text>
+            <ellipse cx="257.0" cy="518.0" rx="58.0" ry="16.0" fill="#131a2e" stroke="#12D6C2" stroke-width="1.5"/>
+            <text x="257.0" y="522.0" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="12" font-weight="600">Vintage amp</text>
+            <ellipse cx="195.0" cy="592.0" rx="150.0" ry="34.0" fill="#131a2e" stroke="#12D6C2" stroke-width="2"/>
+            <text x="195.0" y="589.2" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="15" font-weight="700">AirPlay speakers</text>
+            <text x="195.0" y="605.4" text-anchor="middle" fill="#9aa5c0" font-family="Inter, system-ui, sans-serif" font-size="13">such as Sonos</text>
+            <ellipse cx="123.0" cy="652.0" rx="68.0" ry="16.0" fill="#131a2e" stroke="#12D6C2" stroke-width="1.5"/>
+            <text x="123.0" y="656.0" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="12" font-weight="600">AirPlay 1</text>
+            <ellipse cx="267.0" cy="652.0" rx="68.0" ry="16.0" fill="#131a2e" stroke="#12D6C2" stroke-width="1.5"/>
+            <text x="267.0" y="648.8" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="12" font-weight="600">AirPlay 2</text>
+            <text x="267.0" y="663.2" text-anchor="middle" fill="#FF3C00" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="12" font-weight="600">experimental</text>
+            <ellipse cx="195.0" cy="726.0" rx="150.0" ry="34.0" fill="#131a2e" stroke="#12D6C2" stroke-width="2"/>
+            <text x="195.0" y="723.2" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="15" font-weight="700">Streamers &amp; receivers</text>
+            <text x="195.0" y="739.4" text-anchor="middle" fill="#9aa5c0" font-family="Inter, system-ui, sans-serif" font-size="13">such as WiiM</text>
+            <ellipse cx="123.0" cy="786.0" rx="68.0" ry="16.0" fill="#131a2e" stroke="#FF3C00" stroke-width="1.5"/>
+            <text x="123.0" y="782.8" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="12" font-weight="600">Cast</text>
+            <text x="123.0" y="797.2" text-anchor="middle" fill="#FF3C00" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="12" font-weight="600">In testing</text>
+            <ellipse cx="267.0" cy="786.0" rx="68.0" ry="16.0" fill="#131a2e" stroke="#12D6C2" stroke-width="1.5"/>
+            <text x="267.0" y="790.0" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="12" font-weight="600">Amp / speakers</text>
+            <ellipse cx="195.0" cy="866.0" rx="154.0" ry="40.0" fill="#131a2e" stroke="#12D6C2" stroke-width="2"/>
+            <text x="195.0" y="856.6" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="15" font-weight="700">Phone / browser</text>
+            <text x="195.0" y="871.8" text-anchor="middle" fill="#9aa5c0" font-family="Inter, system-ui, sans-serif" font-size="12">Phone, Mac,</text>
+            <text x="195.0" y="886.2" text-anchor="middle" fill="#9aa5c0" font-family="Inter, system-ui, sans-serif" font-size="12">Chromebook, any PC</text>
+            <ellipse cx="78.3" cy="932.0" rx="54.3" ry="16.0" fill="#131a2e" stroke="#12D6C2" stroke-width="1.5"/>
+            <text x="78.3" y="936.0" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="12" font-weight="600">Built-in speaker</text>
+            <ellipse cx="195.0" cy="932.0" rx="54.3" ry="16.0" fill="#131a2e" stroke="#12D6C2" stroke-width="1.5"/>
+            <text x="195.0" y="936.0" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="12" font-weight="600">Bluetooth</text>
+            <ellipse cx="311.7" cy="932.0" rx="54.3" ry="16.0" fill="#131a2e" stroke="#12D6C2" stroke-width="1.5"/>
+            <text x="311.7" y="928.8" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="12" font-weight="600">HDMI / analog /</text>
+            <text x="311.7" y="943.2" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="12" font-weight="600">optical</text>
+            <ellipse cx="195.0" cy="1024.0" rx="150.0" ry="32.0" fill="#131a2e" stroke="#FF3C00" stroke-width="2" stroke-dasharray="6 5"/>
+            <text x="195.0" y="1021.2" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="15" font-weight="700">Linux / Pi Player</text>
+            <text x="195.0" y="1037.4" text-anchor="middle" fill="#FF3C00" font-family="Inter, system-ui, sans-serif" font-size="13">Planned for 0.8.0</text>
+            <ellipse cx="195.0" cy="1082.0" rx="100.0" ry="16.0" fill="#131a2e" stroke="#FF3C00" stroke-width="1.5" stroke-dasharray="3.5 3"/>
+            <text x="195.0" y="1078.8" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="12" font-weight="600">Vintage amp</text>
+            <text x="195.0" y="1093.2" text-anchor="middle" fill="#FF3C00" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="12" font-weight="600">via Pi + DAC</text>
                       </svg>
-          <figcaption>Arrows show the direction of audio. Two-way arrows mean audio also comes back: the Windows Player can send PC sound or its microphone, and Announce, into the server (since 0.7.2), and a phone can send Announce in. AirPlay in works on a Windows server; there is no AirPlay receiver on Linux or Docker yet (still planned). A vintage amp can hook up to a PC today; the Pi path is planned. AirPlay speakers such as Sonos join the server directly: AirPlay 1 output works today; AirPlay 2 output is experimental. HomePod and Apple TV are not supported. Streamers and receivers such as WiiM join over AirPlay or Cast. Sonos and WiiM are examples, not a promise that every model works.</figcaption>
+          <figcaption>Arrows show the direction of audio. Two-way arrows mean audio also comes back: the Windows Player can send PC sound or its microphone, and Announce, into the server (since 0.7.2), and a phone can send Announce in. AirPlay in works on a Windows server; there is no AirPlay receiver on Linux or Docker yet (still planned). A vintage amp can hook up to a PC today; an AV receiver can hook up over HDMI today. The Pi path is planned. The browser player plays through the device's current system output — the built-in speaker, a paired Bluetooth speaker, or HDMI, analog or optical on a Mac, Chromebook or PC, depending on the model. WavWiz does not pick that output in the browser; change it in the system sound settings. WavWiz EQ applies to WavWiz Players only. AirPlay speakers such as Sonos join the server directly: AirPlay 1 output works today; AirPlay 2 output is experimental. HomePod and Apple TV are not supported. Streamers and receivers such as WiiM join over AirPlay or Cast. Sonos and WiiM are examples, not a promise that every model works.</figcaption>
           <ul class="mesh-legend">
             <li><span class="mesh-swatch mesh-swatch-arrow" aria-hidden="true"></span> Works today (arrow = audio direction)</li>
             <li><span class="mesh-swatch mesh-swatch-twoway" aria-hidden="true"></span> Two-way</li>
@@ -563,7 +589,7 @@
             <li>
               <div class="protocol-copy">
                 <div class="protocol-name">Browser player</div>
-                <p class="protocol-note">Any modern browser on a phone, tablet, Mac or Linux PC.</p>
+                <p class="protocol-note">Plays through the device&rsquo;s current system output on a phone, tablet, Mac, Chromebook or PC: built-in speaker, Bluetooth, or HDMI / analog / optical, depending on the model. WavWiz does not pick that output in the browser. EQ applies to WavWiz Players only.</p>
               </div>
               <span class="status status-today">Works today</span>
             </li>
@@ -644,12 +670,12 @@
           <article class="card works-card reveal">
             <span class="status status-today">Works today</span>
             <h3>Windows PCs</h3>
-            <p>The WavWiz Player plays to any output Windows can use. A vintage amp or receiver can hook up to that PC&rsquo;s analog or optical output today.</p>
+            <p>The WavWiz Player plays to any output Windows can use. A vintage amp can hook up to that PC&rsquo;s analog or optical output today. An AV receiver can hook up over HDMI.</p>
           </article>
           <article class="card works-card reveal">
             <span class="status status-today">Works today</span>
-            <h3>Phones, tablets, Macs and Linux PCs</h3>
-            <p>Open the page in a browser. No app to install. Plays through the built-in speaker or a paired Bluetooth speaker.</p>
+            <h3>Phones, tablets, Macs, Chromebooks and PCs</h3>
+            <p>Open the page in a browser. No app to install. Plays through the device&rsquo;s current system output &mdash; the built-in speaker, a paired Bluetooth speaker, or HDMI, analog or optical on a Mac, Chromebook or PC, depending on the model. WavWiz does not pick that output in the browser.</p>
           </article>
           <article class="card works-card reveal">
             <div class="status-row">
@@ -1012,7 +1038,7 @@
           </details>
           <details class="card reveal">
             <summary>Does it work with Bluetooth, HDMI and receivers?</summary>
-            <p>Yes. The Windows Player can play to HDMI, optical, USB, Bluetooth and any other Windows output. For streamers, AirPlay, Cast and what is planned, see <a href="#devices">Works with what you own</a>.</p>
+            <p>Yes. The Windows Player can play to HDMI, optical, USB, Bluetooth and any other Windows output, including an AV receiver on HDMI. A browser player uses the device&rsquo;s current system output &mdash; a built-in speaker, a paired Bluetooth speaker, or HDMI, analog or optical on a Mac, Chromebook or PC, depending on the model. WavWiz does not pick that output in the browser. For streamers, AirPlay, Cast and what is planned, see <a href="#devices">Works with what you own</a>.</p>
           </details>
           <details class="card reveal">
             <summary>Can guests add songs?</summary>
