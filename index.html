@@ -34,7 +34,7 @@
 
   <link rel="preload" href="assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=074">
+  <link rel="stylesheet" href="styles.css?v=075">
   <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -70,7 +70,7 @@
         "@id": "https://wavwiz.com/#software",
         "name": "WavWiz",
         "url": "https://wavwiz.com/",
-        "description": "Multi-zone mesh audio wizardry, for gear old and new. WavWiz is a free, MIT-licensed multi-room music system. One mesh for every speaker you own. Run a Windows server (or an optional Linux/Docker server for amd64 or arm64; the arm64 build is intended for Raspberry Pi and not yet verified on real Pi hardware) and play through Windows Players or any modern browser on phones, tablets, Macs, Chromebooks and PCs. Streamers and receivers with AirPlay or Cast can join a zone: AirPlay 1 output works; AirPlay 2 output is experimental and off by default; Google Cast output, added in 0.7.0, is still in testing. HomePod and Apple TV are not supported. DLNA / UPnP renderer output is planned for 0.8.0 and is not available yet. An official Linux and Raspberry Pi Player is planned for 0.8.0. Local/NAS library, internet radio, Subsonic/Navidrome, AirPlay in, and live sources in the Windows Player. No cloud account, no telemetry.",
+        "description": "Multi-zone mesh audio wizardry, for gear old and new. WavWiz is a free, MIT-licensed multi-room music system. One mesh for every speaker you own. Run a Windows server (or an optional Linux/Docker server; an arm64 image is published, and is not yet verified on real Raspberry Pi hardware) and play through Windows Players or any modern browser on phones, tablets, Macs, Chromebooks and PCs. Streamers and receivers with AirPlay or Cast can join a zone: AirPlay 1 output works; AirPlay 2 output is experimental and off by default; Google Cast output, added in 0.7.0, is still in testing. HomePod and Apple TV are not supported. DLNA / UPnP renderer output is planned for 0.8.0 and is not available yet. An official Linux and Raspberry Pi Player is planned for 0.8.0. Local/NAS library, internet radio, Subsonic/Navidrome, AirPlay in, and live sources in the Windows Player. No cloud account, no telemetry.",
         "applicationCategory": "MultimediaApplication",
         "applicationSubCategory": "Multi-zone audio",
         "operatingSystem": "Windows 10, Windows 11",
@@ -103,7 +103,7 @@
           "Scenes, schedules, alarms and guest Jukebox",
           "Optional Home Assistant control via REST (custom component not on HACS)",
           "Optional unofficial Spotify Connect (off by default; Premium required)",
-          "Optional Linux/Docker server for amd64 and arm64 (arm64 intended for Raspberry Pi 4/5, not yet verified on real Pi hardware); plays through the host sound card or headless; no AirPlay receiver or AirPlay 2 output",
+          "Optional Linux/Docker server (tags 0.7.3 and latest; an arm64 image is published, not yet verified on real Raspberry Pi hardware); plays through the host sound card or headless; no AirPlay receiver or AirPlay 2 output",
           "MIT licensed; no cloud account; no telemetry"
         ],
         "sameAs": [
@@ -201,7 +201,7 @@
             "name": "What do I need to run it?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The server needs a 64-bit Windows 10 (October 2018 Update or newer) or Windows 11 PC that stays on, and everything else comes in the installer. Speakers need WavWiz Player on Windows or any modern browser on the same home network."
+              "text": "The server needs a 64-bit Windows 10 (October 2018 Update or newer) or Windows 11 PC that stays on, and everything else comes in the installer. You can also run the optional Linux or Docker server (vdubbin74/wavwiz-server:0.7.3 or :latest; an arm64 image is published, not yet verified on real Raspberry Pi hardware). Speakers need WavWiz Player on Windows or any modern browser on the same home network."
             }
           },
           {
@@ -961,7 +961,7 @@
             <h3 id="rm-060">Linux &amp; Docker</h3>
             <p>Run the WavWiz server on a Linux box or in Docker, not just a Windows PC. An arm64 build intended for Raspberry Pi 4/5 followed later; it is not yet verified on real Pi hardware. Docker is a server only &mdash; pair a Windows Player for PC speakers. See the <a href="https://github.com/vdubbin74/WavWiz/blob/main/docs/DOCKER.md" target="_blank" rel="noopener">Docker guide</a>.</p>
             <ul class="spot-list">
-              <li><b>Linux and Docker:</b> official server image on <a href="https://hub.docker.com/r/vdubbin74/wavwiz-server">Docker Hub</a> (<code>vdubbin74/wavwiz-server:0.7.2</code> and <code>:latest</code>, amd64 + arm64). The 0.7.3 image is not on Docker Hub yet; 0.7.3 Linux tarballs are in the <a href="https://github.com/vdubbin74/WavWiz/releases/tag/v0.7.3">release</a>.</li>
+              <li><b>Linux and Docker:</b> official server image on <a href="https://hub.docker.com/r/vdubbin74/wavwiz-server">Docker Hub</a> (<code>vdubbin74/wavwiz-server:0.7.3</code> and <code>:latest</code>). An arm64 image is published; not yet verified on real Raspberry Pi hardware.</li>
               <li><b>Remote libraries and Home Assistant:</b> Subsonic or Navidrome, and Home Assistant control with a secure token.</li>
             </ul>
           </article>
@@ -1048,7 +1048,7 @@
           </details>
           <details class="card reveal">
             <summary>What do I need to run it?</summary>
-            <p>The server needs a 64-bit Windows 10 (October 2018 Update or newer) or Windows 11 PC that stays on, and everything else comes in the installer. Speakers need WavWiz Player on Windows or any modern browser on the same home network.</p>
+            <p>The server needs a 64-bit Windows 10 (October 2018 Update or newer) or Windows 11 PC that stays on, and everything else comes in the installer. You can also run the optional Linux or Docker server (<code>vdubbin74/wavwiz-server:0.7.3</code> or <code>:latest</code>; an arm64 image is published, not yet verified on real Raspberry Pi hardware). Speakers need WavWiz Player on Windows or any modern browser on the same home network.</p>
           </details>
           <details class="card reveal">
             <summary>What doesn't work yet?</summary>
@@ -1112,7 +1112,7 @@
             </a>
           <p class="hero-links"><span class="hero-fact">v<span data-ver>0.7.3</span> Beta</span><span aria-hidden="true">·</span><span>Released <span data-reldate>Nov 27, 2026</span></span><span aria-hidden="true">·</span><a href="https://github.com/vdubbin74/WavWiz/releases/tag/v0.7.3" target="_blank" rel="noopener">Release notes</a><span aria-hidden="true">·</span><a href="https://github.com/vdubbin74/WavWiz" target="_blank" rel="noopener">Source on GitHub</a></p>
           <p class="get-note">Windows installer: <a href="https://github.com/vdubbin74/WavWiz/releases/download/v0.7.3/WavWiz-Setup-0.7.3.exe">WavWiz-Setup-0.7.3.exe</a> (105,079,195 bytes).<br>SHA-256: <code>4614B9724B4249B926157B1C966B71717E93080A74A784DF5C794B79E62E2B81</code></p>
-          <p class="get-note">Linux server: <a href="https://github.com/vdubbin74/WavWiz/releases/download/v0.7.3/wavwiz-server-0.7.3-linux-x64.tar.gz">linux-x64</a> or <a href="https://github.com/vdubbin74/WavWiz/releases/download/v0.7.3/wavwiz-server-0.7.3-linux-arm64.tar.gz">linux-arm64</a> (for Raspberry Pi 4/5; not yet verified on real Pi hardware).<br>Docker Hub still has <code>vdubbin74/wavwiz-server:0.7.2</code> and <code>:latest</code> (amd64 + arm64); the 0.7.3 image is not published there yet. Checksums: <a href="https://github.com/vdubbin74/WavWiz/releases/download/v0.7.3/SHA256SUMS.txt">SHA256SUMS.txt</a>.</p>
+          <p class="get-note">Linux server: <a href="https://github.com/vdubbin74/WavWiz/releases/download/v0.7.3/wavwiz-server-0.7.3-linux-x64.tar.gz">linux-x64</a> or <a href="https://github.com/vdubbin74/WavWiz/releases/download/v0.7.3/wavwiz-server-0.7.3-linux-arm64.tar.gz">linux-arm64</a> (not yet verified on real Raspberry Pi hardware).<br>Docker: <code>docker pull vdubbin74/wavwiz-server:0.7.3</code> or <code>:latest</code>. Compose: <code>image: docker.io/vdubbin74/wavwiz-server:0.7.3</code>. An arm64 image is published; not yet verified on real Raspberry Pi hardware. See the <a href="https://github.com/vdubbin74/WavWiz/blob/main/docs/DOCKER.md" target="_blank" rel="noopener">Docker guide</a>. Checksums: <a href="https://github.com/vdubbin74/WavWiz/releases/download/v0.7.3/SHA256SUMS.txt">SHA256SUMS.txt</a>.</p>
         </div>
         <ul class="card get-req reveal">
           <li><b>Server PC:</b> 64-bit Windows 10 (October 2018 Update or newer) or Windows 11, on a PC that stays on. Admin rights to install. Everything else comes in the installer.</li>
@@ -1153,6 +1153,6 @@
   </footer>
 
   <script src="assets/vendor/qrcode.js"></script>
-  <script src="script.js?v=074"></script>
+  <script src="script.js?v=075"></script>
 </body>
 </html>
