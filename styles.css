@@ -185,7 +185,8 @@ p { margin: 0 0 1em; }
   0%, 100% { filter: drop-shadow(0 0 6px rgba(255,90,31,.45)) drop-shadow(0 0 22px rgba(255,90,31,.25)); }
   50% { filter: drop-shadow(0 0 14px rgba(46,196,182,.75)) drop-shadow(0 0 44px rgba(46,196,182,.4)); }
 }
-.hero-kicker { font-family: var(--font-head); font-weight: 600; font-size: clamp(1.15rem, 2vw, 1.5rem); letter-spacing: -0.02em; color: #e9edf7; margin: 0 0 14px; }
+.nowrap { white-space: nowrap; }
+.hero-kicker { font-family: var(--font-head); font-weight: 600; font-size: clamp(1.05rem, 2vw, 1.45rem); letter-spacing: -0.02em; color: #e9edf7; margin: 0 0 16px; max-width: 25em; line-height: 1.35; text-wrap: pretty; overflow-wrap: normal; hyphens: none; }
 .hero-sub { font-size: clamp(1.05rem, 1.6vw, 1.25rem); color: #c5cde0; max-width: 42em; margin-bottom: 46px; }
 .hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; position: relative; }
 /* "New release" note: sits in the gap above the buttons (absolutely placed, so showing it never moves the layout) */
@@ -395,6 +396,7 @@ p { margin: 0 0 1em; }
   .site-nav .btn { margin: 14px 0 0; }
   .hero-inner { grid-template-columns: 1fr; gap: 0; text-align: center; max-width: none; }
   .hero-sub { margin-left: auto; margin-right: auto; }
+  .hero-kicker { margin-left: auto; margin-right: auto; }
   .hero-ctas { justify-content: center; }
   .steps { grid-template-columns: 1fr; max-width: 560px; margin: 0 auto; }
   .hero-links { justify-content: center; }
@@ -508,10 +510,20 @@ p { margin: 0 0 1em; }
 
 /* ---------------- Works with / mesh (site-mesh) ---------------- */
 .works { padding-top: 72px; }
-.works .section-lead { max-width: 42em; margin-left: auto; margin-right: auto; }
+.works .section-head { margin-bottom: 28px; }
+.scenario-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; max-width: 920px; margin: 0 auto 16px; }
+.scenario-card { padding: 22px 22px 20px; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.scenario-card h3 { margin: 0; font-size: 1.15rem; }
+.scenario-card p { margin: 0; color: var(--muted); font-size: .98rem; line-height: 1.45; overflow-wrap: break-word; }
+.scenario-note { text-align: center; color: var(--muted); font-size: .95rem; line-height: 1.45; max-width: 40em; margin: 0 auto 40px; padding: 0 8px; }
+@media (max-width: 760px) {
+  .scenario-grid { grid-template-columns: 1fr; max-width: 560px; }
+  .scenario-card { padding: 18px 18px 16px; }
+  .scenario-note { margin-bottom: 32px; }
+}
 .mesh-diagram { width: min(1200px, calc(100vw - 32px)); max-width: none; margin: 0 auto 48px; margin-left: calc(50% - min(600px, 50vw - 16px)); }
 .mesh-diagram svg { width: 100%; height: auto; display: block; overflow: visible; }
-.mesh-diagram figcaption { margin-top: 12px; text-align: center; color: var(--muted); font-size: .95rem; max-width: 54em; margin-left: auto; margin-right: auto; }
+.mesh-diagram figcaption { margin-top: 12px; text-align: center; color: var(--muted); font-size: .95rem; line-height: 1.5; max-width: 46em; margin-left: auto; margin-right: auto; padding: 0 8px; overflow-wrap: break-word; }
 .mesh-legend { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px 24px; margin: 8px 0 0; padding: 0; list-style: none; color: var(--muted); font-size: .88rem; }
 .mesh-legend li { display: inline-flex; align-items: center; gap: 8px; }
 .mesh-swatch { width: 28px; height: 0; border-top: 2px solid #12D6C2; display: inline-block; }

@@ -34,7 +34,7 @@
 
   <link rel="preload" href="assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=075">
+  <link rel="stylesheet" href="styles.css?v=076">
   <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -287,7 +287,7 @@
             <span class="line">Multi-zone mesh audio wizardry,</span>
             <span class="line glow-text">for gear old and new.</span>
           </h1>
-          <p class="hero-kicker">One mesh for every speaker you own.</p>
+          <p class="hero-kicker">Your legacy amp, your home theater, and your new <span class="nowrap">Wi-Fi</span> and Bluetooth speakers, all playing in harmony.</p>
           <p class="hero-sub">WavWiz links Windows PCs, phones, and streamers and receivers with AirPlay or Cast into one free multi-room system, with no cloud and no lock-in. Native Linux and Raspberry Pi players are planned.</p>
           <div class="hero-ctas">
             
@@ -319,13 +319,23 @@
         <header class="section-head reveal">
           <p class="eyebrow">Speakers</p>
           <h2 id="devices-title">Works with what you <span class="accent-o">own</span>.</h2>
-          <p class="section-lead">One mesh for every speaker you own, including streamers and receivers with AirPlay or Cast. Status tags tell you what works today, what is still in testing, and what is planned.</p>
         </header>
+        <div class="scenario-grid reveal">
+          <article class="card scenario-card">
+            <h3>One house</h3>
+            <p>The vintage amp in the den runs off an old PC, the Sonos in the kitchen plays over AirPlay, and your phone covers the patio, all in sync.</p>
+          </article>
+          <article class="card scenario-card">
+            <h3>Another</h3>
+            <p>The AV receiver hooks up to a PC over HDMI, a WiiM drives the bookshelf stereo, and a Chromebook&rsquo;s browser plays in the garage.</p>
+          </article>
+        </div>
+        <p class="scenario-note">Status tags show what works today, what&rsquo;s in testing, and what&rsquo;s planned.</p>
 
         <figure class="mesh-diagram reveal">
           <svg class="mesh-wide" viewBox="0 0 1200 1083" role="img" aria-labelledby="mesh-title mesh-desc">
                         <title id="mesh-title">How audio flows through a WavWiz mesh</title>
-                        <desc id="mesh-desc">A hub-and-spoke map. The WavWiz server is in the center. Sources (a local or NAS library, internet radio, and Subsonic or Navidrome) and AirPlay in from an iPhone, iPad or Mac (Windows server only; no AirPlay receiver on Linux or Docker yet) send audio into the server. The server sends audio out to a Windows Player, a browser player on a phone, AirPlay speakers such as Sonos (AirPlay 1 works today; AirPlay 2 is experimental), and streamers and receivers such as WiiM over AirPlay or Google Cast. HomePod and Apple TV are not supported. The Windows Player also sends that PC's sound or microphone, and Announce, back into the server (since 0.7.2). A phone can send Announce in. The Windows Player can use HDMI, analog, optical, a USB DAC, or Bluetooth; a vintage amp can hook up to analog or optical today, and an AV receiver can hook up over HDMI today. The browser player plays through the device's current system output: the built-in speaker, a paired Bluetooth speaker, or HDMI, analog or optical on a Mac, Chromebook or PC, depending on the model. WavWiz does not pick that output in the browser. WavWiz EQ applies to WavWiz Players only. A streamer can connect to an amp or powered speakers. Cast output is in testing. A Linux and Raspberry Pi Player is planned for 0.8.0, with a planned path from that Pi to a vintage amp. Two-way arrows show audio in both directions. Sonos and WiiM are examples, not a promise that every model works.</desc>
+                        <desc id="mesh-desc">Arrows show which way audio flows. Two-way arrows mean audio also comes back, such as PC sound, a mic or Announce going into the server. The browser player uses whatever output the device is set to: built-in speaker, Bluetooth, or HDMI, analog or optical on some Macs, Chromebooks and PCs. AirPlay 1 speakers such as Sonos work today, and AirPlay 2 is experimental. AirPlay in is Windows-only for now, and Pi is planned. Brands are examples, not promises.</desc>
                         <defs>
               <linearGradient id="mw-hub" x1="0" y1="0" x2="1" y2="1">
                 <stop offset="0" stop-color="#FF3C00"/>
@@ -448,7 +458,7 @@
 
           <svg class="mesh-narrow" viewBox="0 0 390 1134" role="img" aria-labelledby="mesh-title-sm mesh-desc-sm">
                         <title id="mesh-title-sm">How audio flows through a WavWiz mesh</title>
-                        <desc id="mesh-desc-sm">A vertical view of the same mesh. Sources and AirPlay in feed a central WavWiz server. The server sends audio out to a Windows Player, AirPlay speakers such as Sonos (AirPlay 1 works today; AirPlay 2 is experimental), streamers and receivers such as WiiM, and a phone or browser player. HomePod and Apple TV are not supported. Two-way arrows mark the Windows Player (PC sound, microphone and Announce) and the phone (Announce). The Windows Player can play to HDMI, analog, optical, a USB DAC or Bluetooth; a vintage amp can hook up to analog or optical, and an AV receiver can hook up over HDMI. The browser player uses the device's current system output (built-in speaker, Bluetooth, or HDMI, analog or optical on a Mac, Chromebook or PC, depending on the model). WavWiz does not pick that output in the browser. WavWiz EQ applies to WavWiz Players only. A Linux and Pi Player is planned. Sonos and WiiM are examples, not a promise that every model works.</desc>
+                        <desc id="mesh-desc-sm">Arrows show which way audio flows. Two-way arrows mean audio also comes back, such as PC sound, a mic or Announce going into the server. The browser player uses whatever output the device is set to: built-in speaker, Bluetooth, or HDMI, analog or optical on some Macs, Chromebooks and PCs. AirPlay 1 speakers such as Sonos work today, and AirPlay 2 is experimental. AirPlay in is Windows-only for now, and Pi is planned. Brands are examples, not promises.</desc>
                         <defs>
               <linearGradient id="mn-hub" x1="0" y1="0" x2="1" y2="1">
                 <stop offset="0" stop-color="#FF3C00"/>
@@ -567,7 +577,7 @@
             <text x="195.0" y="1078.8" text-anchor="middle" fill="#e9edf7" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="12" font-weight="600">Vintage amp</text>
             <text x="195.0" y="1093.2" text-anchor="middle" fill="#FF3C00" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="12" font-weight="600">via Pi + DAC</text>
                       </svg>
-          <figcaption>Arrows show the direction of audio. Two-way arrows mean audio also comes back: the Windows Player can send PC sound or its microphone, and Announce, into the server (since 0.7.2), and a phone can send Announce in. AirPlay in works on a Windows server; there is no AirPlay receiver on Linux or Docker yet (still planned). A vintage amp can hook up to a PC today; an AV receiver can hook up over HDMI today. The Pi path is planned. The browser player plays through the device's current system output — the built-in speaker, a paired Bluetooth speaker, or HDMI, analog or optical on a Mac, Chromebook or PC, depending on the model. WavWiz does not pick that output in the browser; change it in the system sound settings. WavWiz EQ applies to WavWiz Players only. AirPlay speakers such as Sonos join the server directly: AirPlay 1 output works today; AirPlay 2 output is experimental. HomePod and Apple TV are not supported. Streamers and receivers such as WiiM join over AirPlay or Cast. Sonos and WiiM are examples, not a promise that every model works.</figcaption>
+          <figcaption>Arrows show which way audio flows. Two-way arrows mean audio also comes back, such as PC sound, a mic or Announce going into the server. The browser player uses whatever output the device is set to: built-in speaker, Bluetooth, or HDMI, analog or optical on some Macs, Chromebooks and PCs. AirPlay 1 speakers such as Sonos work today, and AirPlay 2 is experimental. AirPlay in is Windows-only for now, and Pi is planned. Brands are examples, not promises.</figcaption>
           <ul class="mesh-legend">
             <li><span class="mesh-swatch mesh-swatch-arrow" aria-hidden="true"></span> Works today (arrow = audio direction)</li>
             <li><span class="mesh-swatch mesh-swatch-twoway" aria-hidden="true"></span> Two-way</li>
@@ -1153,6 +1163,6 @@
   </footer>
 
   <script src="assets/vendor/qrcode.js"></script>
-  <script src="script.js?v=075"></script>
+  <script src="script.js?v=076"></script>
 </body>
 </html>
