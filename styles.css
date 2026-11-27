@@ -249,8 +249,10 @@ p { margin: 0 0 1em; }
 .card:hover { transform: translateY(-4px); border-color: rgba(46,196,182,.6); box-shadow: 0 0 0 1px rgba(46,196,182,.25), 0 18px 50px -18px rgba(46,196,182,.55), 0 0 40px -18px rgba(255,90,31,.45); }
 .card:hover::before { opacity: 1; }
 
-.feature-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.feature-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; align-items: start; }
 .feature-list .feature { display: flex; align-items: flex-start; gap: 18px; min-width: 0; }
+/* The two longer cards start a new row so they sit together, and short cards are not stretched beside them. */
+.feature-list .feature-detail:not(.feature-detail ~ .feature-detail) { grid-column: 1; }
 .feature-list .feature-ico { flex: none; }
 .feature-list .feature-text { min-width: 0; }
 .feature-list .feature h3 { margin: 0 0 6px; }
