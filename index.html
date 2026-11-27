@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US" data-version="0.7.2" data-release-date="2026-11-21">
+<html lang="en-US" data-version="0.7.3" data-release-date="2026-11-27">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -34,7 +34,7 @@
 
   <link rel="preload" href="assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=073m">
+  <link rel="stylesheet" href="styles.css?v=074">
   <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -78,12 +78,12 @@
         "softwareRequirements": "Microsoft Edge WebView2 Runtime for the player window (included with Windows 11 and current Windows 10)",
         "image": "https://wavwiz.com/assets/img/og-image-070.jpg",
         "screenshot": "https://wavwiz.com/assets/img/wavwiz-070-app-window.webp",
-        "softwareVersion": "0.7.2",
-        "datePublished": "2026-11-21",
-        "dateModified": "2026-11-21",
-        "downloadUrl": "https://github.com/vdubbin74/WavWiz/releases/download/v0.7.2/WavWiz-Setup-0.7.2.exe",
+        "softwareVersion": "0.7.3",
+        "datePublished": "2026-11-27",
+        "dateModified": "2026-11-27",
+        "downloadUrl": "https://github.com/vdubbin74/WavWiz/releases/download/v0.7.3/WavWiz-Setup-0.7.3.exe",
         "installUrl": "https://github.com/vdubbin74/WavWiz/releases/latest",
-        "releaseNotes": "https://github.com/vdubbin74/WavWiz/releases/tag/v0.7.2",
+        "releaseNotes": "https://github.com/vdubbin74/WavWiz/releases/tag/v0.7.3",
         "license": "https://opensource.org/license/mit",
         "isAccessibleForFree": true,
         "inLanguage": "en-US",
@@ -282,7 +282,7 @@
 
       <div class="container hero-inner">
         <div class="hero-copy" data-parallax="0.12">
-          <a class="badge badge-ver" href="#new" aria-label="What's new in v0.7.2 Beta, released Nov 21, 2026"><span class="bv-new">New</span><b>v<span data-ver>0.7.2</span> Beta</b><span class="bv-sep" aria-hidden="true">·</span><span class="bv-date"><span class="bv-date-long">Released <span data-reldate>Nov 21, 2026</span></span><span class="bv-date-short" data-reldate-short>Nov 21</span></span><span class="bv-sep bv-sep-more" aria-hidden="true">·</span><span class="bv-more"><span class="bv-more-label">What&rsquo;s new </span><span class="bv-more-arrow" aria-hidden="true">&rarr;</span></span></a>
+          <a class="badge badge-ver" href="#new" aria-label="What's new in v0.7.3 Beta, released Nov 27, 2026"><span class="bv-new">New</span><b>v<span data-ver>0.7.3</span> Beta</b><span class="bv-sep" aria-hidden="true">·</span><span class="bv-date"><span class="bv-date-long">Released <span data-reldate>Nov 27, 2026</span></span><span class="bv-date-short" data-reldate-short>Nov 27</span></span><span class="bv-sep bv-sep-more" aria-hidden="true">·</span><span class="bv-more"><span class="bv-more-label">What&rsquo;s new </span><span class="bv-more-arrow" aria-hidden="true">&rarr;</span></span></a>
           <h1 id="hero-title" class="hero-title">
             <span class="line">Multi-zone mesh audio wizardry,</span>
             <span class="line glow-text">for gear old and new.</span>
@@ -859,37 +859,34 @@
     <section class="section section-alt" id="new" aria-labelledby="new-title">
       <div class="container">
         <header class="section-head reveal">
-          <p class="eyebrow">What&rsquo;s new in v<span data-ver>0.7.2</span> &middot; <span data-reldate>Nov 21, 2026</span></p>
-          <h2 id="new-title">Live sources, <span class="accent-t">Announce in the Player</span>, phone drag.</h2>
+          <p class="eyebrow">What&rsquo;s new in v<span data-ver>0.7.3</span> &middot; <span data-reldate>Nov 27, 2026</span></p>
+          <h2 id="new-title">Direct mode, a clearer first run, <span class="accent-t">simpler phone setup.</span></h2>
         </header>
         <div class="spot-grid">
-          <article class="card spot reveal" aria-labelledby="spot-live072">
-            <p class="spot-tag spot-tag-t">New in 0.7.2</p>
-            <h3 id="spot-live072">Stream a PC's sound or mic to any zone</h3>
-            <p>Only the Windows Player can send that PC's own sound (This PC · Speakers) or its microphone to any zone, the same way AirPlay already can.</p>
+          <article class="card spot reveal" aria-labelledby="spot-direct073">
+            <p class="spot-tag spot-tag-t">New in 0.7.3</p>
+            <h3 id="spot-direct073">Direct (no processing), and a fairer Auto pre-gain</h3>
+            <p>Each speaker can switch to Direct: EQ, Bass/Treble, Balance, Trim, Loudness, Auto pre-gain and the limiter turn off, and come back when you switch it off. Volume, max volume and delay still work. Direct is not bit-perfect &mdash; that is planned for 0.8.0.</p>
             <ul class="spot-list">
-              <li><b>Real time:</b> the PC keeps playing with no extra lag, and the house follows. If that PC is in the same zone, WavWiz doesn't play the sound a second time there.</li>
-              <li><b>Sync with WavWiz:</b> the PC's own speakers play in time with every zone. WavWiz moves Windows to a spare output for this &mdash; optical first, never a headset that's in use &mdash; and a tray item, Restore my speakers, puts your usual output back.</li>
-              <li><b>A calm stop:</b> stopping PC audio asks first, with a one-tap Pause PC audio. When Sync hands back, the Windows volume is matched to what you heard, so nothing blares.</li>
+              <li><b>Auto pre-gain:</b> raising Bass or Treble, or picking a boost EQ, no longer makes the music much quieter.</li>
+              <li><b>Loudness:</b> it is no longer counted in that cut, so it really adds bass and treble.</li>
             </ul>
           </article>
-          <article class="card spot reveal" aria-labelledby="spot-announce072">
-            <p class="spot-tag">New in 0.7.2</p>
-            <h3 id="spot-announce072">Announce from the Windows Player, or a phone</h3>
-            <p>Hold Announce to talk over the house. The music ducks, then fades back up when you let go. It works in the Windows Player window and in a browser on a phone.</p>
+          <article class="card spot reveal" aria-labelledby="spot-setup073">
+            <p class="spot-tag">New in 0.7.3</p>
+            <h3 id="spot-setup073">A clearer first run, and simpler phone setup</h3>
+            <p>Getting started now starts with Check your network (Windows). If that PC&rsquo;s network is Public, phones and other PCs can&rsquo;t reach WavWiz &mdash; a card explains how to fix it. WavWiz never changes the network type or the firewall itself.</p>
             <ul class="spot-list">
-              <li><b>Mic gain:</b> microphone inputs go up to +24&nbsp;dB, with a built-in limiter so a boosted mic doesn't clip.</li>
-              <li><b>Privacy:</b> if Windows is blocking the microphone, the Player says so clearly and offers an Open microphone settings button.</li>
+              <li><b>HTTPS on for new setups:</b> the phones&rsquo; secure connection turns on automatically when the server has a home-network address. Existing setups are left as they are, and a loopback or some Docker setups stay manual.</li>
+              <li><b>Guided trust:</b> Getting started walks each phone through a trust step, and the PC lists which phones are secure.</li>
+              <li><b>Clearer warnings:</b> HTTPS-off messages now say what still works and offer one Set up secure connection button.</li>
             </ul>
           </article>
         </div>
-        <ul class="more-grid grid-3 reveal" aria-label="More in 0.7.2">
-          <li><b>Phone drag</b>Drag an album, song or station onto Now Playing to play it now. Drag speakers between zones. Hold still for the menu; a drag won't select text by accident.</li>
-          <li><b>Gradient edge light</b>The whole zone edge cross-fades through your theme colors. Heartbeat and Heartthrob are new too, and they replace the older comet, pulse and streak styles.</li>
-          <li><b>Volume mixer</b>Master volume now opens Devices in a Volume Mixer mode: every speaker on one line, in the same order as Devices.</li>
-          <li><b>Check with phone</b>A zone's Timing vs house row can measure how two zones line up where you stand, then suggest a timing value. Only an admin can apply it.</li>
-          <li><b>Add speaker</b>AirPlay and Cast no longer sit in separate cards. One Add speaker button opens WavWiz, Browser, AirPlay and Cast tabs.</li>
-          <li><b>Live limiter</b>A limiter after the AirPlay and Spotify Connect boost keeps loud tracks from clipping. Live sources use it too.</li>
+        <ul class="more-grid grid-3 reveal" aria-label="More in 0.7.3">
+          <li><b>Audio inputs guide</b>A new guide explains This PC · Speakers (the PC&rsquo;s own sound), what it needs, and how Real time and Sync with WavWiz differ. Settings &gt; Devices &gt; Audio inputs links to it.</li>
+          <li><b>Narrow window</b>A narrow PC window now looks like the phone, including the smaller header and the phone mixer, while pins, full menus and keyboard shortcuts stay.</li>
+          <li><b>Earlier in 0.7.2</b>Live sources in the Windows Player, Announce, and phone drag are still here. See the changelog for the rest.</li>
         </ul>
         <div class="np-gallery reveal" aria-label="WavWiz in the app">
           <figure><img src="assets/img/wavwiz-070-library.webp" srcset="assets/img/wavwiz-070-library-960.webp 960w, assets/img/wavwiz-070-library.webp 1600w" sizes="(max-width: 700px) calc(100vw - 36px), 400px" width="1600" height="1000" loading="lazy" decoding="async" alt="WavWiz expanded Library in Midnight Neon: six album tiles with Directionless EP playing, and a 69-track Everywhere queue on the right with the compact Now Playing below it."><figcaption>Expanded Library with a full queue</figcaption></figure>
@@ -897,7 +894,7 @@
           <figure><img src="assets/img/wavwiz-070-mini.webp" width="840" height="242" loading="lazy" decoding="async" alt="The WavWiz mini player: spinning CD art, Night Owl by Broke For Free from Directionless EP on Everywhere, LED seek bar, volume and soft transport buttons."><figcaption>Mini player</figcaption></figure>
         </div>
         <p class="new-more reveal">Earlier releases are in the <a href="https://github.com/vdubbin74/WavWiz/blob/main/CHANGELOG.md" target="_blank" rel="noopener">changelog</a> and on the <a href="https://github.com/vdubbin74/WavWiz/releases" target="_blank" rel="noopener">releases page</a>.</p>
-        <p class="new-more reveal">AirPlay 2 output is experimental in this beta, Google Cast output is still in testing, and the ARM64 server isn&rsquo;t verified on real Raspberry Pi hardware yet. See the <a href="https://github.com/vdubbin74/WavWiz/releases/tag/v0.7.2" target="_blank" rel="noopener">0.7.2 release notes</a> and the <a href="https://github.com/vdubbin74/WavWiz/blob/main/CHANGELOG.md" target="_blank" rel="noopener">changelog</a> for every fix.</p>
+        <p class="new-more reveal">AirPlay 2 output is experimental in this beta, Google Cast output is still in testing, and the ARM64 server isn&rsquo;t verified on real Raspberry Pi hardware yet. See the <a href="https://github.com/vdubbin74/WavWiz/releases/tag/v0.7.3" target="_blank" rel="noopener">0.7.3 release notes</a> and the <a href="https://github.com/vdubbin74/WavWiz/blob/main/CHANGELOG.md" target="_blank" rel="noopener">changelog</a> for every fix.</p>
       </div>
     </section>
 
@@ -933,15 +930,16 @@
           <h2 id="roadmap-title">Where WavWiz is <span class="accent-t">headed</span>.</h2>
           <p class="section-lead">The goal: every speaker, old or new, in one synced mesh. Next up is audiophile accuracy and an official Linux Player. Everything below that isn&rsquo;t marked shipped is planned, not available yet, and there are no dates.</p>
         </header>
-        <p class="new-more reveal"><b>Out now in 0.7.2:</b> live sources, Announce and phone drag. See <a href="#new">What&rsquo;s new</a>. AirPlay 2 output is experimental, Google Cast is still in testing, and the ARM64 server is not yet verified on real Raspberry Pi hardware.</p>
+        <p class="new-more reveal"><b>Out now in 0.7.3:</b> Direct (no processing), a fairer Auto pre-gain, a clearer first run and simpler phone setup. See <a href="#new">What&rsquo;s new</a>. AirPlay 2 output is experimental, Google Cast is still in testing, and the ARM64 server is not yet verified on real Raspberry Pi hardware.</p>
         <div class="spot-grid">
           <article class="card spot reveal" aria-labelledby="rm-073">
-            <p class="spot-tag">Coming next in 0.7.3 (planned)</p>
-            <h3 id="rm-073">Auto pre-gain and Direct mode</h3>
-            <p>Cleaner, more accurate playback so boosts don't cost you volume, and a way to switch off all of WavWiz's processing.</p>
+            <p class="spot-tag">Shipped &middot; 0.7.3</p>
+            <h3 id="rm-073">Auto pre-gain, Direct, and a clearer first run</h3>
+            <p>Cleaner playback so boosts don&rsquo;t cost you as much volume, a Direct switch, a first-run network check, and simpler phone HTTPS. See <a href="#new">What&rsquo;s new</a>.</p>
             <ul class="spot-list">
-              <li><b>Auto pre-gain:</b> a planned fix so EQ, Bass/Treble boosts and Loudness no longer make the music quieter.</li>
-              <li><b>Direct (no processing):</b> a planned switch that bypasses all of WavWiz's own processing (EQ, Bass/Treble and Loudness).</li>
+              <li><b>Auto pre-gain:</b> Bass/Treble and boost EQs no longer make the music much quieter; Loudness really adds bass and treble.</li>
+              <li><b>Direct (no processing):</b> turns off WavWiz&rsquo;s own processing on a speaker; volume, max volume and delay still work. Not bit-perfect (planned for 0.8.0).</li>
+              <li><b>First run and phones:</b> Check your network comes first (Windows). For new setups, phone HTTPS turns on automatically when the server has a home-network address, and the PC lists which phones are secure.</li>
             </ul>
           </article>
           <article class="card spot reveal" aria-labelledby="rm-080">
@@ -963,7 +961,7 @@
             <h3 id="rm-060">Linux &amp; Docker</h3>
             <p>Run the WavWiz server on a Linux box or in Docker, not just a Windows PC. An arm64 build intended for Raspberry Pi 4/5 followed later; it is not yet verified on real Pi hardware. Docker is a server only &mdash; pair a Windows Player for PC speakers. See the <a href="https://github.com/vdubbin74/WavWiz/blob/main/docs/DOCKER.md" target="_blank" rel="noopener">Docker guide</a>.</p>
             <ul class="spot-list">
-              <li><b>Linux and Docker:</b> official server image on <a href="https://hub.docker.com/r/vdubbin74/wavwiz-server">Docker Hub</a> (<code>vdubbin74/wavwiz-server:0.7.2</code> and <code>:latest</code>, amd64 + arm64).</li>
+              <li><b>Linux and Docker:</b> official server image on <a href="https://hub.docker.com/r/vdubbin74/wavwiz-server">Docker Hub</a> (<code>vdubbin74/wavwiz-server:0.7.2</code> and <code>:latest</code>, amd64 + arm64). The 0.7.3 image is not on Docker Hub yet; 0.7.3 Linux tarballs are in the <a href="https://github.com/vdubbin74/WavWiz/releases/tag/v0.7.3">release</a>.</li>
               <li><b>Remote libraries and Home Assistant:</b> Subsonic or Navidrome, and Home Assistant control with a secure token.</li>
             </ul>
           </article>
@@ -1112,9 +1110,9 @@
               <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M2 4.3 10 3.2v7.7H2V4.3Zm9-1.2L22 1.5v9.4H11V3.1ZM2 12h8v7.8l-8-1.1V12Zm9 0h11v10.5l-11-1.6V12Z"/></svg>
               Download for Windows
             </a>
-          <p class="hero-links"><span class="hero-fact">v<span data-ver>0.7.2</span> Beta</span><span aria-hidden="true">·</span><span>Released <span data-reldate>Nov 21, 2026</span></span><span aria-hidden="true">·</span><a href="https://github.com/vdubbin74/WavWiz/releases/tag/v0.7.2" target="_blank" rel="noopener">Release notes</a><span aria-hidden="true">·</span><a href="https://github.com/vdubbin74/WavWiz" target="_blank" rel="noopener">Source on GitHub</a></p>
-          <p class="get-note">Windows installer: <a href="https://github.com/vdubbin74/WavWiz/releases/download/v0.7.2/WavWiz-Setup-0.7.2.exe">WavWiz-Setup-0.7.2.exe</a> (104,992,447 bytes).<br>SHA-256: <code>48032FCDB6B0CA460AAE7D4B97C990E30B1D5565776A540E54181C0E7F8C7E32</code></p>
-          <p class="get-note">Linux server: <a href="https://github.com/vdubbin74/WavWiz/releases/download/v0.7.2/wavwiz-server-0.7.2-linux-x64.tar.gz">linux-x64</a> or <a href="https://github.com/vdubbin74/WavWiz/releases/download/v0.7.2/wavwiz-server-0.7.2-linux-arm64.tar.gz">linux-arm64</a> (for Raspberry Pi 4/5; not yet verified on real Pi hardware).<br>Docker: <code>vdubbin74/wavwiz-server:0.7.2</code> (amd64 + arm64). Checksums: <a href="https://github.com/vdubbin74/WavWiz/releases/download/v0.7.2/SHA256SUMS.txt">SHA256SUMS.txt</a>.</p>
+          <p class="hero-links"><span class="hero-fact">v<span data-ver>0.7.3</span> Beta</span><span aria-hidden="true">·</span><span>Released <span data-reldate>Nov 27, 2026</span></span><span aria-hidden="true">·</span><a href="https://github.com/vdubbin74/WavWiz/releases/tag/v0.7.3" target="_blank" rel="noopener">Release notes</a><span aria-hidden="true">·</span><a href="https://github.com/vdubbin74/WavWiz" target="_blank" rel="noopener">Source on GitHub</a></p>
+          <p class="get-note">Windows installer: <a href="https://github.com/vdubbin74/WavWiz/releases/download/v0.7.3/WavWiz-Setup-0.7.3.exe">WavWiz-Setup-0.7.3.exe</a> (105,079,195 bytes).<br>SHA-256: <code>4614B9724B4249B926157B1C966B71717E93080A74A784DF5C794B79E62E2B81</code></p>
+          <p class="get-note">Linux server: <a href="https://github.com/vdubbin74/WavWiz/releases/download/v0.7.3/wavwiz-server-0.7.3-linux-x64.tar.gz">linux-x64</a> or <a href="https://github.com/vdubbin74/WavWiz/releases/download/v0.7.3/wavwiz-server-0.7.3-linux-arm64.tar.gz">linux-arm64</a> (for Raspberry Pi 4/5; not yet verified on real Pi hardware).<br>Docker Hub still has <code>vdubbin74/wavwiz-server:0.7.2</code> and <code>:latest</code> (amd64 + arm64); the 0.7.3 image is not published there yet. Checksums: <a href="https://github.com/vdubbin74/WavWiz/releases/download/v0.7.3/SHA256SUMS.txt">SHA256SUMS.txt</a>.</p>
         </div>
         <ul class="card get-req reveal">
           <li><b>Server PC:</b> 64-bit Windows 10 (October 2018 Update or newer) or Windows 11, on a PC that stays on. Admin rights to install. Everything else comes in the installer.</li>
@@ -1155,6 +1153,6 @@
   </footer>
 
   <script src="assets/vendor/qrcode.js"></script>
-  <script src="script.js?v=073m"></script>
+  <script src="script.js?v=074"></script>
 </body>
 </html>
